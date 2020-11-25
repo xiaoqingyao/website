@@ -1,0 +1,76 @@
+*{ margin:0; padding:0;}
+.clear{ clear:both;}
+body{  }
+
+#bgcolor{ background:#004b7e; font-size:12px; font-family:Arial, Helvetica, sans-serif 'ËÎÌו';}
+#content{ margin:0 auto;}
+.input_box{ height:156px; background:url(../images/login02.jpg) no-repeat;}
+.login_bom{ height:253px; background:url(../images/login03.jpg) no-repeat; text-align: center; line-height:80px; color:#fff;}
+.input_box table tr td {cellspacing:0; border:0; padding-left:5px; line-height:35px;}
+.input_box .user { width:190px; height:24px; line-height:24px; padding-left:9px; background:url(../images/user.gif) no-repeat; border:0;}
+.input_box .pawd { width:190px; height:24px; line-height:24px; padding-left:9px; background:url(../images/password.gif) no-repeat; border:0;}
+.input_box .bt1{ width:77px; height:28px; cursor:pointer; background:url(../images/bt1.jpg) no-repeat; border:0; text-indent:-9999px; display:block;}
+.input_box .bt2{ width:77px; height:28px; cursor:pointer; background:url(../images/bt2.jpg) no-repeat; border:0; text-indent:-9999px; display:block;}
+
+
+.content2{ width:100%; font-size:12px; height:100%; background-color:Red;}
+.header{  background:url(../images/hone_topbg1.jpg) top repeat-x;}
+.header .logo{ width:307px; height:84px; }
+.header .time_txt{ height:59px; background:url(../images/home_top2.jpg) no-repeat; padding-left:220px;}
+.header .time_bg{ height:59px; background:url(../images/home_top4.jpg) top repeat-x;}
+.center{ margin-top:-19px; height:auto;}
+.center .left{ vertical-align:top; width:195px; background:#0488b1; padding-bottom:20px;}
+.center .left .menu{ width:178px; margin:0 auto; background:#fff url(../images/menutop.jpg) top no-repeat; padding-top:35px;}
+.center .left .menu dl dt{ height:26px; line-height:26px; background:url(../images/nav.jpg) repeat-x; padding-left:18px; font-weight:bold; color:#0285b5;}
+.center .left .menu dl dd{ height:24px; line-height:24px; padding-left:20px;} 
+.center .left .menu dl dd a{ color:#777777; text-decoration:none;}
+.center .right{background:#fff; vertical-align:top;}
+.rg{ float:right;}
+.footer{ height:40px; margin-top:-15px; line-height:40px; background:url(../images/footerbg.jpg) repeat-x; text-align:center; color:#fff;}
+
+.slogoinContainer{
+	background:url(../img/loginContainer.png) center 50px no-repeat;
+	height:470px;
+}
+.slogoinContainer .loginLayer{
+	width:190px;
+	color:#fff;
+	position:absolute;
+	left:50%;
+	margin:150px 0 0 -30px;
+	}
+
+.loginLayer select,.loginLayer input.showInput{
+	font-size:12px;
+	width:130px;
+	}
+.slogoinContainer .loginLayer select{
+	width:184px;
+	/*BEHAVIOR: url('css/selectBox.htc'); cursor: hand;*/
+	border:#e4e4e4 1px solid;
+	}
+.slogoinContainer .loginLayer input{
+	border:0px;
+	color:#828282;	
+	padding:2px;
+}
+.slogoinContainer .loginLayer p{ 
+	margin-bottom:3px; 
+	clear:both
+}
+.loginLayer dt,.loginLayer dd{ 
+	float:left;
+}
+.slogoinContainer .loginLayer dd img{ 
+	position:relative; 
+	top:1px; 
+	height:20px; 
+	width:50px;
+}
+.slogoinContainer .showRegExp{ 
+	width:80px;
+}
+.slogoinContainer .loginsubmit{
+	position:relative;
+	top:5px;
+	}

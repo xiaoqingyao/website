@@ -1,0 +1,259 @@
+﻿#region 引用程序集
+
+using System;
+using System.Collections;
+using System.Configuration;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Text;
+using System.Xml;
+using System.Xml.XPath;
+
+using AllPower.Web.Admin;
+using AllPower.Common;
+#endregion
+
+#region 版权注释
+/*================================================================
+    Copyright (C) 2010 华强北在线
+    作者:      吴岸标
+    创建时间： 2010年4月20日
+    功能描述： 专题编辑
+ 
+// 更新日期        更新人      更新原因/内容
+//
+--===============================================================*/
+#endregion
+
+namespace AllPower.WEB.SysAdmin.SysManage
+{
+    public partial class SpecialEdit : AdminPage
+    {
+        #region 变量
+        protected string isCreateHtml;
+        protected string noCreateHtml;
+        protected string jsMessage;                     // js处理提示信息
+        protected string _backParam = string.Empty;     // 要返回的参数
+        #endregion
+
+        #region 属性
+        public string BackParam
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(this._backParam))
+                {
+                    foreach (string key in Request.QueryString.Keys)
+                    {
+                        if (string.IsNullOrEmpty(this._backParam))
+                        {
+                            this._backParam = key + "=" + Request.QueryString[key];
+                        }
+                        else
+                        {
+                            this._backParam += "&" + key + "=" + Request.QueryString[key];
+                        }
+                    }
+                }
+
+                return this._backParam;
+            }
+        }
+        #endregion
+
+        #region Page_Load
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                PageInit();
+            }
+        }
+        #endregion
+
+        #region 页面数据加载
+        public void PageInit()
+        {
+            AllPower.BLL.Content.ModelManage modelManage;  //  模型业务操作类
+            AllPower.Model.SelectParams selParam;
+            DataTable modelDT;
+            bool isValidate;
+
+            modelManage = new AllPower.BLL.Content.ModelManage();
+            selParam = new AllPower.Model.SelectParams();
+            modelDT = modelManage.GetList("ALL", selParam);
+            ddlModelID.DataTextField = "Title";
+            ddlModelID.DataValueField = "ID";
+            ddlModelID.DataSource = modelDT;
+            ddlModelID.DataBind();
+
+            if (string.Equals(this.Action, "EDIT") && !string.IsNullOrEmpty(this.ID))
+            {
+                AllPower.BLL.SysManage.Special special;        // 专题业务操作类
+                DataTable specialDT;
+
+                isValidate = IsHaveRightByOperCode("Edit");  // 修改权限认证
+
+                if (!isValidate)
+                {
+                    jsMessage = "errmsg=\"对不起，您没有修改当前记录的操作权限，请与管理员联系！\";id=\"" + ID + "\"";
+                }
+                else
+                {
+                    special = new AllPower.BLL.SysManage.Special();
+                    selParam.S1 = this.ID;
+                    specialDT = special.GetList("ONE", selParam);
+
+                    if (specialDT != null && specialDT.Rows.Count > 0)
+                    {
+                        ddlModelID.SelectedValue = specialDT.Rows[0]["ModelID"].ToString();
+                        txtDescription.Text = Utils.HtmlDecode(specialDT.Rows[0]["Desc"].ToString());
+                        txtDirectoryName.Text = Utils.HtmlDecode(specialDT.Rows[0]["DirectoryName"].ToString());
+                        txtIcon.Text = Utils.HtmlDecode(specialDT.Rows[0]["Icon"].ToString());
+                        txtMetaDescription.Text = Utils.HtmlDecode(specialDT.Rows[0]["MetaDescription"].ToString());
+                        txtMetaKeyword.Text = Utils.HtmlDecode(specialDT.Rows[0]["MetaKeyword"].ToString());
+                        txtName.Text = Utils.HtmlDecode(specialDT.Rows[0]["Name"].ToString());
+                        txtSearchTemplatePath.Text = Utils.HtmlDecode(specialDT.Rows[0]["SearchTemplatePath"].ToString());
+                        txtSpecialIdentifier.Text = Utils.HtmlDecode(specialDT.Rows[0]["SpecialIdentifier"].ToString());
+                        txtTemplatePath.Text = Utils.HtmlDecode(specialDT.Rows[0]["TemplatePath"].ToString());
+                        txtTips.Text = Utils.HtmlDecode(specialDT.Rows[0]["Tips"].ToString());
+                        ddlModelID.SelectedValue = specialDT.Rows[0]["ModelID"].ToString();
+
+                        if (Utils.ParseBool(specialDT.Rows[0]["Ishtml"].ToString()))
+                        {
+                            isCreateHtml = "checked=\"checked\"";
+                        }
+                        else
+                        {
+                            noCreateHtml = "checked=\"checked\"";
+                        }
+
+                        if (Utils.ParseBool(specialDT.Rows[0]["IsElite"].ToString()))
+                        {
+                            radlIsElite.SelectedValue = "1";
+                        }
+                        else
+                        {
+                            radlIsElite.SelectedValue = "0";
+                        }
+
+                        radlOpenType.SelectedValue = specialDT.Rows[0]["OpenType"].ToString();
+                        radlListPageSaveType.SelectedValue = specialDT.Rows[0]["ListPageSaveType"].ToString();
+                        ddlPagePostfix.SelectedValue = specialDT.Rows[0]["PagePostfix"].ToString();
+                        btnEdit.Text = "修改";
+                    }
+                    else
+                    {
+                        btnEdit.Text = "添加";
+                    }
+                }
+            }
+            else
+            {
+                isValidate = IsHaveRightByOperCode("New");  // 添加权限认证
+
+                if (!isValidate)
+                {
+                    jsMessage = "errmsg=\"对不起，您没有添加记录的操作权限，请与管理员联系！\";id=\"" + ID + "\"";
+                }
+            }
+        }
+        #endregion
+
+        #region 专题更新
+        protected void Special_Edit(object sender, EventArgs e)
+        {
+            AllPower.Model.SysManage.Special mSpecial;     // 专题模型
+            AllPower.BLL.SysManage.Special special;        // 业务操作类
+            bool isValidate;                              // 权限验证
+            string[] tableID;                             // 新增时表主键及排序                     
+            string tranType;                              // 操作类型
+            string returnMsg;                             // 返回信息
+
+            mSpecial = new AllPower.Model.SysManage.Special();
+            special = new AllPower.BLL.SysManage.Special();
+
+            tranType = "EDIT";
+            mSpecial.Desc = Utils.HtmlEncode(txtDescription.Text);
+            mSpecial.DirectoryName = Utils.HtmlEncode(txtDirectoryName.Text.Trim());
+            mSpecial.Icon = Utils.HtmlEncode(txtIcon.Text.Trim());
+            mSpecial.Ishtml = Utils.ParseBool(Utils.ReqFromParameter("radIsCreateHtml"));
+            mSpecial.IsElite = Utils.ParseBool(radlIsElite.SelectedValue);
+            mSpecial.ListPageSaveType = Utils.ParseInt(radlListPageSaveType.SelectedValue, 1);
+            mSpecial.MetaDescription = Utils.HtmlEncode(txtMetaDescription.Text);
+            mSpecial.MetaKeyword = Utils.HtmlEncode(txtMetaKeyword.Text);
+            mSpecial.Name = Utils.HtmlEncode(txtName.Text.Trim());
+            mSpecial.OpenType = Utils.ParseInt(radlOpenType.SelectedValue, 1);
+            mSpecial.PagePostfix = Utils.ParseInt(ddlPagePostfix.SelectedValue, 1);
+            mSpecial.SearchTemplatePath = Utils.HtmlEncode(txtSearchTemplatePath.Text.Trim());
+            mSpecial.SpecialIdentifier = Utils.HtmlEncode(txtSpecialIdentifier.Text.Trim());
+            mSpecial.TemplatePath = Utils.HtmlEncode(txtTemplatePath.Text.Trim());
+            mSpecial.Tips = Utils.HtmlEncode(txtTips.Text.Trim());
+            mSpecial.ModelID = ddlModelID.SelectedValue;
+            mSpecial.SiteID = SiteID;
+
+            if (!string.Equals(this.Action.ToLower(), "edit"))
+            {
+                isValidate = IsHaveRightByOperCode("New");  // 新增权限认证
+
+                if (!isValidate)
+                {
+                    jsMessage = "type=2;errmsg=\"对不起，您没有添加专题的操作权限，请与管理员联系！\";id=\"" + ID + "\"";
+                }
+                else
+                {
+                    tranType = "NEW";
+                    tableID = GetTableID("0", "K_Special");
+                    mSpecial.ID = tableID[0];
+                    mSpecial.Orders = Utils.ParseInt(tableID[1], 100);
+                    mSpecial.IsDel = false;
+                    returnMsg = special.Save(tranType, mSpecial);
+
+                    if (string.Equals(returnMsg, "1"))  // 成功
+                    {
+                        jsMessage = "type=0;title=\"" + mSpecial.Name + " \";id=\"" + mSpecial.ID + "\"";
+                        WriteLog("新增专题 " + mSpecial.Name + "(ID:" + mSpecial.ID + ") 成功！", null, 2);
+                    }
+                    else   // 失败
+                    {
+                        jsMessage = "errmsg=\"对不起，操作失败。\";type=2;id=\"" + mSpecial.ID + "\";";
+                        WriteLog("新增专题 " + mSpecial.Name + "(ID:" + mSpecial.ID + ") 失败！", returnMsg, 3);
+                    }
+                }
+            }
+            else  // 修改
+            {
+                isValidate = IsHaveRightByOperCode("Edit");  // 修改权限认证
+
+                if (!isValidate)
+                {
+                    jsMessage = "errmsg=\"对不起，您没有修改当前记录的操作权限，请与管理员联系！\";id=\"" + ID + "\"";
+                }
+                else
+                {
+                    mSpecial.ID = this.ID;
+                    returnMsg = special.Save(tranType, mSpecial);
+
+                    if (string.Equals(returnMsg, "1"))  // 成功
+                    {
+                        jsMessage = "type=1;title=\"" + mSpecial.Name + " \";id=\"" + mSpecial.ID + "\"";
+                        WriteLog("更新专题 " + mSpecial.Name + "(ID:" + mSpecial.ID + ") 成功！", null, 2);
+                    }
+                    else   // 失败
+                    {
+                        jsMessage = "errmsg=\"对不起，更新失败，请重试。\";type=2;id=\"" + mSpecial.ID + "\";";
+                        WriteLog("更新专题 " + mSpecial.Name + "(ID:" + mSpecial.ID + ") 失败。", returnMsg, 3);
+                    }
+                }
+            }
+        }
+        #endregion
+    }
+}

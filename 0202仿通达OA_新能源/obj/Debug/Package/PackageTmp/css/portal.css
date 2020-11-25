@@ -1,0 +1,265 @@
+@import url('skin-icons.css');
+
+
+.main-container {   
+    padding: 10px 15px;
+    min-width: 285px;
+}
+
+/**
+* Tab
+*/
+.oa-nav-tabs > li > a {
+    color: #333;
+    border-radius: 0;
+    margin-right: 0;
+    line-height: 1;
+    border: 1px solid #ddd;
+    margin-left: -1px;
+    padding: 9px 25px;
+}
+
+.nav > li > a:focus,
+.nav > li > a:hover {
+    color: #2F80D1;
+    text-decoration: none;
+    background-color: transparent;
+    border-color: #ddd;
+}
+
+.oa-nav-tabs > li.active > a,
+.oa-nav-tabs > li.active > a:focus,
+.oa-nav-tabs > li.active > a:hover {
+    color: #2F80D1;
+    border-bottom: 0;
+}
+
+.oa-tab-content {
+    border: 1px solid #ddd;
+    border-top: 0;
+    padding: 20px 15px;
+    margin-left: -1px;
+    margin-top: -1px;
+}
+
+/**
+* Dropdown
+*/
+.dl-horizontal {
+    padding: 5px 0;
+}
+
+.dl-horizontal dt {
+    color: #6D7E86;
+    font-weight: normal;
+    line-height: 32px;
+}
+
+.dl-horizontal textarea {
+    height: 60px;
+}
+
+.btn-oa {
+    height: 30px;
+    border-radius: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    font-size: 12px;
+    padding: 5px 15px;
+}
+
+#status .btn-oa:hover,
+#type .btn-oa:hover {
+    background: rgba(47, 128, 209, 0.2);
+}
+
+#control-btns i {
+    display: inline-block;
+    margin-right: 3px;
+    margin-top: -3px;
+    text-indent: -999em;
+    vertical-align: middle;
+}
+
+.btn-selected,
+.btn-selected:hover,
+.btn-selected:focus,
+.btn-selected:active {
+    background: #2F80D1 !important;
+    border: 1px solid #215A93;
+    color: #fff;
+}
+
+.btn-oa-dropdown {
+    width: 28px;
+    height: 30px;
+    border-radius: 0;
+    border: 1px solid #ddd;
+}
+
+.dropdown-menu li {
+    font-size: 12px;
+    padding: 4px 10px;
+}
+
+.dropdown-menu > li > a {
+    color: #666;
+}
+
+.dropdown-menu > li > a:focus,
+.dropdown-menu > li > a:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: #2f80d1;
+}
+
+/**
+* Input
+*/
+.input-group-oa {
+    width: 182px;
+    display: block;
+    float: right;
+}
+
+.input-group-oa .input-oa {
+    width: 150px;
+}
+
+.input-group-oa .btn-oa {
+    padding: 0;
+    text-align: center;
+    line-height: 30px;
+    width: 32px;
+}
+
+.input-group-oa i {
+    margin-right: 0;
+}
+
+.input-oa {
+    width: 300px;
+    height: 30px;
+    border-radius: 0;
+    border: 1px solid #ddd;
+    font-size: 12px;
+    padding: 4px 5px;
+    box-shadow: 0;
+    display: inline-block;
+}
+
+.input-oa-small {
+    width: 50px;
+}
+
+.validform_checktip {
+    margin-left: 8px;
+    line-height: 32px;
+    height: 24px;
+    overflow: hidden;
+    color: #999;
+    font-size: 12px;
+    display: inline-block;
+}
+
+input.datepicker {
+    padding-left: 30px;
+    width: 170px;
+}
+
+.dl-horizontal .skin-date {
+    position: absolute;
+    margin-top: 12px;
+    margin-left: 10px;
+}
+
+.datepicker td.active, 
+.datepicker td.active:hover {
+    background-color: #2f80d1 !important;
+    background-image: none;
+    background-repeat: repeat-x;
+    border-color: #2f80d1;
+    color: #FFF;
+    text-shadow: none;
+}
+
+.file-box {
+    position:relative;
+    width: 370px;
+}
+
+.file-box .btn-oa {
+    margin-top: -4px;
+}
+
+.file { 
+    position:absolute; 
+    top:0; 
+    right:0; 
+    height:30px; 
+    filter:alpha(opacity:0);
+    opacity: 0;
+    width:65px;
+    cursor: pointer;
+}
+
+/**
+* Footer
+*/
+
+.page-footer {
+    padding: 20px 0px;
+    height: 32px;
+    font-size: 12px;
+}
+
+/**
+* Table
+*/
+.table-content {
+    border: 1px solid #ddd;
+    padding: 20px 15px;
+    margin-left: -1px;
+    margin-top: -1px;
+}
+
+.table {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+}
+
+.table .skin-folder-open,
+.table .skin-folder-line {
+    display: inline-block;
+    margin-right: 2px;
+    vertical-align: middle;
+    text-indent: -999em;
+}
+
+.table a {
+    color: #2F80D1;
+}
+
+.table a:hover {
+    text-decoration: underline;
+    color: #2F80D1;
+}
+
+.table .input-oa-small {
+    padding: 0 3px;
+    height: 20px;
+}
+
+.table th {
+    font-weight: normal;
+}
+
+.table tr:hover {
+    background: #eee !important;
+}
+
+button .skinicon {
+    display: inline-block;
+    margin-right: 3px;
+    text-indent: -999em;
+}

@@ -1,0 +1,111 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_LayoutList.cshtml";
+}
+@section SearchPanel{
+
+    <div class="l-panel-search-item">
+        用户：
+    </div>
+    <div class="l-panel-search-item">
+        <input type="text" id="user" readonly="" data-comboboxid="user" class="l-text-field">
+    </div>
+    <div class="l-panel-search-item">
+        关键词：
+    </div>
+    <div class="l-panel-search-item">
+        <input type="text" id="txtKeyword" />
+    </div>
+    <div class="l-panel-search-item">
+        <div id="searchbtn" style="width:80px;">搜索</div>
+    </div>
+    <div style="color:red;padding-left:10px">操作提示：双击行可以查看关键词对应的提取详情。</div>
+}
+@section scripts{
+    <script>
+        var userid = '';
+        var viewURL = "ExtractResult/GroupDetail";
+        $(function () {
+            //工具条
+            toptoolbarJson = {
+                items: [
+                    { text: '刷新', id: 'refresh', click: itemclick, icon: "refresh" }
+                ]
+            };
+            $("#user").ligerComboBox({
+                width: 200,
+                url: '/ComboBoxData/Users',
+                textField: "UserName",
+                valueField: "Id",
+                initIsTriggerEvent: false
+                , keySupport: true
+                , onSelected: function (value) {
+                    userid = value;
+                }
+            });
+
+            $("#searchbtn").ligerButton({
+                click: function () {
+                    if (!gridManager) return;
+                    var keyword = $("#txtKeyword").val();
+                    gridManager.setOptions(
+                        { parms: [{ name: 'Keyword', value: keyword }, { name: 'userid', value: userid }] }
+                    );
+                    gridManager.loadData(true);
+                }
+            });
+            //展示表格的用户定义部分
+            gridManager.set({
+                columns: [
+                    { display: '关键词', name: 'KeyWord', width: 300 },
+                    { display: '数量', name: 'ct', width: 200 }
+                ],
+                url: "/ExtractResult/GroupQuery"
+                , dataAction: "server"
+                , onDblClickRow: function (data, rowid, rowdata) {
+                    showDetail1(data.KeyWord);
+                }
+            });
+        });
+        function showDetail1(keyword) {
+            var height = $(window).height() * 0.9;
+            var width = $(window).width() * 0.9;
+            $.ligerDialog.open({
+               title:"提取详情", name: 'dialogEdit', url: '/ExtractResult/Detail?key=' + keyword, height: height, width: width
+                , buttons: [{ text: '关闭', onclick: function (item, dialog) { dialog.close(); } }]
+            });
+            return;
+            //请求明细
+            //表格
+           var grid2 =  $("#maingrid2").ligerGrid({
+              height: '100%',
+                width: '100%',
+               pageSize: 50
+                , rownumbers: true,
+                checkbox: false,
+                //应用灰色表头
+                cssClass: 'l-grid-gray'
+                , usePager: true
+                , pageSizeOptions: [50, 100, 150, 200, 300]
+                , columns: [
+                    { display: '群组名', name: 'BatchName' },
+                    { display: '昵称', name: 'NickName' },
+                    { display: '消息内容', name: 'MContent' },
+                    {
+                        display: '时间', name: 'Time', render: function (item) {
+                            return formatDate(item.Time, 'yyyy-MM-dd hh:mm:ss')
+                        }
+                    }
+                ],
+                url: "/ExtractResult/GroupDetail"
+                , dataAction: "server"
+                , parms: [ { name: 'KeyWord', value: keyword }]
+
+            });
+            $.ligerDialog.open({ target: $("#maingrid2"), title: '关键字提取详情', width: $(window).width() - 100, height: $(window).height() - 100 });
+         
+        }
+    </script>
+}
+<div id="maingrid2" style="margin:0; padding:0"></div>
+

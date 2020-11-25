@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMapNode url="" tltle="首页" description="">
+	<siteMapNode url="" tltle="个人信息" description="">
+		<siteMapNode url="~\Admin\AdminrMessage.aspx" tltle="查看信息" description="" />
+		<siteMapNode url="~\Admin\ModifyMessage.aspx" tltle="修改信息" description="" />
+		<siteMapNode url="~\Admin\ModifyPassWord.aspx" tltle="修改密码" description="" />
+	</siteMapNode>
+	<siteMapNode url="" tltle="待审核信息" description="">
+		<siteMapNode url="~\Admin\AuditUpLoadTitle.aspx" tltle="审核新题目" description="" />
+	</siteMapNode>
+</siteMapNode>

@@ -1,0 +1,83 @@
+.css 
+{
+	font-size: 12px;
+}
+.cssTitle
+{
+	font-size: 15px;
+	color: darkblue;
+	font-style: normal;
+	font-family: 新宋体;
+	font-variant: normal;
+}
+.InputCss {  
+    font-size: 9pt; 
+    color: #003399; 
+    font-family: "宋体"; 
+    font-style: normal; 
+	/*background-color: #CCCC99; */
+    border-color: #93BEE2 #93BEE2 #93BEE2 #93BEE2 ; 
+    border: 1px #93BEE2 solid; 
+}
+.Newbutton
+{   font-size: 9pt; color: darkblue;
+	font-family: "Tahoma","宋体";
+	
+}
+/*按钮样式*/
+.ButtonCss {
+    font-family: "Tahoma", "宋体";
+    font-size: 10pt; color: #003399;
+    border: 1px #003399 solid;
+    color:006699;
+    BORDER-BOTTOM: #93bee2 1px solid; 
+    BORDER-LEFT: #93bee2 1px solid; 
+    BORDER-RIGHT: #93bee2 1px solid; 
+    BORDER-TOP: #93bee2 1px solid;
+    background-image:url(../Images/bluebuttonbg.gif);
+    background-color: #e8f4ff;
+    CURSOR: hand;
+    font-style: normal ;
+}
+/*蓝色按钮样式*/
+.blueButtonCss {
+    font-family: "Tahoma", "宋体";
+    font-size: 9pt; color: #003366;
+    border: 0px #93bee2 solid;
+   /* BORDER-BOTTOM: #93bee2 1px solid; 
+    BORDER-LEFT: #93bee2 1px solid; 
+    BORDER-RIGHT: #93bee2 1px solid; 
+    BORDER-TOP: #93bee2 1px solid;*/
+    background-image:url(../Images/blue_button_bg.gif);
+    background-color: #ffffff;
+    CURSOR: hand;
+    font-style: normal ;
+}
+/*红色按钮样式*/
+.redButtonCss {
+    font-family: "Tahoma", "宋体";
+    font-size: 9pt; color: #0066cc;
+    border: 1px #93bee2 solid;
+    BORDER-BOTTOM: #93bee2 1px solid; 
+    BORDER-LEFT: #93bee2 1px solid; 
+    BORDER-RIGHT: #93bee2 1px solid; 
+    BORDER-TOP: #93bee2 1px solid;
+    background-image:url(../Images/redbuttonbg.gif);
+    background-color: #ffffff;
+    CURSOR: hand;
+    font-style: normal ;
+}
+/*绿色按钮样式*/
+.greenButtonCss {
+    font-family: "Tahoma", "宋体";
+    font-size: 9pt; color: #0066cc;
+    border: 1px #93bee2 solid;
+    BORDER-BOTTOM: #93bee2 1px solid; 
+    BORDER-LEFT: #93bee2 1px solid; 
+    BORDER-RIGHT: #93bee2 1px solid; 
+    BORDER-TOP: #93bee2 1px solid;
+    background-image:url(../Images/greenbuttonbg.gif);
+    background-color: #ffffff;
+    CURSOR: hand;
+    font-style: normal ;
+}

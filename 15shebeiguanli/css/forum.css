@@ -1,0 +1,67 @@
+A:visited{ color:"#003366"; text-decoration: none}
+A:active{ color:"#00ff00";text-decoration: none}
+A:hover{ color:"#ff0000";text-decoration: underline;}
+A:link{ color:"#003399";text-decoration : none;}
+.T{LINE-HEIGHT: 1.4}
+BODY{
+        background-color:#ccffff;
+	margin-top:0;
+	margin-left:10;
+	FONT-FAMILY: ﾋﾎﾌ・ FONT-SIZE: 9pt;
+       
+scrollbar-base-color:#E0F0F0;
+scrollbar-face-color:#E8E8E8;
+scrollbar-darkshadow-color:#C0C0C0;}
+TD{FONT-FAMILY: ﾋﾎﾌ・ FONT-SIZE: 9pt}
+DIV{FONT-FAMILY: ﾋﾎﾌ・ FONT-SIZE: 9pt}
+FORM{FONT-FAMILY: ﾋﾎﾌ・ FONT-SIZE: 9pt}
+OPTION{FONT-FAMILY: ﾋﾎﾌ・ FONT-SIZE: 9pt}
+P{FONT-FAMILY:ﾋﾎﾌ・; FONT-SIZE: 9pt}
+TD{FONT-FAMILY: ﾋﾎﾌ・	FONT-SIZE: 9pt;}
+BR{FONT-FAMILY: ﾋﾎﾌ・ FONT-SIZE: 9pt}
+INPUT{FONT-FAMILY: ﾋﾎﾌ・ BORDER-TOP-WIDTH: 1px; PADDING-RIGHT: 1px; PADDING-LEFT: 1px; BORDER-LEFT-WIDTH: 1px; FONT-SIZE: 9pt; BORDER-LEFT-COLOR: #cccccc; BORDER-BOTTOM-WIDTH: 1px; BORDER-BOTTOM-COLOR: #cccccc; PADDING-BOTTOM: 1px; BORDER-TOP-COLOR: #cccccc; PADDING-TOP: 1px; HEIGHT: 20px; BORDER-RIGHT-WIDTH: 1px; BORDER-RIGHT-COLOR: #cccccc}
+textarea {border-width: 1; border-color: #000000; background-color: #efefef; font-family:ﾋﾎﾌ・; font-size: 9pt; font-style: bold;}
+select {border-width: 1; border-color: #000000; background-color: #efefef; font-family: ﾋﾎﾌ・ font-size: 9pt; font-style: bold;}
+UL {
+	FONT-SIZE: 12px; CURSOR: default; FONT-FAMILY:ﾋﾎﾌ・
+}
+LI {
+	FONT-SIZE: 12px; CURSOR: default; FONT-FAMILY: ﾋﾎﾌ・
+}
+P {
+	FONT-SIZE: 12px; CURSOR: default; FONT-FAMILY: ﾋﾎﾌ・
+}
+.bk {
+	BORDER-RIGHT: #d3d3d3 1px solid; BORDER-TOP: #808080 1px solid; PADDING-LEFT: 0.2em; FONT-SIZE: 100%; MARGIN-LEFT: -0.2em; BORDER-LEFT: #808080 1px solid; COLOR: #707070; BORDER-BOTTOM: #d3d3d3 1px solid
+}
+.Tips_bo {
+	BORDER-RIGHT: #d3d3d3 1px solid; BORDER-TOP: #808080 1px solid; PADDING-LEFT: 0.2em; FONT-SIZE: 100%; MARGIN-LEFT: -0.2em; BORDER-LEFT: #808080 1px solid; CURSOR: hand; COLOR: #707070; BORDER-BOTTOM: #d3d3d3 1px solid; FONT-FAMILY: "ﾋﾎﾌ・; BACKGROUND-COLOR: #e8e8e8; TEXT-DECORATION: none
+}
+.a1 {
+	background-color:#ccffff
+
+}
+.a2 {
+	BACKGROUND-COLOR: #a4b6d7
+}
+.a3 {
+	BACKGROUND-COLOR: #f2f8ff
+}
+.a4 {
+	BACKGROUND-COLOR: #ecf5ff
+}
+.CNavi1
+{ FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#6699ff', endColorStr='#ffffff', gradientType='1')}
+.CT1
+{ FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#6699ff', endColorStr='#d4e3ff', gradientType='1')}
+.CT2
+{ FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#d4e3ff', endColorStr='#6699ff', gradientType='1')}
+.CTB
+{ FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#1091F4', endColorStr='#eff8fe', gradientType='1')}
+TABLE.Middle
+{
+    BORDER-BOTTOM: #a0bce7 0px;
+    BORDER-LEFT: #a0bce7 1px solid;
+    BORDER-RIGHT: #a0bce7 1px solid;
+    BORDER-TOP: #a0bce7 1px
+}

@@ -1,0 +1,110 @@
+﻿@charset "utf-8";
+/*
+Powered By www.AllPower.com
+*/
+
+/*Reset*/
+*{ padding:0; margin:0}
+html,div,ul,li,dl,dt,dd,p,h1,h2,h3,h4,h5,h6,img,form,embed,label{margin:0;padding:0;border:0; font-size:12px; font-weight:normal;}
+img{border:none}
+object{ display:block;}
+ul,ul li{ list-style:none;} 
+.cls{clear:both; line-height:0px!important; height:0px!important;font-size:0px!important;} 
+.play{ display:none;} 
+select,input{ vertical-align:middle;font-size:12px;}  
+a {color:#666;text-decoration:none;}
+a:visited {color:#666;text-decoration:none;}
+a:hover {color:#ff0000;}
+a:active {color:#ff0000;}
+.dis{display:block;}
+.undis{display:none;}
+.hidden{ display:none}
+/*basic*/ 
+body{margin:0px; padding:0px;font-family:"\5B8B\4F53", Arial, Helvetica, sans-serif; font-size:12px;color:#333;}  
+
+/*wrap*/
+.wrap{ margin:0 auto; position:relative; width:100%;}
+
+
+/*head*/
+.head{ float:left; width:100%; background: url(../images/bg_top.jpg) no-repeat; height:73px;}
+.head h1{ float:left; margin: 20px; display:inline}
+.nav{ float:left; width:670px; line-height:35px; margin-top:42px; margin-left:0px; display:inline}
+.navlist li
+{
+    border:2px solid #1975c0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+float:left; background: #e3eefe; margin-left:5px; width:87px; padding-left:30px; font-size:14px; color:#888; font-weight:bold; display:inline; cursor:pointer}
+.navlist li.hover{ background:url(../image/tab1.gif) no-repeat; width:137px; color:#1b7ab7;}
+.rhead{ float:right; text-align:left; color:#fff; padding-top:5px; margin-right:30px; display:inline}
+.admin{ font-size:13px; padding-bottom:5px;}
+.oo{ color:#ffee88; font-weight:bold}
+
+.wrap .admin2 a{ color:#fff}
+.wrap .admin2 a:hover{ color:#fff}
+
+
+
+/*nav*/
+
+
+
+/*banner*/
+
+
+/*main*/
+.main{}
+
+/*left*/
+
+
+ 
+ 
+/*right*/ 
+
+
+ 
+ 
+/*m_left*/
+
+
+
+
+/*m_right*/
+
+
+
+
+/*foot*/
+.foot{}
+
+ 
+ 
+ 
+ 
+/*text*/
+.b{ font-weight:bold;}
+.f8{ font-size:8px;}
+.f9{ font-size:9px;}
+.f10{ font-size:10px;}
+.f11{ font-size:11px;}
+.f12{ font-size:12px;}
+.f13{ font-size:13px;}
+.f14{ font-size:14px;}
+.f15{ font-size:15px;}
+.f16{ font-size:16px;}
+.f18{ font-size:18px;}
+.f24{ font-size:24px;}
+.f32{ font-size:32px;}
+.f36{ font-size:36px;}
+.f_l{ float:left;}
+.f_r{ float:right;}
+.em{ text-indent:2em;}
+.hei{ color:#000;}
+.red{ color:#ff0000;}
+
+.Arial{ font-family:"Arial", Helvetica, sans-serif;}
+.yahei{ font-family:"\5FAE\8F6F\96C5\9ED1";} 
+ 
+/*txt btn*/

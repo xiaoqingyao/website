@@ -1,0 +1,160 @@
+﻿<!DOCTYPE HTML SYSTEM "-//Macromedia//DWExtension layout-engine 5.0//dialog">
+<html>
+<head>
+    <meta http-equiv="Content-Type" />
+    <title>登陆HQB站点</title>
+
+    <script language="JavaScript">
+        var sitefile = dreamweaver.getConfigurationPath() + "/Objects/HQB模板管理/Site.txt";
+        function commandButtons() {
+            return new Array("登陆", "login()", "取消", "window.close()")
+        }
+
+        function list() {
+            var sitestr = DWfile.read(sitefile);
+            var site = null;
+            var sitelist = document.getElementById("sitelist");
+
+            if (sitestr != null) {
+                site = sitestr.split("|||");
+            }
+            if (site.length == 5) {
+                if (site[3].length > 0) {
+                    document.getElementById("pwd").setAttribute("value", site[3]);
+                }
+                document.getElementById('dwAdress').value = site[2];
+                document.getElementById('forderPath').value = site[4];
+            }
+
+            var httpReply = MMHttp.postText(site[2], "op=innit", "application/x-www-form-urlencoded", "");
+
+            if (httpReply.statusCode == 200) {
+                var msg = httpReply.data;
+                sitelist.innerHTML = msg;
+                if (msg.length != "") {
+                    sitelist.options[0].selected = true;
+                }
+                for (var i = 0; i < sitelist.options.length; i++) {
+                    if (sitelist.options[i].value == site[0]) {
+                        sitelist.options[i].selected = true;
+                    }
+                }
+            }
+
+        }
+
+
+        function login() {
+            var pwd = document.getElementById("pwd").value;
+            if (pwd == "") {
+                alert("校验码不能为空");
+                return false;
+            }
+
+            var sitelist = document.getElementById("sitelist");
+            var sitevalue = sitelist.options[sitelist.selectedIndex].value;
+            var sitename = sitelist.options[sitelist.selectedIndex].text;
+            var dwadress = document.getElementById('dwAdress').value;
+            var fordpath = document.getElementById('forderPath').value;
+
+            if (testPath(fordpath)) {
+
+                var llurl = "op=log&sitevalue=" + sitevalue + "&pwd=" + encodeu(pwd);
+                var httpReply = MMHttp.postText(dwadress, llurl, "application/x-www-form-urlencoded", "");
+                var saveLoc = httpReply.data;
+                if (httpReply.statusCode == 200) {
+                    if (saveLoc == "校验成功") {
+                        if (!DWfile.exists(fordpath)) {
+                            DWfile.createFolder(fordpath)
+                        }
+                        DWfile.write(sitefile, sitevalue + "|||" + sitename + "|||" + dwadress + "|||" + pwd + "|||" + fordpath);
+                        window.close();
+
+                    }
+                }
+                else {
+                    alert("连接失败，请填写正确的DW接口地址！");
+                }
+            }
+
+        }
+
+        function encodeu(instr) {
+            return escape(instr).replace(/\&/g, "%26").replace(/\+/g, "%2B").replace(/\"/g, "%22").replace(/\'/g, "%27").replace(/\//g, "%2F");
+        }
+        function connect() {
+            var dwadress = document.getElementById('dwAdress').value;
+            var httpReply = MMHttp.postText(dwadress, "op=innit", "application/x-www-form-urlencoded", "");
+            var sitelist = document.getElementById("sitelist");
+            if (httpReply.statusCode == 200) {
+                alert("连接成功！");
+                var msg = httpReply.data;
+                sitelist.innerHTML = msg;
+
+                if (msg.length != "") {
+                    sitelist.options[0].selected = true;
+                }
+                DWfile.write(sitefile, " ||| |||" + dwadress + "||| |||");
+            }
+            else {
+                alert("连接失败，请填写正确的DW接口地址！");
+            }
+        }
+        function testPath(txt) {
+
+            var regExp = /^[a-zA-Z]\:(\\([^\\\/]){1,}){1,}/;
+            if (!regExp.test(txt)) {
+                alert("本地根文件夹路径设置有误");
+                return false;
+            }
+            return true;
+        } 
+
+    </script>
+
+</head>
+<body onload="list()">
+    <form name="theform" method="post" action="">
+    <div id="loginbody" style="width: 400px">
+        <div>
+            &nbsp; &nbsp; DW接口地址 &nbsp;
+            <input id="dwAdress" type="text" style="width: 200px" />
+            &nbsp;<input id="btnConnect" type="button" value="连接" onclick="connect()" /></div>
+        <hr />
+        <table>
+            <tr>
+                <td align="right">
+                    登陆到
+                </td>
+                <td>
+                    &nbsp;&nbsp;&nbsp;<select name="sitelist" style="width: 200px" id="sitelist">
+                        <option selected="selected">-请先连接DW接口-</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    校验码
+                </td>
+                <td>
+                    &nbsp;&nbsp;&nbsp;<input type="text" id="pwd" name="pwd" style="width: 200px" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    本地根文件夹
+                </td>
+                <td>
+                    &nbsp;&nbsp;&nbsp;<input id="forderPath" type="text" style="width: 240px" />
+                </td>
+            </tr>
+        </table>
+    </div>
+    <hr />
+    <div>
+        <img src="../../Shared/MM/Images/warningIcon.png" style="float: left" />1)效验码请参考远程主机SiteParam.config!
+        <br />
+        2)必须通过本地文件才能上传至服务器
+    </div>
+    </form>
+</body>

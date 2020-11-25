@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AdvertisingType>
+  <Row id="1">
+    <name>矩形横幅</name>
+    <value>1</value>
+    <src>Template_Banner.js</src>
+  </Row>
+  <Row id="2">
+    <name>弹出窗口</name>
+    <value>2</value>
+    <src>Template_Pop.js</src>
+  </Row>
+  <Row id="3">
+    <name>随屏移动</name>
+    <value>3</value>
+    <src>Template_Move.js</src>
+  </Row>
+  <Row id="4">
+    <name>固定位置</name>
+    <value>4</value>
+    <src>Template_Fixed.js</src>
+  </Row>
+  <Row id="5">
+    <name>漂浮移动</name>
+    <value>5</value>
+    <src>Template_Float.js</src>
+  </Row>
+  <Row id="6">
+    <name>文字代码</name>
+    <value>6</value>
+    <src>Template_Code.js</src>
+  </Row>
+  <Row id="7">
+    <name>对联广告</name>
+    <value>7</value>
+    <src>Template_Couplet.js</src>
+  </Row>
+</AdvertisingType>

@@ -1,0 +1,9 @@
+C:\Users\LVCC\Desktop\进销存\进销存管理系统_system\进销存管理系统\JXCBLL\bin\Debug\JXCBLL.dll
+C:\Users\LVCC\Desktop\进销存\进销存管理系统_system\进销存管理系统\JXCBLL\bin\Debug\JXCBLL.pdb
+C:\Users\LVCC\Desktop\进销存\进销存管理系统_system\进销存管理系统\JXCBLL\bin\Debug\JXCDAL.dll
+C:\Users\LVCC\Desktop\进销存\进销存管理系统_system\进销存管理系统\JXCBLL\bin\Debug\JXCMODEL.dll
+C:\Users\LVCC\Desktop\进销存\进销存管理系统_system\进销存管理系统\JXCBLL\bin\Debug\JXCDAL.pdb
+C:\Users\LVCC\Desktop\进销存\进销存管理系统_system\进销存管理系统\JXCBLL\bin\Debug\JXCMODEL.pdb
+C:\Users\LVCC\Desktop\进销存\进销存管理系统_system\进销存管理系统\JXCBLL\obj\Debug\JXCBLL.csprojResolveAssemblyReference.cache
+C:\Users\LVCC\Desktop\进销存\进销存管理系统_system\进销存管理系统\JXCBLL\obj\Debug\JXCBLL.dll
+C:\Users\LVCC\Desktop\进销存\进销存管理系统_system\进销存管理系统\JXCBLL\obj\Debug\JXCBLL.pdb

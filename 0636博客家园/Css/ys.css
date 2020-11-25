@@ -1,0 +1,297 @@
+body
+{
+	font-family: "宋体";
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+	margin-right: auto;
+	margin-left: auto;
+	background:#FEFCFD;
+	margin:0 auto;
+}
+.nbk {
+	border: 1px solid #F3EEEC;
+}
+.bt {
+	font-family: "宋体";
+	font-size: 14px;
+	font-style: normal;
+	line-height: 22px;
+	font-weight: bold;
+	font-variant: normal;
+	color: #156D9A;
+}
+.btCopy {
+
+	font-family: "宋体";
+	font-size: 14px;
+	font-style: normal;
+	line-height: 22px;
+	font-weight: bold;
+	font-variant: normal;
+	color: #000000;
+}
+.btCopy2 {
+
+	font-family: "宋体";
+	font-size: 14px;
+	font-style: normal;
+	line-height: 22px;
+	font-weight: bold;
+	font-variant: normal;
+	color: #FF0000; 
+}
+.zw {
+	font-size: 12px;
+	font-style: normal;
+	line-height: 20px;
+	font-weight: normal;
+	font-variant: normal;
+	color: #000000;
+}
+a
+{
+	text-decoration: none;
+	color: #00286C;
+}
+a:hover
+{
+	color: #003300;
+	text-decoration: underline;
+}
+a img
+{
+	border: 0;
+}
+a img, p, h1, h2, h3, h4, a, ul, li
+{
+	padding: 0;
+	padding: 0;
+}
+.divfontsystem
+{
+  font-size:12px;
+  line-height:24px;
+   vertical-align:middle;
+  	height: 24px;
+  	color:#5a5a5a;
+ 
+}
+.divfontsystem img{ vertical-align:middle;}
+.divfont
+{
+  font-size:13px;
+  line-height:22px; 
+  height:22px; 
+}
+.divList
+{
+  font-size:13px;
+  line-height:25px; 
+  height:25px
+}
+.inputcss input
+{
+    height: 20px;
+	border: 1px solid #cccccc;
+	margin: 0px;
+	padding: 0px;
+	background-image: url('images/text_bj.gif');
+	background-repeat: repeat-x;
+	background-position: left top;
+	line-height: 20px;
+	color: #999999;
+	width:90px;
+	text-align: center;
+    }
+    .inputkey input
+{
+    height: 20px;
+	border: 1px solid #cccccc;
+	margin: 0px;
+	padding: 0px;
+	background-image: url('images/Index_59.gif');
+	background-repeat: repeat-x;
+	background-position: left top;
+	line-height: 20px;
+	color: #999999;
+	width:165px;
+	vertical-align:top;
+	text-align: center;
+    }
+.M a:hover {
+	text-decoration: none;
+}
+.leftMenu
+{
+     color:#000;
+    font-size:13px;
+    font-weight:bold; 
+    line-height:30px;
+    letter-spacing:2px; vertical-align:sub;
+    }
+
+.LogininputCss
+{
+	border: 1px solid #abdafe;
+	margin: 0px;
+	padding: 0px;
+	background-repeat: repeat-x;
+	background-position: left top;
+	line-height: 20px;
+	color: #999999;
+	width: 163px;
+	height: 20px;
+}
+table{
+background-color:#ffffff
+}
+.tdbg_left
+{
+border: 1px solid #a1d2fa;
+}
+.PageList_bg
+{
+background-color:#ECECEC;
+border: 1px solid #a1d2fa;
+border-top:0 solid ;
+}
+
+div, ul, p{
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 100%;
+    font-family: inherit;
+}
+
+
+a:link, a:visited {
+    color: #333;
+    text-decoration: none;
+}
+
+.nav
+{
+	width: 999px;
+	position: relative;
+	margin: 0px auto;
+	background-color: #e8f2fc;
+	background: url(/images/qijian/mebg.jpg) repeat-x;
+}
+.navinner {
+	background-color: #e8f2fc;
+    background: url(/images/qijian/mebg.jpg) repeat-x;
+}
+.navlist
+{
+	height: 35px;
+	line-height: 35px;
+	overflow: hidden;
+	margin: 0 10px;
+}
+.nav li {
+    float: left;
+    display: inline;
+    margin: 0 0 0 -2px;
+    padding: 0 4px 0 6px;
+    vertical-align: middle;
+}
+
+.nav a {
+    display: block;
+    width: 78px;
+    text-align: center;
+    font-size: 120%;
+}
+.nav a:link, .nav a:visited {
+    color: #fff;
+}
+.nav a.current, .nav a:hover, .nav a:active {
+    color: #fff;
+    font-weight: bold;
+    background: url(/images/qijian/66.jpg) repeat-x;
+}
+.subnav {
+    position: absolute;
+    top: 41px;
+    left: 0;
+    float: left;
+    height: 27px;
+    line-height: 27px;
+    white-space: nowrap;
+}
+* html .subnav {
+    margin: 0 10px 0 -10px; /* IE 6 and below */
+}
+.subnav p {
+    padding: 0 10px;
+}
+.subnav p span {
+    display: block;
+}
+.subnav p.pointer {
+    position: absolute;
+    top: -4px;
+    left: 0;
+    height: 5px;
+    width: 11px;
+    padding: 0;
+    margin-left: 20px;
+    text-indent: -999em;
+}
+.subnav a {
+    display: inline;
+    padding: 0;
+    font-size: 100%;
+}
+[class~="subnav"] a {
+    padding: 0 3px;
+}
+.subnav, .subnav a:link, .subnav a:visited {
+    color: #235e99;
+}
+.subnav a:hover, .subnav a:active {
+    color: #235e99;
+}
+.subnav a:hover, .subnav a:active {
+    font-weight: normal;
+    background: none;
+    border-bottom: 2px solid;
+}
+/* subnav position and pointer position */
+#subnav1 { left: 120px; }
+#subnav2 { left: 230px; }
+#subnav3 { left: 320px; }
+#subnav4 { left: 430px; }
+#subnav5 { left: 550px; }
+ #subnav6, #subnav7 { 
+    left: auto;
+    right: 0px;
+}
+
+#subnav1 .pointer,
+#subnav2 .pointer,
+#subnav3 .pointer,
+#subnav4 .pointer { left: 30px; }
+#subnav5 .pointer, { left: 25px; }
+#subnav6 .pointer { left: auto; right: 180px; }
+#subnav7 .pointer { left: auto; right: 70px; }
+#subnav1, #subnav2, #subnav3, #subnav4 {
+    min-width: 100px;
+}
+
+#subnav6 { min-width: 240px; }
+#subnav7 { min-width: 130px; }
+
+.note {
+    margin: 0 15px 10px;
+	color:#666666;
+}
+.note span{
+	float:right;
+}
+.disablemenu {
+    display: none;
+}

@@ -1,0 +1,378 @@
+﻿body 
+{
+	font-size: 12px;
+	margin: 0px;
+}
+/*顶部<加入收藏><设为首页>*/
+#divTop a
+{
+	text-decoration: none;
+	color: #ffffff;
+} /* 链接无下划线,有为underline */ 
+#divTop a:link
+{
+	color: #ffffff;
+} /* 未访问的链接 */
+#divTop a:visited
+{
+	color: #ffffff;
+} /* 已访问的链接 */
+#divTop a:hover
+{
+	color: #FF0066;
+} /* 鼠标在链接上 */ 
+#divTop a:active
+{
+	color: #ffffff;
+} /* 点击激活链接 */
+/*顶部<加入收藏><设为首页>*/
+
+
+
+/*顶部<菜单>*/
+#tdMenu
+{
+	background-color: #e8f2fc;
+}
+
+#tdMenu a
+{
+	text-decoration: none;
+	color: #ffffff;
+} /* 链接无下划线,有为underline */ 
+#tdMenu a:link
+{
+	color: #ffffff;
+} /* 未访问的链接 */
+#tdMenu a:visited
+{
+	color: #ffffff;
+} /* 已访问的链接 */
+#tdMenu a:hover
+{
+	color: #FF0066;
+} /* 鼠标在链接上 */ 
+#tdMenu a:active
+{
+	color: #ffffff;
+} /* 点击激活链接 */
+/*顶部<菜单>*/
+
+
+
+/*<新闻列表>*/
+.divList
+{
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #dadada;
+}
+
+#divNews a
+{
+	text-decoration: none;
+	color: #000000;
+} /* 链接无下划线,有为underline */ 
+#divNews a:link
+{
+	color: #000000;
+} /* 未访问的链接 */
+#divNews a:visited
+{
+	color: #000000;
+} /* 已访问的链接 */
+#divNews a:hover
+{
+	color: #FF0066;
+} /* 鼠标在链接上 */ 
+#divNews a:active
+{
+	color: #000000;
+} /* 点击激活链接 */
+/*<新闻列表>*/
+
+/*<工程展示>*/
+#tdRoll a
+{
+	text-decoration: none;
+	color: #000000;
+} /* 链接无下划线,有为underline */ 
+#tdRoll a:link
+{
+	color: #000000;
+} /* 未访问的链接 */
+#tdRoll a:visited
+{
+	color: #000000;
+} /* 已访问的链接 */
+#tdRoll a:hover
+{
+	color: #FF0066;
+} /* 鼠标在链接上 */ 
+#tdRoll a:active
+{
+	color: #000000;
+} /* 点击激活链接 */
+/*<工程展示>*/
+
+
+/*<项目部动态>*/
+#divPrgmNew a
+{
+	text-decoration: none;
+	color: #000000;
+} /* 链接无下划线,有为underline */ 
+#divPrgmNew a:link
+{
+	color: #000000;
+} /* 未访问的链接 */
+#divPrgmNew a:visited
+{
+	color: #000000;
+} /* 已访问的链接 */
+#divPrgmNew a:hover
+{
+	color: #FF0066;
+} /* 鼠标在链接上 */ 
+#divPrgmNew a:active
+{
+	color: #000000;
+} /* 点击激活链接 */
+/*<项目部动态>*/
+
+
+/*<重点工程>*/
+#tdPorPro a
+{
+	text-decoration: none;
+	color: #000000;
+} /* 链接无下划线,有为underline */ 
+#tdPorPro a:link
+{
+	color: #000000;
+} /* 未访问的链接 */
+#tdPorPro a:visited
+{
+	color: #000000;
+} /* 已访问的链接 */
+#tdPorPro a:hover
+{
+	color: #FF0066;
+} /* 鼠标在链接上 */ 
+#tdPorPro a:active
+{
+	color: #000000;
+} /* 点击激活链接 */
+/*<重点工程>*/
+
+
+
+
+/*<董事长致辞>*/
+#divDSZC a
+{
+	text-decoration: none;
+	color: #000000;
+} /* 链接无下划线,有为underline */ 
+#divDSZC a:link
+{
+	color: #000000;
+} /* 未访问的链接 */
+#divDSZC a:visited
+{
+	color: #000000;
+} /* 已访问的链接 */
+#divDSZC a:hover
+{
+	color: #FF0066;
+} /* 鼠标在链接上 */ 
+#divDSZC a:active
+{
+	color: #000000;
+} /* 点击激活链接 */
+/*<董事长致辞>*/
+
+
+/*<通知公告>*/
+#divGG a
+{
+	text-decoration: none;
+	color: #000000;
+} /* 链接无下划线,有为underline */ 
+#divGG a:link
+{
+	color: #000000;
+} /* 未访问的链接 */
+#divGG a:visited
+{
+	color: #000000;
+} /* 已访问的链接 */
+#divGG a:hover
+{
+	color: #FF0066;
+} /* 鼠标在链接上 */ 
+#divGG a:active
+{
+	color: #000000;
+} /* 点击激活链接 */
+/*<通知公告>*/
+
+
+/*<左侧菜单>*/
+#tdLeftMenu a
+{
+	text-decoration: none;
+	color: #000000;
+} /* 链接无下划线,有为underline */ 
+#tdLeftMenu a:link
+{
+	color: #000000;
+} /* 未访问的链接 */
+#tdLeftMenu a:visited
+{
+	color: #000000;
+} /* 已访问的链接 */
+#tdLeftMenu a:hover
+{
+	color: #FF0066;
+} /* 鼠标在链接上 */ 
+#tdLeftMenu a:active
+{
+	color: #000000;
+} /* 点击激活链接 */
+/*<左侧菜单>*/
+
+
+
+
+/*<资源下载>*/
+#nli a
+{
+	text-decoration: none;
+	color: #000000;
+} /* 链接无下划线,有为underline */ 
+#nli a:link
+{
+	color: #000000;
+} /* 未访问的链接 */
+#nli a:visited
+{
+	color: #000000;
+} /* 已访问的链接 */
+#nli a:hover
+{
+	color: #FF0066;
+} /* 鼠标在链接上 */ 
+#nli a:active
+{
+	color: #000000;
+} /* 点击激活链接 */
+/*<资源下载>*/
+
+/*<资源下载>*/
+#tdUpLoad a
+{
+	text-decoration: none;
+	color: #FF0000;
+} /* 链接无下划线,有为underline */ 
+#tdUpLoad a:link
+{
+	color: #FF0000;
+} /* 未访问的链接 */
+#tdUpLoad a:visited
+{
+	color: #FF0000;
+} /* 已访问的链接 */
+#tdUpLoad a:hover
+{
+	color: #0099FF;
+} /* 鼠标在链接上 */ 
+#tdUpLoad a:active
+{
+	color: #FF0000;
+} /* 点击激活链接 */
+/*<资源下载>*/
+
+/*<联系我们>*/
+#divConUs a
+{
+	text-decoration: none;
+	color: #000000;
+} /* 链接无下划线,有为underline */ 
+#divConUs a:link
+{
+	color: #000000;
+} /* 未访问的链接 */
+#divConUs a:visited
+{
+	color: #000000;
+} /* 已访问的链接 */
+#divConUs a:hover
+{
+	color: #FF0066;
+} /* 鼠标在链接上 */ 
+#divConUs a:active
+{
+	color: #000000;
+} /* 点击激活链接 */
+/*<联系我们>*/
+
+/*<网址链接>*/
+#tdSiteAdd a
+{
+	text-decoration: none;
+	color: #000000;
+} /* 链接无下划线,有为underline */ 
+#tdSiteAdd a:link
+{
+	color: #000000;
+} /* 未访问的链接 */
+#tdSiteAdd a:visited
+{
+	color: #000000;
+} /* 已访问的链接 */
+#tdSiteAdd a:hover
+{
+	color: #FF0066;
+} /* 鼠标在链接上 */ 
+#tdSiteAdd a:active
+{
+	color: #000000;
+} /* 点击激活链接 */
+/*<网址链接>*/
+
+
+/*<打印><返回><顶部>*/
+#tdTools a
+{
+	text-decoration: none;
+	color: #000000;
+} /* 链接无下划线,有为underline */ 
+#tdTools a:link
+{
+	color: #000000;
+} /* 未访问的链接 */
+#tdTools a:visited
+{
+	color: #000000;
+} /* 已访问的链接 */
+#tdTools a:hover
+{
+	color: #FF0066;
+} /* 鼠标在链接上 */ 
+#tdTools a:active
+{
+	color: #000000;
+} /* 点击激活链接 */
+/*<打印><返回><顶部>*/
+
+
+
+#tdtitle
+{
+	color: #007eb8;
+	padding-left: 40px;
+	padding-top: 4px;
+	font-weight: bold;
+	height: 43px;
+}

@@ -1,0 +1,151 @@
+﻿<%@ Master Language="C#" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<script runat="server">
+
+</script>
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>某进销存管理系统</title>
+    
+    <script type="text/javascript" language="javascript">
+		function divshow(flag){
+			
+			switch(flag){
+				case 'jcgl':
+					ifelse(flag);
+					document.getElementById('jhgl').style.display='none';
+					document.getElementById('xsgl').style.display='none';
+					document.getElementById('kcgl').style.display='none';
+					break;
+				case 'jhgl':
+					ifelse(flag);
+					document.getElementById('jcgl').style.display='none';
+					document.getElementById('xsgl').style.display='none';
+					document.getElementById('kcgl').style.display='none';
+					break;
+				case 'xsgl':
+					ifelse(flag);
+					document.getElementById('jcgl').style.display='none';
+					document.getElementById('jhgl').style.display='none';
+					document.getElementById('kcgl').style.display='none';
+					break;
+				default :
+					ifelse(flag);
+					document.getElementById('jcgl').style.display='none';
+					document.getElementById('jhgl').style.display='none';
+					document.getElementById('xsgl').style.display='none';
+					break;
+			
+			}
+		}
+		function ifelse(flag){
+			var divs=document.getElementById(flag).style.display;
+			if(divs=='none')
+				document.getElementById(flag).style.display='block';
+			else
+				document.getElementById(flag).style.display='none';
+		}
+		
+		</script>
+		
+</head>
+
+<body style="MaRGIN-TOP: 0px; PaDDING-TOP: 0px; BaCKGROUND-COLOR: #000000; TEXT-aLIGN: center">
+		<div style="WIDTH: 1000px; BaCKGROUND-COLOR: #2c6c25">
+			<form id="Formd" method="post" runat="server">
+				<div style="BaCKGROUND-IMaGE: url(/images/logo.jpg);WIDTH: 1000px;HEIGHT: 100px;BaCKGROUND-COLOR: transparent"
+					align="center"></div>
+				<div style="CLEaR: left; WIDTH: 1000px; HEIGHT: 440px" align="left">
+					<table  width="1000" align="left">
+						<tr>
+							<td valign="top" align="left" colspan="1" rowspan="1" style="width: 150px">
+								<div style="FONT-WEIGHT: bold; BaCKGROUND-IMaGE: url(/images/dhx.jpg); WIDTH: 150px; COLOR: #996600; HEIGHT: 30px"
+									onclick="divshow('jcgl')" align="center">基础管理
+								</div>
+								<div id="jcgl" style="DISPLaY: none">
+									<div style="BaCKGROUND-IMaGE: url(/images/dh.jpg);WIDTH: 150px;COLOR: #ff0000;HEIGHT: 30px"
+										align="center" onclick="window.open('/Default.aspx?urlid=1','_self');">切换用户</div>
+									<div style="BaCKGROUND-IMaGE: url(/images/dh.jpg);WIDTH: 150px;COLOR: #ff0000;HEIGHT: 30px"
+										align="center" onclick="window.open('/Default.aspx?urlid=2','_self');">权限信息设置</div>
+									<div style="BaCKGROUND-IMaGE: url(/images/dh.jpg);WIDTH: 150px;COLOR: #ff0000;HEIGHT: 30px"
+										align="center" onclick="window.open('/Default.aspx?urlid=3','_self');">业务员信息设置</div>
+									<div style="BaCKGROUND-IMaGE: url(/images/dh.jpg);WIDTH: 150px;COLOR: #ff0000;HEIGHT: 30px"
+										align="center" onclick="window.open('/Default.aspx?urlid=4','_self');">客户信息设置</div>
+									<div style="BaCKGROUND-IMaGE: url(/images/dh.jpg);WIDTH: 150px;COLOR: #ff0000;HEIGHT: 30px"
+										align="center" onclick="window.open('/Default.aspx?urlid=5','_self');">供应商信息设置</div>
+									<div style="BaCKGROUND-IMaGE: url(/images/dh.jpg);WIDTH: 150px;COLOR: #ff0000;HEIGHT: 30px"
+										align="center" onclick="window.open('/Default.aspx?urlid=6','_self');">商品信息设置</div>
+									<div style="BaCKGROUND-IMaGE: url(/images/dh.jpg);WIDTH: 150px;COLOR: #ff0000;HEIGHT: 30px"
+										align="center" onclick="window.open('/Default.aspx?urlid=7','_self');">仓库信息设置</div>
+									<div style="BaCKGROUND-IMaGE: url(/images/dh.jpg);WIDTH: 150px;COLOR: #ff0000;HEIGHT: 30px"
+										align="center" onclick="window.open('/Default.aspx?urlid=8','_self');">角色信息设置</div>
+									<div style="BaCKGROUND-IMaGE: url(/images/dh.jpg);WIDTH: 150px;COLOR: #ff0000;HEIGHT: 30px"
+										align="center" onclick="window.open('/Default.aspx?urlid=9','_self');">会员类别类别信息设置</div>
+									<div style="BaCKGROUND-IMaGE: url(/images/dh.jpg);WIDTH: 150px;COLOR: #ff0000;HEIGHT: 30px"
+										align="center" onclick="window.open('/Default.aspx?urlid=10','_self');">产品类别信息设置</div>
+								</div>
+								<div style="FONT-WEIGHT: bold; BaCKGROUND-IMaGE: url(/images/dhx.jpg); WIDTH: 150px; COLOR: #996600; HEIGHT: 30px"
+									onclick="divshow('jhgl')" align="center">进货管理
+								</div>
+								<div id="jhgl" style="DISPLaY: none">
+									<div style="BaCKGROUND-IMaGE: url(/images/dh.jpg);WIDTH: 150px;COLOR: #ff0000;HEIGHT: 30px"
+										align="center" onclick="window.open('/Default.aspx?urlid=11','_self');">进货信息查询</div>
+									<div style="BaCKGROUND-IMaGE: url(/images/dh.jpg);WIDTH: 150px;COLOR: #ff0000;HEIGHT: 30px"
+										align="center" onclick="window.open('/Default.aspx?urlid=12','_self');">进货订单录入和修改</div>
+									<div style="BaCKGROUND-IMaGE: url(/images/dh.jpg);WIDTH: 150px;COLOR: #ff0000;HEIGHT: 30px"
+										align="center" onclick="window.open('/Default.aspx?urlid=13','_self');">进货单录入和修改</div>
+									<div style="BaCKGROUND-IMaGE: url(/images/dh.jpg);WIDTH: 150px;COLOR: #ff0000;HEIGHT: 30px"
+										align="center" onclick="window.open('/Default.aspx','_self');">进货单打印</div>
+								</div>
+								<div style="FONT-WEIGHT: bold; BaCKGROUND-IMaGE: url(/images/dhx.jpg); WIDTH: 150px; COLOR: #996600; HEIGHT: 30px"
+									onclick="divshow('xsgl')" align="center">销售管理
+								</div>
+								<div id="xsgl" style="DISPLaY: none">
+									<div style="BaCKGROUND-IMaGE: url(/images/dh.jpg);WIDTH: 150px;COLOR: #ff0000;HEIGHT: 30px"
+										align="center" onclick="window.open('/Default.aspx?urlid=14','_self');">销售信息查询</div>
+									<div style="BaCKGROUND-IMaGE: url(/images/dh.jpg);WIDTH: 150px;COLOR: #ff0000;HEIGHT: 30px"
+										align="center" onclick="window.open('/Default.aspx?urlid=15','_self');">销售订单录入和修改</div>
+									<div style="BaCKGROUND-IMaGE: url(/images/dh.jpg);WIDTH: 150px;COLOR: #ff0000;HEIGHT: 30px"
+										align="center" onclick="window.open('/Default.aspx?urlid=16','_self');">销售单录入和修改</div>
+									<div style="BaCKGROUND-IMaGE: url(/images/dh.jpg);WIDTH: 150px;COLOR: #ff0000;HEIGHT: 30px"
+										align="center" onclick="window.open('/Default.aspx','_self');">销售单打印</div>
+								</div>
+								<div style="FONT-WEIGHT: bold; BaCKGROUND-IMaGE: url(/images/dhx.jpg); WIDTH: 150px; COLOR: #996600; HEIGHT: 30px"
+									onclick="divshow('kcgl')" align="center">库存管理
+								</div>
+								<div id="kcgl" style="DISPLaY: none">
+									<div style="BaCKGROUND-IMaGE: url(/images/dh.jpg);WIDTH: 150px;COLOR: #ff0000;HEIGHT: 30px"
+										align="center" onclick="window.open('/Default.aspx?urlid=17','_self');">库存信息查询</div>
+									<div style="BaCKGROUND-IMaGE: url(/images/dh.jpg);WIDTH: 150px;COLOR: #ff0000;HEIGHT: 30px"
+										align="center" onclick="window.open('/Default.aspx?urlid=18','_self');">库存信息的设置</div>
+									<div style="BaCKGROUND-IMaGE: url(/images/dh.jpg);WIDTH: 150px;COLOR: #ff0000;HEIGHT: 30px"
+										align="center" onclick="window.open('/Default.aspx?urlid=19','_self');">进货订单的校验</div>
+									<div style="BaCKGROUND-IMaGE: url(/images/dh.jpg);WIDTH: 150px;COLOR: #ff0000;HEIGHT: 30px"
+										align="center" onclick="window.open('/Default.aspx?urlid=20','_self');">销售订单的校验</div>	
+									<div style="BaCKGROUND-IMaGE: url(/images/dh.jpg);WIDTH: 150px;COLOR: #ff0000;HEIGHT: 30px"
+										align="center" onclick="window.open('/Default.aspx','_self');">库存单打印</div>
+								</div>
+								<div style="FONT-WEIGHT: bold; BaCKGROUND-IMaGE: url(/images/dhx.jpg); WIDTH: 150px; COLOR: #996600; HEIGHT: 30px"
+									align="center" onclick="window.open('/Default.aspx?urlid=88','_self');">退出
+								</div>
+							</td>
+							<td valign="top" align="center" width="100%">
+							<div style="font-size: 12px; color: #996600;">
+                                <asp:contentplaceholder id="ContentPlaceHolder2" runat="server">
+                                </asp:contentplaceholder>
+                            </div>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</form>
+		</div>
+		<div style="BaCKGROUND-IMaGE: url(/images/icp.jpg);WIDTH: 1000px;HEIGHT: 50px;TEXT-aLIGN: center"
+			align="center"></div>
+	</body>
+
+
+</html>

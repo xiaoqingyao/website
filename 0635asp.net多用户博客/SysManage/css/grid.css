@@ -1,0 +1,43 @@
+﻿body
+{
+	margin-left: 0px;
+	margin-top: 8px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-size: 12px;
+}
+img{border:0;}
+a
+{
+	color: #135294;
+	text-decoration: none;
+	cursor: hand;
+}
+a:hover
+{
+	color: #ff6600;
+	text-decoration: underline;
+}
+
+.text_page
+{
+	height: 12px;
+	width: 20px;
+	border: 1px solid #999999;
+}
+
+.tab1 td
+{
+	background: #FFFFFF;
+	height: 20px;
+	padding-left: 5px;
+}
+
+.top_tr td
+{
+	height: 22px;
+	background:#c7d78c;
+}
+.textbox{ border:1px solid #88bb40;}
+.btn{ background-image:url(../images/search.gif); width:60px; height:24px; border:none;}
+.hidden{ display:none;}

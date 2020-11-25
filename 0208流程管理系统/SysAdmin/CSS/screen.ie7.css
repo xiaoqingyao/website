@@ -1,0 +1,210 @@
+﻿.tl-stage {
+	background-image: none;	
+}
+
+.tl-story-block .content {
+	min-height: 1px;
+	/*background: url(../ui/story-block/back.ie.png) left top no-repeat;	*/
+}
+
+img { -ms-interpolation-mode:bicubic; }
+
+.tl-admin-holder .tl-ah-list-block {
+	min-height: 1px;
+}
+
+.tl-admin-holder .tl-ah-list-block .tl-ah-list-item {
+	height: 15px;	
+	position: relative;
+}
+
+.tl-admin-holder .tl-ah-list-block .tl-ah-list-item .tl-ah-col-2 {
+	position: absolute;
+	top: 4px;
+	right: -4px;
+}
+
+.tl-admin-holder .tl-ah-tab-block {
+	min-height: 1px;	
+}
+
+.tl-ah-block {
+	min-height: 1px;	
+}
+
+.tl-ah-form-holder {
+	min-height: 1px;	
+}
+
+.tl-ah-field {
+	min-height: 1px;
+	position: relative;
+}
+
+.tl-ah-field .tl-ah-input {
+	min-height: 1px;	
+}
+
+.tl-admin-holder .tl-ah-field  .tl-ah-field-option {
+	margin-top:-16px;	
+}
+
+.tl-admin-holder .tl-ah-field label {
+	position: absolute;
+	left: 0;
+}
+
+.tl-admin-holder .tl-ah-field select {
+	position: relative;
+	left: 65px;
+}
+
+.tl-admin-holder .tl-ah-field-wider-label select {
+	position: relative;
+	left: 80px;
+}
+
+.tl-admin-holder #tl-ah-create-new-timeline-button, .tl-admin-holder  #tl-ah-story-add-media-button, .tl-admin-holder  #tl-ah-create-new-story-button {
+	padding-top: 10px !important;	
+}
+
+.tl-main-content-block-holder .tl-ch-standfirst {
+	font-style: normal;
+}
+
+#tl-container .tl-gallery .tl-g-content-mask {
+	display: none;	
+}
+
+#tl-container, body {
+	min-height: 1px;
+}
+
+.tl-ch-content-block {
+	height: 90%;
+	background: #000;	
+}
+
+.tl-lightbox-2 .tl-ch-content-block {
+	background: #fff;
+	margin-top: 2px;	
+}
+
+.tl-lightbox-2 .tl-g-main-content {
+	background: #000;	
+}
+
+.tl-content-holder-dont-display-gallery .tl-ch-content-block {
+	height: 1px;
+}
+
+/* Slider marker styles */
+
+.tl-s-ie-marker {
+	height: 15px;
+	width: 15px;
+	position: absolute;	
+	margin: -7px 0 0 -7px;
+}
+
+.tl-s-ie-marker-vertical {
+	width: 2px;
+	height: 6px;
+	position: absolute;
+	left: 7px;
+	top: 5px;
+}
+
+.tl-s-ie-marker-horizontal {
+	width: 6px;
+	height: 2px;
+	position: absolute;
+	left: 5px;
+	top: 7px;
+}
+
+#tl-ah-image-positioning-panel .tl-ahip-fake-dragger {
+	background: red;
+	filter: alpha(Opacity=1);
+	z-index: 1;
+}
+
+.tl-stage-view-color-category-stories .tl-story-block .bmp-shadow {
+	display: none;
+}
+
+.tl-stage-view-duration .tl-sb-duration-story .tl-sb-gallery-active .tl-sb-duration-bar {
+	top: 6px;
+	position: relative;
+}
+
+.tl-main-content-block-holder .tl-ch-top-content .tl-ch-media-list li {
+	display: inline;
+}
+
+#tl-slider-dragger .tlsd-corner {
+	display: none;	
+}
+
+.tl-view-category-band .tl-vcb-inner {
+	position: absolute;
+	left: 0;
+	top: 0;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+	width: 30000px;
+}
+
+.tl-main-title {
+	line-height: 17px;
+}
+
+.ft-ah-image-selector-tabs li {
+	display: inline;	
+}
+
+.ft-ah-image-selector-tabs .upload {
+	display: none !important;
+}
+
+.ft-ah-image-selector-tabs ul {
+	min-height: 1px;	
+}
+
+.tl-hide-scale-stripes .tl-stage .scale-block {
+	background: url(/assets/ui/empty-image.gif) !important;
+}
+
+/* USer controls */
+
+.tl-browser-type-advanced-css-unavailable #tl-uc-controls .menu-holder li {
+	display: inline;
+	top: -6px;	
+	float: left;
+}
+
+.tl-browser-type-advanced-css-unavailable #tl-uc-controls .menu-holder li a {
+	display: inline;
+	padding: 0 5px 0 5px;
+	margin: 0 0 0 0;		
+}
+
+.tl-browser-type-advanced-css-unavailable #tl-uc-panel .fp-carousel {
+	top: 10px;	
+}
+
+.tl-image-select-list li {
+	margin: 0 4px 0 0;	
+}
+
+#tl-uc-spacing-block select {
+	color: #333;
+	background: #fff;
+}
+
+.tl-sb-search-hide {
+	display: none;
+}
+
+#tl-uc-panel {
+	opacity: 1;	
+}

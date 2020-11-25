@@ -1,0 +1,194 @@
+﻿<!--<%@ page language="java" import="java.util.*" pageEncoding="gbk"%>-->
+<html><head>
+
+<STYLE type=text/css>
+BODY {
+	MARGIN: 0px; FONT: 9pt 宋体
+}
+TABLE {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px
+}
+TD {
+	FONT: 12px 宋体
+}
+IMG {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; VERTICAL-ALIGN: bottom; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px
+}
+A {
+	FONT: 12px 宋体; COLOR: #000000; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #215dc6
+}
+.sec_menu {
+	BORDER-RIGHT: #158BB7 1px solid; BACKGROUND: #ffffff; OVERFLOW: hidden; BORDER-LEFT:#158BB7 1px solid; BORDER-BOTTOM:#158BB7 1px solid
+}
+.list_title {
+	
+}
+.list_title SPAN {
+	FONT-WEIGHT: bold;
+	LEFT: 8px;
+	COLOR:#FFFFFF;
+	POSITION: relative;
+	TOP: 2px;
+	visibility: visible;
+}
+.list_title2 {
+	
+}
+.list_title2 SPAN {
+	FONT-WEIGHT: bold; LEFT: 8px; COLOR: #ffffff; POSITION: relative; TOP: 2px
+}
+</STYLE>
+<SCRIPT language=javascript>
+function show(obj,maxg,obj2)
+{
+  if(obj.style.pixelHeight<maxg)
+  {
+    obj.style.pixelHeight+=maxg/10;
+	obj.filters.alpha.opacity+=20;
+	obj2.background="Img/back_11.gif";
+    if(obj.style.pixelHeight==maxg/10)
+	  obj.style.display='block';
+	myObj=obj;
+	mymaxg=maxg;
+	myObj2=obj2;
+	setTimeout('show(myObj,mymaxg,myObj2)','5');
+  }
+}
+function hide(obj,maxg,obj2)
+{
+  if(obj.style.pixelHeight>0)
+  {
+    if(obj.style.pixelHeight==maxg/5)
+	  obj.style.display='none';
+    obj.style.pixelHeight-=maxg/5;
+	obj.filters.alpha.opacity-=10;
+	obj2.background="Img/back_08.gif";
+	myObj=obj;
+	mymaxg=maxg
+	myObj2=obj2;
+	setTimeout('hide(myObj,mymaxg,myObj2)','5');
+  }
+  else    if(whichContinue)
+	  whichContinue.click();
+}
+function chang(obj,maxg,obj2)
+{
+    
+  if(obj.style.pixelHeight)
+  {
+    hide(obj,maxg,obj2);
+	nopen='';
+	whichcontinue='';
+  }
+  else    if(nopen)
+	{
+	  whichContinue=obj2;
+      nopen.click();
+	}
+	else
+	{
+	  show(obj,maxg,obj2);
+	  nopen=obj2;
+	  whichContinue='';
+	}
+}
+</SCRIPT>
+
+
+</head>
+<body leftmargin="0" topmargin="0" >
+<TABLE cellSpacing=0 cellPadding=0 width="100%" align=left border=0> 
+<TBODY>
+  <TR>
+    <TD vAlign=top>
+      <TABLE cellSpacing=0 cellPadding=0 width=145 align=center>
+        <TBODY>
+        <TR style="CURSOR: hand">
+        </TR></TBODY></TABLE>
+       <SCRIPT language=javascript>
+  var nopen="";
+  var whichContinue='';
+      </SCRIPT>
+
+        <table align="center" background="Img/back_left_06.gif" border="0" cellpadding="0"
+            cellspacing="0" height="453" width="163">
+            <tr>
+                <td colspan="3" height="50">
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td height="390" width="10">
+                    &nbsp;</td>
+                <td valign="top" width="146">
+ <table cellspacing=0 cellpadding=0 width=145 align=center>
+  <tbody>
+    <tr style="CURSOR: hand">
+      <td class=list_title id=list9 
+          onMouseOver="this.typename='list_title2';" 
+          onClick=chang(menu9,60,list9); 
+          onMouseOut="this.typename='list_title';" 
+          background="Img/back_08.gif" 
+            height=25 style="width: 157px"><span>成绩管理</span> </td>
+    </tr>
+    <tr>
+      <td valign="middle" style="width: 157px">
+        <div class=sec_menu id=menu9 
+            style="DISPLAY: none; FILTER: alpha(Opacity=0); WIDTH: 145px; HEIGHT: 0px">
+          <table  cellspacing=2 
+            cellpadding=0 width=135 align=center>
+            <tbody>
+			  <tr>
+                <td height=25><a href=scoreAdd.aspx target="menu">□ 添加成绩</a></td>
+              </tr>
+             	  
+            </tbody>
+          </table>
+      </div></td>
+    </tr>
+  </tbody>
+</table>
+      <TABLE cellSpacing=0 cellPadding=0 width=145 align=center style="height: 100px">
+        <TBODY>
+        <TR style="CURSOR: hand">
+            <TD class=list_title id=list8 
+          onmouseover="this.typename='list_title2';" 
+          onclick=chang(menu8,80,list8); 
+          onmouseout="this.typename='list_title';" 
+          background="Img/back_08.gif" 
+            height=25><SPAN>个人信息维护</SPAN> </TD>
+          </TR>
+        <TR>
+            <TD valign="middle">              <DIV class=sec_menu id=menu8
+            style="FILTER: alpha(Opacity=100); WIDTH: 145px; HEIGHT:80px">
+                <TABLE  cellSpacing=0 cellPadding=0 width=135 align=center>
+                  <TBODY>
+              <TR>
+               <TD height=30> 
+               <p style="line-height: 200%">
+                   <a href=teacherChangePwd.aspx target="menu">□ 修改密码</a></TD></TR>
+               <TR>
+               <TD height=30> 
+               <p style="line-height: 200%">
+                   <a href=teacherInfo.aspx target="menu">□ 个人信息管理</a></TD></TR>
+              <TR>
+              <TD height=30> 
+              <p style="line-height: 200%">
+              </TD></TR></TBODY></TABLE>
+                <p class="sec_menu">&nbsp;</p>
+              </DIV></TD></TR></TBODY></TABLE>
+                </td>
+                <td width="7">
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="3" height="13">
+                    &nbsp;</td>
+            </tr>
+        </table>
+
+</TABLE>  
+</body>   
+</html>

@@ -1,0 +1,29 @@
+﻿<!DOCTYPE HTML SYSTEM "-//Macromedia//DWExtension layout-engine 5.0//dialog">
+<html>
+<head>
+ <meta http-equiv="Content-Type"  content="text/html; charset=utf-8"  />
+<title>插入包含标签</title>
+<script type="text/javascript">
+function commandButtons() {
+return new Array("插入标签", "GetValue()",  "取消", "window.close()")
+}
+function GetValue()
+{
+	var temptxt="{Include FilePath=\"";
+	var fp=document.getElementById("filepath").value;
+	temptxt+=fp+"\"}";
+	
+	dreamweaver.getDocumentDOM("document").source.wrapSelection(temptxt, '');
+	window.close();
+}
+function windowDimensions() { return "400,80"; }
+</script>
+</head>
+<body>
+<form name="theform" method="post" action="">
+<table width="350" border="0" align="center" cellpadding="4" cellspacing="1">
+<tr><td align="right"> 包含文件的路径</td><td><input type='text' value='' id='filepath'></td></tr>
+</table>
+</form>
+</body>
+</html>

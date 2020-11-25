@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <listlink>
+    <link id="1" order="1" isPublic="1"  text="显示全部">
+      <value>?Action=</value>
+    </link>
+    <link  id="2" order="2" text="锁定">
+      <value>?Action={s}{(IsLock)(=)(1)}</value>
+      <model><field name="IsLock" alias="锁定" type="Int" default="0" isradiao="1" value="是|1,否|0" isnull="1" /></model>
+    </link>
+    <link  id="3" order="3" text="未锁定">
+      <value>?Action={s}{(IsLock)(=)(0)}</value>
+      <model>
+        <field name="IsLock" alias="锁定" type="Int" default="0" isradiao="1" value="是|1,否|0" isnull="1" />
+      </model>
+    </link>
+    <link  id="4" order="4" text="推荐">
+      <value>?Action={s}{(IsCommend)(=)(1)}</value>
+      <model><field name="IsCommend" alias="推荐" type="Int" isradiao="1" value="是|1,否|0" default="0" isnull="1" /></model>
+    </link>
+    <link  id="5" order="5" text="未推荐">
+      <value>?Action={s}{(IsCommend)(=)(0)}</value>
+      <model>
+        <field name="IsCommend" alias="推荐" type="Int" isradiao="1" value="是|1,否|0" default="0" isnull="1" />
+      </model>
+    </link>
+    <link  id="6" order="6" text="置顶">
+      <value>?Action={s}{(IsTop)(=)(1)}</value>
+      <model><field name="IsTop" alias="置顶" type="Int" isradiao="1" value="是|1,否|0" default="0" isnull="1" /></model>
+    </link>
+<!--
+    <link  id="7" order="7" text="回收站"  isPublic="1">
+      <value>?IsDel=1</value>
+    </link>
+  
+     <link  id="8" order="8" text="归档内容">
+      <value>?IsArchiving=1</value>
+    </link>
+    -->
+ </listlink>
+  
+  <listbutton>
+    <link  id="1" isPublic="1"   order="1" text="添加" rights="New" rightsAlias="添加" >
+      <value>
+        <![CDATA[<%if(!string.Equals(ctrManageList.IsArchiving,"1") && !string.Equals(ctrManageList.IsDel,"1")){%><input type="button" value="添加" Href="{a}"  EditUrlParam="{#EditUrlParam#}" id="btnNew" /><%}%>]]></value>
+    </link>
+    
+    <link  id="2" isPublic="1"   order="2" text="删除" rights="Delete" rightsAlias="删除" >
+      <value><![CDATA[<%if(!string.Equals(ctrManageList.IsDel,"1")){%><input type="submit" value="删除" onclick="return confirmSetAction(this,'{e}{(IsDel)(1)}','确定删除选定记录至回收站？');"  runat="server" id="btnDelete" /><%}%>]]></value>
+    </link>
+     <link  id="3"   order="3" text="生成HTML" rights="CreateHtml" rightsAlias="生成HTML" >
+      <value><![CDATA[<%if(!string.Equals(ctrManageList.IsDel,"1")){%><input type="submit" value="生成HTML" onclick="return confirmSetAction(this,'{h}','确定将选定记录生成HTML？');"  runat="server" id="btnCreateHtml" /><%}%>]]></value>
+    </link>
+   <!--
+    <link  id="3" order="3" isPublic="1"  text="从回收站中还原" rights="Revert" rightsAlias="从回收站中还原" >
+      <value><![CDATA[<%if(string.Equals(ctrManageList.IsDel,"1")){%><input type="submit" id="btnRevert" onclick="return confirmSetAction('{e}{(IsDel)(0)}','确定还原选定记录？');"   value="还原" /><%}%>&nbsp;]]></value>
+    </link>
+   
+    <link  id="4" isPublic="1"  order="4" text="彻底删除" rights="Delete">
+      <value><![CDATA[<%if(string.Equals(ctrManageList.IsDel,"1")){%><input type="submit" id="btnDelete" onclick="return confirmSetAction('{d}','确定彻底删除选定记录？');"  runat="server"  value="删除" /><%}%>]]></value>
+    </link>
+    -->
+    <link  id="5"  order="5" text="添加到专题"  rights="AddToSpecial">
+      <value><![CDATA[<%if(!string.Equals(ctrManageList.IsArchiving,"1") && !string.Equals(ctrManageList.IsDel,"1")){%><input type="button" onclick="batchSpecialSet();"  id="btnAddToSpecial" runat="server"  value="添加到专题" /><%}%>]]></value>
+    </link>
+    <link  id="6"  order="6" text="添加到节点"  rights="AddToNode">
+      <value><![CDATA[<%if(!string.Equals(ctrManageList.IsArchiving,"1") && !string.Equals(ctrManageList.IsDel,"1")){%><input type="button" onclick="batchNodeSet();"  id="btnAddToNode" runat="server"  value="添加到节点" /><%}%>]]></value>
+    </link>    
+    <link id="7" order="7" text="通过审核"    rights="Check">
+      <value>
+        <![CDATA[<%if(ctrManageList.IsAllowFlow && !string.Equals(ctrManageList.IsArchiving,"1") && !string.Equals(ctrManageList.IsDel,"1")){%><input type="submit"  onclick="return setAction('HQB_PastFlowCheck');" value="通过审核"  runat="server"  id="btnPastFlowCheck" /><%}%>]]></value>
+    </link>
+    <link id="8" order="8" text="取消审核"    rights="CancelCheck">
+      <value>
+        <![CDATA[<%if(ctrManageList.IsAllowFlow && !string.Equals(ctrManageList.IsArchiving,"1") && !string.Equals(ctrManageList.IsDel,"1")){%><input type="submit"  onclick="return setAction('HQB_CancelFlowCheck');" value="取消审核"  runat="server"  id="btnCancelFlowCheck" /><%}%>]]></value>
+    </link>
+    <!--
+    <link  id="9" order="9" text="归档"     rights="Archiving">
+      <value><![CDATA[<%if(!string.Equals(ctrManageList.IsArchiving,"1") && !string.Equals(ctrManageList.IsDel,"1")){%><input type="submit" value="归档" onclick="return confirmSetAction('{e}{(IsArchiving)(1)}','确定将选定记录归档？');"  runat="server" id="btnArchiving" /><%}%>]]></value>
+    </link>
+     <link id="10" order="10" text="撤销归档"   rights="CancelArchiving">
+      <value>
+        <value><![CDATA[<%if(string.Equals(ctrManageList.IsArchiving,"1")){%><input type="submit" value="撤销归档" onclick="return confirmSetAction('{e}{(IsArchiving)(0)}','确定将所选记录从归档中撤销？');"  runat="server" id="btnCancelArchiving" /><%}%>]]></value>
+      </value>
+    </link>
+    -->
+    <link  id="11" order="11" text="推荐" rights="Commend">
+      <value>
+        <input type="submit" value="推荐" id="btnCommend"  runat="server" onclick="return setAction('{e}{(IsCommend)(1)}');" /></value>
+      <model>
+        <field name="IsCommend" alias="推荐" type="Int" isradiao="1" value="是|1,否|0" default="0" isnull="1" />
+      </model>
+    </link>
+    <link  id="12" order="12" text="置顶" rights="SetTop">
+      <value><input type="submit" value="置顶" onclick="return setAction('{e}{(IsTop)(1)}');"  runat="server"  id="btnSetTop" /></value>
+      <model><field name="IsTop" alias="置顶" type="Int" isradiao="1" value="是|1,否|0" default="0" isnull="1" /></model>
+    </link>
+  </listbutton>
+
+  <rptbutton width="30%">
+    <link id="1" order="1" rights="Edit" text="修改" rightsAlias="修改" btName="修改" isPublic="1"><![CDATA[<%if(!string.Equals(ctrManageList.IsDel,"1") &&  !string.Equals(ctrManageList.IsArchiving,"1")){%><input type="button"  BtnType="Edit"  Href='<%#"{#EditLink#}?action=edit&ID=" + Eval("ID").ToString()%>' value="修改"/>&nbsp;<%}%>]]></link>
+    <link id="2" order="2" rights="Delete" rightsAlias="删除"  btName="删除" text="删除到回收站" isPublic="1"><![CDATA[<%if(!string.Equals(ctrManageList.IsDel,"1")){%><input type="submit" BtnType="Delete" onclick="return rptConfirmSetAction(this,'<%#"{e}{(IsDel)(1)}{ID=" + Eval("ID").ToString() + "}"%>','确定删除当前记录？');" RecordID="<%#Eval("ID")%>"  value="删除" /><%}%>&nbsp;]]></link>
+      <link id="3" order="2" rights="CreateHtml" rightsAlias="生成HTML"  btName="生成HTML" text="生成HTML"><![CDATA[<%if(!string.Equals(ctrManageList.IsDel,"1")){%><input type="submit" BtnType="CreateHtml" onclick="return rptConfirmSetAction(this,'{h}','确定当前记录生成HTML？');" RecordID="<%#Eval("ID")%>"  value="生成HTML" /><%}%>&nbsp;]]></link>
+ <!--
+    <link id="3" order="3" rights="Revert" rightsAlias="从回收站中还原" btName="还原" text="从回收站中还原" ><![CDATA[<%if(string.Equals(ctrManageList.IsDel,"1")){%><input type="submit" id="btnRevert" onclick="return rptConfirmSetAction('<%#"{e}{(IsDel)(0)}{ID=" + Eval("ID").ToString() + "}"%>','确定还原当前记录？');"   value="还原" /><%}%>&nbsp;]]></link>
+    <link id="4" order="4" rights="Delete" rightsAlias="删除" text="彻底删除"  btName="删除"  isPublic="1" ><![CDATA[<%if(string.Equals(ctrManageList.IsDel,"1")){%><input type="submit" id="btnDelete" onclick="return rptConfirmSetAction('<%#"{d}{(ID)(=)(" + Eval("ID").ToString() + ")}"%>','确定彻底删除当前记录？');"   value="删除" />&nbsp;<%}%>]]> </link>
+  
+    <link id="5" order="5" rights="Archiving" rightsAlias="归档" text="归档"   btName="归档" ><![CDATA[<%if(!string.Equals(ctrManageList.IsArchiving,"1") && !string.Equals(ctrManageList.IsDel,"1")){%><input type="submit" id="btnArchiving" onclick="return rptConfirmSetAction('<%#"{e}{(IsArchiving)(1)}{ID=" + Eval("ID").ToString() + "}"%>','确定将当前记录归档？');"   value="归档" /><%}%>&nbsp;]]></link>
+    <link id="6" order="6" rights="CancelArchiving" rightsAlias="撤销归档"  btName="撤销归档"  text="撤销归档"><![CDATA[<%if(string.Equals(ctrManageList.IsArchiving,"1")){%><input type="submit" id="btnCancelArchiving" onclick="return rptConfirmSetAction('<%#"{e}{(IsArchiving)(0)}{ID=" + Eval("ID").ToString() + "}"%>','确定撤销归档？');"   value="撤销归档" /><%}%>&nbsp;]]></link>
+      -->
+    <link id="7" order="7" rights="SeekRecruit" rightsAlias="查看简历" btName="查看简历" text="查看简历">
+      <![CDATA[<input type="button" value="查看简历" onclick="setLocation('Recruitlist.aspx?JobID={$ID$}&')" />]]>
+     
+    </link>
+     <link id="8" order="8" btName="类型管理" text="期刊类型管理">
+      <![CDATA[<input type="button" value="类型管理" onclick="setLocation('PeriodicalCatalogList.aspx?PeriodicalID={$ID$}&')" />]]>
+    </link>
+     <link id="9" order="9" btName="文章列表" text="期刊文章列表">
+      <![CDATA[<input type="button" value="文章列表" onclick="setLocation('PeriodicalArticleList.aspx?PeriodicalID={$ID$}&')" />]]>
+    </link>
+ </rptbutton>
+</config>

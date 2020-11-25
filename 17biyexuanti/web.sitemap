@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap>
+	<siteMapNode title="首页" url="">
+		<siteMapNode url="" title="个人信息" description="">
+			<siteMapNode url="~\Admin\AdminrMessage.aspx" title="查看信息" description="" ></siteMapNode>
+			<siteMapNode url="~\Admin\ModifyMessage.aspx" title="修改信息" description="" ></siteMapNode>
+			<siteMapNode url="~\Admin\ModifyPassWord.aspx" title="修改密码" description="" ></siteMapNode>
+		</siteMapNode>
+		<siteMapNode url="" title="待审核信息" description="">
+			<siteMapNode url="~\Admin\AuditUpLoadTitle.aspx" title="审核新题目" description="" ></siteMapNode>
+		</siteMapNode>
+		<siteMapNode url="" tltle="个人信息" description="">
+			<siteMapNode url="~\Student\StudentMessage.aspx" tltle="查看信息" description="" />
+			<siteMapNode url="~\Student\ModifyMessage.aspx" tltle="修改信息" description="" />
+			<siteMapNode url="~\Student\ModifyPassWord.aspx" tltle="修改密码" description="" />
+		</siteMapNode>
+		<siteMapNode url="" title="论文信息" description="">
+			<siteMapNode url="~\Student\UpLoadThesis.aspx" title="上传论文" description="" />
+			<siteMapNode url="~\Student\ModifyThesis.aspx" title="修改论文" description="" />
+		</siteMapNode>
+		<siteMapNode url="" title="标题信息" description="">
+			<siteMapNode url="~\Student\ChooseTitle.aspx" title="选择题目" description="" />
+			<siteMapNode url="~\Student\UpLoadTitle.aspx" title="上传自定义题目" description="" />
+		</siteMapNode>
+		<siteMapNode url="~\Student\LeaveMessage.aspx" title="留言" description="">
+		</siteMapNode>
+		<siteMapNode url="" title="添加用户" description="">
+			<siteMapNode url="~\SuperAdmin\AddTeacher.aspx" title="添加教师" description="" />
+			<siteMapNode url="~\SuperAdmin\addAdmin.aspx" title="审核新题目" description="" />
+		</siteMapNode>
+	</siteMapNode>
+</siteMap>
+
+
+

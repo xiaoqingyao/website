@@ -1,0 +1,97 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>portal</title>
+    <link href="../../lib/ligerUI/skins/Aqua/css/ligerui-all.css" rel="stylesheet" type="text/css">
+    <script src="~/lib/jquery/jquery-1.9.0.min.js" type="text/javascript"></script>
+    <script src="~/lib/ligerUI/js/core/base.js" type="text/javascript"></script>
+    <script src="~/lib/ligerUI/js/plugins/ligerPanel.js" type="text/javascript"></script>
+    <script src="~/lib/ligerUI/js/plugins/ligerPortal.js" type="text/javascript"></script>
+    <script src="~/lib/ligerUI/js/plugins/ligerDrag.js"></script>
+    <script src="~/lib/ligerUI/js/plugins/ligerButton.js"></script>
+    <script src="~/lib/ligerUI/js/core/inject.js"></script>
+    <script src="~/lib/json2.js"></script>
+    <script type="text/javascript">
+        var manager;
+        var loginImg;
+        $(function () {
+            $("#PStatus").ligerPanel({
+                title: '服务器状态',
+                height: 100,
+                width: $(window).width() - 10
+            });
+            $("#LoginUrl").ligerPanel({
+                title: '二维码扫描区',
+                height: 10,
+                width: $(window).width() - 10
+            });
+
+            LoadServerStatus();
+
+            $("#loadLoginImg").ligerButton({
+                width: 90,
+                height:50,
+                click: function () {
+                    $.post("/WeChat/WantLogin", null, function (data, status) {
+                        if (status == "success") {
+                            if (data.Code == 1) {
+                                $("#img_prev").attr("src","/lib/images/loading.gif");
+                                //间隔五秒去获取一次图片
+                                loginImg = setInterval("LoadLoginImg()", 5000);
+                            } else {
+                                alert("服务器出错，详细信息：" + data.Message);
+                            }
+                        }
+                    });
+                }
+            });
+        });
+        var statusI = setInterval("LoadServerStatus()", 5000);
+        function LoadServerStatus() {
+            
+            $.post("/WeChat/ServerStatus", null, function (data, status) {
+                if (status == "success") {
+                    if (data.Code == 1) {
+                        $("#lblstatus").text(data.Message);
+                    } else {
+                        $("#lblstatus").html("服务器出错，详细信息：" + data.Message);
+                    }
+                }
+            });
+        }
+        
+        function LoadLoginImg() {
+ 
+            $.post("/WeChat/GetLoginImg", null, function (data, status) {
+                if (data.Code == 0) {
+                    alert("加载登录二维码时出错，原因：" + data.Message);
+                } else if (data.Data && data.Data.length > 0) {
+                    var img = data.Data;
+                    $("#img_prev").attr("src", img);
+                    clearInterval(loginImg);
+                }
+            });
+        }
+    </script>
+
+</head>
+<body>
+    <div id="PStatus">
+        <lablel id="lblstatus" style="margin: 11px;font-size: 14px;"></lablel>
+        <img id="loginImage" src="http://uploadfile.cms.aba.com.cn/files/public/ZhiShi/2017/01/12/4b0a10a6-57bc-43fa-84a3-8d93d8c252b5.png" />
+    </div>
+    <div id="LoginUrl">
+    </div>
+    <div style="margin:10px">
+        <input type="button" value="加载二维码" id="loadLoginImg" />
+        <img id="img_prev" src="" style="width:200px;">
+    </div>
+</body>
+</html>

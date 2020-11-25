@@ -1,0 +1,69 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_LayoutList.cshtml";
+}
+@section scripts{
+    <script type="text/javascript">
+        var userid = '';
+        $(function () {
+            $("#user").ligerComboBox({
+                width: 200,
+                url:'/ComboBoxData/Users',
+                textField: "UserName",
+                valueField:"Id",
+                initIsTriggerEvent: false
+                , keySupport: true
+                ,onSelected: function (value) {
+                    userid = value;
+                }
+            });
+
+            //搜索
+            $("#searchbtn").ligerButton({
+                click: function () {
+                    if (!gridManager) return;
+                    var keyword = $("#txtKeyword").val();
+                    gridManager.setOptions(
+                        { parms: [{ name: 'RemarkName', value: keyword }, { name: 'userid', value: userid }] }
+                    );
+                    gridManager.loadData(true);
+                }
+            });
+            //展示表格的用户定义部分
+
+            gridManager.set({
+                columns: [
+                    { display: '用户名', name: 'UserName', width: 150 },
+                    { display: '群组名', name: 'BatchName', width: 150 },
+                    { display: '昵称', name: 'NickName', width: 150 },
+                    { display: '备注名', name: 'RemarkName', width: 150 },
+                    {
+                        display: '时间', name: 'Time', render: function (item) {
+                            return formatDate(item.Time, "yyyy-MM-dd hh:mm:ss")
+                        }, width: 150
+                    },
+                    { display: '内容', name: 'MContent', align: 'left' }
+                ],
+                url: "/WxMessage/Query"
+                , dataAction: "server"
+            });
+        });
+    </script>
+}
+@section SearchPanel{
+    <div class="l-panel-search-item">
+        用户：
+    </div>
+    <div class="l-panel-search-item">
+        <input type="text" id="user" readonly="" data-comboboxid="user" class="l-text-field" >
+    </div>
+    <div class="l-panel-search-item">
+        备注名：
+    </div>
+    <div class="l-panel-search-item">
+        <input type="text" id="txtKeyword" />
+    </div>
+    <div class="l-panel-search-item">
+        <div id="searchbtn" style="width:80px;">搜索</div>
+    </div>
+}

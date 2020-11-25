@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AdvertisingSizeType>
+  <Row>
+    <name>IAB - 468 x 60 IMU (横幅广告)</name>
+    <value>468x60</value>
+  </Row>
+  <Row>
+    <name>IAB - 234 x 60 IMU (半幅广告)</name>
+    <value>234x60</value>
+  </Row>
+  <Row>
+    <name>IAB - 88 x 31 IMU (小按钮)</name>
+    <value>88x31</value>
+  </Row>
+  <Row>
+    <name>IAB - 120 x 90 IMU (按钮一)</name>
+    <value>120x90</value>
+  </Row>
+  <Row>
+    <name>IAB - 120 x 60 IMU (按钮二)</name>
+    <value>120x60</value>
+  </Row>
+  <Row>
+    <name>IAB - 728 x 90 IMU (通栏广告) </name>
+    <value>728x90</value>
+  </Row>
+  <Row>
+    <name>IAB - 120 x 240 IMU (竖幅广告)</name>
+    <value>120x240</value>
+  </Row>
+
+  <Row>
+    <name>IAB - 125 x 125 IMU (方形按钮)</name>
+    <value>125x125</value>
+  </Row>
+  <Row>
+    <name>IAB - 180 x 150 IMU (长方形) </name>
+    <value>180x150</value>
+  </Row>
+  <Row>
+    <name>IAB - 300 x 250 IMU (中长方形)</name>
+    <value>300x250</value>
+  </Row>
+  <Row>
+    <name>IAB - 336 x 280 IMU (大长方形)</name>
+    <value>336x280</value>
+  </Row>
+  <Row>
+    <name>IAB - 240 x 400 IMU (竖长方形)</name>
+    <value>240x400</value>
+  </Row>
+  <Row>
+    <name>IAB - 250 x 250 IMU (正方形弹出)</name>
+    <value>250x250</value>
+  </Row>
+  <Row>
+    <name>IAB - 120 x 600 IMU (摩天大楼)</name>
+    <value>120x600</value>
+  </Row>
+  <Row>
+    <name>IAB - 160 x 600 IMU (宽摩天大楼)</name>
+    <value>160x600</value>
+  </Row>
+  <Row>
+    <name>IAB - 300 x 600 IMU (半页广告)</name>
+    <value>300x600</value>
+  </Row>
+  <Row>
+    <name>自定义大小</name>
+    <value>100x100</value>
+  </Row>
+</AdvertisingSizeType>

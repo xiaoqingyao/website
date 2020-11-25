@@ -1,0 +1,58 @@
+写系统日志
+SDLX.BLL.ERPRiZhi MyRiZhi = new SDLX.BLL.ERPRiZhi();
+MyRiZhi.UserName = SDLX.Common.PublicMethod.GetSessionValue("UserName");
+MyRiZhi.DoSomething = "用户修改单位信息";
+MyRiZhi.IpStr = System.Web.HttpContext.Current.Request.UserHostAddress.ToString();
+MyRiZhi.Add();
+
+内部邮件
+	状态分为 未读、已读、草稿、删除
+	
+Internet邮件 
+    状态：未读、已发、已删、草稿    
+    
+工作计划审批规则设置：
+每份工作计划需要设定可查看人，查看人格式如：  用户1，用户2，用户3
+
+论坛每个版块设置了访问权限
+
+
+工作流程部分权限加上   角色加、改 、个人权限查看、工作流程部分界面按钮权限、main.aspx权限判断
+桌面加上工作流这块
+工作流节点采用图形结构显示
+编辑文档时加红头文件、印章插入功能。写入印章日志
+
+工作流设计开发时纪要：
+印章管理：   印章名称、印章类别（公章or私章）  印章密码    属于人
+印章日志：   印章名称、印章类别     使用人  ip   使用时间
+
+表单类别：直接设置成类别字符串，采用 | 分隔
+表单设计：表单名称、表单类别、使用范围（哪些人允许使用这个表单）、创建日期    
+          表单设计时可添加表单字段，添加的字段分为“常规型”和“数字型”，添加的字段可作为流程中比较的条件
+
+工作流管理：先选择表单，每个表单可对应多个工作流程。    
+工作流字段设置：流程名称、对应表单、使用人列表（限制哪些人可用）、结束后归档到（不归档或者归档到哪一类）
+工作流节点设置：（分为图形和列表） 对应工作流、步骤序号、步骤名称、位置（开始、中间段、结束）、下一步骤、评审模式、审批人员如何选择、结束时间设置、编辑文档、删除文档
+                条件设置、经办人员
+                
+                
+工作流节点说明：
+
+	WorkFlowID	int	4	1                   对应工作流名称，如：148
+	JieDianSerils	varchar	50	1           节点序号，如：1
+	JieDianName	varchar	50	1               节点名称，如：请假撰稿
+	JieDianAddr	varchar	50	1               节点位置，如：开始    中间段    结束
+	NextJieDianSerils	varchar	50	1       下一节点序号，如：2,3,5
+	PingShenMoShi	varchar	500	1           评审模式：一人通过可向下流转、全部通过可向下流转
+	ShengPiUserSetting	varchar	50	1       审批人设置：审批时自由指定    审批时从经办人列表中指定
+	JieShuHours	int	4	1                   多长小时未审批转下一流程。
+	IFEditFile	varchar	50	1               是否允许编辑附件文件
+	IFDelFile	varchar	50	1               是否允许删除附件文件
+	TiaoJianTiaoZhuan	varchar	8000	1   条件跳转，如：  请假天数[数字型] '>' 10→3|请假天数[数字型] '<=' 10→2 | 请假部门[常规型]'=='开发部→5
+	JingBanRenYuanList	varchar	8000	1   经办人列表。如：admin,王财务,test
+	
+公文状态分为：正在办理   正常结束   强制结束  已被驳回
+
+
+
+发布新信息、信息处理、相关操作时邮件、短信通知相关人员  

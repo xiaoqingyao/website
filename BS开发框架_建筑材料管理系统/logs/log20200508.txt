@@ -1,0 +1,591 @@
+2020-05-08 00:03:50,552 [12440] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2020-05-08 00:03:50,742 [12440] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2020-05-08 00:03:50,746 [12440] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2020-05-08 00:03:50,764 [12440] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2020-05-08 00:04:15,768 [13440] DEBUG Servicesys_user - 获取实体对象
+2020-05-08 00:04:15,777 [13440] DEBUG Sys - select sys_user.* from sys_user where  UserCode =  'admin'and Password =  '1234'and IsEnable =  'True'
+2020-05-08 00:04:16,050 [13440] DEBUG Sys - 
+update sys_user
+set LoginCount = isnull(LoginCount,0) + 1
+   ,LastLoginDate = getdate()
+where UserCode = 'admin' 
+2020-05-08 00:04:16,287 [13440] DEBUG Sys - insert into sys_loginHistory([UserCode],[UserName],[HostName],[HostIP],[LoginCity],[LoginDate]) values('admin','管理员','','101.41.168.8','','2020/5/8 0:04:16')
+2020-05-08 00:04:16,335 [13440] DEBUG Servicemms_project - 获取实体对象
+2020-05-08 00:04:16,335 [13440] DEBUG Mms - select mms_project.* from mms_project where  ProjectCode =  '201306030001'
+2020-05-08 00:04:16,427 [13440] DEBUG Sys - select * from sys_userSetting where UserCode='admin'
+2020-05-08 00:04:17,786 [13632] DEBUG Sys - 
+--角色的菜单
+select distinct B.*
+from sys_roleMenuMap A
+inner join sys_menu  B on B.MenuCode = A.MenuCode
+where B.IsEnable='1'
+  and RoleCode in (
+  select RoleCode from sys_userRoleMap where UserCode = 'admin' --用户的角色
+union all
+  select RoleCode from sys_organizeRoleMap where OrganizeCode in  --机构的角色
+  (
+	select OrganizeCode from sys_userOrganizeMap where UserCode = 'admin'
+  )  
+)
+order by B.MenuSeq,B.MenuCode
+2020-05-08 00:04:21,201 [13440] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'admin'
+and C.URL in ('/Mms/receive/Index','/Mms/receive')
+2020-05-08 00:04:21,215 [13440] DEBUG Servicemms_warehouse - 获取动态列表
+2020-05-08 00:04:21,216 [13440] DEBUG Mms - select WarehouseCode as value,WarehouseName as text from mms_warehouse where  ProjectCode =  '201306030001'
+2020-05-08 00:04:21,228 [13440] DEBUG Servicesys_code - 获取动态列表
+2020-05-08 00:04:21,228 [13440] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'SupplyType'
+2020-05-08 00:04:21,725 [13440] DEBUG Servicemms_receive - 获取动态列表
+2020-05-08 00:04:21,726 [13440] DEBUG Mms - select top 20 
+        A.*, B.ProjectName, C.MaterialTypeName, D.WarehouseName as WarehouseName, E.MerchantsName AS SupplierName
+     from 
+        mms_receive A
+        left join mms_project       B on B.ProjectCode      = A.ProjectCode
+        left join mms_materialType  C on C.MaterialType = A.MaterialType
+        left join mms_warehouse         D on D.WarehouseCode       = A.WarehouseCode
+        left join mms_merchants     E on E.MerchantsCode    = A.SupplierCode
+     where  A.ProjectCode =  '201306030001' order by A.BillNo
+2020-05-08 00:04:21,780 [13440] DEBUG Mms - select count(*) from ( select 
+        A.*, B.ProjectName, C.MaterialTypeName, D.WarehouseName as WarehouseName, E.MerchantsName AS SupplierName
+     from 
+        mms_receive A
+        left join mms_project       B on B.ProjectCode      = A.ProjectCode
+        left join mms_materialType  C on C.MaterialType = A.MaterialType
+        left join mms_warehouse         D on D.WarehouseCode       = A.WarehouseCode
+        left join mms_merchants     E on E.MerchantsCode    = A.SupplierCode
+     where  A.ProjectCode =  '201306030001' ) tb_temp
+2020-05-08 00:04:24,772 [13440] DEBUG Servicemms_receive - 获取动态列表
+2020-05-08 00:04:24,773 [13440] DEBUG Mms - with PagedPersons as
+								(
+									select top 100 percent 
+        A.*, B.ProjectName, C.MaterialTypeName, D.WarehouseName as WarehouseName, E.MerchantsName AS SupplierName
+    , row_number() over (order by A.BillNo) as FLUENTDATA_ROWNUMBER
+									 from 
+        mms_receive A
+        left join mms_project       B on B.ProjectCode      = A.ProjectCode
+        left join mms_materialType  C on C.MaterialType = A.MaterialType
+        left join mms_warehouse         D on D.WarehouseCode       = A.WarehouseCode
+        left join mms_merchants     E on E.MerchantsCode    = A.SupplierCode
+     where  A.ProjectCode =  '201306030001'
+								)
+								select *
+								from PagedPersons
+								where fluentdata_RowNumber between 21 and 40
+2020-05-08 00:04:24,809 [13440] DEBUG Mms - select count(*) from ( select 
+        A.*, B.ProjectName, C.MaterialTypeName, D.WarehouseName as WarehouseName, E.MerchantsName AS SupplierName
+     from 
+        mms_receive A
+        left join mms_project       B on B.ProjectCode      = A.ProjectCode
+        left join mms_materialType  C on C.MaterialType = A.MaterialType
+        left join mms_warehouse         D on D.WarehouseCode       = A.WarehouseCode
+        left join mms_merchants     E on E.MerchantsCode    = A.SupplierCode
+     where  A.ProjectCode =  '201306030001' ) tb_temp
+2020-05-08 00:04:27,557 [13440] DEBUG Servicemms_receive - 获取动态列表
+2020-05-08 00:04:27,557 [13440] DEBUG Mms - select top 20 
+        A.*, B.ProjectName, C.MaterialTypeName, D.WarehouseName as WarehouseName, E.MerchantsName AS SupplierName
+     from 
+        mms_receive A
+        left join mms_project       B on B.ProjectCode      = A.ProjectCode
+        left join mms_materialType  C on C.MaterialType = A.MaterialType
+        left join mms_warehouse         D on D.WarehouseCode       = A.WarehouseCode
+        left join mms_merchants     E on E.MerchantsCode    = A.SupplierCode
+     where  A.ProjectCode =  '201306030001' order by A.BillNo
+2020-05-08 00:04:27,587 [13440] DEBUG Mms - select count(*) from ( select 
+        A.*, B.ProjectName, C.MaterialTypeName, D.WarehouseName as WarehouseName, E.MerchantsName AS SupplierName
+     from 
+        mms_receive A
+        left join mms_project       B on B.ProjectCode      = A.ProjectCode
+        left join mms_materialType  C on C.MaterialType = A.MaterialType
+        left join mms_warehouse         D on D.WarehouseCode       = A.WarehouseCode
+        left join mms_merchants     E on E.MerchantsCode    = A.SupplierCode
+     where  A.ProjectCode =  '201306030001' ) tb_temp
+2020-05-08 00:04:30,744 [13632] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'admin'
+and C.URL in ('/Mms/send/Index','/Mms/send')
+2020-05-08 00:04:30,753 [13632] DEBUG Servicemms_warehouse - 获取动态列表
+2020-05-08 00:04:30,753 [13632] DEBUG Mms - select WarehouseCode as value,WarehouseName as text from mms_warehouse where  ProjectCode =  '201306030001'
+2020-05-08 00:04:30,754 [13632] DEBUG Servicesys_code - 获取动态列表
+2020-05-08 00:04:30,754 [13632] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'Pricing'
+2020-05-08 00:04:30,756 [13632] DEBUG Servicesys_code - 获取动态列表
+2020-05-08 00:04:30,756 [13632] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'MaterialUse'
+2020-05-08 00:04:30,782 [13632] DEBUG Sys - select MenuCode from sys_menu where URL = '/mms/send'
+2020-05-08 00:04:30,786 [13632] DEBUG Sys - 
+select *
+from sys_roleMenuColumnMap 
+where MenuCode = '1001'
+and RoleCode in (
+select RoleCode
+from sys_userRoleMap
+where userCode = 'admin'
+union
+select A.RoleCode
+from sys_organizeRoleMap A
+inner join sys_userOrganizeMap B on B.OrganizeCode = A.OrganizeCode
+where B.UserCode = 'admin'
+)
+2020-05-08 00:04:30,827 [13632] DEBUG Sys - select MenuCode from sys_menu where URL = '/mms/send'
+2020-05-08 00:04:30,828 [13632] DEBUG Sys - 
+select A.*
+from sys_button A
+inner join sys_roleMenuButtonMap B on B.MenuCode = '1001' and B.ButtonCode = A.ButtonCode
+where RoleCode in (
+select RoleCode
+from sys_userRoleMap
+where userCode = 'admin'
+union
+select A.RoleCode
+from sys_organizeRoleMap A
+inner join sys_userOrganizeMap B on B.OrganizeCode = A.OrganizeCode
+where B.UserCode = 'admin'
+)
+order by ButtonSeq
+2020-05-08 00:04:31,129 [13440] DEBUG Servicemms_send - 获取动态列表
+2020-05-08 00:04:31,129 [13440] DEBUG Mms - select top 20 
+        A.*, B.ProjectName, C.MaterialTypeName, D.WarehouseName,E.MerchantsName as PickUnitName
+     from 
+        mms_send A
+        left join mms_project       B on B.ProjectCode      = A.ProjectCode
+        left join mms_materialType  C on C.MaterialType = A.MaterialType
+        left join mms_warehouse         D on D.WarehouseCode       = A.WarehouseCode
+        left join mms_merchants E on E.MerchantsCode=A.PickUnit
+     where  A.ProjectCode =  '201306030001' order by A.BillNo
+2020-05-08 00:04:31,144 [13440] DEBUG Mms - select count(*) from ( select 
+        A.*, B.ProjectName, C.MaterialTypeName, D.WarehouseName,E.MerchantsName as PickUnitName
+     from 
+        mms_send A
+        left join mms_project       B on B.ProjectCode      = A.ProjectCode
+        left join mms_materialType  C on C.MaterialType = A.MaterialType
+        left join mms_warehouse         D on D.WarehouseCode       = A.WarehouseCode
+        left join mms_merchants E on E.MerchantsCode=A.PickUnit
+     where  A.ProjectCode =  '201306030001' ) tb_temp
+2020-05-08 00:04:32,552 [13632] DEBUG Servicemms_send - 获取新主键
+2020-05-08 00:04:32,554 [13632] DEBUG Mms - select isnull(max(BillNo),0) from mms_send
+2020-05-08 00:04:32,638 [13632] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'admin'
+and C.URL in ('/Mms/send/edit')
+2020-05-08 00:04:32,645 [13632] DEBUG Servicemms_send - 获取实体对象
+2020-05-08 00:04:32,645 [13632] DEBUG Mms - select mms_send.* from mms_send where  BillNo =  '202005080001'
+2020-05-08 00:04:32,663 [13632] DEBUG Servicemms_send - 获取上一条下一条数据
+2020-05-08 00:04:32,674 [13632] DEBUG Servicemms_send - 获取字段
+2020-05-08 00:04:32,675 [13632] DEBUG Mms - select top 1 BillNo from mms_send where  ProjectCode =  '201306030001' order by BillNo
+2020-05-08 00:04:32,680 [13632] DEBUG Servicemms_send - 获取字段
+2020-05-08 00:04:32,680 [13632] DEBUG Mms - select top 1 BillNo from mms_send where  BillNo < '202005080001'and ProjectCode =  '201306030001' order by BillNo desc
+2020-05-08 00:04:32,691 [13632] DEBUG Servicemms_send - 获取字段
+2020-05-08 00:04:32,691 [13632] DEBUG Mms - select top 1 BillNo from mms_send where  BillNo >  '202005080001'and ProjectCode =  '201306030001' order by BillNo
+2020-05-08 00:04:32,698 [13632] DEBUG Servicemms_send - 获取字段
+2020-05-08 00:04:32,698 [13632] DEBUG Mms - select top 1 BillNo from mms_send where  ProjectCode =  '201306030001' order by BillNo desc
+2020-05-08 00:04:32,717 [13632] DEBUG Servicesys_code - 获取动态列表
+2020-05-08 00:04:32,717 [13632] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'Pricing'
+2020-05-08 00:04:32,719 [13632] DEBUG Servicesys_code - 获取动态列表
+2020-05-08 00:04:32,719 [13632] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'MaterialUse'
+2020-05-08 00:04:32,719 [13632] DEBUG Servicesys_code - 获取动态列表
+2020-05-08 00:04:32,719 [13632] DEBUG Sys - select Text as value,Text as text from sys_code where  CodeType =  'MeasureUnit'
+2020-05-08 00:04:32,720 [13632] DEBUG Servicemms_warehouse - 获取动态列表
+2020-05-08 00:04:32,721 [13632] DEBUG Mms - select WarehouseCode as value,WarehouseName as text from mms_warehouse where  ProjectCode =  '201306030001'
+2020-05-08 00:04:32,721 [13632] DEBUG Servicesys_code - 获取字段
+2020-05-08 00:04:32,721 [13632] DEBUG Sys - select top 1 Code from sys_code where  CodeType =  'Pricing'and IsEnable =  'True'and IsDefault =  'True'
+2020-05-08 00:04:33,340 [13632] DEBUG Servicemms_send - 获取动态列表
+2020-05-08 00:04:33,340 [13632] DEBUG Mms - select 
+        A.*, B.MaterialName,B.Model,B.Material
+     from 
+        mms_sendDetail A
+        left join mms_material B on B.MaterialCode = A.MaterialCode
+     where  BillNo =  '202005080001' order by A.MaterialCode
+2020-05-08 00:04:36,469 [13440] DEBUG Servicemms_materialType - 获取动态列表
+2020-05-08 00:04:36,469 [13440] DEBUG Mms - select 
+        MaterialTypeName as text,MaterialType as id,ParentCode as pid
+     from 
+        mms_materialType
+     order by MaterialType
+2020-05-08 00:04:36,493 [13632] DEBUG Servicemms_material - 获取动态列表
+2020-05-08 00:04:36,493 [13632] DEBUG Mms - select top 10 * from 
+    (select 'receive' as SrcBillType
+    ,A.BillNo as SrcBillNo
+    ,A.RowId as SrcRowId
+    ,B.ReceiveDate as SrcDate
+    ,B.WarehouseCode
+    ,B.ProjectCode
+    ,A.RemainNum
+    ,A.UnitPrice as SrcUnitPrice
+    ,C.*
+    from mms_receiveDetail as A
+    left join mms_receive as B ON A.BillNo=B.BillNo
+    left join mms_material as C ON A.MaterialCode=C.MaterialCode
+    where A.RemainNum>0
+
+    union
+
+    select 'refund' as SrcBillType
+    ,A.BillNo as SrcBillNo
+    ,A.RowId as SrcRowId
+    ,B.RefundDate as SrcDate
+    ,B.WarehouseCode
+    ,B.ProjectCode
+    ,A.RemainNum
+    ,A.UnitPrice as SrcUnitPrice
+    ,C.*
+    from mms_refundDetail as A
+    left join mms_refund as B ON A.BillNo=B.BillNo
+    left join mms_material as C ON A.MaterialCode=C.MaterialCode
+    where A.RemainNum>0
+
+    union
+
+    select 'adjust' as SrcBillType
+    ,A.BillNo as SrcBillNo
+    ,A.RowId as SrcRowId
+    ,B.EffectDate as SrcDate
+    ,B.WarehouseCode
+    ,B.ProjectCode
+    ,A.RemainNum
+    ,A.UnitPrice as SrcUnitPrice
+    ,C.*
+    from mms_stockAdjustDetail as A
+    left join mms_stockAdjust as B ON A.BillNo=B.BillNo
+    left join mms_material as C ON A.MaterialCode=C.MaterialCode
+    where A.RemainNum>0) T
+   where  WarehouseCode =  '' order by MaterialCode
+2020-05-08 00:04:36,557 [13632] DEBUG Mms - select count(*) from ( select * from 
+    (select 'receive' as SrcBillType
+    ,A.BillNo as SrcBillNo
+    ,A.RowId as SrcRowId
+    ,B.ReceiveDate as SrcDate
+    ,B.WarehouseCode
+    ,B.ProjectCode
+    ,A.RemainNum
+    ,A.UnitPrice as SrcUnitPrice
+    ,C.*
+    from mms_receiveDetail as A
+    left join mms_receive as B ON A.BillNo=B.BillNo
+    left join mms_material as C ON A.MaterialCode=C.MaterialCode
+    where A.RemainNum>0
+
+    union
+
+    select 'refund' as SrcBillType
+    ,A.BillNo as SrcBillNo
+    ,A.RowId as SrcRowId
+    ,B.RefundDate as SrcDate
+    ,B.WarehouseCode
+    ,B.ProjectCode
+    ,A.RemainNum
+    ,A.UnitPrice as SrcUnitPrice
+    ,C.*
+    from mms_refundDetail as A
+    left join mms_refund as B ON A.BillNo=B.BillNo
+    left join mms_material as C ON A.MaterialCode=C.MaterialCode
+    where A.RemainNum>0
+
+    union
+
+    select 'adjust' as SrcBillType
+    ,A.BillNo as SrcBillNo
+    ,A.RowId as SrcRowId
+    ,B.EffectDate as SrcDate
+    ,B.WarehouseCode
+    ,B.ProjectCode
+    ,A.RemainNum
+    ,A.UnitPrice as SrcUnitPrice
+    ,C.*
+    from mms_stockAdjustDetail as A
+    left join mms_stockAdjust as B ON A.BillNo=B.BillNo
+    left join mms_material as C ON A.MaterialCode=C.MaterialCode
+    where A.RemainNum>0) T
+   where  WarehouseCode =  '' ) tb_temp
+2020-05-08 00:04:38,068 [13440] DEBUG Servicemms_material - 获取动态列表
+2020-05-08 00:04:38,068 [13440] DEBUG Mms - select top 10 * from 
+    (select 'receive' as SrcBillType
+    ,A.BillNo as SrcBillNo
+    ,A.RowId as SrcRowId
+    ,B.ReceiveDate as SrcDate
+    ,B.WarehouseCode
+    ,B.ProjectCode
+    ,A.RemainNum
+    ,A.UnitPrice as SrcUnitPrice
+    ,C.*
+    from mms_receiveDetail as A
+    left join mms_receive as B ON A.BillNo=B.BillNo
+    left join mms_material as C ON A.MaterialCode=C.MaterialCode
+    where A.RemainNum>0
+
+    union
+
+    select 'refund' as SrcBillType
+    ,A.BillNo as SrcBillNo
+    ,A.RowId as SrcRowId
+    ,B.RefundDate as SrcDate
+    ,B.WarehouseCode
+    ,B.ProjectCode
+    ,A.RemainNum
+    ,A.UnitPrice as SrcUnitPrice
+    ,C.*
+    from mms_refundDetail as A
+    left join mms_refund as B ON A.BillNo=B.BillNo
+    left join mms_material as C ON A.MaterialCode=C.MaterialCode
+    where A.RemainNum>0
+
+    union
+
+    select 'adjust' as SrcBillType
+    ,A.BillNo as SrcBillNo
+    ,A.RowId as SrcRowId
+    ,B.EffectDate as SrcDate
+    ,B.WarehouseCode
+    ,B.ProjectCode
+    ,A.RemainNum
+    ,A.UnitPrice as SrcUnitPrice
+    ,C.*
+    from mms_stockAdjustDetail as A
+    left join mms_stockAdjust as B ON A.BillNo=B.BillNo
+    left join mms_material as C ON A.MaterialCode=C.MaterialCode
+    where A.RemainNum>0) T
+   where  MaterialType like '0002%'and WarehouseCode =  '' order by MaterialCode
+2020-05-08 00:04:38,099 [13440] DEBUG Mms - select count(*) from ( select * from 
+    (select 'receive' as SrcBillType
+    ,A.BillNo as SrcBillNo
+    ,A.RowId as SrcRowId
+    ,B.ReceiveDate as SrcDate
+    ,B.WarehouseCode
+    ,B.ProjectCode
+    ,A.RemainNum
+    ,A.UnitPrice as SrcUnitPrice
+    ,C.*
+    from mms_receiveDetail as A
+    left join mms_receive as B ON A.BillNo=B.BillNo
+    left join mms_material as C ON A.MaterialCode=C.MaterialCode
+    where A.RemainNum>0
+
+    union
+
+    select 'refund' as SrcBillType
+    ,A.BillNo as SrcBillNo
+    ,A.RowId as SrcRowId
+    ,B.RefundDate as SrcDate
+    ,B.WarehouseCode
+    ,B.ProjectCode
+    ,A.RemainNum
+    ,A.UnitPrice as SrcUnitPrice
+    ,C.*
+    from mms_refundDetail as A
+    left join mms_refund as B ON A.BillNo=B.BillNo
+    left join mms_material as C ON A.MaterialCode=C.MaterialCode
+    where A.RemainNum>0
+
+    union
+
+    select 'adjust' as SrcBillType
+    ,A.BillNo as SrcBillNo
+    ,A.RowId as SrcRowId
+    ,B.EffectDate as SrcDate
+    ,B.WarehouseCode
+    ,B.ProjectCode
+    ,A.RemainNum
+    ,A.UnitPrice as SrcUnitPrice
+    ,C.*
+    from mms_stockAdjustDetail as A
+    left join mms_stockAdjust as B ON A.BillNo=B.BillNo
+    left join mms_material as C ON A.MaterialCode=C.MaterialCode
+    where A.RemainNum>0) T
+   where  MaterialType like '0002%'and WarehouseCode =  '' ) tb_temp
+2020-05-08 00:04:39,419 [13440] DEBUG Servicemms_material - 获取动态列表
+2020-05-08 00:04:39,419 [13440] DEBUG Mms - select top 10 * from 
+    (select 'receive' as SrcBillType
+    ,A.BillNo as SrcBillNo
+    ,A.RowId as SrcRowId
+    ,B.ReceiveDate as SrcDate
+    ,B.WarehouseCode
+    ,B.ProjectCode
+    ,A.RemainNum
+    ,A.UnitPrice as SrcUnitPrice
+    ,C.*
+    from mms_receiveDetail as A
+    left join mms_receive as B ON A.BillNo=B.BillNo
+    left join mms_material as C ON A.MaterialCode=C.MaterialCode
+    where A.RemainNum>0
+
+    union
+
+    select 'refund' as SrcBillType
+    ,A.BillNo as SrcBillNo
+    ,A.RowId as SrcRowId
+    ,B.RefundDate as SrcDate
+    ,B.WarehouseCode
+    ,B.ProjectCode
+    ,A.RemainNum
+    ,A.UnitPrice as SrcUnitPrice
+    ,C.*
+    from mms_refundDetail as A
+    left join mms_refund as B ON A.BillNo=B.BillNo
+    left join mms_material as C ON A.MaterialCode=C.MaterialCode
+    where A.RemainNum>0
+
+    union
+
+    select 'adjust' as SrcBillType
+    ,A.BillNo as SrcBillNo
+    ,A.RowId as SrcRowId
+    ,B.EffectDate as SrcDate
+    ,B.WarehouseCode
+    ,B.ProjectCode
+    ,A.RemainNum
+    ,A.UnitPrice as SrcUnitPrice
+    ,C.*
+    from mms_stockAdjustDetail as A
+    left join mms_stockAdjust as B ON A.BillNo=B.BillNo
+    left join mms_material as C ON A.MaterialCode=C.MaterialCode
+    where A.RemainNum>0) T
+   where  MaterialType like '01010103%'and WarehouseCode =  '' order by MaterialCode
+2020-05-08 00:04:39,451 [13440] DEBUG Mms - select count(*) from ( select * from 
+    (select 'receive' as SrcBillType
+    ,A.BillNo as SrcBillNo
+    ,A.RowId as SrcRowId
+    ,B.ReceiveDate as SrcDate
+    ,B.WarehouseCode
+    ,B.ProjectCode
+    ,A.RemainNum
+    ,A.UnitPrice as SrcUnitPrice
+    ,C.*
+    from mms_receiveDetail as A
+    left join mms_receive as B ON A.BillNo=B.BillNo
+    left join mms_material as C ON A.MaterialCode=C.MaterialCode
+    where A.RemainNum>0
+
+    union
+
+    select 'refund' as SrcBillType
+    ,A.BillNo as SrcBillNo
+    ,A.RowId as SrcRowId
+    ,B.RefundDate as SrcDate
+    ,B.WarehouseCode
+    ,B.ProjectCode
+    ,A.RemainNum
+    ,A.UnitPrice as SrcUnitPrice
+    ,C.*
+    from mms_refundDetail as A
+    left join mms_refund as B ON A.BillNo=B.BillNo
+    left join mms_material as C ON A.MaterialCode=C.MaterialCode
+    where A.RemainNum>0
+
+    union
+
+    select 'adjust' as SrcBillType
+    ,A.BillNo as SrcBillNo
+    ,A.RowId as SrcRowId
+    ,B.EffectDate as SrcDate
+    ,B.WarehouseCode
+    ,B.ProjectCode
+    ,A.RemainNum
+    ,A.UnitPrice as SrcUnitPrice
+    ,C.*
+    from mms_stockAdjustDetail as A
+    left join mms_stockAdjust as B ON A.BillNo=B.BillNo
+    left join mms_material as C ON A.MaterialCode=C.MaterialCode
+    where A.RemainNum>0) T
+   where  MaterialType like '01010103%'and WarehouseCode =  '' ) tb_temp
+2020-05-08 00:04:48,081 [13632] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'admin'
+and C.URL in ('/Mms/direct/Index','/Mms/direct')
+2020-05-08 00:04:48,087 [13632] DEBUG Servicemms_warehouse - 获取动态列表
+2020-05-08 00:04:48,087 [13632] DEBUG Mms - select WarehouseCode as value,WarehouseName as text from mms_warehouse where  ProjectCode =  '201306030001'
+2020-05-08 00:04:48,087 [13632] DEBUG Servicesys_code - 获取动态列表
+2020-05-08 00:04:48,087 [13632] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'SupplyType'
+2020-05-08 00:04:48,314 [13440] DEBUG Servicemms_direct - 获取动态列表
+2020-05-08 00:04:48,314 [13440] DEBUG Mms - select top 20 
+        A.*, B.ProjectName, C.MaterialTypeName,D.MerchantsName as SupplierName,E.MerchantsName as PickUnitName
+     from 
+        mms_direct A
+        left join mms_project       B on B.ProjectCode      = A.ProjectCode
+        left join mms_materialType  C on C.MaterialType     = A.MaterialType
+        left join mms_merchants     D on D.MerchantsCode    = A.SupplierCode
+        left join mms_merchants     E on E.MerchantsCode    = A.PickUnit
+     where  A.ProjectCode =  '201306030001' order by A.BillNo
+2020-05-08 00:04:48,396 [13440] DEBUG Mms - select count(*) from ( select 
+        A.*, B.ProjectName, C.MaterialTypeName,D.MerchantsName as SupplierName,E.MerchantsName as PickUnitName
+     from 
+        mms_direct A
+        left join mms_project       B on B.ProjectCode      = A.ProjectCode
+        left join mms_materialType  C on C.MaterialType     = A.MaterialType
+        left join mms_merchants     D on D.MerchantsCode    = A.SupplierCode
+        left join mms_merchants     E on E.MerchantsCode    = A.PickUnit
+     where  A.ProjectCode =  '201306030001' ) tb_temp
+2020-05-08 00:04:49,680 [13632] DEBUG Servicemms_direct - 获取新主键
+2020-05-08 00:04:49,680 [13632] DEBUG Mms - select isnull(max(BillNo),0) from mms_direct
+2020-05-08 00:04:49,744 [13440] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'admin'
+and C.URL in ('/Mms/direct/edit')
+2020-05-08 00:04:49,754 [13440] DEBUG Servicemms_direct - 获取实体对象
+2020-05-08 00:04:49,754 [13440] DEBUG Mms - select mms_direct.* from mms_direct where  BillNo =  '202005080001'
+2020-05-08 00:04:49,757 [13440] DEBUG Servicemms_direct - 获取上一条下一条数据
+2020-05-08 00:04:49,758 [13440] DEBUG Servicemms_direct - 获取字段
+2020-05-08 00:04:49,758 [13440] DEBUG Mms - select top 1 BillNo from mms_direct where  ProjectCode =  '201306030001' order by BillNo
+2020-05-08 00:04:49,759 [13440] DEBUG Servicemms_direct - 获取字段
+2020-05-08 00:04:49,759 [13440] DEBUG Mms - select top 1 BillNo from mms_direct where  BillNo < '202005080001'and ProjectCode =  '201306030001' order by BillNo desc
+2020-05-08 00:04:49,763 [13440] DEBUG Servicemms_direct - 获取字段
+2020-05-08 00:04:49,763 [13440] DEBUG Mms - select top 1 BillNo from mms_direct where  BillNo >  '202005080001'and ProjectCode =  '201306030001' order by BillNo
+2020-05-08 00:04:49,766 [13440] DEBUG Servicemms_direct - 获取字段
+2020-05-08 00:04:49,766 [13440] DEBUG Mms - select top 1 BillNo from mms_direct where  ProjectCode =  '201306030001' order by BillNo desc
+2020-05-08 00:04:49,783 [13440] DEBUG Servicesys_code - 获取动态列表
+2020-05-08 00:04:49,783 [13440] DEBUG Sys - select Text as value,Text as text from sys_code where  CodeType =  'MeasureUnit'
+2020-05-08 00:04:49,785 [13440] DEBUG Servicesys_code - 获取动态列表
+2020-05-08 00:04:49,785 [13440] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'SupplyType'
+2020-05-08 00:04:49,785 [13440] DEBUG Servicesys_code - 获取动态列表
+2020-05-08 00:04:49,785 [13440] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'PayType'
+2020-05-08 00:04:49,786 [13440] DEBUG Servicesys_code - 获取动态列表
+2020-05-08 00:04:49,786 [13440] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'MaterialUse'
+2020-05-08 00:04:49,786 [13440] DEBUG Servicesys_code - 获取字段
+2020-05-08 00:04:49,786 [13440] DEBUG Sys - select top 1 Code from sys_code where  CodeType =  'SupplyType'and IsEnable =  'True'and IsDefault =  'True'
+2020-05-08 00:04:49,788 [13440] DEBUG Servicesys_code - 获取字段
+2020-05-08 00:04:49,788 [13440] DEBUG Sys - select top 1 Code from sys_code where  CodeType =  'PayType'and IsEnable =  'True'and IsDefault =  'True'
+2020-05-08 00:04:50,297 [12900] DEBUG Servicemms_direct - 获取动态列表
+2020-05-08 00:04:50,297 [12900] DEBUG Mms - select 
+        A.*, B.MaterialName,B.Model,B.Material
+     from 
+        mms_directDetail A
+        left join mms_material B on B.MaterialCode = A.MaterialCode
+     where  BillNo =  '202005080001' order by A.MaterialCode
+2020-05-08 01:03:30,592 [12112] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2020-05-08 01:03:30,627 [12112] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2020-05-08 01:03:30,630 [12112] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2020-05-08 01:03:30,640 [12112] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2020-05-08 01:05:05,061 [7800] DEBUG Servicesys_user - 获取实体对象
+2020-05-08 01:05:05,069 [7800] DEBUG Sys - select sys_user.* from sys_user where  UserCode =  'admin'and Password =  '1234'and IsEnable =  'True'
+2020-05-08 01:05:05,125 [7800] DEBUG Sys - 
+update sys_user
+set LoginCount = isnull(LoginCount,0) + 1
+   ,LastLoginDate = getdate()
+where UserCode = 'admin' 
+2020-05-08 01:05:05,162 [7800] DEBUG Sys - insert into sys_loginHistory([UserCode],[UserName],[HostName],[HostIP],[LoginCity],[LoginDate]) values('admin','管理员','','182.32.29.181','','2020/5/8 1:05:05')
+2020-05-08 01:05:05,166 [7800] DEBUG Servicemms_project - 获取实体对象
+2020-05-08 01:05:05,166 [7800] DEBUG Mms - select mms_project.* from mms_project where  ProjectCode =  '201306030001'
+2020-05-08 08:53:54,797 [10628] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2020-05-08 08:53:54,915 [10628] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2020-05-08 08:53:54,918 [10628] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2020-05-08 08:53:54,943 [10628] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2020-05-08 16:19:16,899 [9756] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2020-05-08 16:19:17,194 [9756] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2020-05-08 16:19:17,397 [9756] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2020-05-08 16:19:17,420 [9756] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2020-05-08 17:19:57,933 [10252] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2020-05-08 17:19:57,953 [10252] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2020-05-08 17:19:57,956 [10252] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2020-05-08 17:19:57,960 [10252] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')

@@ -1,0 +1,13 @@
+<html>
+<head>
+    <script language='javascript'>
+             function isDOMRequired() {  
+                return false;
+             }
+             function objectTag(){
+                dw.getDocumentDOM().source.wrapSelection('<ul> <li><a href="{$FirstPageUrl}">首页</a></li> <li><a href="{$PrevPageUrl}">上一页</a></li> <li><a href="{$NextPageUrl}">下一页</a></li> <li><a href="{$LastPageUrl}">尾页</a></li> </ul>', '');
+                 return;
+             }
+    </script>
+</head>
+</html>

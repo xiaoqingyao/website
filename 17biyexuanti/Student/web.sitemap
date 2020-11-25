@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMapNode url="" tltle="首页" description="">
+	<siteMapNode url="" tltle="个人信息" description="">
+		<siteMapNode url="~\Student\StudentMessage.aspx" tltle="查看信息" description="" />
+		<siteMapNode url="~\Student\ModifyMessage.aspx" tltle="修改信息" description="" />
+		<siteMapNode url="~\Student\ModifyPassWord.aspx" tltle="修改密码" description="" />
+	</siteMapNode>
+	<siteMapNode url="" tltle="论文信息" description="">
+		<siteMapNode url="~\Student\UpLoadThesis.aspx" tltle="上传论文" description="" />
+		<siteMapNode url="~\Student\ModifyThesis.aspx" tltle="修改论文" description="" />
+	</siteMapNode>
+	<siteMapNode url="" tltle="标题信息" description="">
+		<siteMapNode url="~\Student\ChooseTitle.aspx" tltle="选择题目" description="" />
+		<siteMapNode url="~\Student\UpLoadTitle.aspx" tltle="上传自定义题目" description="" />
+	</siteMapNode>
+	<siteMapNode url="~\Student\LeaveMessage.aspx" tltle="留言" description="">
+	</siteMapNode>
+</siteMapNode>

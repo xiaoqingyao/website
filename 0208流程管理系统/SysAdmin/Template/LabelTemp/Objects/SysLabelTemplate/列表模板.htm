@@ -1,0 +1,133 @@
+<!DOCTYPE HTML SYSTEM "-//Macromedia//DWExtension layout-engine 5.0//dialog">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>列表模板</title>
+    <script type="text/javascript">
+        String.prototype.trim = function() { return this.replace(/^\s+|\s+$/g, ""); }
+
+        function commandButtons() {
+            return new Array("确定", "getList()", "取消", "window.close()")
+        }
+		
+		function getList(){
+			var insertContent,tableName,nodeCode,pageSize,isSplit,sqlOrder,sqlWhere;
+			
+			tableName = document.getElementById("TableName").value;
+			nodeCode = document.getElementById("Menu").value;
+			pageSize = document.getElementById("PageSize").value;
+			sqlOrder = document.getElementById("SqlOrder").value;
+			sqlWhere = document.getElementById("SqlWhere").value;
+			isSplit = "0";
+			
+			for(var i=0;i< document.getElementById("IsSplit").options.length;i++){
+				if(document.getElementById("IsSplit").options[i].selected){
+					isSplit = document.getElementById("IsSplit").options[i].value;
+				}
+			}
+				
+			insertContent = "{HQB_L000_TemplateName LableType=\"LIST\"  ";
+
+			if(tableName.trim() == ""){
+				insertContent += " TableName=\"表名\" ";
+			}else{
+				insertContent += " TableName=\""+ tableName +"\" ";
+			}
+			
+			if(nodeCode.trim() != "" && nodeCode.trim() != "请输入栏目的NodeCode值"){
+				insertContent += " Menu=\"" + nodeCode + "\" ";
+			}
+			
+			insertContent += " IsSplit=\""+ isSplit +"\" ";
+			
+			if(pageSize.trim() != ""){
+				insertContent += " PageSize=\""+ pageSize +"\" ";
+			}
+			
+			if(sqlOrder.trim() != ""){
+				insertContent += " SqlOrder=\"" + sqlOrder + "\" ";
+			}
+			
+			if(sqlWhere.trim() != ""){
+				insertContent += "SqlWhere=\" "+ sqlWhere+"\" ";
+			}
+					
+			insertContent += "}";
+			insertContent += document.getElementById("itemTemplate").innerHTML;
+			insertContent += "{/HQB_L000}";
+			dreamweaver.getDocumentDOM("document").source.wrapSelection(insertContent, '');
+			window.close();
+		}
+			
+        function windowDimensions() { return "520,250"; }
+		
+		function checkMenuValue(){
+			if(document.getElementById("Menu").value.trim() == "请输入栏目的NodeCode值"){
+				document.getElementById("Menu").value = "";
+			}
+		}
+    </script>
+
+</head>
+<body>
+    <form name="theform" method="post" action="">
+       <table width="480" height="200">
+        <tr>
+            <td style="width: 120px">
+                表 名：
+            </td>
+            <td>
+                <input type="text" value="K_U_Article" ID="TableName" /></td>
+        </tr>
+        <tr>
+            <td>
+                所属栏目：
+            </td>
+            <td><input type="text" id="Menu" value="请输入栏目的NodeCode值" onFocus="checkMenuValue()"/>
+ (为空则为当前发布栏目) </td>
+        </tr>
+        <tr>
+            <td>
+                文章(或分页）数量：
+            </td>
+            <td>
+                <input type="text" id="PageSize" value="10"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                是否分页：
+            </td>
+            <td>
+                <select id="IsSplit">
+                    <option value="0" selected="selected">否</option>
+                    <option value="1">是</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>排序方式：</td>
+            <td><input type="text" id="SqlOrder" value="Orders desc" /></td>
+        </tr>
+        <tr>
+            <td>
+                查询条件：
+            </td>
+            <td>
+                <input type="text" value="" id="SqlWhere" />  不要输入where,例如:clickNum>20               
+            </td>
+        </tr>
+    </table>
+    <div id="itemTemplate" style="display:none;">
+    <!--列表循环显示模板  可用变量  循环序号：{$HQB.Num}、字段标签
+    [HQB.Loop]
+        <ul>
+            <li>{$Field(1,Title,0,0)}</li>
+            <li>{$Field(3,PubDate,yyyy年MM月dd日)}</li>
+        </ul>
+    [/HQB.Loop]
+    -->
+    </div>
+    </form>
+</body>
+</html>

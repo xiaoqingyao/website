@@ -1,0 +1,87 @@
+﻿.masterpage-title
+{
+	background-position: #1E4176;
+	border: 0 none;
+	background: #1E4176;
+	font: normal 26px tahoma, arial, sans-serif;
+	color: white;
+	font-weight: bold;
+}
+A.nochange:link
+{
+	font-size: 12px;
+	color: blue;
+	text-decoration: underline;
+}
+A.nochange:visited
+{
+	font-size: 12px;
+	color: blue;
+	text-decoration: underline;
+}
+A.nochange:active
+{
+	font-size: 12px;
+	color: #0099ff;
+	text-decoration: underline;
+}
+A.nochange:hover
+{
+	font-size: 12px;
+	color: #ff6102;
+	text-decoration: underline;
+}
+.jisuantextbox
+{
+	background-image: url(/Content/icons/calculator.png);
+	background-repeat: no-repeat;
+	background-position: right;
+}
+#login-logo .x-plain-body
+{
+	background: #f0edce url('/Content/logo.png') no-repeat;
+}
+.yonghuming
+{
+	background-image: url(/Content/icons/user.png);
+	background-repeat: no-repeat;
+	padding-left: 20px;
+	background-position: 1px 1px;
+}
+.mima
+{
+	background-image: url(/Content/icons/lock.png);
+	background-repeat: no-repeat;
+	padding-left: 20px;
+	background-position: 1px 1px;
+}
+.pswkey
+{
+	background-image: url(/Content/icons/key.png);
+	background-repeat: no-repeat;
+	padding-left: 20px;
+	background-position: 1px 1px;
+}
+
+.x-tree-node div.menu-node{
+    background:#eee url(cmp-bg.gif) repeat-x;
+    margin-top:1px;
+    border-top:1px solid #ddd;
+    border-bottom:1px solid #ccc;
+    padding-top:2px;
+    padding-bottom:1px;
+    font-weight:bold;
+}
+.menu-node .x-tree-node-icon {
+    display:none;
+}
+.menu-node2 {
+    border:1px solid #fff;
+    background-image: url(/Content/icons/bullet_green.png);
+	background-repeat: no-repeat;
+	padding-right: 20px;
+	background-position: 1px 1px;
+}
+.menu-node2 .x-tree-ec-icon {
+    display:none;
+}

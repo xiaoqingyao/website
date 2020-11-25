@@ -1,0 +1,32 @@
+2016-01-24 13:05:56,872 [1664] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-01-24 13:05:56,972 [1664] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-01-24 13:05:56,975 [1664] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-01-24 13:05:57,030 [1664] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2016-01-24 13:06:48,764 [924] DEBUG Servicesys_user - 获取实体对象
+2016-01-24 13:06:48,775 [924] DEBUG Sys - select sys_user.* from sys_user where  UserCode =  'admin'and Password =  'admin'and IsEnable =  'True'
+2016-01-24 13:06:54,331 [8028] DEBUG Servicesys_user - 获取实体对象
+2016-01-24 13:06:54,332 [8028] DEBUG Sys - select sys_user.* from sys_user where  UserCode =  'admin'and Password =  '1234'and IsEnable =  'True'
+2016-01-24 13:06:54,401 [8028] DEBUG Sys - 
+update sys_user
+set LoginCount = isnull(LoginCount,0) + 1
+   ,LastLoginDate = getdate()
+where UserCode = 'admin' 
+2016-01-24 13:06:54,501 [8028] DEBUG Sys - insert into sys_loginHistory([UserCode],[UserName],[HostName],[HostIP],[LoginCity],[LoginDate]) values('admin','管理员','WIN-E9SGNLV57LK','localhost','天津市','2016/1/24 13:06:54')
+2016-01-24 13:06:54,520 [8028] DEBUG Servicemms_project - 获取实体对象
+2016-01-24 13:06:54,520 [8028] DEBUG Mms - select mms_project.* from mms_project where  ProjectCode =  '201306030001'
+2016-01-24 13:06:54,576 [7864] DEBUG Sys - select * from sys_userSetting where UserCode='admin'
+2016-01-24 13:06:55,961 [7904] DEBUG Sys - 
+--角色的菜单
+select distinct B.*
+from sys_roleMenuMap A
+inner join sys_menu  B on B.MenuCode = A.MenuCode
+where B.IsEnable='1'
+  and RoleCode in (
+  select RoleCode from sys_userRoleMap where UserCode = 'admin' --用户的角色
+union all
+  select RoleCode from sys_organizeRoleMap where OrganizeCode in  --机构的角色
+  (
+	select OrganizeCode from sys_userOrganizeMap where UserCode = 'admin'
+  )  
+)
+order by B.MenuSeq,B.MenuCode

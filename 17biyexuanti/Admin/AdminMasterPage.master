@@ -1,0 +1,102 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMasterPage.master.cs" Inherits="Admin_AdminMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>无标题页</title>
+</head>
+<body style="background-image:url(../Images/bg4.jpg)">
+    <form id="form1" runat="server">
+    <div>
+        <table align="center" border="0" cellpadding="0" cellspacing="0" style=" height: 100%; background-image: url(../Images/bg2.gif);" width="1024">
+            <tr>
+                <td colspan="2" style="height: 177px" align="center">
+                <img src="../Images/head.jpg" />
+                </td>
+            </tr>
+            <tr>
+                <td align="center" colspan="2" style="height: 63px">
+                        <table style=" width:868px; width: 868px;
+                            height: 1px; border-top-width: thin; border-left-width: thin; border-left-color: dodgerblue; border-bottom-width: thin; border-bottom-color: dodgerblue; border-top-color: dodgerblue; border-right-width: thin; border-right-color: dodgerblue;">
+                            <tr>
+                                <td style="width: 868px; height: 23px;">
+                                    您现在所在的位置是：<asp:SiteMapPath ID="SiteMapPath1" runat="server" Font-Names="Verdana"
+                                        Font-Size="0.8em" PathSeparator=" : ">
+                                        <PathSeparatorStyle Font-Bold="True" ForeColor="#990000" />
+                                        <CurrentNodeStyle ForeColor="#333333" />
+                                        <NodeStyle Font-Bold="True" ForeColor="#990000" />
+                                        <RootNodeStyle Font-Bold="True" ForeColor="#FF8000" />
+                                    </asp:SiteMapPath>
+                                </td>
+                                </tr><tr>
+                                <td style="height: 23px">
+                            <asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Size="X-Small" ForeColor="Black"
+                                Text="学生总数:"></asp:Label>
+                            <asp:Label ID="Label3" runat="server" Font-Size="X-Small" ForeColor="Red" Text="Label"
+                                Width="42px"></asp:Label>&nbsp; &nbsp;<asp:Label ID="Label4" runat="server" Font-Bold="True"
+                                    Font-Size="X-Small" ForeColor="Black" Text="标题总数:"></asp:Label><asp:Label ID="Label5"
+                                        runat="server" Font-Size="X-Small" ForeColor="Red"></asp:Label>
+                            &nbsp; &nbsp;<asp:Label ID="Label8" runat="server" Font-Bold="True" Font-Size="X-Small"
+                                Text="标题可选人数总和:"></asp:Label>
+                            <asp:Label ID="Label9" runat="server" Font-Size="X-Small" ForeColor="Red"></asp:Label>
+                            &nbsp; &nbsp;<asp:Label ID="Label6" runat="server" Font-Bold="True" Font-Size="X-Small"
+                                Text="已选题学生人数:"></asp:Label>
+                            <asp:Label ID="Label7" runat="server" Font-Size="X-Small" ForeColor="Red"></asp:Label>
+                            &nbsp;
+                            <asp:Label ID="Label10" runat="server" Font-Bold="True" Font-Size="X-Small" Text="已上传论文学生人数:"></asp:Label>
+                            <asp:Label ID="Label11" runat="server" Font-Size="X-Small" ForeColor="Red"></asp:Label><br />
+                        <asp:Label ID="Label1" runat="server" Font-Size="X-Small" ForeColor="Red" Width="363px" Visible="False"></asp:Label>
+                                </td>
+                            </tr>
+                        </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="height: 500px;" colspan="2" align="center">
+                        <table style="width: 868px; height: 500px; border-left-width: thin; border-left-color: blue; border-bottom-width: thin; border-bottom-color: dodgerblue; border-top-style: solid; border-top-color: dodgerblue; border-right-width: thin; border-right-color: dodgerblue;">
+                            <tr>
+                                <td style="width: 210px; border-right: dodgerblue thin solid; border-top: dodgerblue thin solid; vertical-align: top; border-left: dodgerblue thin solid; border-bottom: dodgerblue thin solid;">
+                                <div style="text-align:left; z-index: 101; left: 94px; width: 100px; top: 257px;
+                        height: 100px" id="left">
+                        <asp:TreeView ID="TreeView1" runat="server" DataSourceID="XMLAdtree" ImageSet="Inbox">
+                            <ParentNodeStyle Font-Bold="False" />
+                            <HoverNodeStyle Font-Underline="True" />
+                            <SelectedNodeStyle Font-Underline="True" HorizontalPadding="0px" VerticalPadding="0px" />
+                            <DataBindings>
+                                <asp:TreeNodeBinding DataMember="siteMapNode" NavigateUrlField="url" TextField="tltle" />
+                                <asp:TreeNodeBinding DataMember="siteMapNode" NavigateUrlField="url" TextField="tltle" />
+                                <asp:TreeNodeBinding DataMember="siteMapNode" NavigateUrlField="url" TextField="tltle" />
+                            </DataBindings>
+                            <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="5px"
+                                NodeSpacing="0px" VerticalPadding="0px" />
+                        </asp:TreeView>
+                        <asp:XmlDataSource ID="XMLAdtree" runat="server" DataFile="~/Admin/AdminTree.xml"></asp:XmlDataSource>
+                    </div>
+
+                                </td>
+                                <td style="width: 642px; border-right: dodgerblue thin solid; border-top: dodgerblue thin solid; vertical-align: top; border-left: dodgerblue thin solid; border-bottom: dodgerblue thin solid;">
+                                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                    </asp:ContentPlaceHolder>
+                                </td>
+                            </tr>
+                        </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="height: 153px" align="center">
+                    
+                        <table style="background-image: url(../Images/foot.gif); width: 868px; background-repeat: repeat-x;
+                            height: 99px">
+                            <tr>
+                                <td style="width: 100px; height: 88px;">
+                                </td>
+                            </tr>
+                        </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

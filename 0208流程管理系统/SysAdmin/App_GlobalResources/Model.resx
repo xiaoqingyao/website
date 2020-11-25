@@ -1,0 +1,1000 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BasicField" xml:space="preserve">
+    <value>基本字段</value>
+  </data>
+  <data name="DropDownDataType" xml:space="preserve">
+    <value>选项数据来源：</value>
+  </data>
+  <data name="EditorType" xml:space="preserve">
+    <value>编辑器类型：</value>
+  </data>
+  <data name="FieldAlias" xml:space="preserve">
+    <value>字段别名：</value>
+  </data>
+  <data name="FieldControls" xml:space="preserve">
+    <value>系统预定义控件</value>
+  </data>
+  <data name="FileGroup" xml:space="preserve">
+    <value>所属分组：</value>
+  </data>
+  <data name="IsEnable" xml:space="preserve">
+    <value>是否启用：</value>
+  </data>
+  <data name="MaxLength" xml:space="preserve">
+    <value>最大字符数：</value>
+  </data>
+  <data name="ModelField" xml:space="preserve">
+    <value>所属模型：</value>
+  </data>
+  <data name="ModelFieldGroupName" xml:space="preserve">
+    <value>名称：</value>
+  </data>
+  <data name="ModelFieldGroupOrder" xml:space="preserve">
+    <value>排序：</value>
+  </data>
+  <data name="ParseModePath" xml:space="preserve">
+    <value>../Configuraion/Model/ParseMode.xml</value>
+    <comment>模型编辑页中解析模块配置文件路径</comment>
+  </data>
+  <data name="SysFieldPath" xml:space="preserve">
+    <value>SysAdmin\\Configuraion\\Model\\SysField.xml</value>
+    <comment>模型编辑页中模型字段配置文件路径</comment>
+  </data>
+  <data name="ModelFieldHieght" xml:space="preserve">
+    <value>高度：</value>
+  </data>
+  <data name="ModelFieldMessage" xml:space="preserve">
+    <value>提示信息：</value>
+  </data>
+  <data name="ModelFieldType" xml:space="preserve">
+    <value>字段类型：</value>
+  </data>
+  <data name="ModelFieldWidth" xml:space="preserve">
+    <value>宽度：</value>
+  </data>
+  <data name="txtBoxWidth" xml:space="preserve">
+    <value>文本框宽：</value>
+  </data>
+  <data name="Validation" xml:space="preserve">
+    <value>正则表达式：</value>
+  </data>
+  <data name="ValidationMessage" xml:space="preserve">
+    <value>提示错误：</value>
+  </data>
+  <data name="ValidationTypes" xml:space="preserve">
+    <value>验证规则：</value>
+  </data>
+  <data name="ModelCustomCol" xml:space="preserve">
+    <value>自定义列表列:</value>
+  </data>
+  <data name="ModelCustomColInfo" xml:space="preserve">
+    <value>注：如果值中有从本模型的字段中读取值，则“{字段名称}”标识</value>
+  </data>
+  <data name="ModelCustomColName" xml:space="preserve">
+    <value>列名称</value>
+  </data>
+  <data name="ModelCustomColValue" xml:space="preserve">
+    <value>值</value>
+  </data>
+  <data name="ModelIsEnable" xml:space="preserve">
+    <value>模型状态：</value>
+  </data>
+  <data name="ModelListButton" xml:space="preserve">
+    <value>列表页面功能按钮设置：</value>
+  </data>
+  <data name="ModelListButtonSelfDefinedInfo" xml:space="preserve">
+    <value>&lt;br&gt;
+&lt;b&gt;自定义功能&lt;/b&gt;,注：action={e}{(字段)(值)}{条件}例：?action={e}{(IsDel)(1)}{ID=20100816182738}</value>
+  </data>
+  <data name="ModelListButtonSelfDefinedName" xml:space="preserve">
+    <value>按钮名称</value>
+  </data>
+  <data name="ModelListButtonSelfDefinedValue" xml:space="preserve">
+    <value>值</value>
+  </data>
+  <data name="ModelListLink" xml:space="preserve">
+    <value>列表页面链接设置：</value>
+  </data>
+  <data name="ModelListLinkSelfDefinedInfo" xml:space="preserve">
+    <value>&lt;b&gt;自定义链接&lt;/b&gt;,注：?Action={s}{(当前表字段)(操作符)(值)} ... [u或n] ....  {(当前表字段)(操作符)(值或其它表字段)}</value>
+  </data>
+  <data name="ModelListLinkSelfDefinedName" xml:space="preserve">
+    <value>连接名称</value>
+  </data>
+  <data name="ModelListLinkSelfDefinedUrl" xml:space="preserve">
+    <value>连接地址</value>
+  </data>
+  <data name="ModelMemo" xml:space="preserve">
+    <value>模型描述：</value>
+  </data>
+  <data name="ModelName" xml:space="preserve">
+    <value>模型名称：</value>
+  </data>
+  <data name="ModelParseTemplate" xml:space="preserve">
+    <value>选择模块： &lt;br&gt;*管理模块管理</value>
+  </data>
+  <data name="ModelSysField" xml:space="preserve">
+    <value>自定义系统字段：</value>
+  </data>
+  <data name="ModelTableName" xml:space="preserve">
+    <value>数据表名称：</value>
+  </data>
+  <data name="SelfDefinedListTemplateJS" xml:space="preserve">
+    <value>&lt;div&gt;名 称：{name}&amp;nbsp;&amp;nbsp;值：{value}&amp;nbsp;&amp;nbsp;&lt;input type='button' onclick='ListButton_Del(this,\"{delContent}\",\"{objContainer}\")' value='删除' class='AddBtn'&gt;&lt;/div&gt;</value>
+    <comment>模型编辑页中,自定义（链接、功能、列表列）添加时界面显示代码模板</comment>
+  </data>
+  <data name="SelfDefinedListTemplate" xml:space="preserve">
+    <value>&lt;div&gt;名 称：{name}&amp;nbsp;&amp;nbsp;值：{value}&amp;nbsp;&amp;nbsp;&lt;input type='button' class='AddBtn' onclick="ListButton_Del(this,'{name}|{value},','{objContainer}')" value='删除'&gt;&lt;/div&gt;</value>
+  </data>
+  <data name="ListPath" xml:space="preserve">
+    <value>SysAdmin\\Configuraion\\Model\\List.xml</value>
+  </data>
+  <data name="ModelListColumnEnable" xml:space="preserve">
+    <value>列显示</value>
+  </data>
+  <data name="ModelListFieldAlias" xml:space="preserve">
+    <value>别名</value>
+  </data>
+  <data name="ModelListFieldName" xml:space="preserve">
+    <value>字段名</value>
+  </data>
+  <data name="ModelListFiledGroup" xml:space="preserve">
+    <value>所属组</value>
+  </data>
+  <data name="ModelListFiledRequired" xml:space="preserve">
+    <value>必填</value>
+  </data>
+  <data name="ModelListFiledSerach" xml:space="preserve">
+    <value>搜索</value>
+  </data>
+  <data name="ModelListFiledSys" xml:space="preserve">
+    <value>系统</value>
+  </data>
+  <data name="ModelListFiledType" xml:space="preserve">
+    <value>类型</value>
+  </data>
+  <data name="AddDataBaseFiledMessage" xml:space="preserve">
+    <value>添加失败,此字段名已经存在于模板表中!</value>
+  </data>
+  <data name="AddDataBaseMessage" xml:space="preserve">
+    <value>添加失败,保存文件大小字段已经存在于模板表中!</value>
+  </data>
+  <data name="AddFiledErrorMessage" xml:space="preserve">
+    <value>添加失败,请填写文件保存字段名称!</value>
+  </data>
+  <data name="AddFiledMessage" xml:space="preserve">
+    <value>添加失败,此字段名已经存在!</value>
+  </data>
+  <data name="AddSucess" xml:space="preserve">
+    <value>操作成功!</value>
+  </data>
+  <data name="CheckBox" xml:space="preserve">
+    <value>多选</value>
+  </data>
+  <data name="DataBaseInput" xml:space="preserve">
+    <value>数据库读取</value>
+  </data>
+  <data name="DataBaseSql" xml:space="preserve">
+    <value>sql语句：</value>
+  </data>
+  <data name="DateTime" xml:space="preserve">
+    <value>日期时间</value>
+  </data>
+  <data name="Decimal" xml:space="preserve">
+    <value>货币</value>
+  </data>
+  <data name="DropDown" xml:space="preserve">
+    <value>下拉列表</value>
+  </data>
+  <data name="DropDownList" xml:space="preserve">
+    <value>列表（可选择多列）</value>
+  </data>
+  <data name="File" xml:space="preserve">
+    <value>文件</value>
+  </data>
+  <data name="Images" xml:space="preserve">
+    <value>图片</value>
+  </data>
+  <data name="LinkErrorMessage" xml:space="preserve">
+    <value>你的链接有误!</value>
+  </data>
+  <data name="ModelFieldList" xml:space="preserve">
+    <value>所属模型</value>
+  </data>
+  <data name="ModelFieldOption" xml:space="preserve">
+    <value>选项：</value>
+  </data>
+  <data name="ModelFieldOptionCount" xml:space="preserve">
+    <value>每行显示项数：</value>
+  </data>
+  <data name="ModelFieldOptionCountValue" xml:space="preserve">
+    <value>0为全部显示在一行</value>
+  </data>
+  <data name="ModelFiledAliasMessage" xml:space="preserve">
+    <value>*便于在管理项目中显示,列如文章内容</value>
+  </data>
+  <data name="ModelFiledAppointedTime" xml:space="preserve">
+    <value>指定日期</value>
+  </data>
+  <data name="ModelFiledCenter" xml:space="preserve">
+    <value>居中</value>
+  </data>
+  <data name="ModelFiledCoulumnEnable" xml:space="preserve">
+    <value>列表是否显示：</value>
+  </data>
+  <data name="ModelFiledCoulumnWidth" xml:space="preserve">
+    <value>列宽</value>
+  </data>
+  <data name="ModelFiledDate" xml:space="preserve">
+    <value>仅日期</value>
+  </data>
+  <data name="ModelFiledDateOption" xml:space="preserve">
+    <value>日期和时间格式</value>
+  </data>
+  <data name="ModelFiledDateTime" xml:space="preserve">
+    <value>日期和时间</value>
+  </data>
+  <data name="ModelFiledDefaultOrder" xml:space="preserve">
+    <value>是否默认排序</value>
+  </data>
+  <data name="ModelFiledDefaultValue" xml:space="preserve">
+    <value>默认值：</value>
+  </data>
+  <data name="ModelFiledImageWitdh" xml:space="preserve">
+    <value>文本框长度：</value>
+  </data>
+  <data name="ModelFiledIsLink" xml:space="preserve">
+    <value>是否加链接</value>
+  </data>
+  <data name="ModelFiledIsOrder" xml:space="preserve">
+    <value>是否排序</value>
+  </data>
+  <data name="ModelFiledIsRss" xml:space="preserve">
+    <value>是否RSS字段：</value>
+  </data>
+  <data name="ModelFiledIsSearch" xml:space="preserve">
+    <value>是否搜索条件：</value>
+  </data>
+  <data name="ModelFiledIsUpload" xml:space="preserve">
+    <value>是否启用上传</value>
+  </data>
+  <data name="ModelFiledLeft" xml:space="preserve">
+    <value>居左</value>
+  </data>
+  <data name="ModelFiledLinkUrl" xml:space="preserve">
+    <value>请填写链接地址和参数</value>
+  </data>
+  <data name="ModelFiledListAlignment" xml:space="preserve">
+    <value>对齐方式</value>
+  </data>
+  <data name="ModelFiledMaxValue" xml:space="preserve">
+    <value>最大值：</value>
+  </data>
+  <data name="ModelFIledMessages" xml:space="preserve">
+    <value>*后台录入时，在标题旁的提示信息</value>
+  </data>
+  <data name="ModelFiledMinValue" xml:space="preserve">
+    <value>最小值：</value>
+  </data>
+  <data name="ModelFiledNameMessage" xml:space="preserve">
+    <value>*注：字段名由字母、数字、下划线组成，并且仅能字母开头，不以下划线结尾。 例如：Content &lt;br&gt;
+可以在模板中用数据源标签调用该字段内容，调用形式例如：&lt;br&gt;
+{KT.Field ID="数据源标签ID" fieldname="Content" /}</value>
+  </data>
+  <data name="ModelFiledNull" xml:space="preserve">
+    <value>无</value>
+  </data>
+  <data name="ModelFiledNumber" xml:space="preserve">
+    <value>小数位数：</value>
+  </data>
+  <data name="ModelFiledOrderAll" xml:space="preserve">
+    <value>两者皆要</value>
+  </data>
+  <data name="ModelFiledOrderAsc" xml:space="preserve">
+    <value>只要升序</value>
+  </data>
+  <data name="ModelFiledOrderDesc" xml:space="preserve">
+    <value>只要降序</value>
+  </data>
+  <data name="ModelFiledOrderLink" xml:space="preserve">
+    <value>排序链接</value>
+  </data>
+  <data name="ModelFiledOrderOption" xml:space="preserve">
+    <value>排序规则</value>
+  </data>
+  <data name="ModelFiledOrdersMessage" xml:space="preserve">
+    <value>*序号越小，排在越前面</value>
+  </data>
+  <data name="ModelFiledRequierdNumber" xml:space="preserve">
+    <value>（注：只能填数字）</value>
+  </data>
+  <data name="ModelFiledRight" xml:space="preserve">
+    <value>居右</value>
+  </data>
+  <data name="ModelFiledSearchOrder" xml:space="preserve">
+    <value>搜索框排序</value>
+  </data>
+  <data name="ModelFiledSearchWidth" xml:space="preserve">
+    <value>搜索框长度</value>
+  </data>
+  <data name="ModelFiledTime" xml:space="preserve">
+    <value>仅时间</value>
+  </data>
+  <data name="ModelFiledToday" xml:space="preserve">
+    <value>当前日期</value>
+  </data>
+  <data name="ModelFiledUserGourp" xml:space="preserve">
+    <value>设置浏览该字段的会员组：</value>
+  </data>
+  <data name="ModelFiledUserRole" xml:space="preserve">
+    <value>设置操作该字段角色</value>
+  </data>
+  <data name="ModelFileIsEnable" xml:space="preserve">
+    <value>是否启用</value>
+  </data>
+  <data name="ModelFileIsRequired" xml:space="preserve">
+    <value>是否必填：</value>
+  </data>
+  <data name="ModelFileSaveName" xml:space="preserve">
+    <value>保存字段的名称,由字母、数字、下划线组成，且仅能字母开头，不以下划线结尾</value>
+  </data>
+  <data name="ModelFileSaveSize" xml:space="preserve">
+    <value>是否保存文件大小</value>
+  </data>
+  <data name="ModelFileSizt" xml:space="preserve">
+    <value>允许大小</value>
+  </data>
+  <data name="ModelFileType" xml:space="preserve">
+    <value>允许类型</value>
+  </data>
+  <data name="ModelFileTypeMessage" xml:space="preserve">
+    <value>注：允许多个类型请用“|”号分割，如：JPG|GIF</value>
+  </data>
+  <data name="ModelGroupName" xml:space="preserve">
+    <value>分组名称</value>
+  </data>
+  <data name="MuliLineText" xml:space="preserve">
+    <value>多行文本（不支持HTML）</value>
+  </data>
+  <data name="MuliLineTextHtml" xml:space="preserve">
+    <value>多行文本（支持HTML）</value>
+  </data>
+  <data name="Number" xml:space="preserve">
+    <value>数字</value>
+  </data>
+  <data name="Radio" xml:space="preserve">
+    <value>单选</value>
+  </data>
+  <data name="Text" xml:space="preserve">
+    <value>单行文件</value>
+  </data>
+  <data name="TextBoxInput" xml:space="preserve">
+    <value>文本框输入</value>
+  </data>
+  <data name="TextBoxInputValue" xml:space="preserve">
+    <value>文本|值,文本|值</value>
+  </data>
+  <data name="UpdateError" xml:space="preserve">
+    <value>修改失败!</value>
+  </data>
+  <data name="ColumnText" xml:space="preserve">
+    <value>Text列</value>
+  </data>
+  <data name="DataBaseTableList" xml:space="preserve">
+    <value>数据表列表</value>
+  </data>
+  <data name="IsInputValue" xml:space="preserve">
+    <value>是否从页面上输入值</value>
+  </data>
+  <data name="ColumnValue" xml:space="preserve">
+    <value>Value列</value>
+  </data>
+  <data name="SqlWhere" xml:space="preserve">
+    <value>sql查询条件</value>
+  </data>
+  <data name="AddError" xml:space="preserve">
+    <value>操作失败!</value>
+  </data>
+  <data name="StepManage" xml:space="preserve">
+    <value>管理步骤</value>
+  </data>
+  <data name="ModelDescribe" xml:space="preserve">
+    <value>描述</value>
+  </data>
+  <data name="ModelEnable" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="ModelValue" xml:space="preserve">
+    <value>状态值</value>
+  </data>
+  <data name="Customize" xml:space="preserve">
+    <value>自定义</value>
+  </data>
+  <data name="FlowStepFail" xml:space="preserve">
+    <value>退回的操作名</value>
+  </data>
+  <data name="FlowStepSuccess" xml:space="preserve">
+    <value>通过的操作名</value>
+  </data>
+  <data name="FlowStepFailState" xml:space="preserve">
+    <value>退回的状态</value>
+  </data>
+  <data name="FlowStepState" xml:space="preserve">
+    <value>此步骤可操作的状态</value>
+  </data>
+  <data name="FlowStepSuccessState" xml:space="preserve">
+    <value>通过的状态</value>
+  </data>
+  <data name="Notation" xml:space="preserve">
+    <value>批注</value>
+  </data>
+  <data name="ListAndText" xml:space="preserve">
+    <value>列表加文本框</value>
+  </data>
+  <data name="Range" xml:space="preserve">
+    <value>范围</value>
+  </data>
+  <data name="UiType" xml:space="preserve">
+    <value>搜索界面范围</value>
+  </data>
+  <data name="Null" xml:space="preserve">
+    <value>无</value>
+  </data>
+  <data name="ModelFiledDataLength" xml:space="preserve">
+    <value>字段表长度</value>
+  </data>
+  <data name="FieldManage" xml:space="preserve">
+    <value>字段管理</value>
+  </data>
+  <data name="IsListVisible" xml:space="preserve">
+    <value>是否在前台列表显示</value>
+  </data>
+  <data name="TemplateManage" xml:space="preserve">
+    <value>模板管理</value>
+  </data>
+  <data name="DateLang" xml:space="preserve">
+    <value>zh-cn</value>
+    <comment>日期控件语言版本</comment>
+  </data>
+  <data name="FormContentManage" xml:space="preserve">
+    <value>表单内容管理</value>
+  </data>
+  <data name="Authcode" xml:space="preserve">
+    <value>是否启用验证码</value>
+  </data>
+  <data name="BeginTime" xml:space="preserve">
+    <value>开始时间</value>
+  </data>
+  <data name="Emails" xml:space="preserve">
+    <value>指定接收的email</value>
+  </data>
+  <data name="EndTime" xml:space="preserve">
+    <value>结束时间</value>
+  </data>
+  <data name="Everyone" xml:space="preserve">
+    <value>任何人都可以查看</value>
+  </data>
+  <data name="FrontModelAdd" xml:space="preserve">
+    <value>前台表单模板</value>
+  </data>
+  <data name="FrontModelList" xml:space="preserve">
+    <value>前台列表模板</value>
+  </data>
+  <data name="IsRelease" xml:space="preserve">
+    <value>是否发布到前台</value>
+  </data>
+  <data name="IsReply" xml:space="preserve">
+    <value>是否要回复</value>
+  </data>
+  <data name="IsReview" xml:space="preserve">
+    <value>是否审核</value>
+  </data>
+  <data name="IsSaveDataBase" xml:space="preserve">
+    <value>是否提交到后台</value>
+  </data>
+  <data name="IsSendAdminEmail" xml:space="preserve">
+    <value>是否发送到指定的email</value>
+  </data>
+  <data name="IsSendAdminPhone" xml:space="preserve">
+    <value>是否发送到指定的手机</value>
+  </data>
+  <data name="IsSendUserEmail" xml:space="preserve">
+    <value>是否将回复发送到会员email</value>
+  </data>
+  <data name="IsSendUserPhone" xml:space="preserve">
+    <value>是否将回复发送到会员手机</value>
+  </data>
+  <data name="IsUser" xml:space="preserve">
+    <value>会员可以查看</value>
+  </data>
+  <data name="IsUserAnswer" xml:space="preserve">
+    <value>是否只有会员提交问题</value>
+  </data>
+  <data name="NoReview" xml:space="preserve">
+    <value>不用审核</value>
+  </data>
+  <data name="PasswordCode" xml:space="preserve">
+    <value>密码验证</value>
+  </data>
+  <data name="Phones" xml:space="preserve">
+    <value>指定接收的手机</value>
+  </data>
+  <data name="ReplyType" xml:space="preserve">
+    <value>查看回复信息类型</value>
+  </data>
+  <data name="Review" xml:space="preserve">
+    <value>都要审核</value>
+  </data>
+  <data name="ReviewFlow" xml:space="preserve">
+    <value>审核流程</value>
+  </data>
+  <data name="Summary" xml:space="preserve">
+    <value>简介</value>
+  </data>
+  <data name="TableName" xml:space="preserve">
+    <value>表名</value>
+  </data>
+  <data name="TimeLimmit" xml:space="preserve">
+    <value>时间限制</value>
+  </data>
+  <data name="UserNoReview" xml:space="preserve">
+    <value>会员不用审核</value>
+  </data>
+  <data name="Call" xml:space="preserve">
+    <value>调用</value>
+  </data>
+  <data name="SubmitLimitIP" xml:space="preserve">
+    <value>IP段过滤限制段 多个用|隔开</value>
+  </data>
+  <data name="SubmitLimitTime" xml:space="preserve">
+    <value>表单限制提交时间(秒)</value>
+  </data>
+  <data name="CounterCount" xml:space="preserve">
+    <value>反对数</value>
+  </data>
+  <data name="CounterName" xml:space="preserve">
+    <value>反方投票页面显示名称</value>
+  </data>
+  <data name="IsCounter" xml:space="preserve">
+    <value>是否启用反方投票</value>
+  </data>
+  <data name="IsNeutral" xml:space="preserve">
+    <value>是否启用中立方投票</value>
+  </data>
+  <data name="IsScore" xml:space="preserve">
+    <value>是否要评分</value>
+  </data>
+  <data name="IsSquare" xml:space="preserve">
+    <value>是否启用正方投票</value>
+  </data>
+  <data name="IsUserSubmit" xml:space="preserve">
+    <value>是否只有会员才能评论</value>
+  </data>
+  <data name="LimitTime" xml:space="preserve">
+    <value>投票限制时间</value>
+  </data>
+  <data name="NeutralCount" xml:space="preserve">
+    <value>中立数</value>
+  </data>
+  <data name="NeutralName" xml:space="preserve">
+    <value>中立方投票页面显示名称</value>
+  </data>
+  <data name="NewsUrl" xml:space="preserve">
+    <value>原文</value>
+  </data>
+  <data name="SquareCount" xml:space="preserve">
+    <value>支持数</value>
+  </data>
+  <data name="SquareName" xml:space="preserve">
+    <value>正方投票页面显示名称</value>
+  </data>
+  <data name="SubmitLimitTimeComment" xml:space="preserve">
+    <value>评论提交限制时间</value>
+  </data>
+  <data name="AdvertisementManage" xml:space="preserve">
+    <value>广告管理</value>
+  </data>
+  <data name="AdvertisingDisplayType1" xml:space="preserve">
+    <value>按权重随机显示</value>
+  </data>
+  <data name="AdvertisingDisplayType2" xml:space="preserve">
+    <value>按权重优先显示</value>
+  </data>
+  <data name="AdvertisingDisplayType3" xml:space="preserve">
+    <value>按顺序循环显示</value>
+  </data>
+  <data name="CustomizeSetting" xml:space="preserve">
+    <value>自定义设置</value>
+  </data>
+  <data name="DefaultSetting" xml:space="preserve">
+    <value>默认设置</value>
+  </data>
+  <data name="DisplayType" xml:space="preserve">
+    <value>显示类型</value>
+  </data>
+  <data name="jsName" xml:space="preserve">
+    <value>js名称</value>
+  </data>
+  <data name="NullSetting" xml:space="preserve">
+    <value>此类型无版位参数设置</value>
+  </data>
+  <data name="PopType" xml:space="preserve">
+    <value>弹出方式</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>尺寸</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>类型</value>
+  </data>
+  <data name="ClickCount" xml:space="preserve">
+    <value>点击数</value>
+  </data>
+  <data name="LastTime" xml:space="preserve">
+    <value>过期时间</value>
+  </data>
+  <data name="Path" xml:space="preserve">
+    <value>路径</value>
+  </data>
+  <data name="ViewCount" xml:space="preserve">
+    <value>浏览数</value>
+  </data>
+  <data name="Weight" xml:space="preserve">
+    <value>权重</value>
+  </data>
+  <data name="cbMoveShowCloseAD" xml:space="preserve">
+    <value>是否显示关闭标签</value>
+  </data>
+  <data name="ddlFloatPositionDesc" xml:space="preserve">
+    <value>开始位置</value>
+  </data>
+  <data name="ddlFloatType1" xml:space="preserve">
+    <value>变速漂浮</value>
+  </data>
+  <data name="ddlFloatType2" xml:space="preserve">
+    <value>匀速漂浮</value>
+  </data>
+  <data name="ddlFloatType3" xml:space="preserve">
+    <value>上下漂浮</value>
+  </data>
+  <data name="ddlFloatType4" xml:space="preserve">
+    <value>左右漂浮</value>
+  </data>
+  <data name="ddlFloatTypeDesc" xml:space="preserve">
+    <value>漂浮类型</value>
+  </data>
+  <data name="ddlMovePositionDesc" xml:space="preserve">
+    <value>广告位置</value>
+  </data>
+  <data name="ddlPopPosition1" xml:space="preserve">
+    <value>左上</value>
+  </data>
+  <data name="ddlPopPosition2" xml:space="preserve">
+    <value>左下</value>
+  </data>
+  <data name="ddlPopPosition3" xml:space="preserve">
+    <value>右上</value>
+  </data>
+  <data name="ddlPopPosition4" xml:space="preserve">
+    <value>右下</value>
+  </data>
+  <data name="ddlPopPositionDesc" xml:space="preserve">
+    <value>弹出位置</value>
+  </data>
+  <data name="ddlPopType1" xml:space="preserve">
+    <value>前置窗口</value>
+  </data>
+  <data name="ddlPopType2" xml:space="preserve">
+    <value>后置窗口</value>
+  </data>
+  <data name="ddlPopType3" xml:space="preserve">
+    <value>网页对话框</value>
+  </data>
+  <data name="ddlPopType4" xml:space="preserve">
+    <value>背投广告</value>
+  </data>
+  <data name="ddlSize" xml:space="preserve">
+    <value>版位尺寸</value>
+  </data>
+  <data name="left" xml:space="preserve">
+    <value>左</value>
+  </data>
+  <data name="rbtlWeight" xml:space="preserve">
+    <value>显示方式</value>
+  </data>
+  <data name="rbtlWeight1" xml:space="preserve">
+    <value>按权重随机显示，权重越大显示机会越大</value>
+  </data>
+  <data name="rbtlWeight2" xml:space="preserve">
+    <value>按权重优先显示，显示权重值最大的广告</value>
+  </data>
+  <data name="rbtlWeight3" xml:space="preserve">
+    <value>按顺序循环显示，此方式仅对矩形横幅有效</value>
+  </data>
+  <data name="TimeDesc" xml:space="preserve">
+    <value>小时 在时间间隔内不重复弹出，设为0时总是弹出</value>
+  </data>
+  <data name="TimeSplit" xml:space="preserve">
+    <value>时间间隔</value>
+  </data>
+  <data name="TxtCoupletLeft" xml:space="preserve">
+    <value>左右边距</value>
+  </data>
+  <data name="TxtCoupletTop" xml:space="preserve">
+    <value>上边距</value>
+  </data>
+  <data name="txtHeight" xml:space="preserve">
+    <value>高度</value>
+  </data>
+  <data name="TxtMoveCloseFontColor" xml:space="preserve">
+    <value>关闭标签的颜色</value>
+  </data>
+  <data name="TxtMoveDelay" xml:space="preserve">
+    <value>移动平滑度</value>
+  </data>
+  <data name="TxtMoveDelayDesc" xml:space="preserve">
+    <value>（取值在0.001至1之间）</value>
+  </data>
+  <data name="txtWidth" xml:space="preserve">
+    <value>宽度</value>
+  </data>
+  <data name="Up" xml:space="preserve">
+    <value>上</value>
+  </data>
+  <data name="ADStatistics" xml:space="preserve">
+    <value>广告统计</value>
+  </data>
+  <data name="cbFlashMode" xml:space="preserve">
+    <value>背景透明</value>
+  </data>
+  <data name="cblIsClick" xml:space="preserve">
+    <value>统计点击数</value>
+  </data>
+  <data name="cblIsView" xml:space="preserve">
+    <value>统计浏览数</value>
+  </data>
+  <data name="ExtenFileUpload" xml:space="preserve">
+    <value>动画上传</value>
+  </data>
+  <data name="ExtenFileUploadDesc" xml:space="preserve">
+    <value>广告内容设置--动画</value>
+  </data>
+  <data name="ExtenFileUploadSize" xml:space="preserve">
+    <value>动画尺寸</value>
+  </data>
+  <data name="FileUploadControl1" xml:space="preserve">
+    <value>图片上传</value>
+  </data>
+  <data name="FileUploadDesc" xml:space="preserve">
+    <value>广告内容设置--图片</value>
+  </data>
+  <data name="FileUploadSize" xml:space="preserve">
+    <value>图片尺寸</value>
+  </data>
+  <data name="lbAdvertisingId" xml:space="preserve">
+    <value>所属版位</value>
+  </data>
+  <data name="rbtlLinkTarget" xml:space="preserve">
+    <value>链接目标</value>
+  </data>
+  <data name="rbtlLinkTarget1" xml:space="preserve">
+    <value>新窗口</value>
+  </data>
+  <data name="rbtlLinkTarget2" xml:space="preserve">
+    <value>原窗口</value>
+  </data>
+  <data name="rbtlLinkType" xml:space="preserve">
+    <value>统计连接路径</value>
+  </data>
+  <data name="rbtlLinkType1" xml:space="preserve">
+    <value>相对路径</value>
+  </data>
+  <data name="rbtlLinkType2" xml:space="preserve">
+    <value>绝对路径</value>
+  </data>
+  <data name="rbtlType" xml:space="preserve">
+    <value>广告类型</value>
+  </data>
+  <data name="TxtADCode" xml:space="preserve">
+    <value>广告内容设置--代码</value>
+  </data>
+  <data name="TxtADIntro" xml:space="preserve">
+    <value>广告简介</value>
+  </data>
+  <data name="TxtADTextDesc" xml:space="preserve">
+    <value>广告内容设置--文本</value>
+  </data>
+  <data name="txtClickCount" xml:space="preserve">
+    <value>点击数</value>
+  </data>
+  <data name="txtExpiredTime" xml:space="preserve">
+    <value>广告过期时间</value>
+  </data>
+  <data name="TxtImgHeight" xml:space="preserve">
+    <value>高</value>
+  </data>
+  <data name="TxtImgWidth" xml:space="preserve">
+    <value>宽</value>
+  </data>
+  <data name="TxtLinkAlt" xml:space="preserve">
+    <value>链接提示</value>
+  </data>
+  <data name="TxtLinkUrl" xml:space="preserve">
+    <value>链接地址</value>
+  </data>
+  <data name="txtViewCount" xml:space="preserve">
+    <value>浏览数</value>
+  </data>
+  <data name="TxtWebFileUrlDesc" xml:space="preserve">
+    <value>广告内容设置--页面</value>
+  </data>
+  <data name="TxtWebFileUrlTitle" xml:space="preserve">
+    <value>注意：页面地址需要加上http://</value>
+  </data>
+  <data name="txtWeight" xml:space="preserve">
+    <value>广告权重</value>
+  </data>
+  <data name="txtWeightTitle" xml:space="preserve">
+    <value>* 版位按权重（优先级、随机）显示时，此处设置的权重越大，该广告显示的机会就越多</value>
+  </data>
+  <data name="AdminEmail" xml:space="preserve">
+    <value>接收的邮件地址</value>
+  </data>
+  <data name="IsCheck" xml:space="preserve">
+    <value>是否复选</value>
+  </data>
+  <data name="AddItem" xml:space="preserve">
+    <value>增加项目</value>
+  </data>
+  <data name="DownItem" xml:space="preserve">
+    <value>下移项目</value>
+  </data>
+  <data name="IsUserVote" xml:space="preserve">
+    <value>是否只能会员才能投票</value>
+  </data>
+  <data name="RemoveItem" xml:space="preserve">
+    <value>删除项目</value>
+  </data>
+  <data name="SelectItem" xml:space="preserve">
+    <value>选择投票项</value>
+  </data>
+  <data name="UpItem" xml:space="preserve">
+    <value>上移项目</value>
+  </data>
+  <data name="VoteCount" xml:space="preserve">
+    <value>投票数</value>
+  </data>
+  <data name="VoteIPCount" xml:space="preserve">
+    <value>合法IP允许投票次数</value>
+  </data>
+  <data name="VoteIPCountMessage" xml:space="preserve">
+    <value>0为不限制次数</value>
+  </data>
+  <data name="VoteItem" xml:space="preserve">
+    <value>投票项目</value>
+  </data>
+  <data name="VoteNewsId" xml:space="preserve">
+    <value>关联ID</value>
+  </data>
+  <data name="txtBoxHeight" xml:space="preserve">
+    <value>文本框高：</value>
+  </data>
+</root>

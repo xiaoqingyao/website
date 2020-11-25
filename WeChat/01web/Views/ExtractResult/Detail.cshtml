@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_LayoutList.cshtml";
+    string key = ViewBag.key as string;
+}
+
+
+@section scripts{
+    <script>
+        $(function () {
+            gridManager.set({
+                columns: [
+                    { display: '群组名', name: 'BatchName' },
+                    { display: '昵称', name: 'NickName' },
+                    { display: '消息内容', name: 'MContent' },
+                    {
+                        display: '时间', name: 'Time', render: function (item) {
+                            return formatDate(item.Time, 'yyyy-MM-dd hh:mm:ss')
+                        }
+                    }
+                ],
+                url: "/ExtractResult/GroupDetail"
+                , dataAction: "server"
+                , onDblClickRow: function (data, rowid, rowdata) {
+                    showDetail1(data.KeyWord);
+                }, parms: [{ name: 'KeyWord', value: '@key' }, { name: 'df', value: $("#txtDf").val() }, { name: 'dt', value:$("#txtDt").val() }]
+            });
+            $("#searchbtn").ligerButton({
+                click: function () {
+                    gridManager.setOptions(
+                        { parms: [{ name: 'KeyWord', value: '@key' }, { name: 'df', value: $("#txtDf").val() }, { name: 'dt', value: $("#txtDt").val() }] }
+                    );
+                    gridManager.loadData(true);
+                }
+            });
+            $("#txtDf").ligerDateEditor();
+            $("#txtDt").ligerDateEditor();
+        });
+    </script>
+}
+@section SearchPanel{
+    <div class="l-panel-search-item">
+        时间从：
+    </div>
+    <div class="l-panel-search-item">
+        @{ var df = DateTime.Now.Year.ToString() + "-" + DateTime.Now.Month.ToString() + "-01";}
+        <input type="text" id="txtDf" value="@df" ) />
+    </div>
+    <div class="l-panel-search-item">
+        到：
+    </div>
+    <div class="l-panel-search-item">
+        <input type="text" id="txtDt" value="@DateTime.Now.ToString("yyyy-MM-dd")" />
+    </div>
+    <div class="l-panel-search-item">
+        <div id="searchbtn" style="width:80px;">搜索</div>
+    </div>
+}

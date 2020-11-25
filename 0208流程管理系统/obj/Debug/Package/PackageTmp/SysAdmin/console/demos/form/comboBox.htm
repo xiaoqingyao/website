@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="../../lib/LigerUI/skins/Aqua/css/ligerui-all.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+    </style>
+    <script src="../../lib/jquery/jquery-1.3.2.min.js" type="text/javascript"></script> 
+    <script src="../../lib/ligerUI/js/ligerui.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function ()
+        {
+
+            $("#lis1").ligerComboBox({
+                data: [
+                [1, '列表项一'],
+                 [2, '列表项二'],
+                 [3, '列表项三'],
+                 [4, '列表项四'],
+                 [5, '列表5'],
+                 [6, '列表6'],
+                 [7, '列表7'],
+                 [8, '列表8'],
+                 [9, '列表9'],
+                 [10, '列项10']
+                  ], isMultiSelect: false,
+                onBeforeSelect: function (value)
+                {
+                    if (value == 3) { return false; }
+                    return true;
+                },
+                onSelectValue: function (newvalue)
+                {
+                    //alert(newvalue);
+                }
+            });
+
+            $("select").ligerComboBox({
+                onBeforeSelect: function (value)
+                {
+                    if (value == 'opt3') { return false; }
+                    return true;
+                }
+            });
+
+            $("#testdiv").ligerComboBox({
+                valueField: 'id',
+                displayField: 'label', isShowCheckBox: true, isMultiSelect: true,
+                data: [
+                    { label: '张三', id: '1' },
+                    { label: '李四', id: '2' },
+                    { label: '赵武', id: '44' }
+                ],
+                textFieldID: "textFieldID1"
+            });
+            var proData = [
+            [1, '广东'], [2, '福建']
+        ];
+            var cityData = [
+                [1, '潮州', 1], [2, '广州', 1],
+                [3, '福州', 2], [4, '厦门', 2]
+            ];
+            $("#txtPro").ligerComboBox({ data: proData, isMultiSelect: false,
+                onSelected: function (newvalue)
+                {
+                    var newData = new Array();
+                    for (i = 0; i < cityData.length; i++)
+                    {
+                        if (cityData[i][2] == newvalue)
+                        {
+                            newData.push(cityData[i]);
+                        }
+                    }
+                    $("#txtCity")[0].manager.setData(newData);
+                }
+            });
+            $("#txtCity").ligerComboBox({ data: null, isMultiSelect: true, isShowCheckBox: true });
+
+            var dataGrid = [
+                { id: 1, name: '李三', sex: '男' },
+                { id: 2, name: '李四', sex: '女' },
+                { id: 3, name: '赵武', sex: '女' },
+                { id: 4, name: '陈留', sex: '女' }
+                ];
+            var dataGridColumns = [
+                { header: 'ID', name: 'id', width: 20 },
+                { header: '名字', name: 'name' },
+                { header: '性别', name: 'sex' }
+            ];
+            $("#txtGrid").ligerComboBox({ data: dataGrid, valueField: 'id',
+                displayField: 'name', columns: dataGridColumns, selectBoxWith: 200
+            });
+        });
+        function clickee()
+        {
+            alert($("#select2").val());
+        }
+    </script>
+</head>
+<body>
+<h3>示例一：复选框单选</h3>
+        <input type="text" id="lis1"/>
+        <br />
+
+<h3>示例二：单选</h3>
+         <select name="select2" id="select2" >
+				<option value="opt1">Big Option test line with more wordssss</option>
+				<option value="opt2">Option 2</option>
+				<option value="opt3">Option 3</option>
+				<option value="opt4">Option 4</option>
+				<option value="opt5">Option 5</option>
+				<option value="opt6">Option 6</option>
+				<option value="opt7">Option 7</option>
+				<option value="opt8">Option 8</option>
+			</select>
+            <br />
+        
+<h3>示例三：多选</h3>   
+        <div id="testdiv"></div>
+
+<h3>示例四：联动效果</h3>   
+   <input type="text" id="txtPro"/>
+   <br />
+   <input type="text" id="txtCity"/>
+    <br />
+
+    <h3>示例五：表格</h3>   
+   <input type="text" id="txtGrid"/>
+   <br />
+   <div id="message"></div><br /><br /><br />
+<a href="javascript:clickee()" class="l-button" style="width:100px">获取select2</a>
+<br /><br /><br /><br />
+ <div style="display:none;">
+
+</div>
+</body>
+</html>

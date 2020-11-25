@@ -1,0 +1,115 @@
+<!DOCTYPE HTML SYSTEM "-//Macromedia//DWExtension layout-engine 5.0//dialog">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>位置导航模板</title>
+    <script type="text/javascript">
+        String.prototype.trim = function() { return this.replace(/^\s+|\s+$/g, ""); }
+
+        function commandButtons() {
+            return new Array("确定", "getContent()", "取消", "window.close()")
+        }
+	
+	    function getContent(){
+			var insertContent,cssClass,target,isNavTagWord,navTagContent,htmlCode;
+			
+			cssClass = document.getElementById("CssClass").value;
+			htmlCode = "";
+			target = "1";
+			navTagContent = "";
+			insertContent = "{HQB_L000_TemplateName  LableType=\"NAV\" Type=\"3\" ";
+			
+			if(document.getElementById("NavTagContentTxt").value != "" && document.getElementById("NavTagContentTxt").value.trim() != "这里是分隔各导航之间的内容"){
+				navTagContent = document.getElementById("NavTagContentTxt").value;
+			}
+			
+			for(var i=0;i<document.getElementById("htmlCode").options.length;i++){
+				if(document.getElementById("htmlCode").options[i].selected){
+					htmlCode = document.getElementById("htmlCode").options[i].value;
+				}
+			}
+			
+			for(var i=0;i<document.getElementById("Target").options.length;i++){
+				if(document.getElementById("Target").options[i].selected){
+					target = document.getElementById("Target").options[i].value;
+				}
+			}
+			
+			if(cssClass.trim() != ""){
+				insertContent += " CssClass=\""+ cssClass +"\" ";
+			}
+			
+			if(document.getElementById("NavTagWord0").checked){
+				insertContent += " IsNavTagWord=\"1\" ";
+			}else if(document.getElementById("NavTagWord1").checked){
+				insertContent += " IsNavTagWord=\"0\" ";
+			}
+
+			if(navTagContent != ""){
+				insertContent += " NavTagContent=\""+ navTagContent +"\" ";
+			}
+			
+			insertContent += " Target=\""+ target +"\" ";
+			insertContent += " HtmlCode=\""+ htmlCode +"\" ";
+			insertContent += "}{/HQB_L000}";
+			
+			
+			dreamweaver.getDocumentDOM("document").source.wrapSelection(insertContent, '');
+            window.close();
+		}
+			
+		function CheckValue(){
+			if(document.getElementById("NavTagContentTxt").value.trim() == "这里是分隔各导航之间的内容"){
+				document.getElementById("NavTagContentTxt").value = "";
+			}
+		}
+		
+	    function windowDimensions() { return "430,180"; }
+    </script>
+
+</head>
+<body>
+    <form name="theform" method="post" action="">
+<table width="380" height="130">
+        <tr>
+            <td style="width: 110px">文字样式：</td>
+            <td><input type="text"  id="CssClass"></td>
+        </tr>
+        <tr>
+            <td>
+                打开方式：
+            </td>
+            <td>
+                <select id="Target">
+                    <option selected="selected" value="1">在本窗口中打开</option>
+                    <option value="2">在新窗口中打开</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>                导航方式：
+            </td>
+            <td>
+                <input type="radio" checked="checked" id="NavTagWord0" value="1" > 文字
+                <input type="radio" id="NavTagWord1"  value="0"> 图片
+				<input type="text" value="这里是分隔各导航之间的内容" onKeyDown="CheckValue()" id="NavTagContentTxt">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                导航的HTML：
+            </td>
+            <td>
+                <select id="htmlCode">
+                    <option selected="selected" value="">无</option>
+                    <option value="li">li</option>
+                    <option value="p">p</option>
+                    <option value="div">div</option>
+                    <option value="span">span</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>

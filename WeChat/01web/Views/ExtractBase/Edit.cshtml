@@ -1,0 +1,57 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_LayoutEdit.cshtml";
+}
+@section scripts{
+
+
+    <script type="text/javascript">
+        var dialog = frameElement.dialog; //调用页面的dialog对象(ligerui对象)
+        var postUrl = "/ExtractBase/Create";
+
+        function valid() {
+            var form = liger.get("form1");
+            return form.valid();
+
+        }
+        function EditSave(gridManager) {
+            var action = postUrl;
+            postUrl = "/ExtractBase/Edit";//进入方法内立即修改，防止重复提交
+            var form = liger.get("form1");
+            var data = form.getData();
+            if (!valid()) {
+                return false;
+            }
+            $.post(action, data, function (data, status) {
+                if (status == "success") {
+                    if (data.Code == 1) {
+                        dialog.close();
+                        gridManager.reload();
+                    } else {
+                        alert("保存出错：" + data.Message);
+                    }
+                }
+            });
+        }
+        function SetData() {
+            var obj = @Html.Raw(ViewBag.ObjString);
+            if (obj) {
+                var form = new liger.get("form1");
+                form.setData(obj);
+                postUrl = "/ExtractBase/Edit";
+            }
+        }
+    </script>
+}
+
+<div id="form1" class="liger-form">
+    <div class="fields">
+        <input data-type="text" data-label="" data-name="Id" style="display:none" />
+        <input data-type="text" data-label="关键词" data-name="KeyWord" />
+        <input data-type="text" data-label="备注" data-name="Note" />
+        <div style="color:red">
+            多个关键词用;隔开
+        </div>
+    </div>
+    
+</div>

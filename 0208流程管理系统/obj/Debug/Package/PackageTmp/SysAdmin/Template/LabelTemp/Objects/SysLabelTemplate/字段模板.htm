@@ -1,0 +1,236 @@
+<!DOCTYPE HTML SYSTEM "-//Macromedia//DWExtension layout-engine 5.0//dialog">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>字段模板</title>
+	<style type="text/css">
+	dl{ height:30px; padding:8; margin:0;}
+		dl dt{ float:left; width:80px;}
+    </style>
+    <script type="text/javascript">
+        String.prototype.trim = function() { return this.replace(/^\s+|\s+$/g, ""); }
+
+        function commandButtons() {
+            return new Array("确定", "getField()", "取消", "window.close()")
+        }
+
+        function getField() {
+            var type;
+            var name = document.getElementById('fieldName').value;
+            var sdl = "{$Field(";
+
+            for (j = 0; j < document.getElementById('outType').options.length; j++) {
+                if (document.getElementById('outType').options[j].selected) {
+                    type = document.getElementById('outType').options[j].value;
+                }
+            }
+
+            switch (type) {
+                case "1":
+                    var len = document.getElementById("txtLen").value;
+                    sdl += "1," + name + ",";
+                    if (len.trim() != "") {
+                        sdl += len + ",";
+                    }
+                    sdl += GetRadioValue("omit");
+                    break;
+                case "2":
+                    var digit = document.getElementById("txtdigit").value;
+                    sdl += "2," + name + "," + GetRadioValue("float");
+                    if (digit.trim() != "") {
+                        sdl += "," + document.getElementById("txtdigit").value;
+                    }
+                    break;
+                case "3":
+                    var formart;
+
+                    for (j = 0; j < document.getElementById('format').options.length; j++) {
+                        if (document.getElementById('format').options[j].selected) {
+                            formart = document.getElementById('format').options[j].value;
+                        }
+                    }
+
+                    sdl += "3," + name;
+                    if (formart.trim() != "") {
+                        sdl += "," + formart;
+                    }
+                    break;
+                default:
+                    var tTrue = document.getElementById("txtTrue").value;
+                    var tFalse = document.getElementById("txtFalse").value;
+                    sdl += "4," + name;
+                    if (tTrue.trim() != "") {
+                        sdl += "," + tTrue;
+                    }
+                    if (tFalse.trim() != "") {
+                        sdl += "," + tFalse;
+                    }
+                    break;
+            }
+
+            sdl += ")}";
+            dreamweaver.getDocumentDOM("document").source.wrapSelection(sdl, '');
+            window.close();
+        }
+
+        function showByType() {
+            var type;
+
+            for (j = 0; j < document.getElementById('outType').options.length; j++) {
+                if (document.getElementById('outType').options[j].selected) {
+                    type = document.getElementById('outType').options[j].value;
+                }
+            }
+
+            document.getElementById("CharType_0").style.display = "none";
+            document.getElementById("CharType_1").style.display = "none";
+            document.getElementById("NumType_0").style.display = "none";
+            document.getElementById("NumType_1").style.display = "none";
+            document.getElementById("DataType_0").style.display = "none";
+            document.getElementById("BoolType_0").style.display = "none";
+            document.getElementById("BoolType_1").style.display = "none";
+
+            switch (type) {
+                case "1":
+                    document.getElementById("CharType_0").style.display = "block";
+                    document.getElementById("CharType_1").style.display = "block";
+                    break;
+                case "2":
+                    document.getElementById("NumType_0").style.display = "block";
+                    document.getElementById("NumType_1").style.display = "block";
+                    break;
+                case "3":
+                    document.getElementById("DataType_0").style.display = "block";
+                    break;
+                case "4":
+                    document.getElementById("BoolType_0").style.display = "block";
+                    document.getElementById("BoolType_1").style.display = "block";
+                    break;
+            }
+        }
+
+        function GetRadioValue(RadioName) {
+            var obj;
+            obj = document.getElementsByName(RadioName);
+            if (obj != null) {
+                var i;
+                for (i = 0; i < obj.length; i++) {
+                    if (obj[i].checked) {
+                        return obj[i].value;
+                    }
+                }
+            }
+        }
+        function windowDimensions() { return "400,210"; }
+    </script>
+
+</head>
+<body>
+    <form name="theform" method="post" action="">
+    <div style="width:300px; padding:0; height:160px; overflow:visible;">
+    	<dl>
+        	<dt>字段名称：</dt>
+            <dd><input type="text" value="fieldName" id="fieldName" /></dd>
+        </dl>
+    	<dl>
+        	<dt>  输出类型：</dt>
+            <dd> <select id="outType" onChange="showByType()">
+                    <option value="1" selected="selected">文本类型</option>
+                    <option value="2">数字类型</option>
+                    <option value="3">日期类型</option>
+                    <option value="4">布尔型</option>
+                </select></dd>
+        </dl>
+    	<dl id="CharType_0">
+        	<dt>截断长度：</dt>
+            <dd><input type="text" id="txtLen" style="width: 50px" value="0" maxlength="4" class="validate[optional,custom[onlyNumber]]" />
+                <span style="color: Red; padding-left: 20px;">为0则不截断</span></dd>
+        </dl>
+    	<dl id="CharType_1">
+        	<dt>截断处理：</dt>
+            <dd><input id="Radio1" type="radio" name="omit" value="1" />显示...&nbsp; &nbsp; &nbsp;<input
+                    id="Radio2" type="radio" name="omit" value="0" checked="checked" />不显示...</dd>
+        </dl>
+    	<dl id="NumType_0" style="display: none;">
+        	<dt>数字类型：</dt>
+            <dd> <input id="radioInt" type="radio"  name="float" value="0" />整数
+                <input id="radioFloat" type="radio"name="float" value="1"
+                    checked="checked" />小数
+                <input id="radioPer" type="radio" name="float" value="2" />百分数</dd>
+        </dl>
+    	<dl id="NumType_1" style="display: none;">
+        	<dt>小数位数：</dt>
+            <dd><input type="text" maxlength="2" id="txtdigit" value="2" style="width: 50" /></dd>
+        </dl>
+    	<dl id="DataType_0" style="display: none;">
+        	<dt>输出格式：</dt>
+            <dd>  <select id="format">
+                    <option selected="selected" value="yyyy-MM-dd">2005-10-1</option>
+                    <option value="yyyy.MM.dd">2005.10.1</option>
+                    <option value="yyyy/MM/dd">2005/10/1</option>
+                    <option value="MM/dd/yyyy">10/1/2005</option>
+                    <option value="yyyy年MM月">2005年10月</option>
+                    <option value="yyyy年MM月dd日">2005年10月1日</option>
+                    <option value="MM.dd.yyyy">10.1.2005</option>
+                    <option value="MM-dd-yyyy">10-1-2005</option>
+                    <option value="MM/dd">10/1</option>
+                    <option value="MM.dd">10.1</option>
+                    <option value="MM月dd日">10月1日</option>
+                    <option value="dd日hh时">1日12时</option>
+                    <option value="dd日hh点">1日12点</option>
+                    <option value="hh时mm分">12时12分</option>
+                    <option value="hh:mm">12:12</option>
+                    <option value="MM-dd">10-1</option>
+                    <option value="MM/dd hh:mm">10/1 12:00</option>
+                    <optgroup label="-----加括号格式-----">
+                    </optgroup>
+                    <option value="(yyyy-MM-dd)">(2005-10-1)</option>
+                    <option value="(yyyy.MM.dd)">(2005.10.1)</option>
+                    <option value="(yyyy/MM/dd)">(2005/10/1)</option>
+                    <option value="(MM/dd/yyyy)">(10/1/2005)</option>
+                    <option value="(yyyy年MM月)">(2005年10月)</option>
+                    <option value="(yyyy年MM月dd日)">(2005年10月1日)</option>
+                    <option value="(MM.dd.yyyy)">(10.1.2005)</option>
+                    <option value="(MM-dd-yyyy)">(10-1-2005)</option>
+                    <option value="(MM/dd)">(10/1)</option>
+                    <option value="(MM.dd)">(10.1)</option>
+                    <option value="(MM月dd日)">(10月1日)</option>
+                    <option value="(dd日hh时)">(1日12时)</option>
+                    <option value="(dd日hh点)">(1日12点)</option>
+                    <option value="(hh时mm分)">(12时12分)</option>
+                    <option value="(hh:mm)">(12:12)</option>
+                    <option value="(MM-dd)">(10-1)</option>
+                    <option value="(MM/dd hh:mm)">(10/1 12:00)</option>
+                    <optgroup label="-----加中括号格式-----">
+                    </optgroup>
+                    <option value="[yyyy-MM-dd]">[2005-10-1]</option>
+                    <option value="[yyyy.MM.dd]">[2005.10.1]</option>
+                    <option value="[yyyy/MM/dd]">[2005/10/1]</option>
+                    <option value="[MM/dd/yyyy]">[10/1/2005]</option>
+                    <option value="[yyyy年MM月]">[2005年10月]</option>
+                    <option value="[yyyy年MM月dd日]">[2005年10月1日]</option>
+                    <option value="[MM.dd.yyyy]">[10.1.2005]</option>
+                    <option value="[MM-dd-yyyy]">[10-1-2005]</option>
+                    <option value="[MM/dd]">[10/1]</option>
+                    <option value="[MM.dd]">[10.1]</option>
+                    <option value="[MM月dd日]">[10月1日]</option>
+                    <option value="[dd日hh时]">[1日12时]</option>
+                    <option value="[dd日hh点]">[1日12点]</option>
+                    <option value="[hh时mm分]">[12时12分]</option>
+                    <option value="[hh:mm]">[12:12]</option>
+                    <option value="[MM-dd]">[10-1]</option>
+                    <option value="[MM/dd hh:mm]">[10/1 12:00]</option>
+                </select></dd>
+        </dl>
+    	<dl id="BoolType_0" style="display: none;">
+        	<dt> 为真输出：</dt>
+            <dd><input type="text" id="txtTrue" value='是' /></dd>
+        </dl>
+    	<dl id="BoolType_1" style="display: none;">
+        	<dt>为假输出：</dt>
+            <dd> <input type="text" id="txtFalse" value='否' /></dd>
+        </dl>
+    </div>
+    </form>
+</body>
+</html>

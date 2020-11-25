@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>家庭理财管理系统</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script language="JavaScript" src="js/jquery.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            //导航切换
+            $(".menuson li").click(function () {
+                $(".menuson li.active").removeClass("active")
+                $(this).addClass("active");
+            });
+
+            $('.title').click(function () {
+                var $ul = $(this).next('ul');
+                $('dd').find('ul').slideUp();
+                if ($ul.is(':visible')) {
+                    $(this).next('ul').slideUp();
+                } else {
+                    $(this).next('ul').slideDown();
+                }
+            });
+        })
+    </script>
+
+
+</head>
+
+<body style="background:#f0f9fd;">
+    <div class="lefttop"><span></span>系统菜单</div>
+    <dl class="leftmenu">
+        <dd>
+            <div class="title">
+                <span><img src="images/leftico01.png" /></span>资金账户
+            </div>
+            <ul class="menuson">
+                <li><cite></cite><a href="AddAcount.aspx" target="rightFrame">添加资金账户</a><i></i></li>
+                <li><cite></cite><a href="AcountManager.aspx" target="rightFrame">资金账户管理</a><i></i></li>
+                <li><cite></cite><a href="AddAccountFundFlow.aspx" target="rightFrame">资金账户变更</a><i></i></li>
+
+            </ul>
+        </dd>
+        <dd>
+            <div class="title">
+                <span><img src="images/leftico01.png" /></span>日常记账
+            </div>
+            <ul class="menuson">
+                <li><cite></cite><a href="AddMoney.aspx?type=1" target="rightFrame">新增收入</a><i></i></li>
+                <li><cite></cite><a href="AddMoney.aspx?type=0" target="rightFrame">新增支出</a><i></i></li>
+                <li><cite></cite><a href="MoneyManger.aspx" target="rightFrame">收支管理</a><i></i></li>
+
+                <li><cite></cite><a href="AddJieKuan.aspx?type=1" target="rightFrame">新增借入款</a><i></i></li>
+                <li><cite></cite><a href="AddJieKuan.aspx?type=0" target="rightFrame">新增借出款</a><i></i></li>
+
+                <li><cite></cite><a href="JieMoneyManger.aspx" target="rightFrame">借贷管理</a><i></i></li>
+                <li><cite></cite><a href="AddCK.aspx" target="rightFrame">新增储蓄</a><i></i></li>
+                <li><cite></cite><a href="CKMoneyManger.aspx" target="rightFrame">储蓄管理</a><i></i></li>
+
+                <li><cite></cite><a href="AddTouZi.aspx" target="rightFrame">新增投资</a><i></i></li>
+                <li><cite></cite><a href="TouZiManger.aspx" target="rightFrame">投资管理</a><i></i></li>
+
+            </ul>
+        </dd>
+        <dd>
+            <div class="title"><span><img src="images/leftico04.png" /></span>统计分析</div>
+            <ul class="menuson">
+                <li><cite></cite><a href="TJMoney.aspx" target="rightFrame">收支统计账表</a><i></i></li>
+                <li><cite></cite><a href="MoneyTJImage.aspx" target="rightFrame">收支统计图</a><i></i></li>
+                <li><cite></cite><a href="AmountTj.aspx" target="rightFrame">资金账户统计</a><i></i></li>
+            </ul>
+        </dd>
+        <dd>
+            <div class="title">
+                <span><img src="images/leftico02.png" /></span>理财专区
+            </div>
+            <ul class="menuson">
+                <li><cite></cite><a href="https://www.yirendai.com/" target="rightFrame">贷款</a><i></i></li>
+                <li><cite></cite><a href="https://8.baidu.com/?source=ppzq" target="rightFrame">理财</a><i></i></li>
+            </ul>
+        </dd>
+        <dd>
+            <div class="title">
+                <span><img src="images/leftico02.png" /></span>科目管理
+            </div>
+            <ul class="menuson">
+                <li><cite></cite><a href="MoneyTypeList.aspx" target="rightFrame">收支科目管理</a><i></i></li>
+            </ul>
+        </dd>
+
+        <dd>
+            <div class="title"><span><img src="images/leftico04.png" /></span>个人中心</div>
+            <ul class="menuson">
+                <li><cite></cite><a href="Uppwd.aspx" target="rightFrame">修改登录密码</a><i></i></li>
+                <li><cite></cite><a href="ModifyUser.aspx" target="rightFrame">修改用户信息</a><i></i></li>
+                <li><cite></cite><a href="#" onclick="javascript:parent.window.location.href='../login.aspx'" target="rightFrame">退出系统</a><i></i></li>
+            </ul>
+        </dd>
+    </dl>
+</body>
+</html>

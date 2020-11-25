@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ControlFormEdit.aspx.cs" Inherits="KingTop.Web.Admin.ControlFormEdit" %>

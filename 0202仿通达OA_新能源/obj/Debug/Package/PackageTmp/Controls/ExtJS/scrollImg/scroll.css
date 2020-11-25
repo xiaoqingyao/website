@@ -1,0 +1,87 @@
+﻿*{
+margin:0;
+padding:0;
+}
+body{
+background:#CCC;
+}
+/*--大块定义--*/
+#container{
+text-align:left; height:50;
+width:100%;
+overflow:hidden;
+background:#fff;
+}
+#content{
+width:778px;
+}
+/*--休闲一刻--*/
+#xxyk{
+float:left; height:50;
+width:778px;
+margin:0;
+padding:0;
+background:#999;
+}
+#xxyk .content{
+float:left; height:50;
+width:778px;
+margin:0;
+padding:0 0 0 0;
+}
+#xxyk .content img{
+border:0;
+}
+#xxyk .content .roll{
+width: 750px; height:50;
+margin:4px auto;
+padding:0 0 0 0; 
+overflow:hidden;
+}
+#xxyk .content .roll #main{
+list-style:none;
+width:1620px;
+padding:0;
+margin:0;
+}
+#xxyk .content .roll #main #pic1,#xxyk .content .roll #main #pic2{
+float:left;
+text-align:left; height:50;
+width:810px;
+padding:0;
+margin:0;
+background:#f90;
+}
+#xxyk .content .roll #main #pic1 a,#xxyk .content .roll #main #pic2 a{
+display:block;
+text-align:center; height:50;
+color:#FFFFFF;
+width:135px;
+}
+#xxyk .content .roll #main #pic1 img,#xxyk .content .roll #main #pic2 img{
+display:block;
+clear:both;
+width:115px;
+height:50px;
+margin:0 auto 5px auto; height:50;
+padding:0;
+}
+#xxyk .content .roll #main #pic1 ul,#xxyk .content .roll #main #pic2 ul{
+float:left;
+list-style:none;
+}
+#xxyk .content .roll #main #pic1 ul li,#xxyk .content .roll #main #pic2 ul li{
+float:left;
+display:block; height:50;
+margin:0;
+padding:0;
+}
+/*--隐藏元素--*/
+#slhdly .title,#xxyk .content ul li.more{
+position:absolute;
+visibility:hidden;
+overflow:hidden;
+display:none;
+clip:rect(0,0,0,0);
+height:0;
+}

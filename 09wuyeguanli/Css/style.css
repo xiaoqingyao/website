@@ -1,0 +1,44 @@
+﻿body 
+{
+	font-size :12px;
+	color:#FFFFFF;
+}
+.FullCenter
+{
+	text-align :center ;
+	width:100%;
+	
+	
+	
+}
+#wrapper
+{
+	width:770px;
+	margin :10px auto 0px auto;
+}
+.GreenClass
+{
+	color:#00CC33;
+}
+.Left
+{
+	float :left;
+	margin-left :10px;
+	width :100%;
+	text-align :left;
+}
+.FloatLeft
+{
+	float :left ;
+}
+.GridTable
+{
+	border-collapse :collapse ;
+	border-width:0px;
+}
+.GridTable td
+{
+	border-width:1px;
+	border-style:outset;
+	border-color :#00ff00;
+}

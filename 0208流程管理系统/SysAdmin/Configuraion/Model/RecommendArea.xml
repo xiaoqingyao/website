@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <RSS>
+  <area name="左上一" tags="RSS_TopLeft1" />
+  <area name="左上二" tags="RSS_TopLeft2" />
+  <area name="右上一" tags="RSS_TopRight1" />
+  <area name="右上二" tags="RSS_TopRight2" />
+  <area name="右上三" tags="RSS_TopRight3" />
+  <area name="右上四" tags="RSS_TopRight4" />
+  </RSS>
+  <Index>
+    <area name="中上一" tags="Index_TopMiddle1" />
+     <area name="中上二" tags="Index_TopMiddle2" />
+     <area name="中上三" tags="Index_TopMiddle3" />
+  </Index>
+</config>

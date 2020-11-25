@@ -1,0 +1,283 @@
+@import url('../common-css/bootstrap/bootstrap.min.css');
+@import url('../common-css/bootstrap/bootstrap-switch.css');
+@import url('../common-css/iconfont/iconfont.css');
+
+
+/* reset */
+html,body{height: 100%;max-height: 100%;}
+body{background: none repeat scroll 0 0 #fff;font-family: "微软雅黑","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 12px;position: relative;overflow: hidden;   }
+body,div,form,img,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,p{margin:0px;padding:0px;border:0px;}
+ol,ul{ margin:0px; padding:0px;list-style:none;}
+h1{ font-size:24px;}
+h2{ font-size:22px;}
+h3{ font-size:17px;}
+h4{ font-size:14px;}
+h5{ font-size:12px;}
+a {cursor: pointer;text-decoration: none;}
+a:focus { outline: none; } /*去掉周围虚线*/
+a:hover, a:focus{text-decoration: none;}
+
+/* 基础样式 */
+.clear{clear:both;}
+.clearfix{zoom:1;}
+.clearfix:after{display:block;content:'';clear:both;line-height:0;visibility:hidden;}
+.undis{display:none;}
+table{border-collapse:collapse;border-spacing:0;}
+.fl{float:left;}
+.marginLeft5{margin-left:5px;}
+
+/**
+* Breadcrumbs
+*/
+.breadcrumbs {
+	background: transparent;
+    padding: 0 0 10px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+    font-size: 12px;
+    color: #686F7F;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.breadcrumbs a {
+    display: inline-block;
+    color: #686F7F;
+    text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+    color: #2F80D1;
+}
+
+.breadcrumbs a i {
+    display: inline-block;
+    text-indent: -9999px;
+    vertical-align: middle;
+}
+
+.breadcrumbs .back {
+	margin-right: 15px;
+}
+.breadcrumbs .skin-arrow-right {
+    display: inline-block;
+    margin: auto 3px;
+    width: 7px;
+    height: 14px;
+    vertical-align: middle;
+}
+
+/**
+* Buttons
+*/
+.btn-blue {
+    height: 30px;
+    border-radius: 0;
+    font-size: 12px;
+    padding: 5px 20px;
+    background: #2F80D1;
+    color: #fff;
+}
+
+.btn-blue:hover,
+.btn-blue:focus,
+.btn-blue:active {
+	color: #fff;
+    background: #215A93;
+}
+
+.btn-orange {
+    height: 30px;
+    border-radius: 0;
+    font-size: 12px;
+    padding: 5px 20px;
+    background: #FF9C30;
+    color: #fff;
+}
+
+.btn-orange:hover,
+.btn-orange:focus,
+.btn-orange:active {
+	color: #fff;
+    background: #C17624;
+}
+
+.btn-red {
+    height: 30px;
+    border-radius: 0;
+    font-size: 12px;
+    padding: 5px 20px;
+    background: #FE8562;
+    color: #fff;
+}
+
+.btn-red:hover,
+.btn-red:focus,
+.btn-red:active {
+    color: #fff;
+    background: #C0654A;
+}
+
+.btn-green {
+    height: 30px;
+    border-radius: 0;
+    font-size: 12px;
+    padding: 5px 20px;
+    background: #98D055;
+    color: #fff;
+}
+
+.btn-green:hover,
+.btn-green:focus,
+.btn-green:active {
+    color: #fff;
+    background: #6B923C;
+}
+
+.btn-yellow {
+    height: 30px;
+    border-radius: 0;
+    font-size: 12px;
+    padding: 5px 20px;
+    background: #FDC006;
+    color: #fff;
+}
+
+.btn-yellow:hover,
+.btn-yellow:focus,
+.btn-yellow:active {
+    color: #fff;
+    background: #BF9105;
+}
+
+.btn-aqua {
+    height: 30px;
+    border-radius: 0;
+    font-size: 12px;
+    padding: 5px 20px;
+    background: #4CCFE1;
+    color: #fff;
+}
+
+.btn-aqua:hover,
+.btn-aqua:focus,
+.btn-aqua:active {
+    color: #fff;
+    background: #3796A3;
+}
+
+.btn-purple {
+    height: 30px;
+    border-radius: 0;
+    font-size: 12px;
+    padding: 5px 20px;
+    background: #90a5fe;
+    color: #fff;
+}
+
+.btn-purple:hover,
+.btn-purple:focus,
+.btn-purple:active {
+    color: #fff;
+    background: #6D7DC0;
+}
+
+/**
+* PageList
+*/
+.pagelist {
+    clear: both;
+    display: block;
+    margin: 0px 0px 20px 1px;
+}
+
+.pagelist .left-btns {
+    display: block;
+    float: left;
+    margin: 2px 5px 0px -1px;
+    padding: 0px 10px;
+    border: 1px solid #DBDBDB;
+    height: 28px;
+    overflow: hidden;
+}
+
+.pagelist .left-btns span {
+    font-size: 12px;
+    color: #333;
+    line-height: 28px;
+}
+
+.pagelist .left-btns .pagenum {
+    display: inline-block;
+    margin: 0px 5px;
+    padding: 0px 5px;
+    border-width: 0px 1px;
+    border-style: none solid;
+    border-color: -moz-use-text-color #DBDBDB;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    width: 30px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 12px;
+    color: #333;
+    text-align: center;
+    vertical-align: top;
+    overflow: hidden;
+}
+
+.pagelist .right-btns {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Microsoft YaHei",Verdana;
+    font-size: 12px;
+    height: 28px;
+}
+
+div.right-btns span:first-child {
+    border-left: 1px solid #E1E1E1;
+}
+
+div.right-btns a, 
+div.right-btns span {
+    display: block;
+    float: left;
+    margin: 2px 0px 0px -1px;
+    padding: 4px 12px;
+    line-height: 20px;
+    height: 20px;
+    border: 1px solid #E1E1E1;
+    background: #FFF none repeat scroll 0% 0%;
+    color: #333;
+    text-decoration: none;
+}
+
+div.right-btns span.disabled {
+    color: #999;
+    background: #FFF none repeat scroll 0% 0%;
+}
+
+div.right-btns span.current {
+    color: #FFF;
+    background: #488FCD none repeat scroll 0% 0%;
+    border-color: #488FCD;
+}
+
+div.right-btns a,
+div.right-btns span {
+    display: block;
+    float: left;
+    margin: 2px 0px 0px -1px;
+    padding: 4px 12px;
+    line-height: 20px;
+    height: 28px;
+    border: 1px solid #E1E1E1;
+    background: #FFF none repeat scroll 0% 0%;
+    color: #333;
+    text-decoration: none;
+}

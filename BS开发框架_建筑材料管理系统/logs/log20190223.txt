@@ -1,0 +1,569 @@
+2019-02-23 21:33:12,150 [64148] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2019-02-23 21:33:12,411 [64148] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2019-02-23 21:33:12,415 [64148] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2019-02-23 21:33:12,432 [64148] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2019-02-23 21:34:32,910 [66056] DEBUG Servicesys_user - 获取实体对象
+2019-02-23 21:34:32,921 [66056] DEBUG Sys - select sys_user.* from sys_user where  UserCode =  'admin'and Password =  '1234'and IsEnable =  'True'
+2019-02-23 21:34:33,040 [66056] DEBUG Sys - 
+update sys_user
+set LoginCount = isnull(LoginCount,0) + 1
+   ,LastLoginDate = getdate()
+where UserCode = 'admin' 
+2019-02-23 21:34:33,112 [66056] DEBUG Sys - insert into sys_loginHistory([UserCode],[UserName],[HostName],[HostIP],[LoginCity],[LoginDate]) values('admin','管理员','','14.108.22.199','','2019/2/23 21:34:33')
+2019-02-23 21:34:33,119 [66056] DEBUG Servicemms_project - 获取实体对象
+2019-02-23 21:34:33,120 [66056] DEBUG Mms - select mms_project.* from mms_project where  ProjectCode =  '201306030001'
+2019-02-23 21:34:33,608 [66056] DEBUG Sys - select * from sys_userSetting where UserCode='admin'
+2019-02-23 21:34:35,559 [67520] DEBUG Sys - 
+--角色的菜单
+select distinct B.*
+from sys_roleMenuMap A
+inner join sys_menu  B on B.MenuCode = A.MenuCode
+where B.IsEnable='1'
+  and RoleCode in (
+  select RoleCode from sys_userRoleMap where UserCode = 'admin' --用户的角色
+union all
+  select RoleCode from sys_organizeRoleMap where OrganizeCode in  --机构的角色
+  (
+	select OrganizeCode from sys_userOrganizeMap where UserCode = 'admin'
+  )  
+)
+order by B.MenuSeq,B.MenuCode
+2019-02-23 21:34:40,476 [67520] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'admin'
+and C.URL in ('/Mms/report/receivesummary')
+2019-02-23 21:34:41,777 [67520] DEBUG Mms - 
+Select T.*
+From
+( 
+    --收料单
+    Select mms_receive.BillNo As SrcBillNo,'receive' As SrcBillType,mms_receive.ContractCode As ContractCode,
+	    mms_receive.SupplierCode,mms_receive.OriginalNum,mms_receive.ReceiveDate As TakeDate,
+	    mms_receiveDetail.MaterialCode,mms_receiveDetail.Unit,mms_receiveDetail.UnitPrice,
+	    mms_receiveDetail.Num,mms_receiveDetail.Money,mms_receiveDetail.Remark,mms_merchants.MerchantsName AS SupplierName,
+        '' as name,(mms_receive.BillNo+'receive'+mms_receiveDetail.MaterialCode) as id,mms_material.MaterialName,mms_material.Model
+    From mms_receiveDetail
+    Left join mms_receive ON mms_receiveDetail.BillNo=mms_receive.BillNo
+    left join mms_merchants on mms_merchants.MerchantsCode=mms_receive.SupplierCode
+    left join mms_material on mms_material.MaterialCode=mms_receiveDetail.MaterialCode
+    Where mms_receive.ApproveState='passed'  And  mms_receive.ProjectCode='201306030001'
+
+    UNION
+
+    --直入直出
+    Select mms_direct.BillNo As SrcBillNo,'direct' As SrcBillType,mms_direct.ContractCode As ContractCode,
+	    mms_direct.SupplierCode,mms_direct.OriginalNum,mms_direct.ArriveDate As TakeDate,
+	    mms_directDetail.MaterialCode,mms_directDetail.Unit,mms_directDetail.UnitPrice,
+	    mms_directDetail.Num,mms_directDetail.Money,mms_directDetail.Remark,mms_merchants.MerchantsName AS SupplierName,
+        '' as name,(mms_direct.BillNo+'direct'+mms_directDetail.MaterialCode) as id,mms_material.MaterialName,mms_material.Model
+    From mms_directDetail
+    Left join mms_direct ON mms_directDetail.BillNo=mms_direct.BillNo
+    left join mms_merchants on mms_merchants.MerchantsCode=mms_direct.SupplierCode
+    left join mms_material on mms_material.MaterialCode=mms_directDetail.MaterialCode
+    Where mms_direct.ApproveState='passed'  And  mms_direct.ProjectCode='201306030001'
+
+    UNION
+
+    --退货
+    Select mms_return.BillNo As SrcBillNo,'return' As SrcBillType,mms_return.ContractCode As ContractCode,
+	    mms_return.SupplierCode,'' AS OriginalNum,mms_return.ReturnDate As TakeDate,
+	    mms_returnDetail.MaterialCode,mms_returnDetail.Unit,mms_returnDetail.UnitPrice,
+	    -mms_returnDetail.Num,-mms_returnDetail.Money,mms_returnDetail.Remark,mms_merchants.MerchantsName AS SupplierName,
+        '' as name,(mms_return.BillNo+'return'+mms_returnDetail.MaterialCode) as id,mms_material.MaterialName,mms_material.Model
+    From mms_returnDetail
+    Left join mms_return ON mms_returnDetail.BillNo=mms_return.BillNo
+    left join mms_merchants on mms_merchants.MerchantsCode=mms_return.SupplierCode
+    left join mms_material on mms_material.MaterialCode=mms_returnDetail.MaterialCode
+    Where mms_return.ApproveState='passed'  And  mms_return.ProjectCode='201306030001'
+
+    UNION
+
+    --租赁进场
+    Select mms_rentIn.BillNo As SrcBillNo,'rentin' As SrcBillType,mms_rentIn.ContractCode As ContractCode,
+	    mms_rentIn.SupplierCode,'' as OriginalNum,mms_rentIn.RentInDate As TakeDate,
+	    mms_rentInDetail.MaterialCode,mms_rentInDetail.Unit,mms_rentInDetail.UnitPrice,
+	    mms_rentInDetail.Num,'0' as Money,mms_rentInDetail.Remark,mms_merchants.MerchantsName AS SupplierName,
+        '' as name,(mms_rentIn.BillNo+'rentIn'+mms_rentInDetail.MaterialCode) as id,mms_material.MaterialName,mms_material.Model
+    From mms_rentInDetail
+    Left join mms_rentIn ON mms_rentInDetail.BillNo=mms_rentIn.BillNo
+    left join mms_merchants on mms_merchants.MerchantsCode=mms_rentIn.SupplierCode
+    left join mms_material on mms_material.MaterialCode=mms_rentInDetail.MaterialCode
+    Where mms_rentIn.ApproveState='passed'  And  mms_rentin.ProjectCode='201306030001'
+) as T
+Where 1=1 
+                
+2019-02-23 21:34:44,100 [67520] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'admin'
+and C.URL in ('/Mms/check/Index','/Mms/check')
+2019-02-23 21:34:44,110 [67520] DEBUG Servicemms_warehouse - 获取动态列表
+2019-02-23 21:34:44,110 [67520] DEBUG Mms - select WarehouseCode as value,WarehouseName as text from mms_warehouse where  ProjectCode =  '201306030001'
+2019-02-23 21:34:47,019 [67520] DEBUG Servicemms_check - 获取动态列表
+2019-02-23 21:34:47,020 [67520] DEBUG Mms - select top 20 
+        A.*, B.ProjectName, C.MaterialTypeName, D.WarehouseName
+     from 
+        mms_check A
+        left join mms_project       B on B.ProjectCode      = A.ProjectCode
+        left join mms_materialType  C on C.MaterialType = A.MaterialType
+        left join mms_warehouse         D on D.WarehouseCode       = A.WarehouseCode
+     where  1=1and A.ProjectCode =  '201306030001' order by A.BillNo
+2019-02-23 21:34:47,044 [67520] DEBUG Mms - select count(*) from ( select 
+        A.*, B.ProjectName, C.MaterialTypeName, D.WarehouseName
+     from 
+        mms_check A
+        left join mms_project       B on B.ProjectCode      = A.ProjectCode
+        left join mms_materialType  C on C.MaterialType = A.MaterialType
+        left join mms_warehouse         D on D.WarehouseCode       = A.WarehouseCode
+     where  1=1and A.ProjectCode =  '201306030001' ) tb_temp
+2019-02-23 21:34:54,586 [66056] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'admin'
+and C.URL in ('/Mms/report/sendsummary')
+2019-02-23 21:34:54,594 [66056] DEBUG Servicemms_buildPart - 获取动态列表
+2019-02-23 21:34:54,594 [66056] DEBUG Mms - select BuildPartCode as value,BuildPartName as text from mms_buildPart where  ProjectCode =  '201306030001'
+2019-02-23 21:34:55,136 [66056] DEBUG Mms - 
+Select T.*
+From
+( 
+	--发料单
+    Select mms_send.BillNo As SrcBillNo,'send' As SrcBillType,mms_send.SendDate As TakeDate,
+		mms_send.PickUnit,mms_merchants.MerchantsName as PickUnitName,mms_buildPart.BuildPartName,
+	    mms_sendDetail.MaterialCode,mms_material.MaterialName,mms_material.Model,
+		mms_sendDetail.Unit,mms_sendDetail.UnitPrice,mms_sendDetail.Num,mms_sendDetail.Money,
+		mms_sendDetail.Remark,'' as name,(mms_send.BillNo+'send'+mms_sendDetail.MaterialCode) as id
+    From mms_sendDetail
+    Left join mms_send ON mms_sendDetail.BillNo=mms_send.BillNo
+    left join mms_merchants on mms_merchants.MerchantsCode=mms_send.PickUnit
+    left join mms_material on mms_material.MaterialCode=mms_sendDetail.MaterialCode
+	left join mms_buildPart on mms_buildPart.BuildPartCode=mms_send.BuildPartCode
+    Where mms_send.ApproveState='passed'  And  mms_send.ProjectCode='201306030001'
+
+    UNION
+
+    --直入直出
+    Select mms_direct.BillNo As SrcBillNo,'direct' As SrcBillType,mms_direct.ArriveDate As TakeDate,
+		mms_direct.PickUnit,mms_merchants.MerchantsName as PickUnitName,mms_buildPart.BuildPartName,
+	    mms_directDetail.MaterialCode,mms_material.MaterialName,mms_material.Model,
+		mms_directDetail.Unit,mms_directDetail.UnitPrice,mms_directDetail.Num,mms_directDetail.Money,
+		mms_directDetail.Remark,'' as name,(mms_direct.BillNo+'direct'+mms_directDetail.MaterialCode) as id
+    From mms_directDetail
+    Left join mms_direct ON mms_directDetail.BillNo=mms_direct.BillNo
+    left join mms_merchants on mms_merchants.MerchantsCode=mms_direct.PickUnit
+    left join mms_material on mms_material.MaterialCode=mms_directDetail.MaterialCode
+	left join mms_buildPart on mms_buildPart.BuildPartCode=mms_direct.BuildPartCode
+    Where mms_direct.ApproveState='passed'  And  mms_direct.ProjectCode='201306030001'
+
+    UNION
+
+    --退库
+     Select mms_refund.BillNo As SrcBillNo,'refund' As SrcBillType,mms_refund.RefundDate As TakeDate,
+		mms_refund.RefundUnit as PickUnit,mms_merchants.MerchantsName as PickUnitName,NULL AS BuildPartName,
+	    mms_refundDetail.MaterialCode,mms_material.MaterialName,mms_material.Model,
+		mms_refundDetail.Unit,mms_refundDetail.UnitPrice,-mms_refundDetail.Num,-mms_refundDetail.Money,
+		mms_refundDetail.Remark,'' as name,(mms_refund.BillNo+'refund'+mms_refundDetail.MaterialCode) as id
+    From mms_refundDetail
+    Left join mms_refund ON mms_refundDetail.BillNo=mms_refund.BillNo
+    left join mms_merchants on mms_merchants.MerchantsCode=mms_refund.RefundUnit
+    left join mms_material on mms_material.MaterialCode=mms_refundDetail.MaterialCode
+    Where mms_refund.ApproveState='passed'  And  mms_refund.ProjectCode='201306030001'
+
+    UNION
+
+    --租赁进场
+    Select mms_rentin.BillNo As SrcBillNo,'rentin' As SrcBillType,mms_rentin.RentInDate As TakeDate,
+		mms_rentinDetail.UseUnit as PickUnit,mms_merchants.MerchantsName as PickUnitName,mms_buildPart.BuildPartName,
+	    mms_rentinDetail.MaterialCode,mms_material.MaterialName,mms_material.Model,
+		mms_rentinDetail.Unit,mms_rentinDetail.UnitPrice,mms_rentinDetail.Num,'0' As Money,
+		mms_rentinDetail.Remark,'' as name,(mms_rentin.BillNo+'rentin'+mms_rentinDetail.MaterialCode) as id
+    From mms_rentinDetail
+    Left join mms_rentin ON mms_rentinDetail.BillNo=mms_rentin.BillNo
+    left join mms_merchants on mms_merchants.MerchantsCode=mms_rentinDetail.UseUnit
+    left join mms_material on mms_material.MaterialCode=mms_rentinDetail.MaterialCode
+	left join mms_buildPart on mms_buildPart.BuildPartCode=mms_rentin.BuildPartCode
+    Where mms_rentin.ApproveState='passed'  And  mms_rentin.ProjectCode='201306030001'
+
+    UNION
+
+	--报损
+	Select mms_lossReport.BillNo As SrcBillNo,'lossReport' As SrcBillType,mms_lossReport.LossReportDate As TakeDate,
+		'其他' as PickUnit,'其他' as PickUnitName,NULL AS BuildPartName,
+	    mms_lossReportDetail.MaterialCode,mms_material.MaterialName,mms_material.Model,
+		mms_lossReportDetail.Unit,mms_lossReportDetail.UnitPrice,mms_lossReportDetail.Num,mms_lossReportDetail.Money,
+		mms_lossReportDetail.Remark,'' as name,(mms_lossReport.BillNo+'lossReport'+mms_lossReportDetail.MaterialCode) as id
+    From mms_lossReportDetail
+    Left join mms_lossReport ON mms_lossReportDetail.BillNo=mms_lossReport.BillNo
+    left join mms_material on mms_material.MaterialCode=mms_lossReportDetail.MaterialCode
+    Where mms_lossReport.ApproveState='passed'  And  mms_lossReport.ProjectCode='201306030001'
+
+    UNION
+
+	--调拨
+	Select mms_transfer.BillNo As SrcBillNo,'transfer' As SrcBillType,mms_transfer.TransferDate As TakeDate,
+		mms_transfer.ReceiveUnit as PickUnit,mms_merchants.MerchantsName as PickUnitName,NULL AS BuildPartName,
+	    mms_transferDetail.MaterialCode,mms_material.MaterialName,mms_material.Model,
+		mms_transferDetail.Unit,mms_transferDetail.UnitPrice,mms_transferDetail.Num,mms_transferDetail.Money,
+		mms_transferDetail.Remark,'' as name,(mms_transfer.BillNo+'transfer'+mms_transferDetail.MaterialCode) as id
+    From mms_transferDetail
+    Left join mms_transfer ON mms_transferDetail.BillNo=mms_transfer.BillNo
+    left join mms_merchants on mms_merchants.MerchantsCode=mms_transfer.ReceiveUnit
+    left join mms_material on mms_material.MaterialCode=mms_transferDetail.MaterialCode
+    Where mms_transfer.ApproveState='passed'  And  mms_transfer.ProjectCode='201306030001'
+
+) as T
+Where 1=1 
+
+                
+2019-02-23 21:34:58,123 [67520] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'admin'
+and C.URL in ('/Mms/merchant/Index','/Mms/merchant')
+2019-02-23 21:34:58,859 [67520] DEBUG Servicemms_merchants - 获取实体列表
+2019-02-23 21:34:58,860 [67520] DEBUG Mms - select top 20 mms_merchants.* from mms_merchants order by MerchantsCode
+2019-02-23 21:34:58,868 [67520] DEBUG Mms - select count(*) from ( select mms_merchants.* from mms_merchants ) tb_temp
+2019-02-23 21:34:59,012 [67520] DEBUG Servicemms_merchantsType - 获取动态列表
+2019-02-23 21:34:59,013 [67520] DEBUG Mms - select mms_merchantsType.* from mms_merchantsType order by MerchantsTypeCode
+2019-02-23 21:34:59,709 [67520] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'admin'
+and C.URL in ('/Mms/project/Index','/Mms/project')
+2019-02-23 21:34:59,717 [67520] DEBUG Servicemms_project - 获取实体对象
+2019-02-23 21:34:59,717 [67520] DEBUG Mms - select mms_project.* from mms_project where  ProjectCode =  '201306030001'
+2019-02-23 21:34:59,718 [67520] DEBUG Servicemms_project - 获取上一条下一条数据
+2019-02-23 21:34:59,731 [67520] DEBUG Servicemms_project - 获取字段
+2019-02-23 21:34:59,732 [67520] DEBUG Mms - select top 1 ProjectCode from mms_project where  ProjectCode =  '201306030001' order by ProjectCode
+2019-02-23 21:34:59,735 [67520] DEBUG Servicemms_project - 获取字段
+2019-02-23 21:34:59,735 [67520] DEBUG Mms - select top 1 ProjectCode from mms_project where  ProjectCode < '201306030001'and ProjectCode =  '201306030001' order by ProjectCode desc
+2019-02-23 21:34:59,738 [67520] DEBUG Servicemms_project - 获取字段
+2019-02-23 21:34:59,738 [67520] DEBUG Mms - select top 1 ProjectCode from mms_project where  ProjectCode >  '201306030001'and ProjectCode =  '201306030001' order by ProjectCode
+2019-02-23 21:34:59,739 [67520] DEBUG Servicemms_project - 获取字段
+2019-02-23 21:34:59,739 [67520] DEBUG Mms - select top 1 ProjectCode from mms_project where  ProjectCode =  '201306030001' order by ProjectCode desc
+2019-02-23 21:34:59,756 [67520] DEBUG Servicesys_code - 获取动态列表
+2019-02-23 21:34:59,757 [67520] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'PartAttr'
+2019-02-23 21:34:59,761 [67520] DEBUG Servicesys_code - 获取动态列表
+2019-02-23 21:34:59,761 [67520] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'ImagePart'
+2019-02-23 21:35:01,544 [64556] DEBUG Servicemms_project - 获取动态列表
+2019-02-23 21:35:01,544 [64556] DEBUG Mms - select ProjectName as text,ProjectCode as id,ParentCode as pid from mms_project
+2019-02-23 21:35:01,577 [66056] DEBUG Servicemms_buildPart - 获取实体列表
+2019-02-23 21:35:01,578 [66056] DEBUG Mms - select mms_buildPart.* from mms_buildPart where  ProjectCode =  '201306030001'
+2019-02-23 21:35:01,643 [64556] DEBUG Servicemms_project - 获取实体对象
+2019-02-23 21:35:01,643 [64556] DEBUG Mms - select mms_project.* from mms_project where  ProjectCode =  '201306030001'
+2019-02-23 21:35:01,644 [64556] DEBUG Servicemms_project - 获取上一条下一条数据
+2019-02-23 21:35:01,644 [64556] DEBUG Servicemms_project - 获取字段
+2019-02-23 21:35:01,644 [64556] DEBUG Mms - select top 1 ProjectCode from mms_project where  ProjectCode =  '201306030001' order by ProjectCode
+2019-02-23 21:35:01,644 [64556] DEBUG Servicemms_project - 获取字段
+2019-02-23 21:35:01,644 [64556] DEBUG Mms - select top 1 ProjectCode from mms_project where  ProjectCode < '201306030001'and ProjectCode =  '201306030001' order by ProjectCode desc
+2019-02-23 21:35:01,644 [64556] DEBUG Servicemms_project - 获取字段
+2019-02-23 21:35:01,644 [64556] DEBUG Mms - select top 1 ProjectCode from mms_project where  ProjectCode >  '201306030001'and ProjectCode =  '201306030001' order by ProjectCode
+2019-02-23 21:35:01,645 [64556] DEBUG Servicemms_project - 获取字段
+2019-02-23 21:35:01,645 [64556] DEBUG Mms - select top 1 ProjectCode from mms_project where  ProjectCode =  '201306030001' order by ProjectCode desc
+2019-02-23 21:35:03,039 [67520] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'admin'
+and C.URL in ('/Mms/warehouse/Index','/Mms/warehouse')
+2019-02-23 21:35:03,667 [67440] DEBUG Servicemms_project - 获取动态列表
+2019-02-23 21:35:03,667 [67440] DEBUG Mms - select ProjectName as text,ProjectCode as id,ParentCode as pid from mms_project
+2019-02-23 21:35:03,684 [66056] DEBUG Servicemms_warehouse - 获取实体列表
+2019-02-23 21:35:03,684 [66056] DEBUG Mms - select top 20 mms_warehouse.* from mms_warehouse order by WarehouseCode
+2019-02-23 21:35:03,690 [66056] DEBUG Mms - select count(*) from ( select mms_warehouse.* from mms_warehouse ) tb_temp
+2019-02-23 21:35:04,643 [66056] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'admin'
+and C.URL in ('/Mms/material/Index','/Mms/material')
+2019-02-23 21:35:05,790 [64556] DEBUG Servicemms_materialType - 获取动态列表
+2019-02-23 21:35:05,790 [64556] DEBUG Mms - select mms_materialType.* from mms_materialType order by MaterialType
+2019-02-23 21:35:05,812 [67440] DEBUG Servicemms_material - 获取实体列表
+2019-02-23 21:35:05,813 [67440] DEBUG Mms - select top 20 mms_material.* from mms_material order by MaterialCode
+2019-02-23 21:35:05,820 [67440] DEBUG Mms - select count(*) from ( select mms_material.* from mms_material ) tb_temp
+2019-02-23 21:35:08,544 [67440] DEBUG Servicemms_material - 获取实体列表
+2019-02-23 21:35:08,545 [67440] DEBUG Mms - select top 20 mms_material.* from mms_material where  MaterialType =  '01010102' order by MaterialCode
+2019-02-23 21:35:08,548 [67440] DEBUG Mms - select count(*) from ( select mms_material.* from mms_material where  MaterialType =  '01010102' ) tb_temp
+2019-02-23 21:35:09,103 [67520] DEBUG Servicemms_material - 获取实体列表
+2019-02-23 21:35:09,103 [67520] DEBUG Mms - select top 20 mms_material.* from mms_material where  MaterialType =  '01010103' order by MaterialCode
+2019-02-23 21:35:09,107 [67520] DEBUG Mms - select count(*) from ( select mms_material.* from mms_material where  MaterialType =  '01010103' ) tb_temp
+2019-02-23 21:35:09,728 [67440] DEBUG Servicemms_material - 获取实体列表
+2019-02-23 21:35:09,728 [67440] DEBUG Mms - select top 20 mms_material.* from mms_material where  MaterialType =  '01010107' order by MaterialCode
+2019-02-23 21:35:09,730 [67440] DEBUG Mms - select count(*) from ( select mms_material.* from mms_material where  MaterialType =  '01010107' ) tb_temp
+2019-02-23 21:35:12,018 [66056] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'admin'
+and C.URL in ('/Sys/menu/Index','/Sys/menu')
+2019-02-23 21:35:12,288 [66056] DEBUG Servicesys_menu - 获取动态列表
+2019-02-23 21:35:12,288 [66056] DEBUG Sys - select A.*,B.MenuName as ParentName from sys_menu A left join sys_menu B on B.MenuCode = A.ParentCode order by A.MenuSeq,A.MenuCode
+2019-02-23 21:35:18,410 [67440] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'admin'
+and C.URL in ('/Sys/organize/Index','/Sys/organize')
+2019-02-23 21:35:18,417 [67440] DEBUG Servicesys_organize - 获取实体列表
+2019-02-23 21:35:18,417 [67440] DEBUG Sys - select sys_organize.* from sys_organize
+2019-02-23 21:35:30,174 [67440] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'admin'
+and C.URL in ('/Sys/permission/Index','/Sys/permission')
+2019-02-23 21:35:30,447 [67440] DEBUG Servicesys_permission - 获取动态列表
+2019-02-23 21:35:30,448 [67440] DEBUG Sys - select A.*,B.PermissionName as ParentName from sys_permission A left join sys_permission B on B.PermissionCode = A.ParentCode
+2019-02-23 21:35:45,633 [67440] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'admin'
+and C.URL in ('/Sys/role/Index','/Sys/role')
+2019-02-23 21:35:45,640 [67440] DEBUG Servicesys_user - 获取动态列表
+2019-02-23 21:35:45,640 [67440] DEBUG Sys - select UserCode,UserName from sys_user
+2019-02-23 21:35:45,641 [67440] DEBUG Servicesys_organize - 获取动态列表
+2019-02-23 21:35:45,641 [67440] DEBUG Sys - select OrganizeCode,OrganizeName from sys_organize
+2019-02-23 21:35:45,747 [67520] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'admin'
+and C.URL in ('/Sys/role/Index','/Sys/role')
+2019-02-23 21:35:45,748 [67520] DEBUG Servicesys_user - 获取动态列表
+2019-02-23 21:35:45,748 [67520] DEBUG Sys - select UserCode,UserName from sys_user
+2019-02-23 21:35:45,748 [67520] DEBUG Servicesys_organize - 获取动态列表
+2019-02-23 21:35:45,748 [67520] DEBUG Sys - select OrganizeCode,OrganizeName from sys_organize
+2019-02-23 21:35:46,049 [66872] DEBUG Servicesys_role - 获取实体列表
+2019-02-23 21:35:46,050 [66872] DEBUG Sys - select sys_role.* from sys_role order by RoleSeq
+2019-02-23 21:35:47,988 [67440] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'admin'
+and C.URL in ('/Sys/user/Index','/Sys/user')
+2019-02-23 21:35:48,139 [67520] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'admin'
+and C.URL in ('/Sys/user/Index','/Sys/user')
+2019-02-23 21:35:48,416 [66872] DEBUG Servicesys_organize - 获取实体列表
+2019-02-23 21:35:48,416 [66872] DEBUG Sys - select sys_organize.* from sys_organize
+2019-02-23 21:35:48,441 [67520] DEBUG Servicesys_user - 获取实体列表
+2019-02-23 21:35:48,442 [67520] DEBUG Sys - select top 20 sys_user.* from sys_user order by UserSeq
+2019-02-23 21:35:48,449 [67520] DEBUG Sys - select count(*) from ( select sys_user.* from sys_user ) tb_temp
+2019-02-23 21:35:51,459 [67440] DEBUG Servicesys_user - 获取实体列表
+2019-02-23 21:35:51,460 [67440] DEBUG Sys - select top 20 sys_user.* from sys_user where  UserCode in (select UserCode from sys_userOrganizeMap where OrganizeCode in (select ID from [dbo].[GetChild]('sys_organize','04'))) order by UserSeq
+2019-02-23 21:35:51,650 [67440] DEBUG Sys - select count(*) from ( select sys_user.* from sys_user where  UserCode in (select UserCode from sys_userOrganizeMap where OrganizeCode in (select ID from [dbo].[GetChild]('sys_organize','04'))) ) tb_temp
+2019-02-23 21:35:52,240 [67440] DEBUG Servicesys_user - 获取实体列表
+2019-02-23 21:35:52,241 [67440] DEBUG Sys - select top 20 sys_user.* from sys_user where  UserCode in (select UserCode from sys_userOrganizeMap where OrganizeCode in (select ID from [dbo].[GetChild]('sys_organize','040501'))) order by UserSeq
+2019-02-23 21:35:52,259 [67440] DEBUG Sys - select count(*) from ( select sys_user.* from sys_user where  UserCode in (select UserCode from sys_userOrganizeMap where OrganizeCode in (select ID from [dbo].[GetChild]('sys_organize','040501'))) ) tb_temp
+2019-02-23 21:35:52,521 [67520] DEBUG Servicesys_user - 获取实体列表
+2019-02-23 21:35:52,521 [67520] DEBUG Sys - select top 20 sys_user.* from sys_user where  UserCode in (select UserCode from sys_userOrganizeMap where OrganizeCode in (select ID from [dbo].[GetChild]('sys_organize','040504'))) order by UserSeq
+2019-02-23 21:35:52,538 [67520] DEBUG Sys - select count(*) from ( select sys_user.* from sys_user where  UserCode in (select UserCode from sys_userOrganizeMap where OrganizeCode in (select ID from [dbo].[GetChild]('sys_organize','040504'))) ) tb_temp
+2019-02-23 21:35:52,996 [67520] DEBUG Servicesys_user - 获取实体列表
+2019-02-23 21:35:52,996 [67520] DEBUG Sys - select top 20 sys_user.* from sys_user where  UserCode in (select UserCode from sys_userOrganizeMap where OrganizeCode in (select ID from [dbo].[GetChild]('sys_organize','040201'))) order by UserSeq
+2019-02-23 21:35:53,012 [67520] DEBUG Sys - select count(*) from ( select sys_user.* from sys_user where  UserCode in (select UserCode from sys_userOrganizeMap where OrganizeCode in (select ID from [dbo].[GetChild]('sys_organize','040201'))) ) tb_temp
+2019-02-23 21:35:53,799 [67440] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'admin'
+and C.URL in ('/Sys/code/Index','/Sys/code')
+2019-02-23 21:35:54,051 [67440] DEBUG Servicesys_codeType - 获取动态列表
+2019-02-23 21:35:54,052 [67440] DEBUG Sys - select sys_codeType.* from sys_codeType order by Seq,CodeType
+2019-02-23 21:35:54,172 [67440] DEBUG Servicesys_code - 获取实体列表
+2019-02-23 21:35:54,172 [67440] DEBUG Sys - select top 20 sys_code.* from sys_code order by Seq
+2019-02-23 21:35:54,181 [67440] DEBUG Sys - select count(*) from ( select sys_code.* from sys_code ) tb_temp
+2019-02-23 21:35:55,640 [67440] DEBUG Servicesys_code - 获取实体列表
+2019-02-23 21:35:55,641 [67440] DEBUG Sys - select top 20 sys_code.* from sys_code where  CodeType =  'Sex' order by Seq
+2019-02-23 21:35:55,643 [67440] DEBUG Sys - select count(*) from ( select sys_code.* from sys_code where  CodeType =  'Sex' ) tb_temp
+2019-02-23 21:35:55,930 [67440] DEBUG Servicesys_code - 获取实体列表
+2019-02-23 21:35:55,930 [67440] DEBUG Sys - select top 20 sys_code.* from sys_code where  CodeType =  'BusinessType' order by Seq
+2019-02-23 21:35:55,932 [67440] DEBUG Sys - select count(*) from ( select sys_code.* from sys_code where  CodeType =  'BusinessType' ) tb_temp
+2019-02-23 21:35:56,415 [67440] DEBUG Servicesys_code - 获取实体列表
+2019-02-23 21:35:56,415 [67440] DEBUG Sys - select top 20 sys_code.* from sys_code where  CodeType =  'DisposalType' order by Seq
+2019-02-23 21:35:56,417 [67440] DEBUG Sys - select count(*) from ( select sys_code.* from sys_code where  CodeType =  'DisposalType' ) tb_temp
+2019-02-23 21:35:56,985 [67440] DEBUG Servicesys_code - 获取实体列表
+2019-02-23 21:35:56,985 [67440] DEBUG Sys - select top 20 sys_code.* from sys_code where  CodeType =  'MaterialType' order by Seq
+2019-02-23 21:35:56,988 [67440] DEBUG Sys - select count(*) from ( select sys_code.* from sys_code where  CodeType =  'MaterialType' ) tb_temp
+2019-02-23 21:35:57,298 [67440] DEBUG Servicesys_code - 获取实体列表
+2019-02-23 21:35:57,298 [67440] DEBUG Sys - select top 20 sys_code.* from sys_code where  CodeType =  'PayType' order by Seq
+2019-02-23 21:35:57,300 [67440] DEBUG Sys - select count(*) from ( select sys_code.* from sys_code where  CodeType =  'PayType' ) tb_temp
+2019-02-23 21:35:57,784 [67440] DEBUG Servicesys_code - 获取实体列表
+2019-02-23 21:35:57,784 [67440] DEBUG Sys - select top 20 sys_code.* from sys_code where  CodeType =  'Pricing' order by Seq
+2019-02-23 21:35:57,787 [67440] DEBUG Sys - select count(*) from ( select sys_code.* from sys_code where  CodeType =  'Pricing' ) tb_temp
+2019-02-23 21:35:58,737 [67520] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'admin'
+and C.URL in ('/Sys/parameter/Index','/Sys/parameter')
+2019-02-23 21:35:59,020 [66872] DEBUG Servicesys_parameter - 获取实体列表
+2019-02-23 21:35:59,021 [66872] DEBUG Sys - select top 20 sys_parameter.* from sys_parameter order by ParamCode
+2019-02-23 21:35:59,031 [66872] DEBUG Sys - select count(*) from ( select sys_parameter.* from sys_parameter ) tb_temp
+2019-02-23 21:36:01,777 [67520] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'admin'
+and C.URL in ('/Sys/log/Index','/Sys/log')
+2019-02-23 21:36:02,247 [66872] DEBUG Servicesys_loginHistory - 获取实体列表
+2019-02-23 21:36:02,247 [66872] DEBUG Sys - select top 20 
+        A.*
+     from 
+        sys_loginHistory A
+     order by A.ID desc
+2019-02-23 21:36:02,253 [66872] DEBUG Sys - select count(*) from ( select 
+        A.*
+     from 
+        sys_loginHistory A
+     ) tb_temp
+2019-02-23 21:36:02,280 [67520] DEBUG Servicesys_log - 获取实体列表
+2019-02-23 21:36:02,281 [67520] DEBUG Sys - select top 20 
+        A.*
+     from 
+        sys_log A
+     order by A.ID desc
+2019-02-23 21:36:02,296 [67520] DEBUG Sys - select count(*) from ( select 
+        A.*
+     from 
+        sys_log A
+     ) tb_temp
+2019-02-23 21:36:15,542 [66872] DEBUG Servicesys_loginHistory - 获取实体列表
+2019-02-23 21:36:15,542 [66872] DEBUG Sys - select top 20 
+        A.*
+     from 
+        sys_loginHistory A
+     order by A.ID desc
+2019-02-23 21:36:15,544 [67440] DEBUG Servicesys_log - 获取实体列表
+2019-02-23 21:36:15,545 [66872] DEBUG Sys - select count(*) from ( select 
+        A.*
+     from 
+        sys_loginHistory A
+     ) tb_temp
+2019-02-23 21:36:15,576 [67440] DEBUG Sys - select top 20 
+        A.*
+     from 
+        sys_log A
+     order by A.ID desc
+2019-02-23 21:36:15,577 [67440] DEBUG Sys - select count(*) from ( select 
+        A.*
+     from 
+        sys_log A
+     ) tb_temp
+2019-02-23 21:36:19,562 [67520] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'admin'
+and C.URL in ('/Mms/transfer/Index','/Mms/transfer')
+2019-02-23 21:36:19,568 [67520] DEBUG Servicesys_code - 获取动态列表
+2019-02-23 21:36:19,568 [67520] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'Pricing'
+2019-02-23 21:36:19,570 [67520] DEBUG Servicemms_warehouse - 获取动态列表
+2019-02-23 21:36:19,570 [67520] DEBUG Mms - select WarehouseCode as value,WarehouseName as text from mms_warehouse where  ProjectCode =  '201306030001'
+2019-02-23 21:36:20,493 [67520] DEBUG Servicemms_transfer - 获取动态列表
+2019-02-23 21:36:20,494 [67520] DEBUG Mms - select top 20 
+        A.*, B.ProjectName, C.MaterialTypeName, D.WarehouseName,E.MerchantsName as ReceiveUnitName
+     from 
+        mms_transfer A
+        left join mms_project       B on B.ProjectCode      = A.ProjectCode
+        left join mms_materialType  C on C.MaterialType = A.MaterialType
+        left join mms_warehouse         D on D.WarehouseCode       = A.WarehouseCode
+        left join mms_merchants     E on E.MerchantsCode    = A.ReceiveUnit
+     where  A.ProjectCode =  '201306030001' order by A.BillNo
+2019-02-23 21:36:20,507 [67520] DEBUG Mms - select count(*) from ( select 
+        A.*, B.ProjectName, C.MaterialTypeName, D.WarehouseName,E.MerchantsName as ReceiveUnitName
+     from 
+        mms_transfer A
+        left join mms_project       B on B.ProjectCode      = A.ProjectCode
+        left join mms_materialType  C on C.MaterialType = A.MaterialType
+        left join mms_warehouse         D on D.WarehouseCode       = A.WarehouseCode
+        left join mms_merchants     E on E.MerchantsCode    = A.ReceiveUnit
+     where  A.ProjectCode =  '201306030001' ) tb_temp
+2019-02-23 21:36:27,016 [67440] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'admin'
+and C.URL in ('/Mms/transfer/Index','/Mms/transfer')
+2019-02-23 21:36:27,023 [67440] DEBUG Servicesys_code - 获取动态列表
+2019-02-23 21:36:27,023 [67440] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'Pricing'
+2019-02-23 21:36:27,025 [67440] DEBUG Servicemms_warehouse - 获取动态列表
+2019-02-23 21:36:27,025 [67440] DEBUG Mms - select WarehouseCode as value,WarehouseName as text from mms_warehouse where  ProjectCode =  '201306030001'
+2019-02-23 21:36:27,768 [67440] DEBUG Servicemms_transfer - 获取动态列表
+2019-02-23 21:36:27,768 [67440] DEBUG Mms - select top 20 
+        A.*, B.ProjectName, C.MaterialTypeName, D.WarehouseName,E.MerchantsName as ReceiveUnitName
+     from 
+        mms_transfer A
+        left join mms_project       B on B.ProjectCode      = A.ProjectCode
+        left join mms_materialType  C on C.MaterialType = A.MaterialType
+        left join mms_warehouse         D on D.WarehouseCode       = A.WarehouseCode
+        left join mms_merchants     E on E.MerchantsCode    = A.ReceiveUnit
+     where  A.ProjectCode =  '201306030001' order by A.BillNo
+2019-02-23 21:36:27,777 [67440] DEBUG Mms - select count(*) from ( select 
+        A.*, B.ProjectName, C.MaterialTypeName, D.WarehouseName,E.MerchantsName as ReceiveUnitName
+     from 
+        mms_transfer A
+        left join mms_project       B on B.ProjectCode      = A.ProjectCode
+        left join mms_materialType  C on C.MaterialType = A.MaterialType
+        left join mms_warehouse         D on D.WarehouseCode       = A.WarehouseCode
+        left join mms_merchants     E on E.MerchantsCode    = A.ReceiveUnit
+     where  A.ProjectCode =  '201306030001' ) tb_temp
+2019-02-23 21:36:40,259 [56836] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'admin'
+and C.URL in ('/Mms/transfer/Index','/Mms/transfer')
+2019-02-23 21:36:40,265 [56836] DEBUG Servicesys_code - 获取动态列表
+2019-02-23 21:36:40,265 [56836] DEBUG Sys - select Code as value,Text as text from sys_code where  CodeType =  'Pricing'
+2019-02-23 21:36:40,267 [56836] DEBUG Servicemms_warehouse - 获取动态列表
+2019-02-23 21:36:40,267 [56836] DEBUG Mms - select WarehouseCode as value,WarehouseName as text from mms_warehouse where  ProjectCode =  '201306030001'
+2019-02-23 21:36:40,748 [67440] DEBUG Servicemms_transfer - 获取动态列表
+2019-02-23 21:36:40,748 [67440] DEBUG Mms - select top 20 
+        A.*, B.ProjectName, C.MaterialTypeName, D.WarehouseName,E.MerchantsName as ReceiveUnitName
+     from 
+        mms_transfer A
+        left join mms_project       B on B.ProjectCode      = A.ProjectCode
+        left join mms_materialType  C on C.MaterialType = A.MaterialType
+        left join mms_warehouse         D on D.WarehouseCode       = A.WarehouseCode
+        left join mms_merchants     E on E.MerchantsCode    = A.ReceiveUnit
+     where  A.ProjectCode =  '201306030001' order by A.BillNo
+2019-02-23 21:36:40,756 [67440] DEBUG Mms - select count(*) from ( select 
+        A.*, B.ProjectName, C.MaterialTypeName, D.WarehouseName,E.MerchantsName as ReceiveUnitName
+     from 
+        mms_transfer A
+        left join mms_project       B on B.ProjectCode      = A.ProjectCode
+        left join mms_materialType  C on C.MaterialType = A.MaterialType
+        left join mms_warehouse         D on D.WarehouseCode       = A.WarehouseCode
+        left join mms_merchants     E on E.MerchantsCode    = A.ReceiveUnit
+     where  A.ProjectCode =  '201306030001' ) tb_temp

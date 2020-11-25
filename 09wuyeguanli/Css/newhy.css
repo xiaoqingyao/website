@@ -1,0 +1,144 @@
+.fcsleft {
+	DISPLAY: inline; FLOAT: left; MARGIN: 5px; WIDTH: 124px; TEXT-ALIGN: center
+}
+.fcsright {
+	DISPLAY: inline; FLOAT: right; MARGIN: 0px; WIDTH: 510px
+}
+.fcnew IMG {
+	BORDER-RIGHT: #333333 1px solid; BORDER-TOP: #333333 1px solid; BORDER-LEFT: #333333 1px solid; BORDER-BOTTOM: #333333 1px solid
+}
+.fcsright .fwzsy {
+	
+}
+.fwzsy {
+	MARGIN-TOP: 4px; MARGIN-RIGHT: 8px
+}
+.fwzsynr {
+	BACKGROUND-POSITION: 50% bottom; BACKGROUND-IMAGE: url(images/movelibg.gif); COLOR: #585858; LINE-HEIGHT: 28px; MARGIN-RIGHT: 8px; BACKGROUND-REPEAT: repeat-x
+}
+.hylefty {
+	FLOAT: left; MARGIN: 5px; WIDTH: 395px; LINE-HEIGHT: 22px
+}
+.hylefty1 {
+	MARGIN-TOP: 5px; FLOAT: left; MARGIN-BOTTOM: 5px; MARGIN-LEFT: 5px; WIDTH: 432px; LINE-HEIGHT: 22px
+}
+.qystjy IMG {
+	MARGIN: 4px
+}
+.qystjy {
+	
+}
+.btfcyy {
+	BACKGROUND-POSITION: right bottom; BACKGROUND-IMAGE: url(images/btrightyy.gif); MARGIN-LEFT: 5px; MARGIN-RIGHT: 5px; BACKGROUND-REPEAT: repeat-x
+}
+.btscy {
+	BACKGROUND-POSITION: right 50%; PADDING-LEFT: 10px; FONT-WEIGHT: 700; FONT-SIZE: 14px; BACKGROUND-IMAGE: url(images/homeindex/homein.gif); COLOR: #6ac000; BACKGROUND-REPEAT: no-repeat; HEIGHT: 20px
+}
+.cpnnn {
+	DISPLAY: block; FLOAT: left; MARGIN: 0px 5px; WIDTH: 130px; COLOR: #333333; LINE-HEIGHT: 20px; TEXT-ALIGN: center
+}
+.spbpx {
+	MARGIN: 10px
+}
+.spbpx SPAN {
+	DISPLAY: block
+}
+.cpnnn IMG {
+	CLEAR: both; MARGIN-LEFT: 4px; MARGIN-RIGHT: 5px
+}
+.btfcyy DIV {
+	BACKGROUND-POSITION: 0px 50%; PADDING-LEFT: 22px; FONT-WEIGHT: bold; FONT-SIZE: 15px; BACKGROUND-IMAGE: url(images/li44gif.gif); COLOR: #766656; BACKGROUND-REPEAT: no-repeat
+}
+.zxxxy SPAN {
+	FONT-SIZE: 12px; FLOAT: right; COLOR: #999999
+}
+.zxxxy A {
+	FONT-SIZE: 13px; COLOR: #535353
+}
+.hyrighty {
+	BACKGROUND-POSITION: 50% bottom; FLOAT: right; BACKGROUND-IMAGE: url(images/fcboty.gif); PADDING-BOTTOM: 10px; MARGIN: 4px 8px 4px 4px; WIDTH: 221px; BACKGROUND-REPEAT: no-repeat
+}
+.hyrighty1 {
+	BACKGROUND-POSITION: 50% bottom; MARGIN-TOP: 8px; FLOAT: right; BACKGROUND-IMAGE: url(images/homeindex/spmlbo.gif); MARGIN-BOTTOM: 10px; PADDING-BOTTOM: 4px; WIDTH: 198px; MARGIN-RIGHT: 8px; BACKGROUND-REPEAT: no-repeat
+}
+.hymltop {
+	BACKGROUND-POSITION: 50% top; BACKGROUND-IMAGE: url(images/fctopy.gif); BACKGROUND-REPEAT: no-repeat; HEIGHT: 22px
+}
+.hymltop1 {
+	BACKGROUND-POSITION: 50% top; BACKGROUND-IMAGE: url(images/homeindex/spmln.gif); PADDING-TOP: 12px; BACKGROUND-REPEAT: no-repeat
+}
+.hylili {
+	FLOAT: left; MARGIN: 5px
+}
+.hybtnr {
+	LINE-HEIGHT: 25px
+}
+.hybtnnnr {
+	FONT-SIZE: 12px; MARGIN-BOTTOM: 5px; MARGIN-LEFT: 5px; COLOR: #666666; MARGIN-RIGHT: 5px
+}
+.hymlcenter UL {
+	MARGIN-BOTTOM: 4px
+}
+.hymlcenter {
+	BORDER-RIGHT: #f3dbc0 1px solid; BORDER-LEFT: #f3dbc0 1px solid
+}
+.hymlcenter1 {
+	BORDER-RIGHT: #75b82d 1px solid; BORDER-LEFT: #75b82d 1px solid
+}
+.zxxxy {
+	FLOAT: left; WIDTH: 215px
+}
+.tbsj {
+	BACKGROUND-POSITION: 0px 50%; PADDING-LEFT: 10px; BACKGROUND-IMAGE: url(images/homeindex/li557.gif); MARGIN: 5px 10px; COLOR: #5c5c5c; BORDER-BOTTOM: #787878 1px dashed; BACKGROUND-REPEAT: no-repeat
+}
+ HTML .tbsj {
+	PADDING-LEFT: 8px; BACKGROUND: url(images/homeindex/li557.gif) no-repeat 0% 50%; MARGIN-LEFT: 0px; OVERFLOW: hidden; LINE-HEIGHT: 24px; HEIGHT: 26px
+}
+UNKNOWN {
+	PADDING-LEFT: 8px; BACKGROUND: url(images/homeindex/li557.gif) no-repeat 0% 50%; MARGIN-LEFT: 0px; OVERFLOW: hidden; LINE-HEIGHT: 24px; HEIGHT: 22px
+}
+.qystjy {
+	CLEAR: both; MARGIN: 3px
+}
+.zxzpy {
+	FLOAT: right; WIDTH: 180px
+}
+.zxzpy UL {
+	BACKGROUND-POSITION: 0px 20%; BACKGROUND-IMAGE: url(images/li444.gif); BACKGROUND-REPEAT: no-repeat
+}
+.zxzpbt {
+	PADDING-LEFT: 15px; FONT-SIZE: 13px; COLOR: #333333
+}
+.zxzpnr {
+	
+}
+.zxzpnr A {
+	COLOR: #af3a25; TEXT-DECORATION: underline
+}
+.fwzsybt {
+	COLOR: #605500; LINE-HEIGHT: 19px; HEIGHT: 19px; BACKGROUND-COLOR: #ffeadf
+}
+.mcy1 {
+	FLOAT: left; WIDTH: 210px
+}
+.mcy2 {
+	FLOAT: left; WIDTH: 70px; TEXT-ALIGN: center
+}
+.mcy3 {
+	FLOAT: left; WIDTH: 140px; TEXT-ALIGN: center
+}
+.fwzsybt .mcy4 {
+	FLOAT: left; WIDTH: 70px! important; TEXT-ALIGN: left
+}
+.fcnew {
+	MARGIN-BOTTOM: 5px; COLOR: #333333
+}
+.fcsleft A {
+	COLOR: #333333
+}
+.fclisty {
+	BORDER-RIGHT: #fbdebb 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #fbdebb 1px solid; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; BORDER-LEFT: #fbdebb 1px solid; COLOR: #666666; PADDING-TOP: 5px; BORDER-BOTTOM: #fbdebb 1px solid; BACKGROUND-COLOR: #fff9f2
+}
+.fclisty A {
+	COLOR: #48525d
+}

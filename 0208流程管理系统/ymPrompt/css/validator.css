@@ -1,0 +1,48 @@
+.onShow
+{
+	display:inline-block;
+    background:url(/ymPrompt/images/onShow.gif) no-repeat; 
+    padding-left:25px; 
+	font-size: 12px;
+	line-height:25px; 
+	    padding-right:10px;
+	vertical-align:middle;
+}
+.onFocus
+{display:inline-block;
+    background:#F0F4F5 url(/ymPrompt/images/onFocus.gif) no-repeat; 
+    padding-left:25px; 
+	font-size: 12px;
+	line-height:22px; 
+    padding-right:10px;
+    border:1px solid #DFE8EA;
+	vertical-align:middle;
+}
+.onError
+{display:inline-block;
+    background:#FFF2E9 url(/ymPrompt/images/onError.gif) no-repeat;
+    padding-left:25px;
+	font-size: 12px;
+	line-height:22px; 
+	    padding-right:10px;
+	    border:1px solid #FFDFCA;
+	vertical-align:middle;
+}
+.onCorrect
+{display:inline-block;
+    background:#E9FFEB url(/ymPrompt/images/onCorrect.gif) no-repeat;
+    padding-left:25px;
+	font-size: 12px;
+	line-height:22px; 
+	    padding-right:10px;
+	vertical-align:middle;
+}
+.onLoad
+{display:inline-block;
+    background:#E9FFEB url(/ymPrompt/images/onLoad.gif) no-repeat 3px 3px;
+    padding-left:25px;
+	font-size: 12px;
+	line-height:22px; 
+	    padding-right:10px;
+	vertical-align:middle;
+} 

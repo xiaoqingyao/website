@@ -1,0 +1,5 @@
+C:\Users\LVCC\Desktop\进销存\进销存管理系统_system\进销存管理系统\JXCMODEL\bin\Debug\JXCMODEL.dll
+C:\Users\LVCC\Desktop\进销存\进销存管理系统_system\进销存管理系统\JXCMODEL\bin\Debug\JXCMODEL.pdb
+C:\Users\LVCC\Desktop\进销存\进销存管理系统_system\进销存管理系统\JXCMODEL\obj\Debug\JXCMODEL.csprojResolveAssemblyReference.cache
+C:\Users\LVCC\Desktop\进销存\进销存管理系统_system\进销存管理系统\JXCMODEL\obj\Debug\JXCMODEL.dll
+C:\Users\LVCC\Desktop\进销存\进销存管理系统_system\进销存管理系统\JXCMODEL\obj\Debug\JXCMODEL.pdb

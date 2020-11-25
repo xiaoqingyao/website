@@ -1,0 +1,72 @@
+img {
+	border: none;
+}
+
+/* dock - top */
+.dock {
+	position: fixed; 
+	_position:absolute; 
+	height: 52px;
+	text-align: center;
+	z-index:90;
+	bottom:0px;
+}
+.dock-container {
+	position: absolute;
+	height: 52px;
+	background:url(../images/mac-memory-info1.png) no-repeat;
+}
+a.dock-item {
+	display: block;
+	width: 50px;
+	color: #000;
+	position: absolute;
+	top: -25px;
+	margin-left:40px;
+	text-align: center;
+	text-decoration: none;
+	font: bold 12px Arial, Helvetica, sans-serif;
+}
+.dock-item img 
+{
+	border: none; 
+	width: 100%; 
+}
+.dock-item span {
+	display: block; 
+	text-align:center;
+	width:50px;
+}
+
+/* dock2 - bottom */
+#dock2 {
+	width: 100%;
+	bottom: 0px;
+	position: absolute;
+	left: 0px;
+}
+.dock-container2 {
+	position: absolute;
+	height: 50px;
+	background: url(images/dock-bg.gif);
+	padding-left: 20px;
+}
+a.dock-item2 {
+	display: block; 
+	font: bold 12px Arial, Helvetica, sans-serif;
+	width: 40px; 
+	color: #000; 
+	bottom: 0px; 
+	position: absolute;
+	text-align: center;
+	text-decoration: none;
+}
+.dock-item2 span {
+	display: none;
+	padding-left: 20px;
+}
+.dock-item2 img {
+	border: none; 
+	margin: 5px 10px 0px; 
+	width: 100%; 
+}

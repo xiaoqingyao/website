@@ -1,0 +1,435 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><title>
+	栏目编辑
+</title><link href="../css/ustyle.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.ui.form.select.js"></script>
+    <script type="text/javascript" src="../js/public.js"></script>
+    <link rel="stylesheet" href="../css/template.css" type="text/css" /><link href="../CSS/validationEngine.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../js/jquery-validationEngine-cn.js"></script>
+    <script src="../JS/jquery-validationEngine.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function() { $("#theForm").validationEngine({ promptPosition: "centerRight" }) });
+    </script>
+    <link href="../css/dialog.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../js/jquery.dialog.js"></script>
+    <script type="text/javascript" src="../js/win.js"></script>
+    <script type="text/javascript" src="../js/Common.js"></script>
+    <script type="text/javascript">
+        function SelectChange() {
+            var CustomContent = document.getElementById("hiddenCustomContent").value;
+            var arrCustomContent = new Array();
+            arrCustomContent = CustomContent.split("###");
+            var count = document.getElementById("ddlCustomContentCount").value;
+            var tdCustomContent = document.getElementById("tdCustomContent");
+            tdCustomContent.innerHTML = "";
+            for (var i = 2; i <= count; i++)
+            {
+                tdCustomContent.innerHTML += "自设内容" + i.toString() + "：";
+                if (i <= arrCustomContent.length) {
+                    tdCustomContent.innerHTML += "<textarea rows='10' cols='50' name='" + "txtCustomContent" + i.toString() + "' ID='" + "txtCustomContent" + i.toString() + "'>" + arrCustomContent[i - 1] + "</textarea><br>";
+                }
+                else {
+                    tdCustomContent.innerHTML += "<textarea rows='10' cols='50' name='" + "txtCustomContent" + i.toString() + "' ID='" + "txtCustomContent" + i.toString() + "'></textarea><br>";
+                }              
+            }
+        }
+        var type = -1;
+        var title = "";
+        var errmsg = "";
+        function showMessage() {
+            var msgContent = "";
+            var jumpurl = "";
+            //添加成功
+            if (type == 0) {
+                msgContent = "添加栏目<font color=red>" + title + "</font>成功<br>";
+                msgContent += "<a href='ModelNodeList.aspx?NodeCode=100015001' style='color:blue'>返回列表</a> | ";
+                msgContent += "<a href='ModelNodeEdit.aspx?Action=Edit&NodeID=cf36d960-143c-4060-917e-328543f3efa6&ID=aef6ad51-7f87-4f9e-b0fc-6c212247395e&NCode=106010006&NodeCode=100015001&ColumnType=1&IsParent=0' style='color:red'>继续添加</a> | ";
+                msgContent += "<a href='ModelNodeEdit.aspx?Action=Edit&NodeID=cf36d960-143c-4060-917e-328543f3efa6&ID=aef6ad51-7f87-4f9e-b0fc-6c212247395e&NCode=106010006&NodeCode=100015001&ColumnType=1&IsParent=0' style='color:red'>修改本栏目</a>";
+                msgContent += "<br>注：3秒钟后自动转到列表页面";
+                jumpurl = "ModelNodeList.aspx?NodeCode=100015001";
+                alert({ msg: msgContent, status: "1", title: "提示信息", url: jumpurl, time: 3000, width: 400 })
+            }
+            else if (type == 1) {  //修改成功
+                msgContent = "修改栏目<font color=red>" + title + "</font>成功<br>";
+                msgContent += "<a href='ModelNodeList.aspx' style='color:blue'>返回列表</a> | ";
+                msgContent += "<a href='ModelNodeEdit.aspx?Action=Edit&NodeID=cf36d960-143c-4060-917e-328543f3efa6&ID=aef6ad51-7f87-4f9e-b0fc-6c212247395e&NCode=106010006&NodeCode=100015001&ColumnType=1&IsParent=0' style='color:red'>继续修改</a> | ";
+                msgContent += "<a href='ModelNodeEdit.aspx?Action=Edit&NodeID=cf36d960-143c-4060-917e-328543f3efa6&ID=aef6ad51-7f87-4f9e-b0fc-6c212247395e&NCode=106010006&NodeCode=100015001&ColumnType=1&IsParent=0' style='color:red'>添加新栏目</a><br>";
+                msgContent += "注：3秒钟后自动转到列表页面";
+                jumpurl = "ModelNodeList.aspx";
+                alert({ msg: msgContent, status: "1", title: "提示信息", url: jumpurl, time: 3000, width: 400 })
+            }
+            else if (type == 2) {  //操作失败
+                msgContent = "操作失败,原因如下：<br>";
+                msgContent += "<font style='color:green'>" + errmsg + "</font><br>";
+                msgContent += "注：10秒钟后提示框自动关闭";
+                alert({ msg: msgContent, status: "2", title: "提示信息", time: 10000, width: 400 })
+            }
+            else if (type == 3) {  //修改成功
+                msgContent = "删除栏目<font color=red>" + title + "</font>成功<br>";
+                msgContent += "注：3秒钟后自动转到列表页面";
+                jumpurl = "ModelNodeList.aspx";
+                alert({ msg: msgContent, status: "1", title: "提示信息", url: jumpurl, time: 3000, width: 400 })
+            }
+        }
+        window.onload = function() {
+            if (type > -1) {
+                showMessage();
+            }
+        }
+        function setAction1(data) {
+            document.getElementById("btnHidAction").click();
+        }
+    </script>
+</head>
+<body>
+    <form name="theForm" method="post" action="ColumnEdit.aspx?Action=Edit&amp;NodeID=cf36d960-143c-4060-917e-328543f3efa6&amp;ID=aef6ad51-7f87-4f9e-b0fc-6c212247395e&amp;NCode=106010006&amp;NodeCode=100015001&amp;ColumnType=1&amp;IsParent=0" id="theForm">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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ATVnEAUBNgUBNmcQBQE3BQE3ZxAFATgFAThnEAUBOQUBOWcQBQIxMAUCMTBnEAUCMTEFAjExZxAFAjEyBQIxMmcQBQIxMwUCMTNnEAUCMTQFAjE0ZxAFAjE1BQIxNWcQBQIxNgUCMTZnEAUCMTcFAjE3ZxAFAjE4BQIxOGcQBQIxOQUCMTlnEAUCMjAFAjIwZ2RkAjgPDxYCHwAFBuS/ruaUuWRkAjkPD2QWAh4Hb25jbGljawU5amF2YXNjcmlwdDpyZXR1cm4oY29uZmlybSgn56Gu5a6a5Yig6Zmk5omA6YCJ6IqC54K577yfJykpZBgCBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WeAULY2hrSXNGb2xkZXIFEGNoa0lzTGVmdERpc3BsYXkFB3JhZFNlbGYFBnJhZE5ldwUGcmFkTmV3BQVyYWRrZgUGcmFkYmtmBQZyYWRia2YFBXJhZHJ6BQVyYWRyegUFcmFkZ2QFBXJhZGdkBRJjaGtJc0VuYWJsZUNvbW1lbnQFFXJhZENyZWF0ZUxpc3RQYWdlVHJ1ZQUWcmFkQ3JlYXRlTGlzdFBhZ2VGYWxzZQUWcmFkQ3JlYXRlTGlzdFBhZ2VGYWxzZQUVY2hrSXNFbmFibGVJbmRleENhY2hlBRhyYWRMaXN0UGFnZVNhdmVQYXRoVHlwZTEFGHJhZExpc3RQYWdlU2F2ZVBhdGhUeXBlMQUYcmFkTGlzdFBhZ2VTYXZlUGF0aFR5cGUyBRhyYWRMaXN0UGFnZVNhdmVQYXRoVHlwZTIFGHJhZExpc3RQYWdlU2F2ZVBhdGhUeXBlMwUYcmFkQ3JlYXRlQ29udGVudFBhZ2VUcnVlBRlyYWRDcmVhdGVDb250ZW50UGFnZUZhbHNlBRlyYWRDcmVhdGVDb250ZW50UGFnZUZhbHNlBRtyYWRDb250ZW50UGFnZVNhdmVQYXRoVHlwZTEFG3JhZENvbnRlbnRQYWdlU2F2ZVBhdGhUeXBlMgUbcmFkQ29udGVudFBhZ2VTYXZlUGF0aFR5cGUyBRtyYWRDb250ZW50UGFnZVNhdmVQYXRoVHlwZTMFG3JhZENvbnRlbnRQYWdlU2F2ZVBhdGhUeXBlMwUbcmFkQ29udGVudFBhZ2VTYXZlUGF0aFR5cGU0BRtyYWRDb250ZW50UGFnZVNhdmVQYXRoVHlwZTQFFnJhZEF1dG9DcmVhdGVIdG1sVHlwZTEFFnJhZEF1dG9DcmVhdGVIdG1sVHlwZTEFFnJhZEF1dG9DcmVhdGVIdG1sVHlwZTIFFnJhZEF1dG9DcmVhdGVIdG1sVHlwZTIFFnJhZEF1dG9DcmVhdGVIdG1sVHlwZTMFFnJhZEF1dG9DcmVhdGVIdG1sVHlwZTMFFnJhZEF1dG9DcmVhdGVIdG1sVHlwZTQFFnJhZEF1dG9DcmVhdGVIdG1sVHlwZTQFFnJhZEF1dG9DcmVhdGVIdG1sVHlwZTUFFnJhZEF1dG9DcmVhdGVIdG1sVHlwZTUFFnJhZEF1dG9DcmVhdGVIdG1sVHlwZTYFNmdydlJpZ2h0JGN0bDAyJGNrYmUyMzEyYzBhLTI1ZTUtNDk3NS04ZGU1LTBkM2E0ZmVlZDVmZAU2Z3J2UmlnaHQkY3RsMDIkY2tiM2RiMmYzMDAtMjZlZS00OTQ2LWEzMjgtNGY2ZjU1ZjYzMTNmBTZncnZSaWdodCRjdGwwMiRja2I1Yjk0MDJmZC04ODZkLTQ2ZmQtOGVhNi01ZjgwNTM0MDAxNDMFNmdydlJpZ2h0JGN0bDAyJGNrYjQwYmZiMTQxLTJlODItNDkxOS05OGZiLTcxYzk2MGZmNmUzNAU2Z3J2UmlnaHQkY3RsMDIkY2tiZDA3Y2FiZjUtNzIzOC00MjMwLThjNjgtN2YxNWFlZTgzN2ZlBTZncnZSaWdodCRjdGwwMiRja2JkZDI1YjAxNy00ZDk3LTQ0NTgtOTg3ZS04YTkyN2ZlNTQ4NGQFNmdydlJpZ2h0JGN0bDAyJGNrYmE3NGViZWIzLWU0NTEtNDRkOC1iMDRkLTlkNWM3MDI0ZDBhZQU2Z3J2UmlnaHQkY3RsMDIkY2tiNzQ5MzZiYjItYzFlZS00ZmNmLWI4ODEtYWY1ODdmMDE1YjkzBTZncnZSaWdodCRjdGwwMiRja2IzZWEzMGNiNC1mZmViLTQ0NGEtYmIyYS1iZTk5OWFmYzg5MTAFNmdydlJpZ2h0JGN0bDAyJGNrYjk5MmZiNTVkLTQ5OWUtNDc5Yy1hYTdlLWQyYjA4MzM4ODUzOAU2Z3J2UmlnaHQkY3RsMDIkY2tiM2ZiNDlkZjQtNGRhMS00YzJkLWFmNzUtZjQxMDlmMmZlYjE5BTZncnZSaWdodCRjdGwwMyRja2JlMjMxMmMwYS0yNWU1LTQ5NzUtOGRlNS0wZDNhNGZlZWQ1ZmQFNmdydlJpZ2h0JGN0bDAzJGNrYjNkYjJmMzAwLTI2ZWUtNDk0Ni1hMzI4LTRmNmY1NWY2MzEzZgU2Z3J2UmlnaHQkY3RsMDMkY2tiNWI5NDAyZmQtODg2ZC00NmZkLThlYTYtNWY4MDUzNDAwMTQzBTZncnZSaWdodCRjdGwwMyRja2I0MGJmYjE0MS0yZTgyLTQ5MTktOThmYi03MWM5NjBmZjZlMzQFNmdydlJpZ2h0JGN0bDAzJGNrYmQwN2NhYmY1LTcyMzgtNDIzMC04YzY4LTdmMTVhZWU4MzdmZQU2Z3J2UmlnaHQkY3RsMDMkY2tiZGQyNWIwMTctNGQ5Ny00NDU4LTk4N2UtOGE5MjdmZTU0ODRkBTZncnZSaWdodCRjdGwwMyRja2JhNzRlYmViMy1lNDUxLTQ0ZDgtYjA0ZC05ZDVjNzAyNGQwYWUFNmdydlJpZ2h0JGN0bDAzJGNrYjc0OTM2YmIyLWMxZWUtNGZjZi1iODgxLWFmNTg3ZjAxNWI5MwU2Z3J2UmlnaHQkY3RsMDMkY2tiM2VhMzBjYjQtZmZlYi00NDRhLWJiMmEtYmU5OTlhZmM4OTEwBTZncnZSaWdodCRjdGwwMyRja2I5OTJmYjU1ZC00OTllLTQ3OWMtYWE3ZS1kMmIwODMzODg1MzgFNmdydlJpZ2h0JGN0bDAzJGNrYjNmYjQ5ZGY0LTRkYTEtNGMyZC1hZjc1LWY0MTA5ZjJmZWIxOQU2Z3J2UmlnaHQkY3RsMDQkY2tiZTIzMTJjMGEtMjVlNS00OTc1LThkZTUtMGQzYTRmZWVkNWZkBTZncnZSaWdodCRjdGwwNCRja2IzZGIyZjMwMC0yNmVlLTQ5NDYtYTMyOC00ZjZmNTVmNjMxM2YFNmdydlJpZ2h0JGN0bDA0JGNrYjViOTQwMmZkLTg4NmQtNDZmZC04ZWE2LTVmODA1MzQwMDE0MwU2Z3J2UmlnaHQkY3RsMDQkY2tiNDBiZmIxNDEtMmU4Mi00OTE5LTk4ZmItNzFjOTYwZmY2ZTM0BTZncnZSaWdodCRjdGwwNCRja2JkMDdjYWJmNS03MjM4LTQyMzAtOGM2OC03ZjE1YWVlODM3ZmUFNmdydlJpZ2h0JGN0bDA0JGNrYmRkMjViMDE3LTRkOTctNDQ1OC05ODdlLThhOTI3ZmU1NDg0ZAU2Z3J2UmlnaHQkY3RsMDQkY2tiYTc0ZWJlYjMtZTQ1MS00NGQ4LWIwNGQtOWQ1YzcwMjRkMGFlBTZncnZSaWdodCRjdGwwNCRja2I3NDkzNmJiMi1jMWVlLTRmY2YtYjg4MS1hZjU4N2YwMTViOTMFNmdydlJpZ2h0JGN0bDA0JGNrYjNlYTMwY2I0LWZmZWItNDQ0YS1iYjJhLWJlOTk5YWZjODkxMAU2Z3J2UmlnaHQkY3RsMDQkY2tiOTkyZmI1NWQtNDk5ZS00NzljLWFhN2UtZDJiMDgzMzg4NTM4BTZncnZSaWdodCRjdGwwNCRja2IzZmI0OWRmNC00ZGExLTRjMmQtYWY3NS1mNDEwOWYyZmViMTkFNmdydlJpZ2h0JGN0bDA1JGNrYmUyMzEyYzBhLTI1ZTUtNDk3NS04ZGU1LTBkM2E0ZmVlZDVmZAU2Z3J2UmlnaHQkY3RsMDUkY2tiM2RiMmYzMDAtMjZlZS00OTQ2LWEzMjgtNGY2ZjU1ZjYzMTNmBTZncnZSaWdodCRjdGwwNSRja2I1Yjk0MDJmZC04ODZkLTQ2ZmQtOGVhNi01ZjgwNTM0MDAxNDMFNmdydlJpZ2h0JGN0bDA1JGNrYjQwYmZiMTQxLTJlODItNDkxOS05OGZiLTcxYzk2MGZmNmUzNAU2Z3J2UmlnaHQkY3RsMDUkY2tiZDA3Y2FiZjUtNzIzOC00MjMwLThjNjgtN2YxNWFlZTgzN2ZlBTZncnZSaWdodCRjdGwwNSRja2JkZDI1YjAxNy00ZDk3LTQ0NTgtOTg3ZS04YTkyN2ZlNTQ4NGQFNmdydlJpZ2h0JGN0bDA1JGNrYmE3NGViZWIzLWU0NTEtNDRkOC1iMDRkLTlkNWM3MDI0ZDBhZQU2Z3J2UmlnaHQkY3RsMDUkY2tiNzQ5MzZiYjItYzFlZS00ZmNmLWI4ODEtYWY1ODdmMDE1YjkzBTZncnZSaWdodCRjdGwwNSRja2IzZWEzMGNiNC1mZmViLTQ0NGEtYmIyYS1iZTk5OWFmYzg5MTAFNmdydlJpZ2h0JGN0bDA1JGNrYjk5MmZiNTVkLTQ5OWUtNDc5Yy1hYTdlLWQyYjA4MzM4ODUzOAU2Z3J2UmlnaHQkY3RsMDUkY2tiM2ZiNDlkZjQtNGRhMS00YzJkLWFmNzUtZjQxMDlmMmZlYjE5BTZncnZSaWdodCRjdGwwNiRja2JlMjMxMmMwYS0yNWU1LTQ5NzUtOGRlNS0wZDNhNGZlZWQ1ZmQFNmdydlJpZ2h0JGN0bDA2JGNrYjNkYjJmMzAwLTI2ZWUtNDk0Ni1hMzI4LTRmNmY1NWY2MzEzZgU2Z3J2UmlnaHQkY3RsMDYkY2tiNWI5NDAyZmQtODg2ZC00NmZkLThlYTYtNWY4MDUzNDAwMTQzBTZncnZSaWdodCRjdGwwNiRja2I0MGJmYjE0MS0yZTgyLTQ5MTktOThmYi03MWM5NjBmZjZlMzQFNmdydlJpZ2h0JGN0bDA2JGNrYmQwN2NhYmY1LTcyMzgtNDIzMC04YzY4LTdmMTVhZWU4MzdmZQU2Z3J2UmlnaHQkY3RsMDYkY2tiZGQyNWIwMTctNGQ5Ny00NDU4LTk4N2UtOGE5MjdmZTU0ODRkBTZncnZSaWdodCRjdGwwNiRja2JhNzRlYmViMy1lNDUxLTQ0ZDgtYjA0ZC05ZDVjNzAyNGQwYWUFNmdydlJpZ2h0JGN0bDA2JGNrYjc0OTM2YmIyLWMxZWUtNGZjZi1iODgxLWFmNTg3ZjAxNWI5MwU2Z3J2UmlnaHQkY3RsMDYkY2tiM2VhMzBjYjQtZmZlYi00NDRhLWJiMmEtYmU5OTlhZmM4OTEwBTZncnZSaWdodCRjdGwwNiRja2I5OTJmYjU1ZC00OTllLTQ3OWMtYWE3ZS1kMmIwODMzODg1MzgFNmdydlJpZ2h0JGN0bDA2JGNrYjNmYjQ5ZGY0LTRkYTEtNGMyZC1hZjc1LWY0MTA5ZjJmZWIxOQU2Z3J2UmlnaHQkY3RsMDckY2tiZTIzMTJjMGEtMjVlNS00OTc1LThkZTUtMGQzYTRmZWVkNWZkBTZncnZSaWdodCRjdGwwNyRja2IzZGIyZjMwMC0yNmVlLTQ5NDYtYTMyOC00ZjZmNTVmNjMxM2YFNmdydlJpZ2h0JGN0bDA3JGNrYjViOTQwMmZkLTg4NmQtNDZmZC04ZWE2LTVmODA1MzQwMDE0MwU2Z3J2UmlnaHQkY3RsMDckY2tiNDBiZmIxNDEtMmU4Mi00OTE5LTk4ZmItNzFjOTYwZmY2ZTM0BTZncnZSaWdodCRjdGwwNyRja2JkMDdjYWJmNS03MjM4LTQyMzAtOGM2OC03ZjE1YWVlODM3ZmUFNmdydlJpZ2h0JGN0bDA3JGNrYmRkMjViMDE3LTRkOTctNDQ1OC05ODdlLThhOTI3ZmU1NDg0ZAU2Z3J2UmlnaHQkY3RsMDckY2tiYTc0ZWJlYjMtZTQ1MS00NGQ4LWIwNGQtOWQ1YzcwMjRkMGFlBTZncnZSaWdodCRjdGwwNyRja2I3NDkzNmJiMi1jMWVlLTRmY2YtYjg4MS1hZjU4N2YwMTViOTMFNmdydlJpZ2h0JGN0bDA3JGNrYjNlYTMwY2I0LWZmZWItNDQ0YS1iYjJhLWJlOTk5YWZjODkxMAU2Z3J2UmlnaHQkY3RsMDckY2tiOTkyZmI1NWQtNDk5ZS00NzljLWFhN2UtZDJiMDgzMzg4NTM4BTZncnZSaWdodCRjdGwwNyRja2IzZmI0OWRmNC00ZGExLTRjMmQtYWY3NS1mNDEwOWYyZmViMTkFNmdydlJpZ2h0JGN0bDA4JGNrYmUyMzEyYzBhLTI1ZTUtNDk3NS04ZGU1LTBkM2E0ZmVlZDVmZAU2Z3J2UmlnaHQkY3RsMDgkY2tiM2RiMmYzMDAtMjZlZS00OTQ2LWEzMjgtNGY2ZjU1ZjYzMTNmBTZncnZSaWdodCRjdGwwOCRja2I1Yjk0MDJmZC04ODZkLTQ2ZmQtOGVhNi01ZjgwNTM0MDAxNDMFNmdydlJpZ2h0JGN0bDA4JGNrYjQwYmZiMTQxLTJlODItNDkxOS05OGZiLTcxYzk2MGZmNmUzNAU2Z3J2UmlnaHQkY3RsMDgkY2tiZDA3Y2FiZjUtNzIzOC00MjMwLThjNjgtN2YxNWFlZTgzN2ZlBTZncnZSaWdodCRjdGwwOCRja2JkZDI1YjAxNy00ZDk3LTQ0NTgtOTg3ZS04YTkyN2ZlNTQ4NGQFNmdydlJpZ2h0JGN0bDA4JGNrYmE3NGViZWIzLWU0NTEtNDRkOC1iMDRkLTlkNWM3MDI0ZDBhZQU2Z3J2UmlnaHQkY3RsMDgkY2tiNzQ5MzZiYjItYzFlZS00ZmNmLWI4ODEtYWY1ODdmMDE1YjkzBTZncnZSaWdodCRjdGwwOCRja2IzZWEzMGNiNC1mZmViLTQ0NGEtYmIyYS1iZTk5OWFmYzg5MTAFNmdydlJpZ2h0JGN0bDA4JGNrYjk5MmZiNTVkLTQ5OWUtNDc5Yy1hYTdlLWQyYjA4MzM4ODUzOAU2Z3J2UmlnaHQkY3RsMDgkY2tiM2ZiNDlkZjQtNGRhMS00YzJkLWFmNzUtZjQxMDlmMmZlYjE5BQhncnZSaWdodA88KwAKAQgCAWTLaz1jOaXH2UgY6me6cN07Yyh7Mw==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['theForm'];
+if (!theForm) {
+    theForm = document.theForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div>
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWqAECh8jZoAUC0O2wwAkCyrDi4A8C+9qp6gkCn/LxpgkC0p2w0gcCgYnlkQwC+Zaw8Q4CxomThwUC1pTPmwICv8G9twoCyoDV8AcC2u//ngsC97GGvQMC7tOboAoC7IeC3goC95+BhAkCiqu48QECprC2wAwCttSVnAoC0fbznQYCzvbznQYCwZnZ8woCtvO13g8CwsPW3AcCg4/hzAYCqKXoyggCuK3bpQoCm/i5ywsCz4+y+Q4CirC4aQKZsITsBwL2s8zcAgKIsKijCwKJqpvjBAKF2fPeBgKah9TgDgKX4vi6DwLJsYmYAgK4rLnDBwKo1IBCAqq9/YgMAuKCoPEIAruPtf0PAtnljOgJAo+h/eEGApLT6IQLApLT1OsDApLTwM4KAqLJqxYCo/D3xA4Co/CnlwUCx7OtngYCsc+HrgoCpvPjxgcC0YDfkQUC7rae7QIChay4+gwCoMXa1wYCv/LELAL38o2TDwL38rGTDwL38rWTDwL38rmTDwL38r2TDwL38qGTDwLqmIDZCAK08sv9DQKm3/rkAwLOw+GiDQLNxsyWBgLDu7TbBALv86OgCQLLsZCmAwKil7PYDALT1b3QCAKPj73wDwLh5qKkDQKx4J61AwKgi8KwDAKGvcP9BAKZgpuyDAK92rzEDALE8dI4AtbX+IwCArP3mb4BAqTbg4YPAvuQtcwDArnkiqcCAqe23bYJAtyL6xMCt/bHDQKeiJm5CwKe//SLBALToZjaCQL9udCwCwKGjP3TAwK76+PwCQKVjZrfCAKwgP+fDQKGx8/oDAK4jIe3BQKUpJeLBwLRiPrnBwLTpMqiCgKc1OrJCAL4pdPZBQKJls7VBwLnmqyEBQLsj66VCQK/2YWBAQKI4sqXDAKaoMD5DQKxq83ZCAKqnqKEBALjxfXqBALorILADQLJkM7JDQKdu5LdBAK+ysyJCQKotIKXDwL9zdhvAvakuMIEAvTu+vgPAsGSxOsBAryN0P4CAp7xmc0KAr6SwpYNAvTdyukNAuOew7oEApP4nIYJAsm32ZUMAuDM+a8FAsKmvPAHAs6qpLAFAqiIqPMNAvSv2aINAubu87MHAqvrkOEEArqWiZkEAtOGj5ENAr3W2YoPAtTHnYUHAra02JgMAre02JgMArS02JgMArW02JgMArK02JgMArO02JgMArC02JgMAqG02JgMAq602JgMAra0mJsMAra0lJsMAra0kJsMAra0rJsMAra0qJsMAra0pJsMAra0oJsMAra0vJsMAra0+JgMAra09JgMAre0mJsMArG69uEGAvDAzewBAqPC/8kPArbhq80NAouTpcYFTkY3EgIIYEfUTxCNCc1kAxtgFVI=" />
+</div>
+    <div class="container">
+        <h4>
+            位置： <a href="#">系统管理</a> &gt; <a href="#">栏目管理</a> &gt; <span class="breadcrumb_current"> 添加/修改栏目</span>
+        </h4>
+        <div id="con">
+            <ul id="tags">
+                <li class="selectTag"><a href="javascript:;">基本信息</a> </li>
+                <li><a href="javascript:;">栏目选项</a></li>
+                <li><a href="javascript:;">模板选项</a></li>
+                <li><a href="javascript:;">生成选项</a></li>
+                <li><a href="javascript:;">权限设置</a></li>
+                <li><a href="javascript:;">自设内容</a></li>
+            </ul>
+            <div id="panel">
+            
+                <fieldset>
+                    <dl>
+                        <dt>栏目名称：</dt>
+                        <dd>
+                           <input name="txtNodeName" type="text" value="testaaa" id="txtNodeName" class="validate[required,length[1,10]]" />
+                           
+                           
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>英文名称：</dt>
+                        <dd><input name="txtNodelEngDesc" type="text" value="tsad" id="txtNodelEngDesc" class="validate[required,custom[onlyLetter],length[0,20]] text-input" /></dd>
+                    </dl>
+                    <dl>
+                        <dt>是否启用子域名：</dt>
+                        <dd> <table id="RbtEnableSubDomain" border="0" style="height:16px;width:124px;">
+	<tr>
+		<td><input id="RbtEnableSubDomain_0" type="radio" name="RbtEnableSubDomain" value="False" checked="checked" /><label for="RbtEnableSubDomain_0">不启用</label></td><td><input id="RbtEnableSubDomain_1" type="radio" name="RbtEnableSubDomain" value="True" /><label for="RbtEnableSubDomain_1">启用</label></td>
+	</tr>
+</table> </dd>
+                    </dl>
+                    <dl>
+                        <dt>子域名地址：</dt>
+                        <dd><input name="txtSubDomain" type="text" value="4" id="txtSubDomain" />(例如：http://www.360hqb.com/ )</dd>
+                    </dl>
+                    <dl>
+                        <dt>栏目目录名：</dt>
+                        <dd><input name="txtNodeDir" type="text" value="5" id="txtNodeDir" /></dd>
+                    </dl>
+                    <dl>
+                        <dt>栏目图标(如果是父栏目类型或需自定义栏目图标则需上传图片)：</dt>
+                        <dd><input name="txtNodelIcon" type="text" value="6" id="txtNodelIcon" style="width:252px;" /> <input name="Button3" type="button" id="Button3" value="上传" Class="subButton" onclick="InputFile('theForm','txtNodelIcon','image',1,'jpg|gif|bmp|png');" /></dd>
+                    </dl>
+                    <dl>
+                        <dt>是否父栏目(只有父栏目下才能包含子栏目，父栏目不能属于某个模块)：</dt>
+                        <dd> 
+                            <input id="chkIsFolder" type="checkbox" name="chkIsFolder" onclick="javascript:setTimeout('__doPostBack(\'chkIsFolder\',\'\')', 0)" /><label for="chkIsFolder">是</label>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>所属模块：</dt>
+                        <dd><select name="ddlModel" onchange="javascript:setTimeout('__doPostBack(\'ddlModel\',\'\')', 0)" id="ddlModel">
+	<option value="0">请选择</option>
+	<option selected="selected" value="818379e9-8880-48e1-b446-87de2fd8b034">产品模型</option>
+	<option value="369257e0-94d7-4215-8e54-f9e9e7bcfc42">关键字</option>
+	<option value="b4a9d6f6-2bd8-497d-a16c-835ad6627790">后台信息模型</option>
+	<option value="9c5b5315-6465-452c-981d-0df0345d53c7">图片幻灯片模型</option>
+	<option value="6e424068-5a2b-4c35-9e87-41a65fa61b6e">文章模型</option>
+
+</select></dd>
+                    </dl>
+                    <dl>
+                        <dt>自定义链接：</dt>
+                        <dd><input name="txtLinkURL" type="text" value="7" id="txtLinkURL" style="width:231px;" />&nbsp;默认为空</dd>
+                    </dl>
+                    <dl>
+                        <dt>左边菜单栏显示：</dt>
+                        <dd>    
+                            <input id="chkIsLeftDisplay" type="checkbox" name="chkIsLeftDisplay" checked="checked" /><label for="chkIsLeftDisplay">是</label>（默认为是）
+                        </dd>
+                    </dl>               
+                    <dl>
+                        <dt>是否有效：</dt>
+                        <dd><table id="RBL_IsValid" border="0" style="height:16px;width:124px;">
+	<tr>
+		<td><input id="RBL_IsValid_0" type="radio" name="RBL_IsValid" value="0" /><label for="RBL_IsValid_0">禁用</label></td><td><input id="RBL_IsValid_1" type="radio" name="RBL_IsValid" value="1" checked="checked" /><label for="RBL_IsValid_1">启用</label></td>
+	</tr>
+</table></dd>
+                    </dl>
+                    <dl>
+                        <dt>栏目说明：</dt>
+                        <dd>
+                        <textarea name="Editor1$txtEditorContent" type="text" id="Editor1_txtEditorContent" style="display:none">asfd fdsa</textarea>
+<iframe id="eWebEditorEditor1" src="../Editor/eWebEditor/ewebeditor.htm?id=Editor1$txtEditorContent&amp;style=mini500&amp;skin=blue2" width="500" frameborder="0" height="200" scrolling="no"></iframe>
+
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>栏目提示：</dt>
+                        <dd><input name="txtTips" type="text" value="1" id="txtTips" style="width:200px;" />(鼠标移至栏目名称上时将显示设定的提示文字（不支持HTML）)</dd>
+                    </dl>
+                    <dl>
+                        <dt>栏目Meta关键字：</dt>
+                        <dd><textarea name="txtKeyWords" rows="2" cols="20" id="txtKeyWords" style="height:80px;width:280px;">2</textarea>针对搜索引擎设置的关键词。多个关键词请用,号分隔</dd>
+                    </dl>
+                    <dl>
+                        <dt>栏目Meta说明：</dt>
+                        <dd><textarea name="txtMetaDesc" rows="2" cols="20" id="txtMetaDesc" style="height:80px;width:280px;">3</textarea>针对搜索引擎设置的网页描述。多个描述请用,号分隔 </dd>                                                            
+                    </dl>
+                    <dl>
+                        <dt> 排序号：</dt>
+                        <dd><input name="txtNodelOrder" type="text" value="0" id="txtNodelOrder" class="validate[required,custom[onlyNumber],length[0,3]] text-input" style="width:50px;" /></dd>
+                    </dl>
+                    <div style="clear:left"></div>
+                 </fieldset>
+                 
+                       
+                 
+                 <fieldset style="display: none;">
+                     <dl>
+                        <dt>打开方式：</dt>
+                        <dd><input id="radSelf" type="radio" name="OpenType" value="radSelf" checked="checked" /><label for="radSelf">在原窗口打开</label><input id="radNew" type="radio" name="OpenType" value="radNew" /><label for="radNew">在新窗口打开</label></dd>          
+                    </dl>
+                    <dl>
+                        <dt>访问权限：</dt>
+                        <dd>
+                        <input id="radkf" type="radio" name="PurviewType" value="radkf" checked="checked" /><label for="radkf">开放栏目</label>&nbsp;&nbsp;&nbsp;&nbsp;任何人（包括游客）可以浏览和查看此栏目下的信息。<br>
+                        <input id="radbkf" type="radio" name="PurviewType" value="radbkf" /><label for="radbkf">半开放栏目</label>&nbsp;&nbsp;&nbsp;&nbsp;任何人（包括游客）都可以浏览。游客不可查看，其他会员根据会员组的栏目权限设置决定是否可以查看。<br>
+                        <input id="radrz" type="radio" name="PurviewType" value="radrz" /><label for="radrz">认证栏目</label>&nbsp;&nbsp;&nbsp;&nbsp;游客不能浏览和查看，其他会员根据会员组的栏目权限设置决定是否可以浏览和查看。 <br>
+                        <input id="radgd" type="radio" name="PurviewType" value="radgd" /><label for="radgd">归档栏目</label>&nbsp;&nbsp;&nbsp;&nbsp;任何人（包括会员、管理员）都不可以在此栏目下添加信息。 
+                        </dd>          
+                </dl>
+                    <dl>
+                    <dt>是否允许评论：</dt>
+                    <dd>    
+                        <input id="chkIsEnableComment" type="checkbox" name="chkIsEnableComment" checked="checked" /><label for="chkIsEnableComment">是</label>（默认为是）
+                    </dd>
+                    </dl>
+                    <dl>
+                    <dt>审核流程：</dt>
+                    <dd><select name="ddlReviewFlow" id="ddlReviewFlow">
+	<option value="0">请选择</option>
+	<option value="000000000540453">三 级 审 核</option>
+	<option value="000000000279398">二级审核</option>
+	<option selected="selected" value="000000000000000">一级审核</option>
+
+</select></dd>
+                    </dl> 
+                    <div style="clear:left"></div>
+                 </fieldset>                 
+                 
+                 
+                 
+                <fieldset style="display: none;">                
+                    <dl>
+                        <dt>栏目首页模板：</dt>
+                        <dd><input name="txtDefaultTemplate" type="text" id="txtDefaultTemplate" style="width:280px;" />(例如：/内容页模板/默认文章内容页模板.html)</dd>          
+                    </dl>
+                    <dl>
+                        <dt>栏目列表页模板：</dt>
+                        <dd><input name="txtListPageTemplate" type="text" id="txtListPageTemplate" style="width:280px;" /></dd>          
+                    </dl>     
+                    <dl>
+                        <dt>内容页模板：</dt>
+                        <dd><input name="txtContentTemplate" type="text" id="txtContentTemplate" style="width:280px;" /></dd>          
+                    </dl>      
+                    <div style="clear:left"></div>
+                 </fieldset>
+                 
+                 
+                 <fieldset style="display: none;">                
+                    <dl>
+                        <dt>列表页生成HTML：</dt>
+                        <dd><input id="radCreateListPageTrue" type="radio" name="IsCreateListPage" value="radCreateListPageTrue" checked="checked" /><label for="radCreateListPageTrue">不生成HTML，使用动态页方式</label><br>
+                        <input id="radCreateListPageFalse" type="radio" name="IsCreateListPage" value="radCreateListPageFalse" /><label for="radCreateListPageFalse">生成HTML</label></dd>          
+                    </dl>
+                    <dl>
+                        <dt>增量更新HTML页数：</dt>
+                        <dd><input name="txtIncrementalUpdatePages" type="text" value="0" id="txtIncrementalUpdatePages" style="width:280px;" /></dd>          
+                    </dl>     
+                    <dl>
+                        <dt>缓存动态页首页：</dt>
+                        <dd><input id="chkIsEnableIndexCache" type="checkbox" name="chkIsEnableIndexCache" /><label for="chkIsEnableIndexCache">当栏目页为动态方式时，缓存本栏目的首页内容</label></dd>          
+                    </dl>      
+                    <dl>
+                        <dt>列表页生成类型：</dt>
+                        <dd>
+                            <input id="radListPageSavePathType1" type="radio" name="ListPageSavePathType" value="radListPageSavePathType1" /><label for="radListPageSavePathType1">列表文件分目录保存在所属栏目的文件夹中</label><br>
+                            例：Index.html（栏目首页）<br>
+                            List_1.html（栏目列表第一页）<br>
+                            <input id="radListPageSavePathType2" type="radio" name="ListPageSavePathType" value="radListPageSavePathType2" /><label for="radListPageSavePathType2">列表文件统一保存在指定的“List”文件夹中</label><br>
+                            例：List/List_236.html（栏目首页）<br>
+                            List/List_236_1.html（栏目列表第一页）<br>
+                            <input id="radListPageSavePathType3" type="radio" name="ListPageSavePathType" value="radListPageSavePathType3" checked="checked" /><label for="radListPageSavePathType3">列表文件统一保存在一级栏目文件夹中</label><br>
+                            例：List_236.html（栏目首页）<br>
+                            List_236_1.html（栏目列表第一页）<br>
+                        </dd>          
+                    </dl> 
+                    <dl>
+                        <dt>列表页后缀：</dt>
+                        <dd>
+                        <select name="ddlListPagePostFix" id="ddlListPagePostFix">
+	<option selected="selected" value=""></option>
+	<option value="html">html</option>
+	<option value="htm">htm</option>
+	<option value="shtml">shtml</option>
+	<option value="shtm">shtm</option>
+
+</select>
+                        </dd>          
+                    </dl>
+                    <dl>
+                        <dt>内容页生成HTML：</dt>
+                        <dd><input id="radCreateContentPageTrue" type="radio" name="IsCreateContentPage" value="radCreateContentPageTrue" checked="checked" /><label for="radCreateContentPageTrue">不生成HTML，使用动态页方式</label><br>
+                        <input id="radCreateContentPageFalse" type="radio" name="IsCreateContentPage" value="radCreateContentPageFalse" /><label for="radCreateContentPageFalse">生成HTML</label></dd>          
+                    </dl>
+                    <dl>
+                        <dt>内容页的文件名规则：</dt>
+                        <dd>
+                            <input id="radContentPageSavePathType1" type="radio" name="ContentPageSavePathType" value="radContentPageSavePathType1" checked="checked" /><label for="radContentPageSavePathType1">生成到根目录下html文件夹</label><br>
+                            如：html/2010/07/12345678.html<br>
+                            <input id="radContentPageSavePathType2" type="radio" name="ContentPageSavePathType" value="radContentPageSavePathType2" /><label for="radContentPageSavePathType2">生成到相应栏目文件夹下</label><br>
+                            如：news/12345678.html<br>
+                            news/computer/12345678.html<br>
+                            <input id="radContentPageSavePathType3" type="radio" name="ContentPageSavePathType" value="radContentPageSavePathType3" /><label for="radContentPageSavePathType3">生成到大类目录下的html文件夹</label><br>
+                            如：news/html/12345678.html<br>
+                            <input id="radContentPageSavePathType4" type="radio" name="ContentPageSavePathType" value="radContentPageSavePathType4" /><label for="radContentPageSavePathType4">大类/年份/月份/文件名</label><br>
+                            如：news/2010/07/12345678.html<br>
+                        </dd> 
+                    </dl>
+                                       
+                    <dl>
+                        <dt>自动生成关联页面的方式：</dt>
+                        <dd>
+                            <input id="radAutoCreateHtmlType1" type="radio" name="AutoCreateHtmlType" value="radAutoCreateHtmlType1" /><label for="radAutoCreateHtmlType1">手动生成，由管理员在生成管理手动生成全部所需的页面</label><br>                            
+                            <input id="radAutoCreateHtmlType2" type="radio" name="AutoCreateHtmlType" value="radAutoCreateHtmlType2" /><label for="radAutoCreateHtmlType2">只自动生成内容页</label><br>                           
+                            <input id="radAutoCreateHtmlType3" type="radio" name="AutoCreateHtmlType" value="radAutoCreateHtmlType3" /><label for="radAutoCreateHtmlType3">自动生成内容页和所属栏目的列表页</label><br>   
+                            <input id="radAutoCreateHtmlType4" type="radio" name="AutoCreateHtmlType" value="radAutoCreateHtmlType4" /><label for="radAutoCreateHtmlType4">自动生成内容页和所属栏目及父栏目的列表页</label><br>  
+                            <input id="radAutoCreateHtmlType5" type="radio" name="AutoCreateHtmlType" value="radAutoCreateHtmlType5" /><label for="radAutoCreateHtmlType5">自动生成内容页和所属栏目及父栏目的列表页以及自动关联的专题页</label><br>  
+                            <input id="radAutoCreateHtmlType6" type="radio" name="AutoCreateHtmlType" value="radAutoCreateHtmlType6" checked="checked" /><label for="radAutoCreateHtmlType6">自动生成所有关联的页（在发表、更新文章时，除了自动生成内容页和所属栏目及父栏目的列表页以外，还会自动会生成指定栏目的列表页）。</label>                         
+                        </dd>          
+                    </dl> 
+                    <div style="clear:left"></div>
+                 </fieldset>                 
+                 
+                 
+                 <fieldset style="display: none;">
+                 <div>
+	<table cellspacing="0" rules="all" border="1" id="grvRight" style="border-collapse:collapse;">
+		<tr>
+			<th scope="col">用户组名</th><th scope="col">产品模型New</th><th scope="col">产品模型Archiving</th><th scope="col">产品模型LogicDelete</th><th scope="col">产品模型CancelFlowCheck</th><th scope="col">产品模型PastFlowCheck</th><th scope="col">产品模型AddToNode</th><th scope="col">产品模型Edit</th><th scope="col">产品模型Delete</th><th scope="col">产品模型CancelArchiving</th><th scope="col">产品模型AddToSpecial</th><th scope="col">产品模型Revert</th>
+		</tr><tr>
+			<td>管理员用户组1</td><td><input id="grvRight_ctl02_ckbe2312c0a-25e5-4975-8de5-0d3a4feed5fd" type="checkbox" name="grvRight$ctl02$ckbe2312c0a-25e5-4975-8de5-0d3a4feed5fd" /></td><td><input id="grvRight_ctl02_ckb3db2f300-26ee-4946-a328-4f6f55f6313f" type="checkbox" name="grvRight$ctl02$ckb3db2f300-26ee-4946-a328-4f6f55f6313f" /></td><td><input id="grvRight_ctl02_ckb5b9402fd-886d-46fd-8ea6-5f8053400143" type="checkbox" name="grvRight$ctl02$ckb5b9402fd-886d-46fd-8ea6-5f8053400143" /></td><td><input id="grvRight_ctl02_ckb40bfb141-2e82-4919-98fb-71c960ff6e34" type="checkbox" name="grvRight$ctl02$ckb40bfb141-2e82-4919-98fb-71c960ff6e34" /></td><td><input id="grvRight_ctl02_ckbd07cabf5-7238-4230-8c68-7f15aee837fe" type="checkbox" name="grvRight$ctl02$ckbd07cabf5-7238-4230-8c68-7f15aee837fe" /></td><td><input id="grvRight_ctl02_ckbdd25b017-4d97-4458-987e-8a927fe5484d" type="checkbox" name="grvRight$ctl02$ckbdd25b017-4d97-4458-987e-8a927fe5484d" /></td><td><input id="grvRight_ctl02_ckba74ebeb3-e451-44d8-b04d-9d5c7024d0ae" type="checkbox" name="grvRight$ctl02$ckba74ebeb3-e451-44d8-b04d-9d5c7024d0ae" /></td><td><input id="grvRight_ctl02_ckb74936bb2-c1ee-4fcf-b881-af587f015b93" type="checkbox" name="grvRight$ctl02$ckb74936bb2-c1ee-4fcf-b881-af587f015b93" /></td><td><input id="grvRight_ctl02_ckb3ea30cb4-ffeb-444a-bb2a-be999afc8910" type="checkbox" name="grvRight$ctl02$ckb3ea30cb4-ffeb-444a-bb2a-be999afc8910" /></td><td><input id="grvRight_ctl02_ckb992fb55d-499e-479c-aa7e-d2b083388538" type="checkbox" name="grvRight$ctl02$ckb992fb55d-499e-479c-aa7e-d2b083388538" /></td><td><input id="grvRight_ctl02_ckb3fb49df4-4da1-4c2d-af75-f4109f2feb19" type="checkbox" name="grvRight$ctl02$ckb3fb49df4-4da1-4c2d-af75-f4109f2feb19" /></td>
+		</tr><tr>
+			<td>系统管理员组</td><td><input id="grvRight_ctl03_ckbe2312c0a-25e5-4975-8de5-0d3a4feed5fd" type="checkbox" name="grvRight$ctl03$ckbe2312c0a-25e5-4975-8de5-0d3a4feed5fd" /></td><td><input id="grvRight_ctl03_ckb3db2f300-26ee-4946-a328-4f6f55f6313f" type="checkbox" name="grvRight$ctl03$ckb3db2f300-26ee-4946-a328-4f6f55f6313f" /></td><td><input id="grvRight_ctl03_ckb5b9402fd-886d-46fd-8ea6-5f8053400143" type="checkbox" name="grvRight$ctl03$ckb5b9402fd-886d-46fd-8ea6-5f8053400143" /></td><td><input id="grvRight_ctl03_ckb40bfb141-2e82-4919-98fb-71c960ff6e34" type="checkbox" name="grvRight$ctl03$ckb40bfb141-2e82-4919-98fb-71c960ff6e34" /></td><td><input id="grvRight_ctl03_ckbd07cabf5-7238-4230-8c68-7f15aee837fe" type="checkbox" name="grvRight$ctl03$ckbd07cabf5-7238-4230-8c68-7f15aee837fe" /></td><td><input id="grvRight_ctl03_ckbdd25b017-4d97-4458-987e-8a927fe5484d" type="checkbox" name="grvRight$ctl03$ckbdd25b017-4d97-4458-987e-8a927fe5484d" /></td><td><input id="grvRight_ctl03_ckba74ebeb3-e451-44d8-b04d-9d5c7024d0ae" type="checkbox" name="grvRight$ctl03$ckba74ebeb3-e451-44d8-b04d-9d5c7024d0ae" /></td><td><input id="grvRight_ctl03_ckb74936bb2-c1ee-4fcf-b881-af587f015b93" type="checkbox" name="grvRight$ctl03$ckb74936bb2-c1ee-4fcf-b881-af587f015b93" /></td><td><input id="grvRight_ctl03_ckb3ea30cb4-ffeb-444a-bb2a-be999afc8910" type="checkbox" name="grvRight$ctl03$ckb3ea30cb4-ffeb-444a-bb2a-be999afc8910" /></td><td><input id="grvRight_ctl03_ckb992fb55d-499e-479c-aa7e-d2b083388538" type="checkbox" name="grvRight$ctl03$ckb992fb55d-499e-479c-aa7e-d2b083388538" /></td><td><input id="grvRight_ctl03_ckb3fb49df4-4da1-4c2d-af75-f4109f2feb19" type="checkbox" name="grvRight$ctl03$ckb3fb49df4-4da1-4c2d-af75-f4109f2feb19" /></td>
+		</tr><tr>
+			<td>店铺录入用户组</td><td><input id="grvRight_ctl04_ckbe2312c0a-25e5-4975-8de5-0d3a4feed5fd" type="checkbox" name="grvRight$ctl04$ckbe2312c0a-25e5-4975-8de5-0d3a4feed5fd" /></td><td><input id="grvRight_ctl04_ckb3db2f300-26ee-4946-a328-4f6f55f6313f" type="checkbox" name="grvRight$ctl04$ckb3db2f300-26ee-4946-a328-4f6f55f6313f" /></td><td><input id="grvRight_ctl04_ckb5b9402fd-886d-46fd-8ea6-5f8053400143" type="checkbox" name="grvRight$ctl04$ckb5b9402fd-886d-46fd-8ea6-5f8053400143" /></td><td><input id="grvRight_ctl04_ckb40bfb141-2e82-4919-98fb-71c960ff6e34" type="checkbox" name="grvRight$ctl04$ckb40bfb141-2e82-4919-98fb-71c960ff6e34" /></td><td><input id="grvRight_ctl04_ckbd07cabf5-7238-4230-8c68-7f15aee837fe" type="checkbox" name="grvRight$ctl04$ckbd07cabf5-7238-4230-8c68-7f15aee837fe" /></td><td><input id="grvRight_ctl04_ckbdd25b017-4d97-4458-987e-8a927fe5484d" type="checkbox" name="grvRight$ctl04$ckbdd25b017-4d97-4458-987e-8a927fe5484d" /></td><td><input id="grvRight_ctl04_ckba74ebeb3-e451-44d8-b04d-9d5c7024d0ae" type="checkbox" name="grvRight$ctl04$ckba74ebeb3-e451-44d8-b04d-9d5c7024d0ae" /></td><td><input id="grvRight_ctl04_ckb74936bb2-c1ee-4fcf-b881-af587f015b93" type="checkbox" name="grvRight$ctl04$ckb74936bb2-c1ee-4fcf-b881-af587f015b93" /></td><td><input id="grvRight_ctl04_ckb3ea30cb4-ffeb-444a-bb2a-be999afc8910" type="checkbox" name="grvRight$ctl04$ckb3ea30cb4-ffeb-444a-bb2a-be999afc8910" /></td><td><input id="grvRight_ctl04_ckb992fb55d-499e-479c-aa7e-d2b083388538" type="checkbox" name="grvRight$ctl04$ckb992fb55d-499e-479c-aa7e-d2b083388538" /></td><td><input id="grvRight_ctl04_ckb3fb49df4-4da1-4c2d-af75-f4109f2feb19" type="checkbox" name="grvRight$ctl04$ckb3fb49df4-4da1-4c2d-af75-f4109f2feb19" /></td>
+		</tr><tr>
+			<td>111222</td><td><input id="grvRight_ctl05_ckbe2312c0a-25e5-4975-8de5-0d3a4feed5fd" type="checkbox" name="grvRight$ctl05$ckbe2312c0a-25e5-4975-8de5-0d3a4feed5fd" /></td><td><input id="grvRight_ctl05_ckb3db2f300-26ee-4946-a328-4f6f55f6313f" type="checkbox" name="grvRight$ctl05$ckb3db2f300-26ee-4946-a328-4f6f55f6313f" /></td><td><input id="grvRight_ctl05_ckb5b9402fd-886d-46fd-8ea6-5f8053400143" type="checkbox" name="grvRight$ctl05$ckb5b9402fd-886d-46fd-8ea6-5f8053400143" /></td><td><input id="grvRight_ctl05_ckb40bfb141-2e82-4919-98fb-71c960ff6e34" type="checkbox" name="grvRight$ctl05$ckb40bfb141-2e82-4919-98fb-71c960ff6e34" /></td><td><input id="grvRight_ctl05_ckbd07cabf5-7238-4230-8c68-7f15aee837fe" type="checkbox" name="grvRight$ctl05$ckbd07cabf5-7238-4230-8c68-7f15aee837fe" /></td><td><input id="grvRight_ctl05_ckbdd25b017-4d97-4458-987e-8a927fe5484d" type="checkbox" name="grvRight$ctl05$ckbdd25b017-4d97-4458-987e-8a927fe5484d" /></td><td><input id="grvRight_ctl05_ckba74ebeb3-e451-44d8-b04d-9d5c7024d0ae" type="checkbox" name="grvRight$ctl05$ckba74ebeb3-e451-44d8-b04d-9d5c7024d0ae" /></td><td><input id="grvRight_ctl05_ckb74936bb2-c1ee-4fcf-b881-af587f015b93" type="checkbox" name="grvRight$ctl05$ckb74936bb2-c1ee-4fcf-b881-af587f015b93" /></td><td><input id="grvRight_ctl05_ckb3ea30cb4-ffeb-444a-bb2a-be999afc8910" type="checkbox" name="grvRight$ctl05$ckb3ea30cb4-ffeb-444a-bb2a-be999afc8910" /></td><td><input id="grvRight_ctl05_ckb992fb55d-499e-479c-aa7e-d2b083388538" type="checkbox" name="grvRight$ctl05$ckb992fb55d-499e-479c-aa7e-d2b083388538" /></td><td><input id="grvRight_ctl05_ckb3fb49df4-4da1-4c2d-af75-f4109f2feb19" type="checkbox" name="grvRight$ctl05$ckb3fb49df4-4da1-4c2d-af75-f4109f2feb19" /></td>
+		</tr><tr>
+			<td>123321</td><td><input id="grvRight_ctl06_ckbe2312c0a-25e5-4975-8de5-0d3a4feed5fd" type="checkbox" name="grvRight$ctl06$ckbe2312c0a-25e5-4975-8de5-0d3a4feed5fd" /></td><td><input id="grvRight_ctl06_ckb3db2f300-26ee-4946-a328-4f6f55f6313f" type="checkbox" name="grvRight$ctl06$ckb3db2f300-26ee-4946-a328-4f6f55f6313f" /></td><td><input id="grvRight_ctl06_ckb5b9402fd-886d-46fd-8ea6-5f8053400143" type="checkbox" name="grvRight$ctl06$ckb5b9402fd-886d-46fd-8ea6-5f8053400143" /></td><td><input id="grvRight_ctl06_ckb40bfb141-2e82-4919-98fb-71c960ff6e34" type="checkbox" name="grvRight$ctl06$ckb40bfb141-2e82-4919-98fb-71c960ff6e34" /></td><td><input id="grvRight_ctl06_ckbd07cabf5-7238-4230-8c68-7f15aee837fe" type="checkbox" name="grvRight$ctl06$ckbd07cabf5-7238-4230-8c68-7f15aee837fe" /></td><td><input id="grvRight_ctl06_ckbdd25b017-4d97-4458-987e-8a927fe5484d" type="checkbox" name="grvRight$ctl06$ckbdd25b017-4d97-4458-987e-8a927fe5484d" /></td><td><input id="grvRight_ctl06_ckba74ebeb3-e451-44d8-b04d-9d5c7024d0ae" type="checkbox" name="grvRight$ctl06$ckba74ebeb3-e451-44d8-b04d-9d5c7024d0ae" /></td><td><input id="grvRight_ctl06_ckb74936bb2-c1ee-4fcf-b881-af587f015b93" type="checkbox" name="grvRight$ctl06$ckb74936bb2-c1ee-4fcf-b881-af587f015b93" /></td><td><input id="grvRight_ctl06_ckb3ea30cb4-ffeb-444a-bb2a-be999afc8910" type="checkbox" name="grvRight$ctl06$ckb3ea30cb4-ffeb-444a-bb2a-be999afc8910" /></td><td><input id="grvRight_ctl06_ckb992fb55d-499e-479c-aa7e-d2b083388538" type="checkbox" name="grvRight$ctl06$ckb992fb55d-499e-479c-aa7e-d2b083388538" /></td><td><input id="grvRight_ctl06_ckb3fb49df4-4da1-4c2d-af75-f4109f2feb19" type="checkbox" name="grvRight$ctl06$ckb3fb49df4-4da1-4c2d-af75-f4109f2feb19" /></td>
+		</tr><tr>
+			<td>123321123</td><td><input id="grvRight_ctl07_ckbe2312c0a-25e5-4975-8de5-0d3a4feed5fd" type="checkbox" name="grvRight$ctl07$ckbe2312c0a-25e5-4975-8de5-0d3a4feed5fd" /></td><td><input id="grvRight_ctl07_ckb3db2f300-26ee-4946-a328-4f6f55f6313f" type="checkbox" name="grvRight$ctl07$ckb3db2f300-26ee-4946-a328-4f6f55f6313f" /></td><td><input id="grvRight_ctl07_ckb5b9402fd-886d-46fd-8ea6-5f8053400143" type="checkbox" name="grvRight$ctl07$ckb5b9402fd-886d-46fd-8ea6-5f8053400143" /></td><td><input id="grvRight_ctl07_ckb40bfb141-2e82-4919-98fb-71c960ff6e34" type="checkbox" name="grvRight$ctl07$ckb40bfb141-2e82-4919-98fb-71c960ff6e34" /></td><td><input id="grvRight_ctl07_ckbd07cabf5-7238-4230-8c68-7f15aee837fe" type="checkbox" name="grvRight$ctl07$ckbd07cabf5-7238-4230-8c68-7f15aee837fe" /></td><td><input id="grvRight_ctl07_ckbdd25b017-4d97-4458-987e-8a927fe5484d" type="checkbox" name="grvRight$ctl07$ckbdd25b017-4d97-4458-987e-8a927fe5484d" /></td><td><input id="grvRight_ctl07_ckba74ebeb3-e451-44d8-b04d-9d5c7024d0ae" type="checkbox" name="grvRight$ctl07$ckba74ebeb3-e451-44d8-b04d-9d5c7024d0ae" /></td><td><input id="grvRight_ctl07_ckb74936bb2-c1ee-4fcf-b881-af587f015b93" type="checkbox" name="grvRight$ctl07$ckb74936bb2-c1ee-4fcf-b881-af587f015b93" /></td><td><input id="grvRight_ctl07_ckb3ea30cb4-ffeb-444a-bb2a-be999afc8910" type="checkbox" name="grvRight$ctl07$ckb3ea30cb4-ffeb-444a-bb2a-be999afc8910" /></td><td><input id="grvRight_ctl07_ckb992fb55d-499e-479c-aa7e-d2b083388538" type="checkbox" name="grvRight$ctl07$ckb992fb55d-499e-479c-aa7e-d2b083388538" /></td><td><input id="grvRight_ctl07_ckb3fb49df4-4da1-4c2d-af75-f4109f2feb19" type="checkbox" name="grvRight$ctl07$ckb3fb49df4-4da1-4c2d-af75-f4109f2feb19" /></td>
+		</tr><tr>
+			<td>111222333</td><td><input id="grvRight_ctl08_ckbe2312c0a-25e5-4975-8de5-0d3a4feed5fd" type="checkbox" name="grvRight$ctl08$ckbe2312c0a-25e5-4975-8de5-0d3a4feed5fd" /></td><td><input id="grvRight_ctl08_ckb3db2f300-26ee-4946-a328-4f6f55f6313f" type="checkbox" name="grvRight$ctl08$ckb3db2f300-26ee-4946-a328-4f6f55f6313f" /></td><td><input id="grvRight_ctl08_ckb5b9402fd-886d-46fd-8ea6-5f8053400143" type="checkbox" name="grvRight$ctl08$ckb5b9402fd-886d-46fd-8ea6-5f8053400143" /></td><td><input id="grvRight_ctl08_ckb40bfb141-2e82-4919-98fb-71c960ff6e34" type="checkbox" name="grvRight$ctl08$ckb40bfb141-2e82-4919-98fb-71c960ff6e34" /></td><td><input id="grvRight_ctl08_ckbd07cabf5-7238-4230-8c68-7f15aee837fe" type="checkbox" name="grvRight$ctl08$ckbd07cabf5-7238-4230-8c68-7f15aee837fe" /></td><td><input id="grvRight_ctl08_ckbdd25b017-4d97-4458-987e-8a927fe5484d" type="checkbox" name="grvRight$ctl08$ckbdd25b017-4d97-4458-987e-8a927fe5484d" /></td><td><input id="grvRight_ctl08_ckba74ebeb3-e451-44d8-b04d-9d5c7024d0ae" type="checkbox" name="grvRight$ctl08$ckba74ebeb3-e451-44d8-b04d-9d5c7024d0ae" /></td><td><input id="grvRight_ctl08_ckb74936bb2-c1ee-4fcf-b881-af587f015b93" type="checkbox" name="grvRight$ctl08$ckb74936bb2-c1ee-4fcf-b881-af587f015b93" /></td><td><input id="grvRight_ctl08_ckb3ea30cb4-ffeb-444a-bb2a-be999afc8910" type="checkbox" name="grvRight$ctl08$ckb3ea30cb4-ffeb-444a-bb2a-be999afc8910" /></td><td><input id="grvRight_ctl08_ckb992fb55d-499e-479c-aa7e-d2b083388538" type="checkbox" name="grvRight$ctl08$ckb992fb55d-499e-479c-aa7e-d2b083388538" /></td><td><input id="grvRight_ctl08_ckb3fb49df4-4da1-4c2d-af75-f4109f2feb19" type="checkbox" name="grvRight$ctl08$ckb3fb49df4-4da1-4c2d-af75-f4109f2feb19" /></td>
+		</tr>
+	</table>
+</div>
+                 <div style="clear:left"></div>
+                 </fieldset> 
+                 
+                 
+                <fieldset style="display: none;">
+                    <dl>
+                        <dt>自设内容项目数：</dt>
+                        <dd><select name="ddlCustomContentCount" id="ddlCustomContentCount" onChange="SelectChange();">
+	<option selected="selected" value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+	<option value="5">5</option>
+	<option value="6">6</option>
+	<option value="7">7</option>
+	<option value="8">8</option>
+	<option value="9">9</option>
+	<option value="10">10</option>
+	<option value="11">11</option>
+	<option value="12">12</option>
+	<option value="13">13</option>
+	<option value="14">14</option>
+	<option value="15">15</option>
+	<option value="16">16</option>
+	<option value="17">17</option>
+	<option value="18">18</option>
+	<option value="19">19</option>
+	<option value="20">20</option>
+
+</select></dd>
+                     </dl>
+                     <dl>
+                        <dt>自设内容1：</dt>
+                        <dd><textarea name="txtCustomContent1" rows="2" cols="20" id="txtCustomContent1" style="height:150px;width:380px;"></textarea></dd>          
+                    </dl>
+                     <table width="100%" >
+                     <tr><td id="tdCustomContent">
+                     </td>
+</tr>
+                     <input name="hiddenCustomContent" type="hidden" id="hiddenCustomContent" />
+                     </table>
+                    <div style="clear:left"></div>
+                 </fieldset>
+            </div>
+            <div class="Submit">
+                <input type="submit" name="btnHidAction" value="" id="btnHidAction" style="display:none" />
+                <input type="submit" name="btnEdit" value="修改" id="btnEdit" class="subButton" />
+                <input type="submit" name="btnDel" value="删除" onclick="selfconfirm({msg:'确定要执行删除操作吗？',fn:function(data){setAction1(data)}});return false;javascript:return(confirm('确定删除所选节点？'));" id="btnDel" class="subButton" />
+                <input type="button" name="Submit422" Class="subButton" value="返回" onclick='location.href="ColumnManage.aspx?NodeCode100015001";'>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

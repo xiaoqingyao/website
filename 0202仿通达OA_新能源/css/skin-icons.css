@@ -1,0 +1,76 @@
+.skinicon {
+    width: 14px;
+    height: 14px;
+    background-image: url('../images/skin_icons.png');
+    background-repeat: no-repeat;
+}
+
+.skin-date {
+    background-position: -308px -28px;
+}
+
+.skin-back {
+    background-position: 0 0;
+}
+
+.skin-home {
+    background-position: -28px 0px;
+}
+
+.skin-arrow-right {
+    background-position: -56px 0px;
+}
+
+.skin-plus {
+    background-position: 0px -28px;
+}
+
+.skin-save {
+    background-position: -28px -28px;
+}
+
+.skin-select-all {
+    background-position: -56px -28px;
+}
+
+.skin-delete {
+    background-position: -84px -28px;
+}
+
+.skin-folder {
+    background-position: 0px -168px;
+}
+
+.skin-file {
+    background-position: -28px -168px;
+}
+
+.skin-sms {
+    background-position: -364px -28px;
+}
+
+.skin-lock {
+    background-position: -336px -28px;
+}
+
+.skin-caret {
+    background-position: 7px -189px;
+}
+
+.skin-search {
+    width: 30px;
+    height: 30px;
+    background-position: -160px -20px;
+}
+
+.skin-folder-line {
+    width: 20px;
+    height: 20px;
+    background-position: -200px -250px;
+}
+
+.skin-folder-open {
+    width: 20px;
+    height: 20px;
+    background-position: -160px -250px;
+}

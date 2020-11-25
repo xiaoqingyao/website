@@ -1,0 +1,5 @@
+D:\03测试项目\26进销存管理系统带论文\程序\进销存管理系统\进销存管理系统\JXCMODEL\bin\Release\JXCMODEL.dll
+D:\03测试项目\26进销存管理系统带论文\程序\进销存管理系统\进销存管理系统\JXCMODEL\bin\Release\JXCMODEL.pdb
+D:\03测试项目\26进销存管理系统带论文\程序\进销存管理系统\进销存管理系统\JXCMODEL\obj\Release\JXCMODEL.csproj.CoreCompileInputs.cache
+D:\03测试项目\26进销存管理系统带论文\程序\进销存管理系统\进销存管理系统\JXCMODEL\obj\Release\JXCMODEL.dll
+D:\03测试项目\26进销存管理系统带论文\程序\进销存管理系统\进销存管理系统\JXCMODEL\obj\Release\JXCMODEL.pdb

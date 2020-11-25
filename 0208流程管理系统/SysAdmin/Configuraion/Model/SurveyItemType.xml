@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SurveyItem>
+  <Row>
+    <name>单行文本</name>
+    <value>1</value>
+  </Row>
+  <Row>
+    <name>数字</name>
+    <value>5</value>
+  </Row>
+  <Row>
+    <name>日期和时间</name>
+    <value>7</value>
+  </Row>
+  <Row>
+    <name>Email</name>
+    <value>8</value>
+  </Row>
+  <Row>
+    <name>多行文本</name>
+    <value>3</value>
+  </Row>
+  <Row>
+    <name>下拉框</name>
+    <value>2</value>
+  </Row> 
+  <Row>
+    <name>多选列表</name>
+    <value>4</value>
+  </Row> 
+  <Row>
+    <name>单选</name>
+    <value>6</value>
+  </Row> 
+  <Row>
+    <name>多选</name>
+    <value>9</value>
+  </Row>
+</SurveyItem>

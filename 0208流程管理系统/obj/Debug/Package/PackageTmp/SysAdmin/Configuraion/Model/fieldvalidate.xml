@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>  
+  <validation>
+    <name>Email</name>    
+    <value>2</value>
+    <message>你的email输入错误</message>
+    <expression>\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+</expression>
+  </validation>
+  <validation>
+    <name>固定电话</name> 
+    <value>3</value>
+    <message>你的电话号码格式有误</message>
+    <expression>\d+</expression>
+  </validation>
+</config>

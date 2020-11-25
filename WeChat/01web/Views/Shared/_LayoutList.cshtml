@@ -1,0 +1,225 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/lib/ligerUI/skins/Aqua/css/ligerui-all.css" rel="stylesheet" />
+    <link href="~/lib/ligerUI/skins/ligerui-icons.css" rel="stylesheet" />
+    <script src="~/lib/jquery/jquery-1.9.0.min.js"></script>
+    <script src="~/lib/ligerUI/js/core/base.js"></script>
+    <script src="~/lib/ligerUI/js/plugins/ligerGrid.js"></script>
+    <script src="~/lib/ligerUI/js/plugins/ligerTextBox.js" type="text/javascript"></script>
+    <script src="~/lib/ligerUI/js/plugins/ligerCheckBox.js" type="text/javascript"></script>
+    <script src="~/lib/ligerUI/js/plugins/ligerMenu.js" type="text/javascript"></script>
+    <script src="~/lib/ligerUI/js/plugins/ligerComboBox.js" type="text/javascript"></script>
+    <script src="~/lib/ligerUI/js/plugins/ligerMenuBar.js" type="text/javascript"></script>
+    <script src="~/lib/ligerUI/js/plugins/ligerToolBar.js" type="text/javascript"></script>
+    <script src="~/lib/ligerUI/js/plugins/ligerButton.js" type="text/javascript"></script>
+    <script src="~/lib/ligerUI/js/plugins/ligerResizable.js" type="text/javascript"></script>
+    <script src="~/lib/ligerUI/js/plugins/ligerDialog.js" type="text/javascript"></script>
+    <script src="~/lib/ligerUI/js/plugins/ligerDrag.js" type="text/javascript"></script>
+    <script src="~/lib/ligerUI/js/plugins/ligerDateEditor.js"></script>
+    <script src="~/Scripts/Utils.js"></script>
+    @* 公共变量及方法 *@
+    <script>
+        var topmenuJson = null;//菜单栏JsonData
+        var toptoolbarJson = null;//工具栏JsonData
+        var gridManager = null;//dataGrid对象
+
+        var addURL = null;//添加地址
+        //按钮点击事件
+        function itemclick(item) {
+            if (item.id) {
+                switch (item.id) {
+                    case "refresh":
+                        gridManager.reload();
+                        break;
+                    case "add":
+                        onAdd(); break;
+                    case "Aqua":
+                        $("#maingrid").removeClass("l-grid-gray"); break;
+                        return;
+                    case "Gray":
+                        $("#maingrid").addClass("l-grid-gray"); break;
+                        return;
+                    case "modify":
+                        var rowsdata = gridManager.getSelectedRow();
+                        if (!rowsdata) alert('请选择行');
+                        else
+                            onEdit(rowsdata);
+                        return;
+                    case "view":
+                        var row = gridManager.getSelectedRow();
+                        if (!row) alert('请选择行');
+                        else
+                            onView(row);
+                        return;
+                    case "Excel":
+                    case "Word":
+                    case "PDF":
+                    case "TXT":
+                    case "XML":
+                        $.ligerDialog.waitting('导出中，请稍候...');
+                        setTimeout(function () {
+                            $.ligerDialog.closeWaitting();
+                            if (item.id == "Excel")
+                                $.ligerDialog.success('导出成功');
+                            else
+                                $.ligerDialog.error('导出失败');
+                        }, 1000);
+                        return;
+                    default: alert(item.text);
+                }
+            }
+
+        }
+        $(function () {
+            //表格
+            gridManager = $("#maingrid").ligerGrid({
+                width: '100%', height: '100%', pageSize: 50, rownumbers: true,
+                checkbox: false,
+                //应用灰色表头
+                cssClass: 'l-grid-gray'
+                , usePager: true
+                //, pageSizeOptions: [10, 20, 30, 40, 50]
+                , pageSizeOptions: [50, 100, 150, 200, 300]
+            });
+        });
+    </script>
+    @*子页面定义的js代码*@
+    @RenderSection("scripts", required: false)
+    @* 根据子页面设置的信息加载页面控件 *@
+    <script type="text/javascript">
+        //设置菜单
+        setTimeout(function () {
+            //加载菜单栏
+            if (topmenuJson) {
+                $("#topmenu").ligerMenuBar(topmenuJson);
+            } else {
+                $("#topmenu").hide();
+            }
+
+            //加载工具栏
+            if (toptoolbarJson) {
+                $("#toptoolbar").ligerToolBar(toptoolbarJson);
+            } else {
+                $("#toptoolbar").hide();
+            }
+        }, 500);
+
+
+    </script>
+</head>
+<body style="padding:0px; overflow:hidden;">
+    <div class="l-loading" style="display:block" id="pageloading"></div>
+    <div id="topmenu"></div>
+
+    <div id="toptoolbar"></div>
+
+    <div class="l-panel-search">
+        @RenderSection("SearchPanel", required: false)
+
+    </div>
+
+    <div>
+        @RenderBody()
+        <div id="maingrid" style="margin:0; padding:0"></div>
+    </div>
+</body>
+
+</html>
+<script type="text/javascript">
+    $("#pageloading").hide();
+    var height = $(window).height() * 0.9;
+    var width = $(window).width() * 0.9;
+    //当触发添加按钮
+    function onAdd() {
+        if (!addURL) {
+            alert("请在子页面定义addURL");
+            return;
+        }
+        $.ligerDialog.open({
+            name: 'dialogAdd', url: addURL, height: height, width: width
+            , buttons: [{
+                text: '确定', onclick: function (item, dialog) {
+
+                    dialog.frame.EditSave(gridManager);
+                }
+            }, { text: '取消', onclick: function (item, dialog) { dialog.close(); } }]
+        });
+    }
+    //当触发修改按钮
+    function onEdit(objRow) {
+        
+        if (!objRow) {
+            alert("请选择对应的行");
+            return;
+        }
+        if (!editURL) {
+            alert("请在子页面定义editURL 如：/User/Edit");
+            return;
+        }
+        if (editURL.indexOf("?") == -1) {
+            editURL = editURL + "?r=" + Math.random();
+        } else {
+            editURL = editURL + "&r=" + Math.random();
+        }
+        editURL += "&Id=" + objRow.Id;
+        $.ligerDialog.open({
+            name: 'dialogEdit', url: editURL, height: height, width: width
+            , buttons: [{
+                text: '确定', onclick: function (item, dialog) {
+                    dialog.frame.EditSave(gridManager);
+                }
+            }, { text: '取消', onclick: function (item, dialog) { dialog.close(); } }]
+        });
+    }
+
+    function onView(row) {
+       
+        if (!row) {
+            alert("请选择对应的行");
+            return;
+        }
+        if (!viewURL) {
+            alert("请在子页面定义viewURL 如：/User/View");
+            return;
+        }
+        if (viewURL.indexOf("?") == -1) {
+            viewURL = viewURL + "?r=" + Math.random();
+        } else {
+            viewURL = viewURL + "&r=" + Math.random();
+        }
+        viewURL += "&obj=" + row;
+        $.ligerDialog.open({
+            name: 'dialogEdit', url: viewURL, height: height, width: width
+            ,buttons: [{ text: '关闭', onclick: function (item, dialog) { dialog.close(); } }]
+        });
+    }
+</script>
+@*
+    菜单json Demo
+    $("#topmenu").ligerMenuBar({
+                items: [
+                    { text: '文件', menu: menu1 },
+                    { text: '导出', menu: menu2 },
+                    { text: '表格风格', menu: menu3 }
+                ]
+            });
+     var menu3 = {
+            width: 120, items:
+                [
+                    { text: '灰色', id: 'Gray', click: itemclick },
+                    { text: '浅绿色', id: 'Aqua', click: itemclick }
+                ]
+        };
+     //工具条
+            toptoolbarJson = {
+                items: [
+                    { text: '增加', id: 'add', click: itemclick },
+                    { text: '修改', id: 'modify', click: itemclick },
+                    { text: '删除', id: 'delete', click: itemclick }
+                ]
+            };
+*@

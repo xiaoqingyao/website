@@ -1,0 +1,120 @@
+body {
+	margin: 0px auto; padding: 0px; border: 0px currentColor; text-align: center; font-size: 12px;
+}
+.STYLE1 {
+	color: rgb(153, 51, 0); font-size: 14px; font-weight: bolder; text-decoration: none;
+}
+.STYLE11 {
+	color: rgb(153, 51, 0); font-size: 12px; font-weight: bolder; text-decoration: none;
+}
+.STYLE12 {
+	text-align: left;
+}
+.STYLE2 {
+	color: rgb(255, 255, 255); line-height: 35px; font-size: 15px; font-weight: bolder; text-decoration: none; background-color: rgb(18, 112, 201);
+}
+.STYLE3 {
+	line-height: 35px; background-color: rgb(238, 238, 238);
+}
+.STYLE5 {
+	color: rgb(0, 0, 0); text-decoration: none;
+}
+.nr_biaoti {
+	color: rgb(153, 51, 0); line-height: 30px; font-size: 20px; font-weight: bolder;
+}
+.nr_ziti {
+	line-height: 25px; font-size: 15px;
+}
+.biaoti {
+	color: rgb(91, 91, 91); font-size: 12px; text-decoration: none;
+}
+.riqi {
+	color: rgb(91, 91, 91); font-size: 12px; text-decoration: none;
+}
+#__01 {
+	margin: 0px auto; width: 850px; height: 750px; text-align: center; position: relative;
+}
+#lanmu-01 {
+	left: 0px; top: 0px; width: 340px; height: 101px; position: absolute;
+}
+#lanmu-02 {
+	left: 340px; top: 0px; width: 510px; height: 51px; position: absolute;
+}
+#lanmu-03 {
+	left: 340px; top: 51px; width: 510px; height: 50px; position: absolute;
+}
+#lanmu-04 {
+	left: 0px; top: 101px; width: 26px; height: 29px; position: absolute;
+}
+#lanmu-05 {
+	width: 796px; height: 29px; text-align: center; line-height: 29px; vertical-align: middle; background-color: rgb(18, 112, 201);
+}
+.dh_bai {
+	color: rgb(255, 255, 255); font-size: 12px; text-decoration: none;
+}
+#lanmu-06 {
+	left: 822px; top: 101px; width: 28px; height: 29px; position: absolute;
+}
+#lanmu-07 {
+	left: 0px; top: 130px; width: 850px; height: 15px; position: absolute;
+}
+#lanmu-08 {
+	left: 0px; top: 145px; width: 20px; height: 565px; position: absolute;
+}
+#lanmu-09 {
+	margin: 0px; padding: 0px; width: 185px; height: 29px; text-align: left; line-height: 29px; border-top-color: rgb(210, 210, 210); border-right-color: rgb(210, 210, 210); border-left-color: rgb(210, 210, 210); border-top-width: 1px; border-right-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: solid; border-left-style: solid; float: left; background-image: url("/images/dh_bg4.gif"); background-repeat: repeat-x; background-color: rgb(245, 245, 245);
+}
+.dh_slan {
+	color: rgb(18, 112, 201); font-size: 15px; font-weight: bolder; text-decoration: none;
+}
+.dh_zlan {
+	color: rgb(8, 56, 105); font-weight: bolder;
+}
+#lanmu-10 {
+	left: 207px; top: 145px; width: 11px; height: 565px; position: absolute;
+}
+#lanmu-11 {
+	background-position: bottom; width: 609px; height: 29px; text-align: left; line-height: 29px; background-image: url("/images/dh_bg3.gif"); background-repeat: no-repeat; background-color: rgb(245, 245, 245);
+}
+#lanmu-12 {
+	left: 827px; top: 145px; width: 23px; height: 565px; position: absolute;
+}
+#lanmu-13 {
+	left: 218px; top: 174px; width: 609px; height: 536px; position: absolute;
+}
+#lanmu-13 ul {
+	margin: 0px; padding: 0px; width: 609px; height: auto;
+}
+#lanmu-13 ul li {
+	background-position: 7px; border-width: 1px; border-style: none none dashed; border-color: rgb(204, 204, 204); width: 609px; height: 27px; text-align: left; line-height: 27px; text-indent: 22px; vertical-align: middle; list-style-type: none; background-image: url("/images/ty_dot.jpg"); background-repeat: no-repeat;
+}
+.dh_hui {
+	color: rgb(91, 91, 91); font-size: 12px; text-decoration: none;
+}
+#lanmu-14 {
+	margin: 0px; padding: 0px; border: 1px solid rgb(210, 210, 210); width: 185px; height: auto; float: left; background-color: rgb(245, 245, 245);
+}
+#lanmu-14 ul {
+	margin: 0px; padding: 0px; width: 185px; height: auto;
+}
+#lanmu-14 ul li {
+	margin: 5px 0px; padding: 0px; width: 185px; height: 27px; text-align: left; line-height: 27px; text-indent: 40px; list-style-type: none;
+}
+.dh_lanzi {
+	background-position: center; margin: 0px; padding: 0px; width: 185px; height: 27px; text-align: center; line-height: 27px; vertical-align: middle; background-image: url("/images/dh_bg1.gif"); background-repeat: no-repeat;
+}
+.dh_huidi {
+	background-position: center; background-image: url("/images/dh_bg2.gif"); background-repeat: no-repeat;
+}
+.dh_baizi {
+	color: rgb(255, 255, 255); font-size: 12px; text-decoration: none;
+}
+.dh_huizi {
+	color: rgb(91, 91, 91); font-size: 12px; text-decoration: none;
+}
+#lanmu-15 {
+	left: 0px; top: 710px; width: 850px; height: 25px; position: absolute;
+}
+#lanmu-16 {
+	left: 0px; top: 735px; width: 850px; height: 15px; position: absolute;
+}

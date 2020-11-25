@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ADCount.aspx.cs" Inherits="AllPower.Web.Admin.ADCount" %>

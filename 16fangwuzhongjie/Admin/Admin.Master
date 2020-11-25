@@ -1,0 +1,67 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="houseIntermediaryMIS.Admin.Admin" %>
+
+<%@ Register TagPrefix="UCtrl" TagName="MyLeft" Src="~/UserControls/AdminLeftCtrl.ascx" %>
+<%@ Register TagPrefix="UCtrl" TagName="Head" Src="~/UserControls/HeadCtrl.ascx" %>
+<%@ Register TagPrefix="UCtrl" TagName="Foot" Src="~/UserControls/FootCtrl.ascx" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/Styles/Site.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table class="tableCss" width="900" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+                <td>
+                    <img alt="房屋中介管理系统" src="/Images/headPic.jpg" width="900" />
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 900px; background-color: blue; font-size: 16px;" height="30px">
+                    &nbsp; <a href="<%=appPath%>/Default.aspx"><font color="white">系统首页</font></a> <font
+                        color="white">| </font><a href="<%=appPath%>/Admin/Default.aspx"><font color="white">
+                            员工中心 </font></a><font color="white">| </font><a href="<%=appPath%>/HouseList.aspx?type=1">
+                                <font color="white">出租信息</font></a> <font color="white">| </font><a href="<%=appPath%>/HouseList.aspx?type=2">
+                                    <font color="white">出售信息</font></a> <font color="white">| </font>
+                    <a href="<%=appPath%>/NeedList.aspx?type=1"><font color="white">求租信息</font></a>
+                    <font color="white">| </font><a href="<%=appPath%>/NeedList.aspx?type=2"><font color="white">
+                        求购信息</font></a>
+                </td>
+            </tr>
+            <tr>
+                <td height="10px" style="height: 10px; background-color: White">
+                </td>
+            </tr>
+        </table>
+        <table id="table1" width="900" align="center" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td valign="top" width="180">
+                    <UCtrl:MyLeft ID="MyLeft1" runat="server"></UCtrl:MyLeft>
+                </td>
+                <td valign="top">
+                    <asp:ContentPlaceHolder ID="mainContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+        <table width="900" border="0" align="center" cellpadding="2" cellspacing="0">
+            <tr>
+                <td height="62" bgcolor="#C5D5E5">
+                    <div align="center">
+                        <span style="font-size: 10pt; font-family: Courier New" />CopyRight @ 软件1401班 
+                        Visual Studio 2012 + SQL Server 2008<br />
+                        <span style="color: Red">--毕业设计--&nbsp;</span>
+                        <br />
+                        <a href="/Login.aspx">会员前台管理</a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,82 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*通用样式 start*/
+
+select,label,input,span{margin:0px; padding:0; vertical-align:middle;}
+*{margin:0;padding:0; font-size:12px;}
+img{border:0;}
+ul{list-style:outside;}
+.fixfloat:after{content:".";display:block;clear:both;visibility:hidden;height:0;}
+.fixfloat{zoom:1}
+fieldset{border:none;}
+legend{display:none;}
+body {color:#666;font-size:12px;font-family:"宋体";background-color: #FFFFFF;}
+textarea, select,text {font-family:Arial, "微软雅黑", "宋体"; font-size:12px; color:#565b5f; padding:1px;}
+
+/*通用样式 end*/
+
+
+
+/*表单样式 start*/
+.model{margin:10px 0 0 35px;}
+	.model span{ padding-left:8px; text-align:center;}
+	.text_Mdel{width:240px; height:20px; border:#D6D6D8 solid 1px; line-height:18px;}
+	.sort_text{width:55px; height:20px;border:#D6D6D8 solid 1px; line-height:18px;}
+	.add_button,.fanhui_button{width:44px; height:20px;vertical-align:bottom;padding-top:3px;border:none; color:#858585;}
+	.add_button{background:url(../images/but_bg.gif) no-repeat 0 -190px; }
+	.fanhui_button{background:url(../images/but_bg.gif) no-repeat 0 -156px;}
+	.daoru_button,.daochu_button{width:67px; height:20px; line-height:20px;vertical-align: middle; border:none; border:none;border:none; color:#858585;}
+	.daoru_button{background:url(../images/but_bg.gif) no-repeat 0 0; }
+	.daochu_button{background:url(../images/but_bg.gif) no-repeat 0 -31px;}
+	.caiji_button{background:url(../images/but_bg.gif) no-repeat 0 -59px; width:67px; height:20px;vertical-align:bottom; border:none; border:none;padding-top:3px;border:none; color:#858585;}
+	.searchtext{width:250px;height:20px;margin-left:10px;border:#D6D6D8 solid 1px; background:#FFF;}
+	.searchArea{padding:20px 0 0 138px;}
+	.search{ margin-top:5px; position:absolute;}
+	.CtlSelect{border: 1px solid #006600;font-family: verdana;height: 20px;color: #006600;background: #ffffff;}
+	.selected{background: #006600;color: #ffffff;height: 20px;}
+	.unselected{height: 20px;color: #006600;line-height: 120%;border-bottom: 1px solid #006600;}
+	.intext{ width:12px; height:20px; width:240px; border:none;}
+	.search_layout{width: 100%;line-height:30px;}
+	.search_layout span{padding:0px 10px;}
+	.Function { float:right; width:auto;padding:10px;}
+	
+	.hqbsearch{ float:left;height:20px; width:240px;border:#7F9DB9 solid 1px;}
+	.hqbsearch input.intext{float:left;border:none;*padding:0 0 0 5px;padding:2px 0 0 5px;width:182px;height:18px;*height:17px;color:#999;font-size:12px;
+	*line-height:17px;}
+	.hqbsearch .textbut{border:none;float:left;width:18px;display:block;height:20px;*height:19px;
+		background:url(../images/suos.gif) no-repeat;}
+	
+
+/*表单样式 end*/
+
+/*内容列表 start*/
+	#senfe {width: 100%;border: #DBE5E7 1px solid;color:#858585;line-height:25px; border-collapse:collapse;}
+	#senfe th{ background: url(../image/table_th_bg.gif) repeat-x #FFFFFF;color:#6A727F;}
+	#senfe th, #senfe td {height:25px;border: #DBE5E7 1px solid;padding:4px 8px;}
+	#senfe a{color: #5786A2; text-decoration:none;}
+	#senfe a:hover{ color:#F00; text-decoration:underline;} 
+	tr.odd {background:#e4dcd9;}
+	tr.highlight {background:#BDA9A2;}
+	tr.selected {background:#4a1200;color:#fff;}
+	td+td+td {text-align: left;}
+
+
+/*	.title_bg{ background:url(../images/table_th_bg.gif) repeat-x;width:100%;  }
+	
+	.datalist{width:100%;border:1px solid #D8E6E5;font-family:Arial;border-collapse:collapse;font-size:12px;}
+	.datalist caption{padding-bottom:5px;font:bold 1.4em;text-align:left;}
+	.datalist th,tr,td{ padding:3px;}
+	.datalist th{border:1px solid #DCE6EC;font-weight:bold;padding-top:4px; padding-bottom:4px;padding-left:12px; padding-right:12px;text-align:left;}
+	.datalist td{border:1px solid #DCE6EC;text-align:left;padding-top:4px; padding-bottom:4px;padding-left:10px; padding-right:10px;}
+	.datalist tr:hover,.datalist tr.altrow{background-color:#c4e4ff;}
+	
+	*/
+/*分页样式 start*/
+	.paging{height:40px;text-align:center; padding-top:15px; color:#7E7E7E;}
+	.qianye_button,.shangye_button,.xiaye_button,.houye_button{vertical-align:bottom; width:20px;height:20px!important;height:21px; border:none;}
+	.qianye_button{background:url(../images/but_bg.gif) no-repeat 0 -91px; }
+	.shangye_button{background:url(../images/but_bg.gif) no-repeat 0 -249px;}
+	.xiaye_button{background:url(../images/but_bg.gif) no-repeat 0 -124px;}
+	.houye_button{background:url(../images/but_bg.gif) no-repeat 0 -216px;}
+	

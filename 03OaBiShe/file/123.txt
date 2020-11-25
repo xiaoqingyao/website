@@ -1,0 +1,58 @@
+     protected void DataList2_ItemCommand(object source, DataListCommandEventArgs e)
+    {
+        Class2 sh = new Class2();
+        if (Session["wo"] == null)
+        {
+            Response.Write(sh.showmessage("ÇëµÇÂ¼"));
+        }
+        else
+        {
+
+            string id = DataList2.DataKeys[e.Item.ItemIndex].ToString();
+            sh.godataset(id);
+        }
+    }
+=====================================================
+
+
+  public void godataset(string id)   //
+    {
+        if (Session["bus"] == null)
+        {
+            Hashtable ht = new Hashtable();             
+            ht.Add(id, 1);
+            Session["bus"] = ht;
+            dafill(ht);
+        }
+        else
+        {
+            Hashtable ht = (Hashtable)Session["bus"];
+            if (ht[id] == null)
+            {
+                ht[id] = 1;
+            }
+            else
+            {
+                ht[id] = (int)ht[id] + 1;
+            }
+            Session["bus"] = ht;
+            dafill(ht);
+        }     
+    }
+    public void dafill(Hashtable ht)
+    {
+        ///
+        godset.Clear();
+       
+        foreach (DictionaryEntry de in ht)
+        {
+            hh = ht[de.Key.ToString()].ToString();
+            //this.Response.Write(this.showmessage.showmessage(de.Key.ToString()));
+            SqlDataAdapter datap = new SqlDataAdapter("select * from tb_goods where id='" + de.Key.ToString() + "'", System.Configuration.ConfigurationManager.AppSettings["ccc"]);
+            
+            if (datap != null)
+            {
+                datap.Fill(godset);
+            }
+        }
+    }

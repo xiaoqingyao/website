@@ -1,0 +1,16 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="SysManage_MasterPage" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>社区水电费管理信息系统</title>
+    <link type="text/css" href="css/grid.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/color.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+        </asp:contentplaceholder>
+    </form>
+</body>
+</html>

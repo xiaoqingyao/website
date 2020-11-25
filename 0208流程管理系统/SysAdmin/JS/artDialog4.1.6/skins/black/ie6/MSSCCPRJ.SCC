@@ -1,0 +1,34 @@
+SCC = This is a Source Code Control file.
+
+[TargetOA.sln]
+SCC_Aux_Path = target-server:8877:TargetSource
+SCC_Project_Name = $/1204TargetOA/Code/TargetOA
+
+[TargetOA.BLL.csproj]
+SCC_Aux_Path = target-server:8877:TargetSource
+SCC_Project_Name = $/1204TargetOA/Code/TargetOA/TargetOA.BLL
+
+[TargetOA.Common.csproj]
+SCC_Aux_Path = target-server:8877:TargetSource
+SCC_Project_Name = $/1204TargetOA/Code/TargetOA/TargetOA.Common
+
+[TargetOA.DAL.csproj]
+SCC_Aux_Path = target-server:8877:TargetSource
+SCC_Project_Name = $/1204TargetOA/Code/TargetOA/TargetOA.DAL
+
+[TargetOA.DALFactory.csproj]
+SCC_Aux_Path = target-server:8877:TargetSource
+SCC_Project_Name = $/1204TargetOA/Code/TargetOA/TargetOA.DALFactory
+
+[TargetOA.DataModel.csproj]
+SCC_Aux_Path = target-server:8877:TargetSource
+SCC_Project_Name = $/1204TargetOA/Code/TargetOA/TargetOA.DataModel
+
+[TargetOA.IDAL.csproj]
+SCC_Aux_Path = target-server:8877:TargetSource
+SCC_Project_Name = $/1204TargetOA/Code/TargetOA/TargetOA.IDAL
+
+[TargetOA.Web.csproj]
+SCC_Aux_Path = target-server:8877:TargetSource
+SCC_Project_Name = $/1204TargetOA/Code/TargetOA/TargetOA.Web
+

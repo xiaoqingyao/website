@@ -1,0 +1,32 @@
+﻿body
+{
+	font-size: 10pt;
+	color: black;
+	font-family: 宋体;
+	text-decoration: none;
+} 
+
+
+A:link
+{
+	font-size: 10pt;
+	color: blue;
+	text-decoration: none;
+	cursor: hand;
+} 
+A:visited
+{
+	font-size: 10pt;
+	color: red;
+	text-decoration: none;
+} 
+A:hover
+{
+	font-size: 12pt;
+	color: yellow;
+	text-decoration: none;
+} 
+A:active
+{
+	
+} 

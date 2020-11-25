@@ -1,0 +1,1 @@
+2019-10-21 23:07:48,715 [7764] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')

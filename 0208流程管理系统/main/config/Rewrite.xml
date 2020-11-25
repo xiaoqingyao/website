@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<rewriter>
+  <!--网站首页及各频道首页-->
+  <rewrite url="^~/index.html" to="~/index.htm" />
+  <rewrite url="^~/computer/index.html" to="~/computer/index.aspx" />
+  
+  <!-- 个人前台 -->
+  <rewrite url="^~/user/index_(.+).html" to="~/presonalshow/default.aspx?mid=$1" />
+  <rewrite url="^~/user/blogdetail_(.+),(.+),1.html" to="~/presonalshow/blogdetail.aspx?id=$1&amp;mid=$2&amp;ptype=1" />
+  <rewrite url="^~/user/blog_(.+),1.html" to="~/presonalshow/blogview.aspx?mid=$1&amp;ptype=1" />
+
+  <!-- 新闻 -->
+  <rewrite url="^~/news/newsdetail_(\d+).html" to="~/news/newsdetail.aspx?ID=$1" />
+  <rewrite url="^~/news/newslist.html" to="~/news/newslist.aspx" />
+  <rewrite url="^~/news/newslist_(\d+).html" to="~/news/newslist.aspx?page=$1" />
+  <rewrite url="^~/user/blog_(.+),(.+),1.html" to="~/presonalshow/blogview.aspx?mid=$1&amp;ptype=1" />
+  <!--公告 -->
+  <rewrite url="^~/Others/bulletin_(.+).html" to="~/Others/Bulletin.aspx?id=$1" />
+
+  <!-- 店铺 -->
+  <rewrite url="^~/(\w+)/home_(\d+).html" to="~/shop/shopindex.aspx?bid=$2" />
+  <!--手机 -->
+  <rewrite url="^~/(\w+)/mobile.aspx" to="~/shop/mobile.aspx" />
+  <!--数码 -->
+  <rewrite url="^~/(\w+)/digital.aspx" to="~/shop/digital.aspx" />
+  <!--安防-->
+  <rewrite url="^~/(\w+)/security.aspx" to="~/shop/security.aspx" />
+  <!--吃喝玩乐-->
+  <rewrite url="^~/(\w+)/eat_play.aspx" to="~/shop/eat_play.aspx" />
+  <!--电脑 -->
+  <rewrite url="^~/(\w+)/computer.aspx" to="~/shop/computer.aspx" />
+  <rewrite url="^~/coupon/coupondetail_(\d+),(\d+),3.html" to="~/coupon/shopcoupondetail.aspx?bid=$1&amp;id=$2&amp;stype=3" />
+  <rewrite url="^~/promotion/promotionetail_(\d+),(\d+),2,1.html" to="~/claim/SalesPromotionDetail.aspx?bid=$1&amp;id=$2&amp;stype=2&amp;IsProceed=1" />
+  <rewrite url="^~/coupon/couponprint_(.+).html" to="~/coupon/ShopCouponPrint.aspx?id=$1" />
+  <rewrite url="^~/shop/comment_(\d+),5.html" to="~/shop/shopComment.aspx?stype=5&amp;bid=$1" />
+  
+  <!--跳蚤-->
+  <rewrite url="^~/market/index.html" to="~/infopub/fleas.aspx?ptype=8" />
+  <rewrite url="^~/market/computer/detail_(\d+).html" to="~/infopub/computernetworkview.aspx?cbid=3&amp;id=$1" />
+  <rewrite url="^~/market/ticket/detail_(\d+).html" to="~/infopub/ticketview.aspx.aspx?cbid=3&amp;id=$1" />
+  <rewrite url="^~/market/life/detail_(\d+).html" to="~/infopub/lifeserviceview.aspx?cbid=3&amp;id=$1" />
+  <rewrite url="^~/market/job/detail_(\d+).html" to="~/infopub/jobview.aspx?cbid=3&amp;id=$1" />
+  <rewrite url="^~/market/home/detail_(\d+).html" to="~/infopub/homewiringview.aspx?cbid=3&amp;id=$1" />
+  <rewrite url="^~/market/digital/detail_(\d+).html" to="~/infopub/digitalview.aspx?cbid=3&amp;id=$1" />
+  <rewrite url="^~/market/house/detail_(\d+).html" to="~/infopub/HouseTenementView.aspx?cbid=3&amp;id=$1" />
+  <rewrite url="^~/market/car/detail_(\d+).html" to="~/infopub/VehicleView.aspx?cbid=3&amp;id=$1" />
+  
+  <!-- 华强北知道 -->
+  <rewrite url="^~/zhidao/index.html$" to="~/zhidao/index.aspx" />
+  <rewrite url="^~/zhidao/question_(\d+).html$" to="~/zhidao/question.aspx?id=$1" />
+  <rewrite url="^~/zhidao/bulletin_(\d+).html$" to="~/zhidao/bulletin.aspx?id=$1" />
+
+</rewriter>

@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+#nav {line-height: 38px;list-style-type: none; position: absolute;left: 194px;top: 23px;	width: 800px;font-size:12px;}
+#nav li {float:left;width:auto;height:38px;	display: block;}
+#nav li a {display: block;width: 101px;	height:38px;text-align:left;color: #515765;font-weight: bold;}
+#nav li a:hover{display: block;	width: 101px;height:38px;background: url(../skin/images/nav_ahover.gif) repeat-x;color:#3B414F;}
+#nav li ul {position: absolute;list-style-type:none;text-align:left;width:100px;border: 1px solid #CCCCCC;}
+#nav li ul li{float: left; width:100px; height:30px; line-height:30px; overflow:hidden;background:#F6F6F6;}
+#nav li ul a{display: block;text-align:left;padding-left:24px;float:left;font-weight: normal;background-color: #FFFFFF;}
+#nav li ul a:hover {color:#515765;text-decoration:none;font-weight:bold;color:#515765;background-color: #E6EFF7;background-image: none;}
+#nav li:hover ul { left: auto;}
+#nav li.sfhover ul { left: auto;}
+#content {clear: left;}
+.nav_ico{float:left; margin: 12px 0 0 18px;}
+.Headernav2 {float: left;background: url(../skin/images/2.png) no-repeat;width: 16px;height: 16px;margin: 10px 5px 10px 10px;}
+.Headernav3 {float: left;background: url(../skin/images/3.png) no-repeat;width: 16px;height: 16px;margin: 10px 5px 10px 10px;}
+.Headernav4 {float: left;background: url(../skin/images/4.png) no-repeat;width: 16px;height: 16px;margin: 10px 5px 10px 10px;}
+.Headernav5 {float: left;background: url(../skin/images/5.png) no-repeat;width: 16px;height: 16px;margin: 10px 5px 10px 10px;}
+.Headernav6 {float: left;background: url(../skin/images/6.png) no-repeat;width: 16px;height: 16px;margin: 10px 5px 10px 10px;}
+.Headernav7 {float: left;background: url(../skin/images/7.png) no-repeat;width: 16px;height: 16px;margin: 10px 5px 10px 10px;}
+.Off {float: left;background: url(../skin/images/logout.png) no-repeat;width: 16px;height: 16px;margin: 10px 5px;}
+.Help {float: left;background: url(../skin/images/help.png) no-repeat;width: 16px;height: 16px;margin: 10px 5px;}
+.MyTable {float: left;background: url(../skin/images/my.png) no-repeat;width: 16px;height: 16px;margin: 10px 5px;}

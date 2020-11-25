@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FieldControls>
+  <FieldControl>
+    <name>关键字</name>
+    <value>1</value>
+  </FieldControl>
+  <FieldControl>
+    <name>作者</name>
+    <value>2</value>
+  </FieldControl>
+  <FieldControl>
+    <name>来源</name>
+    <value>3</value>
+  </FieldControl>
+</FieldControls>

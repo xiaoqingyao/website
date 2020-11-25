@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+
+  <field id="1" orders="1"  title="专题">
+    <name>SpecialID</name>
+    <alias>专题</alias>
+    <edit>
+      <input type="text" name="HQB_SpecialID" readonly="readonly" value="{$SpecialName$}" style="cursor:text; width:300px;" onclick="openframe({ title: '添加到专题栏目', url: 'ShowSpecial.aspx', width: '360', height: '280' })" id="HQB_SpecialID"/>
+      <input type="button" onclick="openframe({ title: '添加到专题栏目', url: 'ShowSpecial.aspx', width: '360', height: '280' })" value="添加到专题"/>
+      <input type="hidden" name="SpecialID" value="{$SpecialID$}" id="SpecialID" />
+      <input type="hidden" name="OriginalSpecialID" value="{$SpecialID$}" />
+    </edit>
+  </field>
+
+  <field id="2" orders="2"  title="所属节点">
+    <name>NodeCode</name>
+    <alias>所属节点</alias>
+    <edit>
+      <input type="text" name="HQB_NodeID" readonly="readonly" style="cursor:text; width:300px;"  class="validate[required]"  value="{$NodeName$}" onclick="OpenShowSiteNode(1)" id="HQB_NodeID"/>
+      <input type="button" value="更换节点"  onclick="OpenShowSiteNode(1)" />
+      <input type="button" value="添加至其它节点"  onclick="OpenShowSiteNode(0)" id="btnAddToOtherNode" runat="server" />
+      <ul id="HQB_SiteNode_Container" style="float:none;"></ul>
+    </edit>
+  </field>
+
+  <field id="3" order="3"  title="标题（含链接）">
+    <name>Title</name>
+    <alias>标题</alias>
+    <sql type="string" length="256" default="" isnull="1" />
+    <list   width="200" issort="1" sorttype="3"><a href="{#ViewLink#}?ID={$ID$}" title="{$Title$}">{$Title$}</a></list>
+    <edit>
+      <input type="text"  style="width:300px;" class="validate[required]" name="Title" value="{$Title$}" id="Title" />
+      <span style="color:#ff0000;"> * </span>
+      <input type="button" value="检测是否具有重复" id="CheckTitleISRepeat" onclick="CheckTitleRepeat('{#TableName#}','Title','CheckTitleISRepeatMSG')" />
+      <span style="color:#ff0000;" id="CheckTitleISRepeatMSG"></span>
+    </edit>
+  </field>  
+  
+  <field id="4" order="4"  title="标题(包含样式)">
+    <name>Title</name>
+    <alias>标题</alias>
+    <sql type="string" length="256" default="" isnull="1" />
+    <list  issort="1" sorttype="3" width="200">{$TitlePrefix$}<a href="{#ViewLink#}?ID={$ID$}"  title="{$Title$}"><span style="color:{$ColorCode$};{$TitleStyle$}">{$Title$}</span></a></list>
+    <search  ><input type="text" name="Title"  style="width:{#StyleWidth#}px;"/></search>
+    <edit>
+      <input type="text"  style="width:300px;" class="validate[required]" name="Title" value="{$Title$}" id="Title" />
+      <span style="color:#ff0000;"> * </span>
+      <input type="button" value="检测是否具有重复" id="CheckTitleISRepeat" onclick="CheckTitleRepeat('{#TableName#}','Title','CheckTitleISRepeatMSG')" />
+      <span style="color:#ff0000;" id="CheckTitleISRepeatMSG"></span>
+  </edit>
+  </field> 
+  
+  <field id="5" order="5" title="颜色代码" >
+    <name>ColorCode</name>
+    <alias>颜色代码</alias>
+    <sql type="string" length="8" default="#000000" isnull="1" />
+    <edit>
+      <input type="text"  readonly="readonly"  style="width:100px;background-color:{$ColorCode$};" imagepath="../ColorPicker/imgs/" id="ColorCode" name="ColorCode" value="{$ColorCode$}" />
+        <script>$(function initColorPicker(){  	var myCP1 = new dhtmlXColorPickerInput('ColorCode');myCP1.setImagePath("../ColorPicker/imgs/");myCP1.init();}) </script>
+    </edit>
+  </field>
+  
+
+  <field id="6" order="6" title="作者">
+    <name>Author</name>
+    <alias>作者</alias>
+    <sql type="string" length="512" default="" isnull="1" />
+    <edit >
+      <![CDATA[<script type="text/javascript">loadRecommendAuthor("HQB_AuthorRecommend");</script><input style="width:300px;"  type="text" name="Author" value="{$Author$}" id="Author" /><span>&nbsp;<<&nbsp;<span id="HQB_AuthorRecommend" >loading...</span>【<span style=" cursor:default;" onclick="openframe({ title: '作者', url: 'ShowAuthor.aspx', width: '700', height: '450' })">更多</span>】</span>]]>   
+    </edit>
+  </field>
+
+   <field id="7" order="7" title="来源">
+    <name>Source</name>
+    <alias>来源</alias>
+    <sql type="string" length="256" default="" isnull="1" />
+    <edit>
+      <![CDATA[<script type="text/javascript">loadRecommendSource("HQB_SourceRecommend");</script><input type="text" style="width:300px;"  name="Source" value="{$Source$}" id="Source" /><span>&nbsp;<<&nbsp;<span id="HQB_SourceRecommend"  >loading...</span>【<span style=" cursor:default;" onclick="openframe({ title: '来源', url: 'ShowSource.aspx', width: '700', height: '450' })">更多</span>】</span>]]>
+    </edit>
+  </field>
+    <field id="8" order="8" title="关键字">
+    <name>Keyword</name>
+    <alias>关键字</alias>
+    <sql type="string" length="512" default="" isnull="1" />
+    <edit>
+      <![CDATA[<script type="text/javascript">loadRecommendKeyword("HQB_KeywordRecommend");</script><input type="text" style="width:300px;"  name="Keyword" value="{$Keyword$}" id="Keyword" /><span>&nbsp;<<&nbsp;<span id="HQB_KeywordRecommend"  ></span>【<span style=" cursor:default;" onclick="openframe({ title: '关键字', url: 'ShowKeyword.aspx', width: '700', height: '450' })">更多</span>】</span>]]>
+    </edit>
+  </field>
+  
+   <field id="9" order="9" title="可选文本框内容">
+    <name>OptionalTextBoxField</name>
+    <alias>可选文本框内容</alias>
+    <sql type="string" length="512" default="" isnull="1" />
+    <edit><![CDATA[<input type="text" class="validate[optional,custom[url]]" name="OptionalTextBoxField" id="OptionalTextBoxField" value="{$OptionalTextBoxField$}" /> <input type="checkbox" id="HQB_OptionalTextBoxFieldCheckBox" onclick="HQB_OptionalTextBoxField(this) "/><script type="text/javascript">function HQB_OptionalTextBoxFieldInit(){if($("#OptionalTextBoxField").val() == ""){$("#OptionalTextBoxField").attr("disabled", "disabled");$("#OptionalTextBoxField").css("background-color", "Gray");$("#HQB_OptionalTextBoxFieldCheckBox").removeAttr("checked");}else {$("#OptionalTextBoxField").removeAttr("disabled");$("#OptionalTextBoxField").css("background-color", "White");$("#HQB_OptionalTextBoxFieldCheckBox").attr("checked","checked");}}HQB_OptionalTextBoxFieldInit();function HQB_OptionalTextBoxField(obj) {if ($(obj).attr("checked") == false) {$("#OptionalTextBoxField").attr("disabled", "disabled");$("#OptionalTextBoxField").css("background-color", "Gray");}else {$("#OptionalTextBoxField").removeAttr("disabled");$("#OptionalTextBoxField").css("background-color", "White");}}</script>]]></edit>
+  </field>
+  
+  <field id="11" order="11" title="审核状态列表显示">
+    <name>FlowState</name>
+    <alias>审核状态</alias>
+    <list  issort="1" sorttype="3" ><![CDATA[<%#ctrManageList.ParseFlowState(Eval("FlowState"))%>]]></list>
+  </field>
+
+  <field id="12" order="12" title="发布范围">
+    <name>PublishRange</name>
+    <alias>发布范围</alias>
+    <sql type="string" length="1024" default="" isnull="1" />
+    <edit>
+      <input type="hidden" name="PublishRange" value="{$PublishRange$}" id="PublishRange" />
+      <textarea name="HQB_PublishRange" id="HQB_PublishRange" readonly="readOnly" style="height:45px; width:300px;" wrap="yes"  onclick="openframe({ title: '选择发布范围', url: 'PublishRange.aspx', width: '440', height: '250' })" ></textarea>
+      <script type="text/javascript">PublishRangeGetUserName();</script>
+      <a href="javascript:openframe({ title: '选择发布范围', url: 'PublishRange.aspx', width: '440', height: '250' })">添加</a>
+    </edit>
+  </field>
+  <include>
+    <file nodeid="11" page="list"><script src="../JS/FlowState.js" type="text/javascript"></script>
+    </file>
+  </include>
+
+</config>

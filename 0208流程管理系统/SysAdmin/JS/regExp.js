@@ -1,0 +1,5 @@
+﻿// JavaScript Document
+
+//getStrRegExp
+
+

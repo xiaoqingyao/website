@@ -1,0 +1,10 @@
+[version]
+	signature="$CHICAGO"
+	AdvancedINF=2.0
+[Add.Code]
+	Sign.dll=Sign.dll
+[Sign.dll]
+	file-win32-x86=thiscab
+	clsid={6F752F76-0FFD-4FE2-B9FB-051400791462}
+	FileVersion=1,0,0,1
+	RegsiterServer=yes

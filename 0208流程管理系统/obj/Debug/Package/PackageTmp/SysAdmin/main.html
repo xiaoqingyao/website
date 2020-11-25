@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<SCRIPT src="js/jquery-1.4.2.min.js" type="text/javascript"></SCRIPT>
+<SCRIPT src="js/ui.core.js" type="text/javascript"></SCRIPT>
+<SCRIPT src="js/ui.sortable.js" type="text/javascript"></SCRIPT>
+<SCRIPT src="js/jquery.cookie.js" type="text/javascript"></SCRIPT>
+<STYLE type=text/css>
+*{ margin:0px; padding:0px;}
+body{font:12px Arial, Helvetica, sans-serif;}
+div.column{
+	
+	/*BORDER-RIGHT: #adaada 1px solid; BORDER-TOP: #adaada 1px solid; FLOAT: left; PADDING-BOTTOM: 100px; BORDER-LEFT: #adaada 1px solid; BORDER-BOTTOM: #adaada 1px solid*/
+	float:left;
+	border:#d0e6ec 1px dashed;
+	margin:5px;
+}
+.w1 {
+	WIDTH: 370px;
+}
+.w2 {
+	WIDTH: 250px
+}
+.w3 {
+	WIDTH: 400px
+}
+div.portlet {
+	border:#d0e6ec 1px solid;
+	margin:2px;
+}
+h4.portlet-header {
+	background:url(img/title.png) repeat-x;
+	height:26px;
+	line-height:26px;
+	font-size:12px;
+	color:#077ac7;
+	padding-left:10px;
+	
+}
+h4.portlet-header a{
+	width:14px;
+	height:14px;
+	float:right;
+	display:block;
+	margin:6px 6px 0 0;
+	}
+h4.portlet-header a.min{
+	background:url(img/min.png) no-repeat;
+	}
+h4.portlet-header a.close{
+	background:url(img/close.png) no-repeat;
+	}
+.portlet-header .ui-icon {
+	FLOAT: right
+}
+.portlet-content {
+	padding:10px;
+	background:#fff;
+}
+.ui-sortable-placeholder {	
+	border:#f60 1px solid;
+}
+.ui-sortable-placeholder  {
+	visibility:hidden
+}
+.ui-icon ui-icon-plusthick {
+	cursor:pointer
+}
+.demo-description {
+	clear:both
+}
+</STYLE>
+<SCRIPT id=showtxb type=text/javascript>
+        $(function() {
+            //$.cookie("list","c1:1@2@3|c2:4|c3:5");
+            if (!$.cookie("list")) {
+                $.cookie("list", "c1:1@2@3|c2:4|c3:5"); //设置默认排序
+            }
+            var list = $.cookie("list"); //获取cookie里的list值
+            //alert(list)
+            var arrColumn = list.split('|');
+            $.each(arrColumn, function(m, n) {
+                var elemId = n.split(':')[0]; //容器ID
+                //debugger;
+                var arrRow = n.split(':')[1] ? n.split(':')[1].split('@') : ""; //单个序列ID
+                //debugger;
+                $.each(arrRow, function(m, n) {
+                    if (n) {//排除空值
+                        $("#" + elemId).append($("#sb" + n).attr('id', n))//把序列填加进容器
+                    }
+                });
+            })
+
+            ////////调用排序组件.  stop 为移动停止时事件。connectWith是跨列排序。
+            $(".column").sortable({
+                connectWith: '.column',
+				revert: true,
+                stop: saveLayout
+            });
+            /*$(".portlet").addClass("ui-widget ui-widget-content ui-helper-clearfix ui-corner-all")
+			.find(".portlet-header")
+				.addClass("ui-widget-header ui-corner-all")
+				.prepend('<span class="ui-icon ui-icon-plusthick">　-　</span>')
+				.end()
+			.find(".portlet-content");
+
+            $(".portlet-header .ui-icon").click(function() {
+                //$(this).toggleClass("ui-icon-minusthick");
+            $('.ui-icon-plusthick').toggle(function() { $(this).html("　+　") }, function() { $(this).html("　-　"); });
+                $(this).parents(".portlet:first").find(".portlet-content").toggle();
+            });*/
+			$(".portlet").addClass("ui-widget ui-widget-content ui-helper-clearfix ui-corner-all")
+			.find(".portlet-header")
+			.prepend('<a href="javascript:;" class="close"></a><a href="javascript:;" class="min"></a>')
+			.find(".close")
+			.click(function(){
+				$(this).parent().parent().remove();
+				saveLayout();
+			})
+			.end()
+			.find(".min").toggle(
+			function(){
+				$(this).parent().next().hide();
+			},function(){
+				$(this).parent().next().show();
+			})
+			
+
+            $(".column").disableSelection();
+
+            ///把顺序拼接保存到cookie里.
+            function saveLayout() {
+                //alert()
+                var list = "";
+                $.each($(".column"), function(m) {
+                    //alert($(this).attr('id'))
+                    list += $(this).attr('id') + ":";
+                    $.each($(this).children(".portlet"), function(d) {
+                        //alert($(this).attr('id'))
+                        list += $(this).attr('id') + "@";
+                    })
+                    list += "|";
+                    //alert($(this).child(".portlet")[0].attributes['id'].value)
+                    //alert($(this)[0].attributes['id'].value)
+                })
+                $.cookie("list", list)
+                //alert($.cookie("list"))
+
+            }
+            //每一列模块的值,其实sortable这个函数里有一个serialize可以直接取到对应的序列值:格式如下:
+            // $('#left').sortable('serialize',{key:'leftmod[]'}) + '&' + $('#right').sortable('serialize',{key:'rightmod[]'})
+            //我这里就没有用这个东西
+        })
+    </SCRIPT>
+</head>
+
+<body>
+<div class="demo">
+<div style="display: none">
+<div class="portlet" id="sb1">
+<h4 class="portlet-header">Feeds</h4>
+<div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div></div>
+<div class="portlet" id="sb2">
+<h4 class="portlet-header">News</h4>
+<div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div></div>
+<div class="portlet" id="sb3">
+<h4 class="portlet-header">Shopping</h4>
+<div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div></div>
+<div class="portlet" id="sb4">
+<h4 class="portlet-header">Links</h4>
+<div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div></div>
+<div class="portlet" id="sb5">
+<h4 class="portlet-header">Images</h4>
+<div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div></div></div>
+<div class="column w1" id="c1"></div>
+<div class="column w2" id="c2"></div>
+<div class="column w3" id="c3"></div></div>
+</body>
+</html>

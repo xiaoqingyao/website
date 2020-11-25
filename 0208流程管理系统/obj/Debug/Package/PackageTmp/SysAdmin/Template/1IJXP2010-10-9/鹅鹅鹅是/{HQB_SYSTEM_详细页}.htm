@@ -1,0 +1,17 @@
+<html>
+<head>
+    <script language='javascript'>
+             function isDOMRequired() {  
+                return false;
+             }
+             function objectTag(){
+                dw.getDocumentDOM().source.wrapSelection('{HQB_SYS_CONTENT}
+<dl><dt>标题：</dt><dd>{$Field(1,Title,0,1)}</dd></dl>
+<dl><dt>作者：</dt><dd>{$Field(1,Author,0,1)}</dd></dl>
+<dl><dt>内容：</dt><dd>{$Field(1,Content,0,1)}</dd></dl>
+{/HQB_SYS_CONTENT}', '');
+                 return;
+             }
+    </script>
+</head>
+</html>

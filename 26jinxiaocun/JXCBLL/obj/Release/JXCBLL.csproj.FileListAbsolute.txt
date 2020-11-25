@@ -1,0 +1,11 @@
+D:\03测试项目\26进销存管理系统带论文\程序\进销存管理系统\进销存管理系统\JXCBLL\bin\Release\JXCBLL.dll
+D:\03测试项目\26进销存管理系统带论文\程序\进销存管理系统\进销存管理系统\JXCBLL\bin\Release\JXCBLL.pdb
+D:\03测试项目\26进销存管理系统带论文\程序\进销存管理系统\进销存管理系统\JXCBLL\bin\Release\JXCDAL.dll
+D:\03测试项目\26进销存管理系统带论文\程序\进销存管理系统\进销存管理系统\JXCBLL\bin\Release\JXCMODEL.dll
+D:\03测试项目\26进销存管理系统带论文\程序\进销存管理系统\进销存管理系统\JXCBLL\bin\Release\JXCDAL.pdb
+D:\03测试项目\26进销存管理系统带论文\程序\进销存管理系统\进销存管理系统\JXCBLL\bin\Release\JXCMODEL.pdb
+D:\03测试项目\26进销存管理系统带论文\程序\进销存管理系统\进销存管理系统\JXCBLL\obj\Release\JXCBLL.csprojAssemblyReference.cache
+D:\03测试项目\26进销存管理系统带论文\程序\进销存管理系统\进销存管理系统\JXCBLL\obj\Release\JXCBLL.csproj.CoreCompileInputs.cache
+D:\03测试项目\26进销存管理系统带论文\程序\进销存管理系统\进销存管理系统\JXCBLL\obj\Release\JXCBLL.csproj.CopyComplete
+D:\03测试项目\26进销存管理系统带论文\程序\进销存管理系统\进销存管理系统\JXCBLL\obj\Release\JXCBLL.dll
+D:\03测试项目\26进销存管理系统带论文\程序\进销存管理系统\进销存管理系统\JXCBLL\obj\Release\JXCBLL.pdb

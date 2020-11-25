@@ -1,0 +1,102 @@
+
+
+
+
+
+
+
+
+function RndNum_CNNIC(k){
+	for (var rnd = "", i = k; i--; ) 
+		rnd += Math.floor( Math.random() * 10 );
+	return rnd;
+}
+var KX_cfg_data = { cnnic_dn : '', cnnic_lang : 'zh_cn' };
+
+	KX_cfg_data.cnnic_sn = "2011030400100006881";
+	KX_cfg_data.cnnic_u1 = "https://ss.knet.cn/verifyseal.dll" + "?sn=" + KX_cfg_data.cnnic_sn + "&ct=df" + "&a=1&pa=" + RndNum_CNNIC(6);
+	KX_cfg_data.cnnic_u2 = "https://kxlogo.knet.cn/seallogo.dll?kind=pic" + "&sn=" + KX_cfg_data.cnnic_sn + "&ct=df" ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function starLevel(obj){
+	var star = obj.parentNode.parentNode.getElementsByTagName('i')[0];
+	star.style.display = star.style.display == 'none' ? 'inline-block' : 'none'; 
+}
+
+/*
+
+
+
+	['<span style="display:inline-block;position:relative;width:auto;">',
+		'<a href="' + KX_cfg_data.cnnic_u1 + '" id="kx_verify" tabindex="-1" target="_blank" kx_type="图标式"',
+			'style="display:inline-block;">',
+			'<img src="' + KX_cfg_data.cnnic_u2 + '"  style="border:none;"',
+				'oncontextmenu="return false;"  alt="&#x53EF;&#x4FE1;&#x7F51;&#x7AD9;"',
+				'onmouseover="starLevel(this)"',
+				'onmouseout="starLevel(this)"',
+			'/>',
+		'</a>',
+		'<i id="star" style="background:#F2F2F2;border:1px solid #CACACA;border-radius:3px;bottom:-30px;color:#C4372C;display:none;height:20px;font-style:normal;left:20px;overflow:hidden;padding:0 5px;position:absolute;width:190px;z-index:99;">',
+			'<span style="float:left;font-size:14px;">中网验证评级</span>',
+			'<span style="float:left;height:16px;width:100px;display:inline-block;margin:1px 2px 0;background:url(https://ss.knet.cn//images/star.png) no-repeat 0px -20px;"></span>',
+		'</i>',
+	'</span>'].join(' ')
+*/
+
+var parameterNew = null;
+var scheme = 1;
+var imgUrl = KX_cfg_data.cnnic_u2;
+ 
+if(scheme == 1){
+	 	 
+	if(imgUrl.indexOf("https")== -1){//如果不是https
+		imgUrl = imgUrl.replace("http","https");
+	}
+}
+
+var str =	['<span style="display:inline-block;position:relative;width:auto;">',
+		'<a href="' + KX_cfg_data.cnnic_u1 + '" id="kx_verify" tabindex="-1" target="_blank" kx_type="图标式"',
+			'style="display:inline-block;">',
+			'<img src="' +imgUrl + '"  style="border:none;"',
+				'oncontextmenu="return false;"  alt="&#x53EF;&#x4FE1;&#x7F51;&#x7AD9;"',
+			'/>',
+		'</a>',
+	'</span>'].join(' ');
+	
+if( parameterNew== "1"){
+	document.getElementById("ss").innerHTML = str;
+
+}else{
+	document.write(str);
+}	
+	
+
+
+
+
+

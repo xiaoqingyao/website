@@ -1,0 +1,48 @@
+﻿.system_icon
+{
+	background-image: url(../../../Controls/images/menus/setting.png);
+}
+.workflow_icon
+{
+	background-image: url(../../../Controls/images/menus/flow.gif);
+}
+.kaoqing_icon
+{
+	background-image: url(../../../Controls/images/menus/personal/dutySetting.png);
+}
+.jianzheng_icon
+{
+	background-image: url(../../../Controls/images/menus/hrm/hrm-briefcase.png);
+}
+.renshi_icon
+{
+	background-image: url(../../../Controls/images/menus/hrm/hrm.png);
+}
+.peixun_icon
+{
+	background-image: url(../../../Controls/images/menus/hrm/profile-create.png);
+}
+.tongji_icon
+{
+	background-image: url(../../../Controls/images/menus/chart_organisation.png);
+}
+.gongcheng_icon
+{
+	background-image: url(../../../Controls/images/menus/gongcheng.png);
+}
+.gongzuo_icon
+{
+	background-image: url(../../../Controls/images/menus/rizhi.png);
+}
+.bangong_icon
+{
+	background-image: url(../../../Controls/images/menus/bangong.png);
+}
+.jingyin_icon
+{
+	background-image: url(../../../Controls/images/menus/customer/product.png);
+}
+.kaohe_icon
+{
+	background-image: url(../../../Controls/images/menus/admin/car_apply.png);
+}

@@ -1,0 +1,315 @@
+.np {
+	CURSOR: hand; COLOR: black; FONT-FAMILY: "Webdings"; HEIGHT: 26px; TEXT-ALIGN: center
+}
+BODY {
+	SCROLLBAR-FACE-COLOR: #c8dafa; FONT-SIZE: 9pt; SCROLLBAR-HIGHLIGHT-COLOR: #ffffff; SCROLLBAR-SHADOW-COLOR: #9ebdf6; WORD-BREAK: break-all; SCROLLBAR-3DLIGHT-COLOR: #9ebdf6; SCROLLBAR-ARROW-COLOR: #a7c4f7; FONT-FAMILY: "verdana", "宋体", "Seoul", "Gulim"; SCROLLBAR-DARKSHADOW-COLOR: #ffffff; SCROLLBAR-BASE-COLOR: #c8dafa; LETTER-SPACING: 1px; BACKGROUND-COLOR: #ffffff
+}
+TD {
+	FONT-SIZE: 9pt; FONT-FAMILY: "宋体"
+}
+INPUT {
+	FONT-SIZE: 9pt; FONT-FAMILY: 宋体
+}
+.noempty {
+	FONT-SIZE: 9pt; COLOR: #ff0000; FONT-FAMILY: "宋体"
+}
+.table_height {
+	FONT-SIZE: 9pt; LINE-HEIGHT: 25px; BACKGROUND-COLOR: #ffffff
+}
+.font10 {
+	FONT-SIZE: 9pt; LINE-HEIGHT: 15pt; TEXT-DECORATION: none
+}
+.outertable1 {
+	BACKGROUND-COLOR: #a4caf0
+}
+.outertable2 {
+	BACKGROUND-COLOR: #ffffff
+}
+.noline {
+	TEXT-DECORATION: none
+}
+.maintable_bak {
+	FONT-SIZE: 9pt; LINE-HEIGHT: 25px; BACKGROUND-COLOR: #ffffff
+}
+.roletable {
+	FONT-SIZE: 9pt; LINE-HEIGHT: 25px; BACKGROUND-COLOR: #ffffff
+}
+.maintable_home {
+	BACKGROUND-COLOR: #ffffff
+}
+.maintable_daiban {
+	BACKGROUND-COLOR: #ffffff
+}
+.off-white {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; COLOR: #ffffff; TEXT-DECORATION: none
+}
+.font {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; COLOR: #ff0000; FONT-FAMILY: "Arial", "宋体"; TEXT-DECORATION: none
+}
+A {
+	FONT-SIZE: 9pt; COLOR: #0000cc; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: darkorange; TEXT-DECORATION: none
+}
+.yi_hang_1 {
+	BORDER-RIGHT: #6ba3ed 0.5pt; BORDER-TOP: #6ba3ed 0.5pt; FONT-WEIGHT: bold; FONT-SIZE: 9pt; BORDER-LEFT: #6ba3ed 0.5pt; COLOR: #000000; LINE-HEIGHT: 14pt; BORDER-BOTTOM: #6ba3ed 0.5pt; FONT-FAMILY: "Arial", "宋体"; HEIGHT: 27px; BACKGROUND-COLOR: #539ce5; TEXT-DECORATION: none
+}
+.table {
+	
+}
+.shou_ye_001 {
+	BACKGROUND-IMAGE: url(home_p_01.gif); WIDTH: 21px; HEIGHT: 40px
+}
+.shou_ye_002 {
+	BACKGROUND-IMAGE: url(splogo_center.gif); WIDTH: 420px; HEIGHT: 40px
+}
+.shou_ye_003 {
+	BACKGROUND-IMAGE: url(home_p_03.gif); WIDTH: 140px
+}
+.shou_ye_004 {
+	BACKGROUND-IMAGE: url(home_p_04.gif); WIDTH: 161px; HEIGHT: 40px
+}
+.shou_ye_005 {
+	BACKGROUND-IMAGE: url(home_p_05.gif); WIDTH: 18px; HEIGHT: 40px
+}
+.shou_ye_006 {
+	BACKGROUND-IMAGE: url(home_p_06.gif); WIDTH: 21px; COLOR: #000000; HEIGHT: 326px
+}
+.shou_ye_007 {
+	BACKGROUND-IMAGE: url(home_p_07.gif); WIDTH: 18px; HEIGHT: 326px
+}
+.shou_ye_008 {
+	BACKGROUND-IMAGE: url(home_p_08.gif); WIDTH: 21px; HEIGHT: 43px
+}
+.shou_ye_009 {
+	BACKGROUND-IMAGE: url(home_p_09.gif); HEIGHT: 43px
+}
+.shou_ye_010 {
+	BACKGROUND-IMAGE: url(home_p_10.gif); WIDTH: 18px; HEIGHT: 43px
+}
+.fontt {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; COLOR: #000000; LINE-HEIGHT: 12pt; TEXT-DECORATION: none
+}
+.qbfl {
+	FONT-SIZE: 9pt; COLOR: #666666; TEXT-INDENT: 9pt; FONT-FAMILY: "Arial", "宋体"; TEXT-DECORATION: none
+}
+.cmcc_bei_01 {
+	BACKGROUND-IMAGE: url(cmcc_tu02.gif); HEIGHT: 65px
+}
+.cmcc_bei_02 {
+	FONT-WEIGHT: normal; FONT-SIZE: 9pt; BACKGROUND-IMAGE: url(menu/beijing_tiao.gif); COLOR: #000000; FONT-FAMILY: "Arial", "宋体"; HEIGHT: 26px; TEXT-DECORATION: none
+}
+.ft_black_bold {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; COLOR: #000000; FONT-FAMILY: "Arial", "宋体"; TEXT-DECORATION: none
+}
+.ft_black {
+	FONT-WEIGHT: normal; FONT-SIZE: 9pt; COLOR: #0650a2; FONT-FAMILY: "Arial", "宋体"; TEXT-DECORATION: none
+}
+.button {
+	BORDER-RIGHT: #939393 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #939393 1px solid; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; FONT: 10pt "宋体"; BORDER-LEFT: #333333 1px solid; COLOR: #333333; PADDING-TOP: 0px; BORDER-BOTTOM: #939393 1px solid; LETTER-SPACING: 0px; HEIGHT: 22px
+}
+.button_biao_01 {
+	BACKGROUND-IMAGE: url(cmcc_biao_a13.gif); WIDTH: 14px; HEIGHT: 14px
+}
+.button_biao_02 {
+	BACKGROUND-IMAGE: url(cmcc_biao_a12.gif); WIDTH: 14px; HEIGHT: 14px
+}
+.cmcc_biao_01 {
+	BACKGROUND-IMAGE: url(cmcc_biao_01.gif); WIDTH: 28px; HEIGHT: 26px; TEXT-ALIGN: right
+}
+.shou_ye_011 {
+	BACKGROUND-IMAGE: url(home_p_11.gif); WIDTH: 710px; HEIGHT: 317px
+}
+.shou_ye_beijing_se {
+	BACKGROUND-COLOR: #e6f2f5
+}
+.shou_ye_beijing {
+	BACKGROUND-IMAGE: url(a11.gif); HEIGHT: 620px
+}
+.maintable_min_se {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; COLOR: #000000; FONT-FAMILY: "Arial", "宋体"; BACKGROUND-COLOR: #bbdbfd; TEXT-ALIGN: left; TEXT-DECORATION: none
+}
+.cmcc_zong_beijing {
+	WIDTH: 100%; TEXT-ALIGN: center
+}
+.cmcc_bei_04 {
+	BACKGROUND-IMAGE: url(cmcc_biao_02.gif); HEIGHT: 23px
+}
+.cmcc_biao_02 {
+	BACKGROUND-IMAGE: urlcmcc_biao_a01.gif); WIDTH: 141px; HEIGHT: 23px
+}
+.cmcc_biao_03 {
+	BACKGROUND-IMAGE: url(cmcc_biao_a03.gif); WIDTH: 9px; HEIGHT: 23px
+}
+.cmcc_biao_04 {
+	BACKGROUND-IMAGE: url(cmcc_biao_a02.gif); WIDTH: 141px; HEIGHT: 23px
+}
+.cmcc_biao_05 {
+	BACKGROUND-IMAGE: url(cmcc_biao_a04.gif); WIDTH: 141px; HEIGHT: 23px
+}
+.cmcc_biao_06 {
+	BACKGROUND-IMAGE: url(cmcc_biao_a05.gif); WIDTH: 196px; HEIGHT: 26px
+}
+.cmcc_biao_07 {
+	BACKGROUND-IMAGE: url(cmcc_biao_a06.gif); WIDTH: 196px; HEIGHT: 26px
+}
+.cmcc_biao_08 {
+	BACKGROUND-IMAGE: url(home_biao_4.gif); WIDTH: 16px; HEIGHT: 16px
+}
+.cmcc_daogang {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; COLOR: #000000; FONT-FAMILY: "Arial", "宋体"; TEXT-DECORATION: none
+}
+.cmcc_daogang_beise {
+	FONT: bold 9pt "Arial", "宋体"; COLOR: #ffffff; TEXT-DECORATION: none
+}
+.cmcc_daohang_01 {
+	BACKGROUND-IMAGE: url(biao_beijing.gif); WIDTH: 100px; HEIGHT: 27px
+}
+.cmcc_daohang_02 {
+	BACKGROUND-IMAGE: url(biao_beijing.gif); WIDTH: 165px; HEIGHT: 27px
+}
+.cmcc_daohang_03 {
+	BACKGROUND-IMAGE: url(biao_beijing_3.gif); WIDTH: 106px; HEIGHT: 27px
+}
+.cmcc_daohang_04 {
+	BACKGROUND-IMAGE: url(biao_beijing_4.gif); WIDTH: 179px; HEIGHT: 27px
+}
+.cmcc_biao_09 {
+	BACKGROUND: url(cmcc_tu01.gif); WIDTH: 395px; HEIGHT: 65px
+}
+.cmcc_sms_01 {
+	BACKGROUND-IMAGE: url(sms_1.GIF); WIDTH: 27px; HEIGHT: 27px
+}
+.cmcc_wap_02 {
+	BACKGROUND-IMAGE: url(wap_2.gif); WIDTH: 27px; HEIGHT: 27px
+}
+.cmcc_pda_03 {
+	BACKGROUND-IMAGE: url(pda_3.gif); WIDTH: 27px; HEIGHT: 27px
+}
+.cmcc_mms_04 {
+	BACKGROUND-IMAGE: url(mms_4.gif); WIDTH: 27px; HEIGHT: 27px
+}
+.cmcc_ivr_05 {
+	BACKGROUND-IMAGE: url(ivr_5.gif); WIDTH: 27px; HEIGHT: 27px
+}
+.cmcc_java_06 {
+	BACKGROUND-IMAGE: url(java_6.gif); WIDTH: 27px; HEIGHT: 27px
+}
+.cmcc_biao_10 {
+	BACKGROUND-IMAGE: url(go_2.gif); WIDTH: 38px; HEIGHT: 23px
+}
+.cmcc_biao_11 {
+	BACKGROUND-IMAGE: url(cmcc_tu01.gif); WIDTH: 441px; HEIGHT: 65px
+}
+.cmcc_biao_12 {
+	BACKGROUND-IMAGE: url(cmcc_biao_a09.gif); WIDTH: 196px; HEIGHT: 26px
+}
+.cmcc_biao_13 {
+	BACKGROUND-IMAGE: url(cmcc_biao_a08.gif); WIDTH: 141px; HEIGHT: 23px
+}
+.cmcc_biao_14 {
+	BACKGROUND-IMAGE: url(cmcc_biao_a10.gif); WIDTH: 141px; HEIGHT: 23px
+}
+.cmcc_biao_15 {
+	BACKGROUND-IMAGE: url(cmcc_biao_a21.gif); WIDTH: 196px; HEIGHT: 26px
+}
+.cmcc_biao_16 {
+	BACKGROUND-IMAGE: url(cmcc_biao_a18.gif); WIDTH: 196px; HEIGHT: 26px
+}
+.cmcc_biao_19 {
+	BACKGROUND-IMAGE: url(cmcc_biao_a17.gif); WIDTH: 196px; HEIGHT: 26px
+}
+.cmcc_biao_17 {
+	BACKGROUND-IMAGE: url(cmcc_biao_a19.gif); WIDTH: 141px; HEIGHT: 23px
+}
+.cmcc_biao_18 {
+	BACKGROUND-IMAGE: url(cmcc_biao_a20.gif); WIDTH: 141px; HEIGHT: 23px
+}
+.yi_hang_1 {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; COLOR: #000000; HEIGHT: 27px; BACKGROUND-COLOR: #539ce5; TEXT-DECORATION: none
+}
+.yi_hang_2 {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; COLOR: #044b9b; HEIGHT: 4px; BACKGROUND-COLOR: #ededed; TEXT-DECORATION: none
+}
+.yi_hang_3 {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; COLOR: #000000; LINE-HEIGHT: 12pt; BACKGROUND-COLOR: #ffffff; TEXT-DECORATION: none
+}
+.yi_hang_4 {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; COLOR: #000000; HEIGHT: 20px; BACKGROUND-COLOR: #eeeeee; TEXT-DECORATION: none
+}
+.yi_hang_5 {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; COLOR: #044b9b; HEIGHT: 20px; BACKGROUND-COLOR: #ffffff; TEXT-DECORATION: none
+}
+.yi_hang_6 {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; COLOR: #000000; HEIGHT: 20px; BACKGROUND-COLOR: #c2e1ff; TEXT-DECORATION: none
+}
+.yi_hang_7 {
+	HEIGHT: 27px; BACKGROUND-COLOR: #539ce5; TEXT-DECORATION: none
+}
+.yi_hang_8 {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; COLOR: #044b9b; HEIGHT: 4px; BACKGROUND-COLOR: #dddddd; TEXT-DECORATION: none
+}
+.yi_hang_9 {
+	BACKGROUND-COLOR: #f9f9f9
+}
+.table_home {
+	
+}
+.maintable1 {
+	
+}
+.maintable {
+	BORDER-RIGHT: #b4b4b4 1px solid; BORDER-TOP: #b4b4b4 1px solid; FONT-SIZE: 9pt; BORDER-LEFT: #b4b4b4 1px solid; LINE-HEIGHT: 20px; BORDER-BOTTOM: #b4b4b4 1px solid; FONT-FAMILY: '宋体'; BORDER-COLLAPSE: collapse; BACKGROUND-COLOR: #ffffff
+}
+.dg_tr_mouseover {
+	COLOR: #000000
+}
+.dg_tr_normal {
+	COLOR: #000000
+}
+.dg_tr_mouseover {
+	BACKGROUND-COLOR: #dddddd
+}
+.dg_tr_mouseover A {
+	BACKGROUND-COLOR: #dddddd
+}
+.dg_tr_normal {
+	BACKGROUND-COLOR: #ffffff
+}
+.dg_tr_normal1 {
+	BACKGROUND-COLOR: #c6c6c6
+}
+.detailtable {
+	BORDER-RIGHT: #c6c6c6 1px solid; BORDER-TOP: #c6c6c6 1px solid; FONT-SIZE: 9pt; BORDER-LEFT: #c6c6c6 1px solid; LINE-HEIGHT: 20px; BORDER-BOTTOM: #c6c6c6 1px solid; FONT-FAMILY: '宋体'; BORDER-COLLAPSE: collapse; BACKGROUND-COLOR: #ffffff
+}
+.settletable {
+	BORDER-RIGHT: #b4b4b4 1px solid; BORDER-TOP: #b4b4b4 1px solid; FONT-SIZE: 9pt; BORDER-LEFT: #b4b4b4 1px solid; LINE-HEIGHT: 20px; BORDER-BOTTOM: #b4b4b4 1px solid; FONT-FAMILY: '宋体'; BORDER-COLLAPSE: collapse; BACKGROUND-COLOR: #ffffff
+}
+.gehangtr {
+	BACKGROUND-COLOR: #f6f6f6
+}
+.ge1hangtr {
+	
+}
+.hangtr {
+	BACKGROUND-COLOR: #e0ebfc
+}
+.ge2hangtr {
+	
+}
+.ge3hangtr {
+	
+}
+.over {
+	BACKGROUND-COLOR: #dddddd
+}
+.out {
+	BACKGROUND-COLOR: #f6f6f6
+}
+.error1tr {
+	BACKGROUND-COLOR: #d2ffd2
+}
+.error2tr {
+	BACKGROUND-COLOR: #ffffb9
+}

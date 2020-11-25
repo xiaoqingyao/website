@@ -1,0 +1,347 @@
+﻿<!--<%@ page language="java" import="java.util.*" pageEncoding="gbk"%>-->
+<html><head>
+
+<STYLE type=text/css>
+BODY {
+	MARGIN: 0px; FONT: 9pt 宋体
+}
+TABLE {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px
+}
+TD {
+	FONT: 12px 宋体
+}
+IMG {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; VERTICAL-ALIGN: bottom; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px
+}
+A {
+	FONT: 12px 宋体; COLOR: #000000; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #215dc6
+}
+.sec_menu {
+	BORDER-RIGHT: #158BB7 1px solid; BACKGROUND: #ffffff; OVERFLOW: hidden; BORDER-LEFT:#158BB7 1px solid; BORDER-BOTTOM:#158BB7 1px solid
+}
+.list_title {
+	
+}
+.list_title SPAN {
+	FONT-WEIGHT: bold;
+	LEFT: 8px;
+	COLOR:#FFFFFF;
+	POSITION: relative;
+	TOP: 2px;
+	visibility: visible;
+}
+.list_title2 {
+	
+}
+.list_title2 SPAN {
+	FONT-WEIGHT: bold; LEFT: 8px; COLOR: #ffffff; POSITION: relative; TOP: 2px
+}
+</STYLE>
+<SCRIPT language=javascript>
+function show(obj,maxg,obj2)
+{
+  //if(obj.style.pixelHeight<maxg)
+  //{
+  //  obj.style.pixelHeight+=maxg/10;
+  //  obj.filters.alpha.opacity+=20;
+  //  obj2.background="Img/back_11.gif";
+  //  if(obj.style.pixelHeight==maxg/10)
+  //    obj.style.display='block';
+  //  myObj=obj;
+  //  mymaxg=maxg;
+  //  myObj2=obj2;
+  //  setTimeout('show(myObj,mymaxg,myObj2)','5');
+  //}
+}
+function hide(obj,maxg,obj2)
+{
+  //if(obj.style.pixelHeight>0)
+  //{
+  //  if(obj.style.pixelHeight==maxg/5)
+  //    obj.style.display='none';
+  //  obj.style.pixelHeight-=maxg/5;
+  //  obj.filters.alpha.opacity-=10;
+  //  obj2.background="Img/back_08.gif";
+  //  myObj=obj;
+  //  mymaxg=maxg
+  //  myObj2=obj2;
+  //  setTimeout('hide(myObj,mymaxg,myObj2)','5');
+  //}
+  //else    if(whichContinue)
+  //    whichContinue.click();
+}
+function chang(obj,maxg,obj2)
+{
+    
+  //if(obj.style.pixelHeight)
+  //{
+  //  hide(obj,maxg,obj2);
+  //  nopen='';
+  //  whichcontinue='';
+  //}
+  //else    if(nopen)
+  //  {
+  //    whichContinue=obj2;
+  //    nopen.click();
+  //  }
+  //  else
+  //  {
+  //    show(obj,maxg,obj2);
+  //    nopen=obj2;
+  //    whichContinue='';
+  //  }
+}
+</SCRIPT>
+
+
+</head>
+<body leftmargin="0" topmargin="0" >
+<TABLE cellSpacing=0 cellPadding=0 width="100%" align=left border=0> 
+<TBODY>
+  <TR>
+    <TD vAlign=top>
+      <TABLE cellSpacing=0 cellPadding=0 width=145 align=center>
+        <TBODY>
+        <TR style="CURSOR: hand">
+        </TR></TBODY></TABLE>
+       <SCRIPT language=javascript>
+  var nopen="";
+  var whichContinue='';
+      </SCRIPT>
+
+        <table align="center" background="Img/back_left_06.gif" border="0" cellpadding="0"
+            cellspacing="0" height="453" width="163">
+            <tr>
+                <td colspan="3" height="50">
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td height="390" width="10">
+                    &nbsp;</td>
+                <td valign="top" style="width: 146px">
+                    <TABLE cellSpacing=0 cellPadding=0 align=center style="width: 146px">
+        <TBODY>
+        <TR style="CURSOR: hand">
+            <TD class=list_title id=list1 
+          onmouseover="this.typename='list_title2';" 
+          onclick=chang(menu1,90,list1); 
+          onmouseout="this.typename='list_title';" 
+          background="Img/back_08.gif" 
+            height=25>
+                <span style="color: #ffffff"><SPAN>学生信息管理</SPAN> </span>
+            </TD>
+          </TR>
+        <TR>
+            <TD align="center" valign="middle"> 
+              <DIV class=sec_menu id=menu1 
+            style="DISPLAY: block; FILTER: alpha(Opacity=0); WIDTH: 145px;">
+                <TABLE  cellSpacing=0 
+            cellPadding=0 width=135 align=center>
+                  <TBODY>
+                   <TR> 
+                      <TD height=20 align="left"><a href="StudentInfo.aspx" target="menu">□ 学生详细信息</a></TD>
+                    </TR>   
+                    <TR> 
+                      <TD align="left" style="height: 20px"><a href="StudentAdd.aspx" target="menu">□ 学生信息添加</a></TD>
+                    </TR>           
+                    <TR> 
+                      <TD style="height: 19px"><a href=studentManage.aspx target="menu">□ 学生信息管理</a></TD>
+                    </TR>
+                     <TR> 
+                      <TD style="height: 20px"><a href=studentAdd_piliang.aspx target="menu">□ 批量信息添加</a></TD>
+                    </TR>
+                    </TBODY>
+                </TABLE>
+              </DIV></TD></TR></TBODY></TABLE>
+<table cellspacing=0 cellpadding=0 width=145 align=center>
+  <tbody>
+    <tr style="CURSOR: hand">
+      <td class=list_title id=list9 
+          onMouseOver="this.typename='list_title2';" 
+          onClick=chang(menu9,120,list9); 
+          onMouseOut="this.typename='list_title';" 
+          background="Img/back_08.gif" 
+            height=25 style="width: 157px"><span>教师信息管理</span> </td>
+    </tr>
+    <tr>
+      <td valign="middle" style="width: 157px">
+        <div class=sec_menu id=menu9 
+            style="DISPLAY: block; FILTER: alpha(Opacity=0); WIDTH: 145px; ">
+          <table  cellspacing=2 
+            cellpadding=0 width=135 align=center>
+            <tbody>
+              <tr>
+                <td height=25><a href=teacherAdd.aspx target="menu">□ 教师信息添加</a></td>
+              </tr>
+			  <tr>
+                <td style="height: 25px"><a href=teacherManage.aspx target="menu">□ 教师信息管理</a></td>
+              </tr>	
+                
+            </tbody>
+          </table>
+      </div></td>
+    </tr>
+  </tbody>
+</table>
+
+
+       <TABLE cellSpacing=0 cellPadding=0 width=145 align=center>
+         <TBODY>
+           <TR style="CURSOR: hand">
+             <TD class=list_title id=list11 
+          onmouseover="this.typename='list_title2';" 
+          onclick=chang(menu11,140,list11); 
+          onmouseout="this.typename='list_title';" 
+          background="Img/back_08.gif" 
+            height=25><SPAN>部门信息管理</SPAN> </TD>
+           </TR>
+           <TR>
+             <TD align=center>
+               <DIV class=sec_menu id=menu11 
+            style="DISPLAY: block; FILTER: alpha(Opacity=0); WIDTH: 145px;">
+                 <TABLE width=135 align=center 
+            cellPadding=0  cellSpacing=2  > 
+                    <TBODY>
+                     <TR> 
+                      <TD style="height:20px"><a href="deptCollegeAdd.aspx" target="menu">□ 学院信息添加</a></TD>
+                    </TR>     
+                    <TR> 
+                      <TD style="height:20px"><a href="deptCollegeManage.aspx" target="menu">□ 学院信息管理</a></TD>
+                    </TR>  
+                     <TR> 
+                      <TD style="height: 20px"><a href="deptproAdd.aspx" target="menu">□ 专业信息添加</a></TD>
+                    </TR>         
+                    <TR> 
+                      <TD style="height: 20px"><a href="deptproManage.aspx" target="menu">□ 专业信息管理</a></TD>
+                    </TR>
+                    <TR> 
+                      <TD style="height: 20px"><a href="deptclaAdd.aspx" target="menu">□ 班级信息添加</a></TD>
+                    </TR>
+                     <TR> 
+                      <TD style="height: 20px"><a href="deptclaManage.aspx" target="menu">□ 班级信息管理</a></TD>
+                    </TR>
+                    </TBODY>
+                 </TABLE>
+             </DIV></TD>
+           </TR>
+         </TBODY>
+       </TABLE>
+
+       <TABLE cellSpacing=0 cellPadding=0 width=145 align=center>
+         <TBODY>
+           <TR style="CURSOR: hand">
+             <TD class=list_title id=list10 
+          onmouseover="this.typename='list_title2';" 
+          onclick=chang(menu10,120,list10); 
+          onmouseout="this.typename='list_title';" 
+          background="Img/back_08.gif" 
+            height=25><SPAN>科目信息管理</SPAN> </TD>
+           </TR>
+           <TR>
+             <TD align=center>
+               <DIV class=sec_menu id=menu10 
+            style="DISPLAY: block; FILTER: alpha(Opacity=0); WIDTH: 145px; ">
+                 <TABLE width=135 align=center 
+            cellPadding=0  cellSpacing=2  > 
+                    <TBODY>
+                    <TR> 
+                      <TD style="height:20px"><a href="courseAdd.aspx" target="menu">□ 科目信息添加</a></TD>
+                    </TR>           
+                    <TR> 
+                      <TD style="height: 20px"><a href=courseManage.aspx target="menu">□ 科目信息管理</a></TD>
+                    </TR>
+                     <TR> 
+                      <TD style="height: 20px"><a href=courseMode.aspx target="menu">□ 科目状态管理</a></TD>
+                    </TR>
+                    <TR> 
+                      <TD style="height: 20px"><a href=courseteacher.aspx target="menu">□ 授课教师指定</a></TD>
+                    </TR>
+                     <TR> 
+                      <TD style="height: 20px"><a href="courseTeacherManage.aspx" target="menu">□ 课程指定管理</a></TD>
+                    </TR>
+                    </TBODY>
+                 </TABLE>
+             </DIV></TD>
+           </TR>
+         </TBODY>
+       </TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=145 align=center>
+         <TBODY>
+           <TR style="CURSOR: hand">
+             <TD class=list_title id=list4 
+          onmouseover="this.typename='list_title2';" 
+          onclick=chang(menu4,60,list4); 
+          onmouseout="this.typename='list_title';" 
+          background="Img/back_08.gif" 
+            height=25><SPAN>考试结果管理</SPAN> </TD>
+           </TR>
+           <TR>
+             <TD valign="middle">
+               <DIV class=sec_menu id=menu4 
+            style="DISPLAY: block; FILTER: alpha(Opacity=0); WIDTH: 145px; ">
+                 <TABLE  cellSpacing=2 
+            cellPadding=0 width=135 align=center>
+                   <TBODY>
+                   <TR>
+                       <TD height=25><a href="scoremenuCreate.aspx" target="menu">□ 考试名单生成</a></TD>
+                     </TR> 
+                   <TR>
+                       <TD height=25><a href="scoreAdd.aspx" target="menu">□ 成绩添加</a></TD>
+                     </TR>   
+                                
+                   </TBODY>
+                 </TABLE>
+             </DIV></TD>
+           </TR>
+         </TBODY>
+      </TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 width=145 align=center style="height: 100px">
+        <TBODY>
+        <TR style="CURSOR: hand">
+            <TD class=list_title id=list8 
+          onmouseover="this.typename='list_title2';" 
+          onclick=chang(menu8,80,list8); 
+          onmouseout="this.typename='list_title';" 
+          background="Img/back_08.gif" 
+            height=25><SPAN>管理员信息维护</SPAN> </TD>
+          </TR>
+        <TR>
+            <TD valign="middle">              <DIV class=sec_menu id=menu8
+            style="FILTER: alpha(Opacity=100); WIDTH: 145px; ">
+                <TABLE  cellSpacing=0 cellPadding=0 width=135 align=center>
+                  <TBODY>
+              <TR>
+               <TD height=30 style="width: 135px"> 
+               <p style="line-height: 200%">
+                   <a href=Admin_ChangePwd.aspx target="menu">□ 修改密码</a></TD></TR>
+               <TR>
+               <TD height=30 style="width: 135px"> 
+               <p style="line-height: 200%">
+                   <a href=admin_add.aspx target="menu">□ 管理员添加</a></TD></TR>
+              <TR>
+               <TD height=30 style="width: 135px"> 
+               <p style="line-height: 200%">
+                   <a href=admin_manage.aspx target="menu">□ 管理员管理</a></TD></TR>
+              <TR>
+              <TD height=30 style="width: 135px"> 
+              <p style="line-height: 200%">
+              </TD></TR></TBODY></TABLE>
+                <p class="sec_menu">&nbsp;</p>
+              </DIV></TD></TR></TBODY></TABLE>
+                </td>
+                <td style="width: 7px">
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="3" height="13">
+                    &nbsp;</td>
+            </tr>
+        </table>
+
+</TABLE>  
+</body>   
+</html>

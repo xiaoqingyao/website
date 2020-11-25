@@ -1,0 +1,2 @@
+D:\03测试项目\BS开发框架_建筑材料管理系统_20160124\BS开发框架_建筑材料管理系统_20160124\source20131023\Zephyr.Web\obj\Release\Zephyr.Web.csprojAssemblyReference.cache
+D:\03测试项目\BS开发框架_建筑材料管理系统_20160124\BS开发框架_建筑材料管理系统_20160124\source20131023\Zephyr.Web\obj\Release\Zephyr.Web.csproj.CoreCompileInputs.cache

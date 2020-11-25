@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*main*/
+.bgMain{
+width:99%; margin-top:5px; height:100%; margin-left:auto; margin-right:auto; overflow:hidden;}
+.indexMain{
+width:100%; margin-top:5px; height:100%; overflow:hidden;}
+/
+
+.cadTit{
+width:260px; height:32px; overflow:hidden;}
+.cadCont{
+width:258px; height:auto; background-color:#FFFFFF; overflow:hidden;}
+.ymNaviss{
+width:256px; height:20px; line-height:20px; margin-top:1px; margin-left:auto; margin-right:auto; overflow:hidden;}
+.ymNavis{
+width:160px; line-height:20px; margin-left:auto; margin-right:auto; overflow:hidden;}
+.ymNavis SPAN{
+float:left; margin-left:3px; margin-right:3px; width:70px; text-align:center;}
+.ymNaviBtn{
+height:15px; width:15px; margin-top:2px; float:left; margin-left:3px; margin-right:3px; overflow:hidden;}
+
+.cadTable{
+margin-bottom:1px; background-color:#FFFFFF; text-align:center;}
+.red{
+color:#FF0000;}
+.cadTable thead{
+height:20px; overflow:hidden;}
+.cadTable tbody tr{
+height:18px;}
+.cadTable tbody td A{
+width:100%; height:100%; float:left;}
+.cadTable tbody td A:hover{
+background-color:#fdfdcf;}

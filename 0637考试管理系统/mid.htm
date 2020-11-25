@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>欢迎使用音像租赁管理系统</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<STYLE type=text/css>BODY {
+	MARGIN: 0px
+}
+</STYLE>
+<script language="JavaScript">
+
+if (navigator.appName.indexOf("Internet Explorer") != -1) 
+document.onmousedown = noSourceExplorer;
+
+function noSourceExplorer()
+{
+if (event.button == 2 | event.button == 3)
+{
+//alert("版权所有（C），严禁复制！");
+//location.replace("../copy.htm");
+}
+}
+</script>
+<META content="MSHTML 6.00.3790.2541" name=GENERATOR></HEAD>
+<BODY bgColor=#e0ebfc>
+<DIV id=showmenu 
+style="LEFT: 0px; WIDTH: 10px; POSITION: absolute; TOP: 221px; HEIGHT: 31px"><IMG 
+onmouseover="this.style.cursor='hand'" onclick=hidFrame() alt=隐藏菜单 
+src="mid/scroll_right.gif" name=img1></DIV>
+<SCRIPT language=javascript>
+//显示/隐藏左边帧( 默认情况下为显示左边帧 2003.4 )
+var currentChoice = true;
+arrow1=new Image;
+arrow2=new Image;
+arrow1.src="images/new/scroll_right.gif";
+arrow2.src="images/new/scroll_left.gif";
+if (currentChoice) {
+	document.img1.src=arrow1.src;
+	document.img1.alt="隐藏菜单";
+} else {
+    document.img1.src=arrow2.src;
+    document.img1.alt="显示菜单";
+}
+
+function hidFrame(){
+	if(currentChoice){
+		if (parent.setyou.cols=="150,10,*,10,198"){
+			parent.setyou.cols="0,10,*,10,198";
+			document.img1.src=arrow2.src;
+			document.img1.alt="显示菜单";
+		} else if (parent.setyou.cols=="150,10,*,10,0"){
+			parent.setyou.cols="0,10,*,10,0";
+			document.img1.src=arrow2.src;
+			document.img1.alt="显示菜单";
+		}
+	} else {
+		if (parent.setyou.cols=="0,10,*,10,198"){
+			parent.setyou.cols="150,10,*,10,198";
+			document.img1.src=arrow1.src;
+			document.img1.alt="隐藏菜单";
+		} else if (parent.setyou.cols=="0,10,*,10,0"){
+			parent.setyou.cols="150,10,*,10,0";
+			document.img1.src=arrow1.src;
+			document.img1.alt="隐藏菜单";
+		}
+	}
+	currentChoice = !currentChoice;
+
+}
+
+function hidFrame2(){
+	parent.bottomFrame.cols="0,10,*";
+	document.img1.src=arrow2.src;
+	document.img1.alt="显示菜单";
+	currentChoice = false;
+}
+
+function showFrame2(){
+	parent.bottomFrame.cols="150,10,*";
+	document.img1.src=arrow1.src;
+	document.img1.alt="隐藏菜单";
+	currentChoice = true;
+
+}
+</SCRIPT>
+</BODY></HTML>

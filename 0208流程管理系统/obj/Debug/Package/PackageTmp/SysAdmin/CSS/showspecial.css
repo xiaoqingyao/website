@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* CSS Document */
+*{ 
+	margin:0px; 
+	padding:0px;
+}
+body{
+	font-size:12px;
+	}
+.subject{
+	border:#e4e4e4 1px solid;
+	padding-bottom:15px;
+}
+.subject h4{ 
+	background:#f9f9f9;
+	font-size:12px;
+	height:30px;
+	line-height:30px;
+	padding-left:15px;
+	border-width:1px 1px 0;
+	margin-left:2px;
+}
+.subject ul{ 
+}
+.subject li{
+	color:#333;
+	float:left;
+	border:#e4e4e4 1px solid;
+	margin:1px;
+	padding:2px 4px;
+	display:block;
+	white-space:nowrap
+}

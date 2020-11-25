@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "程序数据库VS2010+SQL2005", ".", "{7DABCDD5-AD8D-4647-8FE4-02732DD0399A}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv2.0"
+		Debug.AspNetCompiler.VirtualPath = "/JiaTingLiCaiWebMIs"
+		Debug.AspNetCompiler.PhysicalPath = "..\JiaTingLiCaiWebMIs\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\JiaTingLiCaiWebMIs\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/JiaTingLiCaiWebMIs"
+		Release.AspNetCompiler.PhysicalPath = "..\JiaTingLiCaiWebMIs\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\JiaTingLiCaiWebMIs\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "49993"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7DABCDD5-AD8D-4647-8FE4-02732DD0399A}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{7DABCDD5-AD8D-4647-8FE4-02732DD0399A}.Debug|.NET.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8CE3D166-F2C7-4617-84D9-68A7F6ECF76D}
+	EndGlobalSection
+EndGlobal

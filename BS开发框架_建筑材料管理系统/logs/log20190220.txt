@@ -1,0 +1,8 @@
+2019-02-20 10:39:47,588 [55216] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2019-02-20 10:39:47,652 [55216] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2019-02-20 10:39:47,656 [55216] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2019-02-20 10:39:47,663 [55216] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2019-02-20 10:43:29,662 [65072] DEBUG Servicesys_user - 获取实体对象
+2019-02-20 10:43:29,676 [65072] DEBUG Sys - select sys_user.* from sys_user where  UserCode =  'admin'and Password =  'admin23\'and IsEnable =  'True'
+2019-02-20 10:43:32,339 [56808] DEBUG Servicesys_user - 获取实体对象
+2019-02-20 10:43:32,339 [56808] DEBUG Sys - select sys_user.* from sys_user where  UserCode =  'admin'and Password =  'admin2123'and IsEnable =  'True'

@@ -1,0 +1,35 @@
+﻿<!DOCTYPE HTML SYSTEM "-//Macromedia//DWExtension layout-engine 5.0//dialog">
+<html>
+<head>
+ <meta http-equiv="Content-Type"  content="text/html; charset=utf-8"  />
+<title>插入单页内容标签</title>
+<script type="text/javascript">
+function commandButtons() {
+return new Array("插入标签", "GetValue()",  "取消", "window.close()")
+}
+function GetValue()
+{
+	var temptxt="{SinglePage Length=\"";
+	var len=document.getElementById("subcontent").value;
+	temptxt+=len+"\" IsDot=\"";
+	var isdotValue=0;
+	if(document.getElementById("isdot").options[1].selected==true)
+	{
+		isdotValue=1
+	}
+	temptxt+=isdotValue+"\"}";
+	dreamweaver.getDocumentDOM("document").source.wrapSelection(temptxt, '');
+	window.close();
+}
+function windowDimensions() { return "350,100"; }
+</script>
+</head>
+<body>
+<form name="theform" method="post" action="">
+<table width="300" border="0" align="center" cellpadding="4" cellspacing="1">
+<tr><td align="right"> 内容截取长度</td><td><input type='text' value='0' id='subcontent' size='4' maxlength='6'></td></tr>
+<tr><td align="right">是否加省略号</td><td><select id='isdot'><option value='0' selected>不加</option><option value='1'>加</td></tr>
+</table>
+</form>
+</body>
+</html>

@@ -1,0 +1,85 @@
+﻿.btn
+    {
+	    background-color: #DCDCFF;
+	    color: #000000;
+	    font-size: 9pt;
+	    font-weight: Normal;
+	    text-decoration: None;
+	    FOTN-FAMILY: 宋体,verdana,Arial, Helvetica;
+	    text-align: center;
+	    border: 1 solid #003399;	   
+	    cursor: hand;	     
+	    height:20px;
+    }
+  
+    .div{
+         width:100px;
+   height:90px;
+    position:absolute;
+    left:0px;
+    top:0px;
+    background:#ffffff;
+    text-align:center;    
+    filter:Alpha(opacity=100);   
+    font-size:9pt;
+    color:#FFFFFF;
+    border:1px solid #003399;
+    display:table-cell;
+    z-index:3;    
+    }
+    .divLoading
+    {
+        	
+		z-index:2;	
+	width:102%;
+   height:100%;
+    position:absolute;
+    left:0px;
+    top:0pxpx;
+    background:#9CCBFF;
+    text-align:center;    
+    filter:Alpha(opacity=0);   
+    font-size:9pt;
+    color:#00659C;
+    border:1px solid #003399;    
+    display:table-cell;
+
+    }
+  #main {    
+    position:absolute;
+    left:230px;
+    top:180px;
+    background:#EFEFFF;
+    text-align:left;
+    filter:Alpha(opacity=100)    
+  }
+  #ChatHead {
+    text-align:right;
+    padding:3px;
+    border:1px solid #003399;
+    background:#DCDCFF;
+    font-size:11px;
+    color:#3366FF;
+    cursor:move;
+  }
+  #ChatHead a:link,#ChatHead a:visited, {
+    font-size:14px;
+    font-weight:bold;
+    padding:0 3px
+  }
+  #ChatBody {
+    border:1px solid #003399;
+    border-top:none;
+    padding:2px;
+  }
+  #ChatContent {
+    height:200px;
+    padding:6px;
+    overflow-y:scroll;
+    word-break: break-all
+  }
+  #ChatBtn {
+    border-top:1px solid #003399;
+    padding:2px
+  }
+ 

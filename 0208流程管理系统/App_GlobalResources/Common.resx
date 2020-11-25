@@ -1,0 +1,407 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Add" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>返回</value>
+  </data>
+  <data name="formValidationLanguage" xml:space="preserve">
+    <value>jquery-validationEngine-cn.js</value>
+    <comment>表单验证脚本配置文件</comment>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>修改</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>搜索</value>
+  </data>
+  <data name="Orders" xml:space="preserve">
+    <value>排序</value>
+  </data>
+  <data name="Browse" xml:space="preserve">
+    <value>浏览</value>
+  </data>
+  <data name="Del" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="DelConfirm" xml:space="preserve">
+    <value>确定要删除吗？</value>
+  </data>
+  <data name="ModelOrder" xml:space="preserve">
+    <value>排序</value>
+  </data>
+  <data name="ON" xml:space="preserve">
+    <value>&lt;span style="color:red;font-size:14px"&gt;√&lt;/span&gt;</value>
+  </data>
+  <data name="Operation" xml:space="preserve">
+    <value>操作</value>
+  </data>
+  <data name="COPY" xml:space="preserve">
+    <value>复制</value>
+  </data>
+  <data name="OFF" xml:space="preserve">
+    <value>&lt;span style="color:green;font-size:14px"&gt;×&lt;/span&gt;</value>
+  </data>
+  <data name="Asc" xml:space="preserve">
+    <value>升</value>
+  </data>
+  <data name="Desc" xml:space="preserve">
+    <value>降</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>否</value>
+  </data>
+  <data name="Null" xml:space="preserve">
+    <value>无</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>是</value>
+  </data>
+  <data name="UploadClose" xml:space="preserve">
+    <value>关 闭</value>
+  </data>
+  <data name="UploadErr1" xml:space="preserve">
+    <value>上传文件不能大于</value>
+  </data>
+  <data name="UploadExtErr" xml:space="preserve">
+    <value>上传格式不正确</value>
+  </data>
+  <data name="UploadExtErr1" xml:space="preserve">
+    <value>此文件为系统禁止上传类型</value>
+  </data>
+  <data name="UploadFileExistErr" xml:space="preserve">
+    <value>文件已存在，请另外命名文件名后上传</value>
+  </data>
+  <data name="UploadMsg" xml:space="preserve">
+    <value>1.只能上传</value>
+    <comment>上传提示</comment>
+  </data>
+  <data name="UploadMsg1" xml:space="preserve">
+    <value>上传文件</value>
+  </data>
+  <data name="UploadMsg2" xml:space="preserve">
+    <value>文件</value>
+  </data>
+  <data name="UploadMsg3" xml:space="preserve">
+    <value>生成缩略图</value>
+  </data>
+  <data name="UploadMsg4" xml:space="preserve">
+    <value>注：生成的缩略图会与上传的图片保存在同一路径下，文件命名为:上传文件名+.gif,例如上传图片保存后的名称是“201001011122.jpg”,则缩略图为“201001011122.jpg.gif”</value>
+  </data>
+  <data name="UploadMsg5" xml:space="preserve">
+    <value>每个文件不能大于</value>
+  </data>
+  <data name="UploadMsg6" xml:space="preserve">
+    <value>上传功能已关闭，请与管理员联系</value>
+  </data>
+  <data name="UploadMsg7" xml:space="preserve">
+    <value>请选择要上传的文件</value>
+  </data>
+  <data name="UploadMsg8" xml:space="preserve">
+    <value>请不要关闭，文件正在上传······</value>
+  </data>
+  <data name="UploadSubmit" xml:space="preserve">
+    <value>上 传</value>
+  </data>
+  <data name="Describe" xml:space="preserve">
+    <value>描述</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>类型</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>标题</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>生成</value>
+  </data>
+  <data name="AddTime" xml:space="preserve">
+    <value>添加日期</value>
+  </data>
+  <data name="UserNo" xml:space="preserve">
+    <value>用户</value>
+  </data>
+  <data name="FlowFail" xml:space="preserve">
+    <value>退稿</value>
+  </data>
+  <data name="FlowSuccess" xml:space="preserve">
+    <value>通过</value>
+  </data>
+  <data name="Content" xml:space="preserve">
+    <value>内容</value>
+  </data>
+  <data name="Author" xml:space="preserve">
+    <value>作者</value>
+  </data>
+  <data name="Source" xml:space="preserve">
+    <value>来源</value>
+  </data>
+  <data name="Review" xml:space="preserve">
+    <value>审核</value>
+  </data>
+  <data name="LogicDel" xml:space="preserve">
+    <value>逻辑删除</value>
+  </data>
+  <data name="BusinessModel" xml:space="preserve">
+    <value>商家</value>
+  </data>
+  <data name="Exist" xml:space="preserve">
+    <value>已存在</value>
+  </data>
+  <data name="Failure" xml:space="preserve">
+    <value>失败</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>成功</value>
+  </data>
+  <data name="ModelGroup" xml:space="preserve">
+    <value>模型分组</value>
+  </data>
+  <data name="ReviewFlow" xml:space="preserve">
+    <value>审核流程</value>
+  </data>
+  <data name="Advertisement" xml:space="preserve">
+    <value>广告</value>
+  </data>
+  <data name="Advertising" xml:space="preserve">
+    <value>广告位</value>
+  </data>
+  <data name="CustomForm" xml:space="preserve">
+    <value>自定义表单</value>
+  </data>
+  <data name="FlowStep" xml:space="preserve">
+    <value>流程步骤</value>
+  </data>
+  <data name="ReviewFlowState" xml:space="preserve">
+    <value>流程状态</value>
+  </data>
+  <data name="Vote" xml:space="preserve">
+    <value>投票</value>
+  </data>
+  <data name="Survey" xml:space="preserve">
+    <value>问卷调查</value>
+  </data>
+  <data name="SurveyItem" xml:space="preserve">
+    <value>问卷调查选项</value>
+  </data>
+  <data name="EDIT" xml:space="preserve">
+    <value>修改</value>
+  </data>
+  <data name="NEW" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="TipMessage" xml:space="preserve">
+    <value>提示信息</value>
+  </data>
+  <data name="FriendLinkClass" xml:space="preserve">
+    <value>友情链接分类</value>
+  </data>
+  <data name="IsRecommendOff" xml:space="preserve">
+    <value>不推荐</value>
+  </data>
+  <data name="IsRecommendOn" xml:space="preserve">
+    <value>推荐</value>
+  </data>
+  <data name="IsTopOff" xml:space="preserve">
+    <value>不置顶</value>
+  </data>
+  <data name="IsTopOn" xml:space="preserve">
+    <value>置顶</value>
+  </data>
+  <data name="SurveyVote" xml:space="preserve">
+    <value>问卷投票结果</value>
+  </data>
+  <data name="DelFileAll" xml:space="preserve">
+    <value>批量删除目录/文件</value>
+  </data>
+  <data name="DelDirectory" xml:space="preserve">
+    <value>删除空目录</value>
+  </data>
+  <data name="DelFile" xml:space="preserve">
+    <value>删除文件</value>
+  </data>
+  <data name="CreateDirectory" xml:space="preserve">
+    <value>新建目录</value>
+  </data>
+  <data name="AddWaterMark" xml:space="preserve">
+    <value>添加水印</value>
+  </data>
+  <data name="OffTitle" xml:space="preserve">
+    <value>禁用</value>
+  </data>
+  <data name="OnTitle" xml:space="preserve">
+    <value>启用</value>
+  </data>
+  <data name="CustomInfoHTML" xml:space="preserve">
+    <value>共&lt;font color='red'&gt;%RecordCount%&lt;/font&gt;条，&lt;font color='red'&gt;%PageSize%&lt;/font&gt;条/页，共&lt;font color='red'&gt;%PageCount%&lt;/font&gt;页</value>
+  </data>
+  <data name="Recycling" xml:space="preserve">
+    <value>回收站</value>
+  </data>
+  <data name="RESE" xml:space="preserve">
+    <value>还原</value>
+  </data>
+  <data name="KeywordFilter" xml:space="preserve">
+    <value>关键字</value>
+  </data>
+  <data name="RecyclingManage" xml:space="preserve">
+    <value>回收站信息表</value>
+  </data>
+  <data name="FriendLink" xml:space="preserve">
+    <value>友情链接</value>
+  </data>
+  <data name="TemplateProject" xml:space="preserve">
+    <value>模板方案</value>
+  </data>
+  <data name="TemplateStyle" xml:space="preserve">
+    <value>模板风格</value>
+  </data>
+  <data name="Memorandum" xml:space="preserve">
+    <value>备忘录</value>
+  </data>
+  <data name="WorkStation" xml:space="preserve">
+    <value>我的工作台</value>
+  </data>
+  <data name="LableClass" xml:space="preserve">
+    <value>标签分类</value>
+  </data>
+  <data name="Lable" xml:space="preserve">
+    <value>标签</value>
+  </data>
+  <data name="FileDir" xml:space="preserve">
+    <value>文件目录</value>
+  </data>
+  <data name="SkinFile" xml:space="preserve">
+    <value>风格文件</value>
+  </data>
+  <data name="TemplateFile" xml:space="preserve">
+    <value>模板文件</value>
+  </data>
+  <data name="ModelManageName" xml:space="preserve">
+    <value>模型列表</value>
+  </data>
+</root>

@@ -1,0 +1,105 @@
+2018-08-12 22:16:41,487 [6036] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2018-08-12 22:16:41,712 [6036] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2018-08-12 22:16:41,721 [6036] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2018-08-12 22:16:41,766 [6036] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2018-08-12 22:20:32,619 [4060] DEBUG Servicesys_user - 获取实体对象
+2018-08-12 22:20:32,626 [4060] DEBUG Sys - select sys_user.* from sys_user where  UserCode =  'admin'and Password =  '1234'and IsEnable =  'True'
+2018-08-12 22:20:32,811 [4060] DEBUG Sys - 
+update sys_user
+set LoginCount = isnull(LoginCount,0) + 1
+   ,LastLoginDate = getdate()
+where UserCode = 'admin' 
+2018-08-12 22:20:32,898 [4060] DEBUG Sys - insert into sys_loginHistory([UserCode],[UserName],[HostName],[HostIP],[LoginCity],[LoginDate]) values('admin','管理员','','171.113.186.15','湖北省武汉市','2018/8/12 星期日 22:20:32')
+2018-08-12 22:20:32,930 [4060] DEBUG Servicemms_project - 获取实体对象
+2018-08-12 22:20:32,931 [4060] DEBUG Mms - select mms_project.* from mms_project where  ProjectCode =  '201306030001'
+2018-08-12 22:20:33,086 [172] DEBUG Sys - select * from sys_userSetting where UserCode='admin'
+2018-08-12 22:20:35,630 [4060] DEBUG Sys - 
+--角色的菜单
+select distinct B.*
+from sys_roleMenuMap A
+inner join sys_menu  B on B.MenuCode = A.MenuCode
+where B.IsEnable='1'
+  and RoleCode in (
+  select RoleCode from sys_userRoleMap where UserCode = 'admin' --用户的角色
+union all
+  select RoleCode from sys_organizeRoleMap where OrganizeCode in  --机构的角色
+  (
+	select OrganizeCode from sys_userOrganizeMap where UserCode = 'admin'
+  )  
+)
+order by B.MenuSeq,B.MenuCode
+2018-08-12 22:20:40,713 [208] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'admin'
+and C.URL in ('/Mms/refund/Index','/Mms/refund')
+2018-08-12 22:20:40,737 [208] DEBUG Servicemms_warehouse - 获取动态列表
+2018-08-12 22:20:40,738 [208] DEBUG Mms - select WarehouseCode as value,WarehouseName as text from mms_warehouse where  ProjectCode =  '201306030001'
+2018-08-12 22:20:45,866 [4060] DEBUG Servicemms_refund - 获取动态列表
+2018-08-12 22:20:45,866 [4060] DEBUG Mms - select top 20 
+        A.*, B.ProjectName, C.MaterialTypeName, D.WarehouseName,E.MerchantsName as RefundUnitName
+     from 
+        mms_refund A
+        left join mms_project       B on B.ProjectCode      = A.ProjectCode
+        left join mms_materialType  C on C.MaterialType = A.MaterialType
+        left join mms_warehouse         D on D.WarehouseCode       = A.WarehouseCode
+        left join mms_merchants     E on E.MerchantsCode    = A.RefundUnit
+     where  A.ProjectCode =  '201306030001' order by A.BillNo
+2018-08-12 22:20:45,946 [4060] DEBUG Mms - select count(*) from ( select 
+        A.*, B.ProjectName, C.MaterialTypeName, D.WarehouseName,E.MerchantsName as RefundUnitName
+     from 
+        mms_refund A
+        left join mms_project       B on B.ProjectCode      = A.ProjectCode
+        left join mms_materialType  C on C.MaterialType = A.MaterialType
+        left join mms_warehouse         D on D.WarehouseCode       = A.WarehouseCode
+        left join mms_merchants     E on E.MerchantsCode    = A.RefundUnit
+     where  A.ProjectCode =  '201306030001' ) tb_temp
+2018-08-12 22:20:52,866 [208] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'admin'
+and C.URL in ('/Sys/permission/Index','/Sys/permission')
+2018-08-12 22:20:53,609 [172] DEBUG Servicesys_permission - 获取动态列表
+2018-08-12 22:20:53,610 [172] DEBUG Sys - select A.*,B.PermissionName as ParentName from sys_permission A left join sys_permission B on B.PermissionCode = A.ParentCode
+2018-08-12 22:20:55,291 [4060] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'admin'
+and C.URL in ('/Sys/user/Index','/Sys/user')
+2018-08-12 22:20:56,578 [6036] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'admin'
+and C.URL in ('/Sys/code/Index','/Sys/code')
+2018-08-12 22:20:57,927 [2316] DEBUG Sys - 
+select 1
+from sys_roleMenuMap A
+left join sys_userRoleMap B on B.RoleCode = A.RoleCode
+left join sys_menu C on C.MenuCode = A.MenuCode
+where B.UserCode = 'admin'
+and C.URL in ('/Sys/parameter/Index','/Sys/parameter')
+2018-08-12 22:20:58,557 [172] DEBUG Servicesys_parameter - 获取实体列表
+2018-08-12 22:20:58,559 [172] DEBUG Sys - select top 20 sys_parameter.* from sys_parameter order by ParamCode
+2018-08-12 22:20:58,574 [172] DEBUG Sys - select count(*) from ( select sys_parameter.* from sys_parameter ) tb_temp
+2018-08-12 22:20:58,726 [4060] DEBUG Servicesys_organize - 获取实体列表
+2018-08-12 22:20:58,727 [4060] DEBUG Sys - select sys_organize.* from sys_organize
+2018-08-12 22:20:58,765 [2316] DEBUG Servicesys_codeType - 获取动态列表
+2018-08-12 22:20:58,766 [2316] DEBUG Sys - select sys_codeType.* from sys_codeType order by Seq,CodeType
+2018-08-12 22:20:58,766 [208] DEBUG Servicesys_user - 获取实体列表
+2018-08-12 22:20:58,774 [208] DEBUG Sys - select top 20 sys_user.* from sys_user order by UserSeq
+2018-08-12 22:20:58,787 [208] DEBUG Sys - select count(*) from ( select sys_user.* from sys_user ) tb_temp
+2018-08-12 22:20:59,191 [172] DEBUG Servicesys_code - 获取实体列表
+2018-08-12 22:20:59,192 [172] DEBUG Sys - select top 20 sys_code.* from sys_code order by Seq
+2018-08-12 22:20:59,207 [172] DEBUG Sys - select count(*) from ( select sys_code.* from sys_code ) tb_temp
+2018-08-12 22:43:09,708 [444] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2018-08-12 22:43:09,717 [444] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2018-08-12 22:43:09,721 [444] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2018-08-12 22:43:09,721 [444] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')

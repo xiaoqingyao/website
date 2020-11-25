@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title></title>
+    <link href="../css/public.css" rel="stylesheet" type="text/css" />
+      <link href="../CSS/validationEngine.css" rel="stylesheet" type="text/css" />
+    <script src="../JS/jquery-3.2.min.js" type="text/javascript"></script>
+        <script src="../JS/jquery-3.2-vsdoc2.js" type="text/javascript"></script>    
+    <script src="../JS/jquery-validationEngine.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../js/jquery-validationEngine-cn.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function() { $("#theForm").validationEngine({ promptPosition: "centerRight" }) });
+
+        function closeSubmit(rType) {
+            if (isEmpty()) {
+                parent.document.getElementById("hiOld").value = document.getElementById("txtOldCode").value;
+                parent.document.getElementById("hiReplace").value = document.getElementById("txtReplace").value;
+                //批量替换
+                if (rType == 1) {
+                    parent.document.getElementById("btnMutiReplace").click();
+                }
+                //全部替换
+                if (rType == 2) {
+                    parent.document.getElementById("btnAllReplace").click();
+                }
+                jQuery(parent.document.getElementById("norDialogBackground")).remove();
+                jQuery(parent.document.getElementById("norDialog")).remove().end();    
+            }
+            
+        }
+
+        function isEmpty() {
+            var str = document.getElementById("txtOldCode").value;            
+            if (str == "") {
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+        
+
+        
+    </script>     
+</head>
+<body>
+<form id="theForm" action="">
+ <div class="container">
+        <dl>
+            <dt>原代码：</dt>
+            <dd>
+            <textarea rows="7" cols="35" id="txtOldCode" class="validate[required,length[3,200]]"></textarea>
+            </dd>
+        </dl>
+        <dl>
+            <dt>替换成：</dt><dd>
+            <textarea rows="7" cols="35" id="txtReplace"></textarea>
+            </dd></dl>
+         <dl><dd style="color:Red;"> 注：  替换后将不能恢复，请谨慎操作！</dd></dl>
+                 <div class="Submit">
+                <input type="submit" id="btnSubmit" value="批量替换"  onclick="return closeSubmit(1);"  class="subButton" />
+          <input type="submit" id="Submit1" value="全部替换"  onclick="return closeSubmit(2);"  class="subButton" />
+                </div>
+        </div>
+        </form>
+</body>
+</html>

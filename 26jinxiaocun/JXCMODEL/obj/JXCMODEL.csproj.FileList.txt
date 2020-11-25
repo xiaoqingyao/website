@@ -1,0 +1,5 @@
+bin\Debug\JXCMODEL.dll
+bin\Debug\JXCMODEL.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\JXCMODEL.dll
+obj\Debug\JXCMODEL.pdb

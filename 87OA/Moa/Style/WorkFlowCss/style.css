@@ -1,0 +1,156 @@
+A:link {
+	COLOR: #0000ff; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #0000ff; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #3333ff; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #ff0000; TEXT-DECORATION: none
+}
+A.A1:link {
+	COLOR: #ffffff; TEXT-DECORATION: underline
+}
+A.A1:visited {
+	COLOR: #ffffff; TEXT-DECORATION: underline
+}
+A.A1:active {
+	COLOR: #3333ff; TEXT-DECORATION: underline
+}
+A.A1:hover {
+	COLOR: #ff0000; TEXT-DECORATION: underline
+}
+BODY {
+	SCROLLBAR-FACE-COLOR: #eeeaeb; FONT-SIZE: 12pt; SCROLLBAR-HIGHLIGHT-COLOR: #fbfdfc; SCROLLBAR-SHADOW-COLOR: #170708; SCROLLBAR-3DLIGHT-COLOR: #170708; SCROLLBAR-ARROW-COLOR: #000000; SCROLLBAR-DARKSHADOW-COLOR: #ffffff; SCROLLBAR-BASE-COLOR: #170708
+}
+.bodycolor {
+	BACKGROUND: #677cad
+}
+.loginbodycolor {
+	BACKGROUND: #6ba2d8
+}
+.topbar {
+	FONT-SIZE: 9pt; BACKGROUND: url(/theme/1/topbar.gif) #c4d9ef
+}
+.topbar2 {
+	FONT-SIZE: 9pt; BACKGROUND: url(/theme/1/menubg.gif) #c4d9ef
+}
+#Nav A {
+	DISPLAY: block; COLOR: #000000; POSITION: relative
+}
+#Nav A:hover {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 4px; MARGIN: 0px; COLOR: #ffffff; PADDING-TOP: 4px; BACKGROUND-COLOR: #677cad
+}
+.panel {
+	BACKGROUND: #c4d9ef; COLOR: #654125
+}
+.timebar {
+	BACKGROUND: #cedff1
+}
+.statusbar {
+	BACKGROUND-IMAGE: url(/theme/1/statusbar.gif)
+}
+.col {
+	BACKGROUND: url(/theme/1/col.gif) #c4d9ef
+}
+.small {
+	FONT-SIZE: 9pt
+}
+.small1 {
+	FONT-SIZE: 9pt; COLOR: #ffffff
+}
+.big {
+	FONT-SIZE: 12pt
+}
+.big1 {
+	FONT-SIZE: 12pt; COLOR: #ffffff
+}
+.big2 {
+	FONT-SIZE: 18pt
+}
+.big3 {
+	FONT-WEIGHT: bold; FONT-SIZE: 12pt; COLOR: #ffffff
+}
+.big4 {
+	COLOR: #ff0000
+}
+.verybig {
+	FONT-SIZE: 24pt
+}
+INPUT.SmallButton {
+	BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; FONT-SIZE: 9pt; BACKGROUND-IMAGE: url(/theme/1/button_back.gif); BORDER-LEFT: black 1px solid; CURSOR: hand; COLOR: #000066; BORDER-BOTTOM: #104a7b 1px solid; HEIGHT: 19px; TEXT-DECORATION: none
+}
+INPUT.BigButton {
+	BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; FONT-SIZE: 12pt; BACKGROUND-IMAGE: url(/theme/1/button_back.gif); BORDER-LEFT: black 1px solid; CURSOR: hand; COLOR: #000066; BORDER-BOTTOM: #104a7b 1px solid; HEIGHT: 24px; TEXT-DECORATION: none
+}
+INPUT.SmallInput {
+	BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; FONT-WEIGHT: normal; FONT-SIZE: 9pt; BACKGROUND: #f8f8f8; BORDER-LEFT: black 1px solid; COLOR: #000066; LINE-HEIGHT: normal; BORDER-BOTTOM: black 1px solid; FONT-STYLE: normal; HEIGHT: 18px; FONT-VARIANT: normal
+}
+INPUT.SmallInput1 {
+	BORDER-RIGHT: 0px; BORDER-TOP: black 1px solid; FONT-WEIGHT: normal; FONT-SIZE: 9pt; BACKGROUND: #f8f8f8; BORDER-LEFT: black 1px solid; COLOR: #000066; LINE-HEIGHT: normal; BORDER-BOTTOM: black 1px solid; FONT-STYLE: normal; HEIGHT: 18px; FONT-VARIANT: normal
+}
+INPUT.BigInput {
+	BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; FONT-WEIGHT: normal; FONT-SIZE: 12pt; BACKGROUND: #f8f8f8; BORDER-LEFT: black 1px solid; COLOR: #000066; LINE-HEIGHT: normal; BORDER-BOTTOM: 1px double; FONT-STYLE: normal; HEIGHT: 22px; FONT-VARIANT: normal
+}
+INPUT.BigInputMoney {
+	BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; FONT-WEIGHT: normal; FONT-SIZE: 12pt; BACKGROUND: #f8f8f8; BORDER-LEFT: black 1px solid; COLOR: #000066; LINE-HEIGHT: normal; BORDER-BOTTOM: 1px double; FONT-STYLE: normal; HEIGHT: 22px; TEXT-ALIGN: right; FONT-VARIANT: normal
+}
+INPUT.SmallStatic {
+	BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; FONT-WEIGHT: normal; FONT-SIZE: 9pt; BACKGROUND: #e0e0e0; BORDER-LEFT: black 1px solid; COLOR: #000066; LINE-HEIGHT: normal; BORDER-BOTTOM: black 1px solid; FONT-STYLE: normal; HEIGHT: 18px; FONT-VARIANT: normal
+}
+INPUT.BigStatic {
+	BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; FONT-WEIGHT: normal; FONT-SIZE: 12pt; BACKGROUND: #e0e0e0; BORDER-LEFT: black 1px solid; COLOR: #000066; LINE-HEIGHT: normal; BORDER-BOTTOM: 1px double; FONT-STYLE: normal; HEIGHT: 22px; FONT-VARIANT: normal
+}
+SELECT.BigSelect {
+	BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; FONT-WEIGHT: normal; FONT-SIZE: 12pt; BACKGROUND: #f8f8f8; BORDER-LEFT: black 1px solid; COLOR: #000066; LINE-HEIGHT: normal; BORDER-BOTTOM: 1px double; FONT-STYLE: normal; HEIGHT: 22px; FONT-VARIANT: normal
+}
+SELECT.SmallSelect {
+	BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; FONT-WEIGHT: normal; FONT-SIZE: 9pt; BACKGROUND: #f8f8f8; BORDER-LEFT: black 1px solid; COLOR: #000066; LINE-HEIGHT: normal; BORDER-BOTTOM: 1px double; FONT-STYLE: normal; HEIGHT: 18px; FONT-VARIANT: normal
+}
+SELECT.BigStatic {
+	BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; FONT-WEIGHT: normal; FONT-SIZE: 12pt; BACKGROUND: #e0e0e0; BORDER-LEFT: black 1px solid; COLOR: #000066; LINE-HEIGHT: normal; BORDER-BOTTOM: 1px double; FONT-STYLE: normal; HEIGHT: 22px; FONT-VARIANT: normal
+}
+SELECT.SmallStatic {
+	BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; FONT-WEIGHT: normal; FONT-SIZE: 9pt; BACKGROUND: #e0e0e0; BORDER-LEFT: black 1px solid; COLOR: #000066; LINE-HEIGHT: normal; BORDER-BOTTOM: black 1px solid; FONT-STYLE: normal; HEIGHT: 18px; FONT-VARIANT: normal
+}
+TEXTAREA.BigInput {
+	BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; FONT-WEIGHT: normal; FONT-SIZE: 10pt; BACKGROUND: #f8f8f8; BORDER-LEFT: black 1px solid; COLOR: #000066; LINE-HEIGHT: normal; BORDER-BOTTOM: 1px double; FONT-STYLE: normal; FONT-VARIANT: normal
+}
+TEXTAREA.BigStatic {
+	BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; FONT-WEIGHT: normal; FONT-SIZE: 10pt; BACKGROUND: #e0e0e0; BORDER-LEFT: black 1px solid; COLOR: #000066; LINE-HEIGHT: normal; BORDER-BOTTOM: 1px double; FONT-STYLE: normal; FONT-VARIANT: normal
+}
+.TableControl {
+	BACKGROUND: #eff7ff
+}
+.TableHeader {
+	FONT-WEIGHT: bold; FONT-SIZE: 11pt; BACKGROUND: url(/theme/1/headerbg.gif) #d3e5fa; COLOR: #3f3f7e
+}
+.TableHeader1 {
+	BACKGROUND: url(/theme/1/button_back.gif) #d3e5fa; CURSOR: hand; COLOR: #000066
+}
+.TableHeader2 {
+	FONT-WEIGHT: bold; BACKGROUND: url(/theme/1/menubg.gif) #d3e5fa; CURSOR: hand; COLOR: #000066
+}
+.TableContent {
+	BACKGROUND: #e2e8fa
+}
+.TableData {
+	BACKGROUND: #ffffff; COLOR: #000000
+}
+.TableLine1 {
+	BACKGROUND: #f3f3f3
+}
+.TableLine2 {
+	BACKGROUND: #ffffff
+}
+.TextColor1 {
+	COLOR: #ff6600
+}
+.TextColor2 {
+	COLOR: #ff0000
+}
+.top {
+	FONT-WEIGHT: bold; COLOR: #ff0000
+}

@@ -1,0 +1,60 @@
+2018-12-05 16:37:05,356 [30992] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2018-12-05 16:37:05,476 [30992] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2018-12-05 16:37:05,480 [30992] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2018-12-05 16:37:05,564 [30992] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2018-12-05 16:38:29,017 [32756] DEBUG Servicesys_user - 获取实体对象
+2018-12-05 16:38:29,026 [32756] DEBUG Sys - select sys_user.* from sys_user where  UserCode =  'admin'and Password =  'admin'and IsEnable =  'True'
+2018-12-05 16:38:33,243 [32756] DEBUG Servicesys_user - 获取实体对象
+2018-12-05 16:38:33,243 [32756] DEBUG Sys - select sys_user.* from sys_user where  UserCode =  'admin'and Password =  '1234'and IsEnable =  'True'
+2018-12-05 16:38:36,116 [30912] DEBUG Servicesys_user - 获取实体对象
+2018-12-05 16:38:36,117 [30912] DEBUG Sys - select sys_user.* from sys_user where  UserCode =  'admin'and Password =  '12345'and IsEnable =  'True'
+2018-12-05 16:38:45,264 [32756] DEBUG Servicesys_user - 获取实体对象
+2018-12-05 16:38:45,264 [32756] DEBUG Sys - select sys_user.* from sys_user where  UserCode =  'admin'and Password =  '1234'and IsEnable =  'True'
+2018-12-05 16:38:46,966 [30912] DEBUG Servicesys_user - 获取实体对象
+2018-12-05 16:38:46,966 [30912] DEBUG Sys - select sys_user.* from sys_user where  UserCode =  'admin'and Password =  '1234'and IsEnable =  'True'
+2018-12-05 16:38:47,211 [30912] DEBUG Servicesys_user - 获取实体对象
+2018-12-05 16:38:47,211 [30912] DEBUG Sys - select sys_user.* from sys_user where  UserCode =  'admin'and Password =  '1234'and IsEnable =  'True'
+2018-12-05 16:38:47,454 [30912] DEBUG Servicesys_user - 获取实体对象
+2018-12-05 16:38:47,455 [30912] DEBUG Sys - select sys_user.* from sys_user where  UserCode =  'admin'and Password =  '1234'and IsEnable =  'True'
+2018-12-05 16:38:47,501 [32756] DEBUG Servicesys_user - 获取实体对象
+2018-12-05 16:38:47,502 [32756] DEBUG Sys - select sys_user.* from sys_user where  UserCode =  'admin'and Password =  '1234'and IsEnable =  'True'
+2018-12-05 16:38:47,704 [30912] DEBUG Servicesys_user - 获取实体对象
+2018-12-05 16:38:47,704 [30912] DEBUG Sys - select sys_user.* from sys_user where  UserCode =  'admin'and Password =  '1234'and IsEnable =  'True'
+2018-12-05 16:38:48,520 [32756] DEBUG Servicesys_user - 获取实体对象
+2018-12-05 16:38:48,520 [32756] DEBUG Sys - select sys_user.* from sys_user where  UserCode =  'admin'and Password =  '1234'and IsEnable =  'True'
+2018-12-05 16:38:49,061 [32756] DEBUG Servicesys_user - 获取实体对象
+2018-12-05 16:38:49,062 [32756] DEBUG Sys - select sys_user.* from sys_user where  UserCode =  'admin'and Password =  '1234'and IsEnable =  'True'
+2018-12-05 16:38:49,438 [32756] DEBUG Servicesys_user - 获取实体对象
+2018-12-05 16:38:49,438 [32756] DEBUG Sys - select sys_user.* from sys_user where  UserCode =  'admin'and Password =  '1234'and IsEnable =  'True'
+2018-12-05 16:38:49,568 [30912] DEBUG Servicesys_user - 获取实体对象
+2018-12-05 16:38:49,568 [30912] DEBUG Sys - select sys_user.* from sys_user where  UserCode =  'admin'and Password =  '1234'and IsEnable =  'True'
+2018-12-05 18:18:36,115 [34144] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2018-12-05 18:18:36,179 [34144] DEBUG Sys - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2018-12-05 18:18:36,183 [34144] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2018-12-05 18:18:36,217 [34144] DEBUG Mms - select name from dbo.sysobjects where id = object_id(N'[dbo].[fun_getPY]') and xtype in (N'FN', N'IF', N'TF')
+2018-12-05 18:19:29,594 [33668] DEBUG Servicesys_user - 获取实体对象
+2018-12-05 18:19:29,603 [33668] DEBUG Sys - select sys_user.* from sys_user where  UserCode =  'admin'and Password =  '1234'and IsEnable =  'True'
+2018-12-05 18:19:29,735 [33668] DEBUG Sys - 
+update sys_user
+set LoginCount = isnull(LoginCount,0) + 1
+   ,LastLoginDate = getdate()
+where UserCode = 'admin' 
+2018-12-05 18:19:29,842 [33668] DEBUG Sys - insert into sys_loginHistory([UserCode],[UserName],[HostName],[HostIP],[LoginCity],[LoginDate]) values('admin','管理员','iZqxlxq8z66evcZ','localhost','浙江省','2018/12/5 18:19:29')
+2018-12-05 18:19:29,853 [33668] DEBUG Servicemms_project - 获取实体对象
+2018-12-05 18:19:29,853 [33668] DEBUG Mms - select mms_project.* from mms_project where  ProjectCode =  '201306030001'
+2018-12-05 18:19:29,936 [34208] DEBUG Sys - select * from sys_userSetting where UserCode='admin'
+2018-12-05 18:19:35,524 [33668] DEBUG Sys - 
+--角色的菜单
+select distinct B.*
+from sys_roleMenuMap A
+inner join sys_menu  B on B.MenuCode = A.MenuCode
+where B.IsEnable='1'
+  and RoleCode in (
+  select RoleCode from sys_userRoleMap where UserCode = 'admin' --用户的角色
+union all
+  select RoleCode from sys_organizeRoleMap where OrganizeCode in  --机构的角色
+  (
+	select OrganizeCode from sys_userOrganizeMap where UserCode = 'admin'
+  )  
+)
+order by B.MenuSeq,B.MenuCode

@@ -1,0 +1,127 @@
+body,td {
+    margin: 0px;	
+	line-height: 20px;	
+	font-size: 12px;
+	color:#000000;	
+}
+submitcss {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BACKGROUND: url(../images/btn.png) no-repeat; BORDER-BOTTOM-WIDTH: 0px; WIDTH: 74px; CURSOR: hand; COLOR: #ffffff; HEIGHT: 21px; BORDER-RIGHT-WIDTH: 0px
+}
+textcss {
+	BORDER-RIGHT: #404040 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #404040 1px solid; PADDING-LEFT: 5px; FONT-SIZE: 9pt; BACKGROUND: url(../images/input.png) repeat-x; PADDING-BOTTOM: 2px; BORDER-LEFT: #404040 1px solid; COLOR: #212121; PADDING-TOP: 2px; BORDER-BOTTOM: #404040 1px solid
+}
+.inputCss
+{
+    height:20px;
+    width:250px;
+    }
+a:link {
+	font-size: 12px;	
+	color:#000000;
+	text-decoration: underline;
+}
+a:visited {
+	font-size: 12px;	
+	color:#000000;
+	text-decoration: underline;
+}
+a:hover {
+	font-size: 12px;
+    color:#CF7500;
+	text-decoration: none;
+}
+a.na:link {
+	font-size: 12px;	
+	font-weight:bold;
+	color:Red;
+	text-decoration: none;
+}
+a.na:visited {
+	font-size: 12px;	
+	font-weight:bold;
+	color:Red;
+	text-decoration: none;
+}
+a.na:hover {
+	font-size: 12px;
+	font-weight:bold;
+    color:Red;
+	text-decoration: underline;
+}
+a.hei:link {
+	font-size: 12px;	
+	color:Black;
+	text-decoration: none;
+}
+a.hei:visited {
+	font-size: 12px;	
+	color:Black;
+	text-decoration: none;
+}
+a.hei:hover {
+	font-size: 12px;
+	color:Black;
+	text-decoration: underline;
+}
+
+a.heiBold:link {
+	font-size: 12px;	
+	font-weight:bold;
+	color:Black;
+	text-decoration: underline;
+}
+a.heiBold:visited {
+	font-size: 12px;	
+	font-weight:bold;
+	color:Black;
+	text-decoration: underline;
+}
+a.heiBold:hover {
+	font-size: 12px;
+	font-weight:bold;
+	color:Black;
+	text-decoration: underline;
+}
+
+
+a.bai:link {
+	font-size: 12px;	
+	color:White;
+	text-decoration: none;
+}
+a.bai:visited {
+	font-size: 12px;	
+	color:White;
+	text-decoration: none;
+}
+a.bai:hover {
+	font-size: 12px;
+	color:White;
+	text-decoration: none;
+}
+.TextBoxCss {	
+	height:20px;
+	width:140px;	
+}
+
+.HerCss {
+	CURSOR: hand;
+}
+.tddisp {
+	DISPLAY: none
+	
+}
+.TextBoxCss
+{
+    font-size:12px;
+    color:Black;    
+    width:250px;
+}
+.ButtonCss
+{
+    font-size:12px;    
+}
+.DropCss
+{
+    font-size:12px;    
+}

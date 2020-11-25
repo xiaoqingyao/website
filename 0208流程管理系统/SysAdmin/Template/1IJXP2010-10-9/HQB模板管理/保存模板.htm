@@ -1,0 +1,75 @@
+﻿<!DOCTYPE HTML SYSTEM "-//Macromedia//DWExtension layout-engine 5.0//dialog">
+<html>
+<head>
+<meta http-equiv="Content-Type"/>
+<title>保存模板</title>
+<script language="JavaScript">
+    var sitefile = dreamweaver.getConfigurationPath() + "/Objects/HQB模板管理/Site.txt";
+function commandButtons(){
+ return new Array("保存","savetemplate()","取消","window.close()")
+}
+function savetemplate()
+{
+    var DOM = dw.getDocumentDOM();
+    if(DOM)
+    {
+        var openpath = DOM.getOpenPathName();
+        if(dreamweaver.saveDocument(openpath)) { }
+
+        var sitestr = DWfile.read(sitefile);
+        var site = null;
+        if (sitestr) {
+            site = sitestr.split("|||");
+        }
+        
+        if (site.length == 5) {
+           
+            var putname = openpath.replace(site[4]+"\\", "");         
+            if (openpath.indexOf(site[4]) < 0) {
+                alert("只能上传当前登陆站点下的文件!");
+                return false;
+            }
+            var source = dreamweaver.getDocumentDOM("document").documentElement.outerHTML;
+            var llurl = "op=savetemplate&sitevalue=" + encodeu(site[0]) + "&pwd=" + encodeu(site[3]) + "&path=" + encodeu(putname.replace(".html", "").replace(".htm", "")) + "&cont=" + encodeu(source);          
+          
+            var httpReply = MMHttp.postText(site[2], llurl, "application/x-www-form-urlencoded", "");
+            if (httpReply.statusCode == 200){
+                var saveLoc = httpReply.data;
+                alert(saveLoc);
+                window.close();
+            }
+            else
+            {
+                alert("发送失败,请重试!");
+                window.close();
+            }
+        }
+        else
+        {
+            alert("尚未选定登陆站点");
+            window.close();
+        }
+    }
+    else
+    {
+        alert("请先打开文档!");
+        window.close();
+    }
+}
+
+function encodeu(instr) {
+
+    instr = escape(instr).replace(/\&/g, "%26").replace(/\+/g, "%2B").replace(/\"/g, "%22").replace(/\'/g, "%27").replace(/\//g, "%2F");
+    return instr;
+}
+</script>
+</head>
+<body>
+<form id="theform" name="theform" method="post" action="">
+<table><tr>
+<td valign="top"><img src="../../Shared/MM/Images/alertIconWin.gif" /></td>
+<td><div id="tar" style="width:250px;height:80px">你确认要保存本模板到远程服务器么？<br />此操作将覆盖服务器上的文件，且不可撤消。</div>
+</td></tr>
+<tr><td align="center" colspan="2"><img src="../../Shared/MM/Images/Site_wizard.gif" /></td></tr></table>
+</form>
+</body>

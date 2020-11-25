@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DWAPI.aspx.cs" Inherits="AllPower.WEB.SysAdmin.DWAPI" %>

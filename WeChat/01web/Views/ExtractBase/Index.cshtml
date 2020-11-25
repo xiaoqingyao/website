@@ -1,0 +1,77 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_LayoutList.cshtml";
+}
+@section scripts{
+    <script type="text/javascript">
+        var addURL = "/ExtractBase/Edit/";
+        var editURL = "/ExtractBase/Edit";
+        $(function () {
+            //工具条
+            toptoolbarJson = {
+                items: [
+                    { text: '刷新', id: 'refresh', click: itemclick, icon: "refresh" },
+                    { text: '增加', id: 'add', click: itemclick, icon: "add" },
+                    { text: '修改', id: 'modify', click: itemclick, icon: "modify" },
+                    { text: '删除', id: 'delete', click: onDelete, icon: "delete" }
+                ]
+            };
+            //搜索
+            $("#searchbtn").ligerButton({
+                click: function () {
+                    if (!gridManager) return;
+                    var keyword = $("#txtKeyword").val();
+                    gridManager.setOptions(
+                        { parms: [{ name: 'Keyword', value: keyword }] }
+                    );
+                    gridManager.loadData(true);
+                }
+            });
+            //展示表格的用户定义部分
+            gridManager.set({
+                columns: [
+                    { display: '关键词', name: 'KeyWord' },
+                    { display: '备注', name: 'Note' },
+                    {
+                        display: '创建日期', name: 'CreateDate',width:100},
+                   
+                ],
+                url: "/ExtractBase/Query"
+                , dataAction: "server"
+            });
+        });
+        //删除
+        function onDelete(item) {
+            var data = gridManager.getSelectedRow();
+            if (!data)
+                alert('请选择行');
+            else {
+                $.ligerDialog.confirm('确定删除' + data.KeyWord + '?', function (sure) {
+                    if (sure) {
+                        $.post("/ExtractBase/Delete", { Id: data.Id }, function (data, status) {
+                            if (status == "success") {
+                                if (data.Code == 1) {
+                                    gridManager.reload();
+                                } else {
+                                    alert("删除出错：" + data.Message);
+                                }
+                            }
+                        });
+                    }
+                });
+            }
+            return;
+        }
+    </script>
+}
+@section SearchPanel{
+    <div class="l-panel-search-item">
+        关键词：
+    </div>
+    <div class="l-panel-search-item">
+        <input type="text" id="txtKeyword" />
+    </div>
+    <div class="l-panel-search-item">
+        <div id="searchbtn" style="width:80px;">搜索</div>
+    </div>
+}

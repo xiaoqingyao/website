@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ZXEducationalManage_7fd4c163-20fa-4ed7-8521-5f6381067a2b", ".", "{7501CFE2-DD3A-416F-974A-5375C1CE7737}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv2.0"
+		Debug.AspNetCompiler.VirtualPath = "/教务管理系统"
+		Debug.AspNetCompiler.PhysicalPath = "E:\项目\wwb调试\审核后台源码\教务管理系统_59a9224f-6c6f-40a9-b62c-dea6bec549b6\教务管理系统\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\教务管理系统\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/教务管理系统"
+		Release.AspNetCompiler.PhysicalPath = "E:\项目\wwb调试\审核后台源码\教务管理系统_59a9224f-6c6f-40a9-b62c-dea6bec549b6\教务管理系统\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\教务管理系统\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "1697"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7501CFE2-DD3A-416F-974A-5375C1CE7737}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{7501CFE2-DD3A-416F-974A-5375C1CE7737}.Debug|.NET.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

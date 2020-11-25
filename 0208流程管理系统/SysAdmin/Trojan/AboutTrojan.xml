@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Trojan>
+  <!--文件类型-->
+  <fileType>txt</fileType>
+  <!--特征代码-->
+  <Code>hello word!</Code>
+  <ScanHistory>
+    <startdate>2010-05-06</startdate>
+    <enddate>2010-05-06</enddate>
+  </ScanHistory>
+</Trojan>

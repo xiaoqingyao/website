@@ -1,0 +1,52 @@
+@charset "utf-8";
+/* CSS Document */
+/* 全局样式 */
+body
+{
+	background: #fff;
+	color: #333;
+	font-size: 16px;
+	font-family: 黑体;
+}
+ul, ol, li
+{
+	list-style-type: none;
+}
+img
+{
+	border: none;
+}
+select, input, img
+{
+	vertical-align: middle;
+}
+a
+{
+	text-decoration: none;
+}
+/*链接*/
+#link
+{
+	background:url("../Common/images/left-bj.jpg") no-repeat scroll 0 0 transparent;
+	border: 0 none;
+	height: 170px;
+	margin: 10px auto 0;
+	width: 938px;
+	text-align:center;
+}
+.link_list
+{
+	padding: 0px 0 0 20px;
+}
+.link_list li
+{
+	width: 78px;
+	text-align: left;
+	margin-right: 3px;
+	float: left;
+	line-height: 55px;
+}
+.link_list li a:link, .link_list li a:visited
+{
+	color: #063881;
+}

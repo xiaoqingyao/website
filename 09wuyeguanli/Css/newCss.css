@@ -1,0 +1,25 @@
+.left{ float:left; width:250px; height:600px;margin-top:5px; padding-left:5px}
+.right{ float:left; width:738px; height:610px;margin-left:5px;border:1px solid #cbcbcb;  border-top:none;margin-top:5px}
+.mycontrol{ width:255px; overflow:hidden}
+.logo{ height:62px; width:auto; text-align:left}
+.userInfo{ height:30px;width:auto; text-align:right; line-height:30px; clear:both}
+.userInfo a {font-size:12px; color:#444444; cursor:pointer ;font-weight:bold}
+.userInfo a:link {color: #444444; text-decoration: none;font-weight:bold}
+.userInfo a:visited {color: #444444; text-decoration: none;font-weight:bold}
+.userInfo a:hover { color: #444444; font-weight:bold; text-decoration:underline;font-weight:bold}
+#menubar{float:left; background-image:url('../Images/bar.png'); 
+height:32px; width:99%
+}
+#iframe{float:left; background-image:url(../Images/bei.jpg); background-repeat: no-repeat;}
+.menutcatalog{float:left; padding-left:5px; padding-right:5px; line-height:30px; background-color:#e8f4ff}/*background-image:url(../Images/bar2.png)*/
+.menutitle{float:left; padding-left:6px; padding-right:6px; line-height:30px; cursor: pointer;font-weight:bold;
+    width: 66px;
+    height: 23px;
+}
+.active{ background-image:url(../Images/bar2.png)}
+.personalmenu{ float:left; overflow:hidden}
+.personalmenuitem{ float:left; padding-left:8px; padding-right:8px; line-height:30px; cursor: pointer; font-weight:bold}
+.logininfo{ float:left; padding-left:5px; padding-right:5px; line-height:30px;}
+.hide{ display:none}
+#mymenu{float:right; text-align:right}
+.bottom{ width:1002px; float:left; overflow:hidden; }

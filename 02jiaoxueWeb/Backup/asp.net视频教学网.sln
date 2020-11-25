@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "asp.net视频教学网", ".", "{471C113B-7E9F-4C06-BC49-8618A242077C}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFramework = "2.0"
+		Debug.AspNetCompiler.VirtualPath = "/asp.net视频教学网"
+		Debug.AspNetCompiler.PhysicalPath = "E:\设计\DOTNET\已经发布到淘宝上的\net004视频教学网asp.net\程序\asp.net视频教学网\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\asp.net视频教学网\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/asp.net视频教学网"
+		Release.AspNetCompiler.PhysicalPath = "E:\设计\DOTNET\已经发布到淘宝上的\net004视频教学网asp.net\程序\asp.net视频教学网\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\asp.net视频教学网\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "11226"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{471C113B-7E9F-4C06-BC49-8618A242077C}.Debug|.NET.ActiveCfg = Debug|.NET
+		{471C113B-7E9F-4C06-BC49-8618A242077C}.Debug|.NET.Build.0 = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

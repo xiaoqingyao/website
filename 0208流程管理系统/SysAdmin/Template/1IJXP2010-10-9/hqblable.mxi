@@ -1,0 +1,71 @@
+﻿<macromedia-extension 
+         name="华强北网络标签插件" 
+      version="1.0.0"  
+      type="object">
+      <author name="华强北在线" />
+      <products>
+		              <product name="Dreamweaver" version="8" primary="true" />
+      </products>
+      <description>	<![CDATA[	[这是由华强北在线自动生成的标签插件]]	]]>	</description>
+      <ui-access>
+	<![CDATA[
+	http://www.360HQB.com
+	]]>
+	</ui-access>
+      <configuration-changes>
+        <files>  
+             <file name="HQB模板管理/登陆HQB站点.htm" destination="$dreamweaver/configuration/objects/HQB模板管理" /> 
+             <file name="HQB模板管理/保存模板.htm" destination="$dreamweaver/configuration/objects/HQB模板管理" /> 
+             <file name="HQB模板管理/获取模板.htm" destination="$dreamweaver/configuration/objects/HQB模板管理" /> 
+             <file name="HQB模板管理/Site.txt" destination="$dreamweaver/configuration/objects/HQB模板管理" /> 
+             <file name="HQB模板管理/dir.gif" destination="$dreamweaver/configuration/objects/HQB模板管理" /> 
+             <file name="HQB模板管理/other.gif" destination="$dreamweaver/configuration/objects/HQB模板管理" /> 
+             <file name="HQB模板管理/SystemLable.js" destination="$dreamweaver/configuration/objects/HQB模板管理" /> 
+             <file source="鹅鹅鹅是/{HQB_SYSTEM_栏目代码模式}.htm" destination="$dreamweaver/configuration/objects/鹅鹅鹅是" /> 
+             <file source="鹅鹅鹅是/{HQB_SYSTEM_详细页}.htm" destination="$dreamweaver/configuration/objects/鹅鹅鹅是" /> 
+             <file source="鹅鹅鹅是/{HQB_SYSTEM_导航}.htm" destination="$dreamweaver/configuration/objects/鹅鹅鹅是" /> 
+             <file source="鹅鹅鹅是/{HQB_SYSTEM_子栏目二级}.htm" destination="$dreamweaver/configuration/objects/鹅鹅鹅是" /> 
+             <file source="鹅鹅鹅是/{HQB_SYSTEM_顶部二级导航}.htm" destination="$dreamweaver/configuration/objects/鹅鹅鹅是" /> 
+             <file source="新闻标签/{HQB_SYSTEM_顶部二级导航纵向}.htm" destination="$dreamweaver/configuration/objects/新闻标签" /> 
+             <file source="新闻标签/{HQB_SYSTEM_多个栏目}.htm" destination="$dreamweaver/configuration/objects/新闻标签" /> 
+             <file source="新闻标签/{HQB_SYSTEM_简单列表(分页)}.htm" destination="$dreamweaver/configuration/objects/新闻标签" /> 
+             <file source="新闻标签/{HQB_SPLIT_简单分页}.htm" destination="$dreamweaver/configuration/objects/新闻标签" /> 
+             <file source="新闻标签/{HQB_SPLIT_枚举分页}.htm" destination="$dreamweaver/configuration/objects/新闻标签" /> 
+             <file source="新闻标签/{HQB_SYSTEM_顶部导航}.htm" destination="$dreamweaver/configuration/objects/新闻标签" /> 
+             <file source="自定义标签/{HQB_SYSTEM_dddddddddd}.htm" destination="$dreamweaver/configuration/objects/自定义标签" /> 
+             <file source="自定义标签/{HQB_SYSTEM_sssss}.htm" destination="$dreamweaver/configuration/objects/自定义标签" /> 
+        </files>
+          <menu-insert insertAfter="DWMenu_Site">
+          <menu name="HQB模板管理(_H)" id="DWMenu_HQB_Site" />
+          </menu-insert>
+          <menu-insert appendTo="DWMenu_HQB_Site" skipSeparator="true"> 
+          <menuitem name="登陆HQB站点" file="objects/HQB模板管理/登陆HQB站点.htm" id="HQB_LoginSite" />
+          </menu-insert>
+          <menu-insert insertAfter="HQB_LoginSite">
+          <separator />
+          <menuitem name="获取模板" file="objects/HQB模板管理/获取模板.htm" id="HQB_GetSite" />
+          <menuitem name="保存模板" file="objects/HQB模板管理/保存模板.htm" id="HQB_SaveSite" />
+          </menu-insert>
+          <insertbar-changes>
+              <insertbar-insert insertAfter="DW_Insertbar_Favorites">
+                  <category MMString:name="鹅鹅鹅是" folder="鹅鹅鹅是" id="DWBar_HQB_鹅鹅鹅是">
+                      <button file="objects/鹅鹅鹅是/{HQB_SYSTEM_顶部二级导航}.htm" id="DWBar_HQB_{HQB_SYSTEM_顶部二级导航}" name="鹅鹅鹅是" /> 
+                  </category>
+              </insertbar-insert>
+         </insertbar-changes> 
+          <insertbar-changes>
+              <insertbar-insert insertAfter="DW_Insertbar_Favorites">
+                  <category MMString:name="新闻标签" folder="新闻标签" id="DWBar_HQB_新闻标签">
+                      <button file="objects/新闻标签/{HQB_SYSTEM_顶部导航}.htm" id="DWBar_HQB_{HQB_SYSTEM_顶部导航}" name="新闻标签" /> 
+                  </category>
+              </insertbar-insert>
+         </insertbar-changes> 
+          <insertbar-changes>
+              <insertbar-insert insertAfter="DW_Insertbar_Favorites">
+                  <category MMString:name="自定义标签" folder="自定义标签" id="DWBar_HQB_自定义标签">
+                      <button file="objects/自定义标签/{HQB_SYSTEM_sssss}.htm" id="DWBar_HQB_{HQB_SYSTEM_sssss}" name="自定义标签" /> 
+                  </category>
+              </insertbar-insert>
+         </insertbar-changes> 
+      </configuration-changes>
+</macromedia-extension>

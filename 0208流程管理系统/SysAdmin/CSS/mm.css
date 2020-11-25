@@ -1,0 +1,41 @@
+body {font-family: "Verdana", "Tahoma", "宋体"; font-size: 9pt; line-height: 18px}
+td {  font-family: "Verdana", "Tahoma", "宋体"; font-size: 9pt; line-height: 18px}
+.ts {  font-size: 11px; line-height: 14px; font-family: "Verdana", "Tahoma", "宋体"}
+.ty {  font-size: 11px; line-height: 14px}
+.tl {  font-size: 14px; line-height: 20px; font-family: "Verdana", "Tahoma", "宋体"}
+.at {  color:#000000; text-decoration: none}
+.ct { color:#000000}
+li {  font-size: 12px; line-height: 20px}
+a
+{
+   color:#314D07;
+	text-decoration: none;
+	font-size: 9pt;
+
+}
+a:link{
+	color:#314D07;
+	font-size: 9pt;
+
+}
+
+a:visited {
+	color: #4B7013;
+	text-decoration: none;
+}
+.bborder {  background-color: #C1DA90}
+.btd {  background-color: #F0F9DF}
+.btd2 {  background-color: #ffffff}
+.btd3 {  background-color: #C1DA90}
+.ttopname {  font-size: 14px; color: #ffffff; line-height: 18px}
+.ttop {  font-size: 12px; color: #ffffff}
+.tleft {  font-size: 12px; color: #ffffff}
+.leftbg {  background-color: #C1DA90}
+input {  font-family: "Verdana","宋体"; font-size: 12px; height: auto;}
+select { font-family: "Verdana","宋体"; font-size: 12px}
+textarea { font-family: "Verdana","宋体"; font-size: 12px}a:hover {
+	text-decoration: underline;
+	font-size: 9pt;
+	color: #FF6600;
+
+}

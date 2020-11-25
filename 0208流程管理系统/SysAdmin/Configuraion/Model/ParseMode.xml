@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<model>
+  <row>
+    <id>1</id>
+    <name>内容管理</name>
+  </row>
+  <row>
+    <id>2</id>
+    <name>视频管理</name>
+  </row>
+  <row>
+    <id>3</id>
+    <name>会员管理</name>
+  </row>
+  <row>
+    <id>4</id>
+    <name>供求管理</name>
+  </row>
+</model>

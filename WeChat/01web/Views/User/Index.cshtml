@@ -1,0 +1,95 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_LayoutList.cshtml";
+}
+@section scripts{
+    <script type="text/javascript">
+        var addURL = "/User/Edit/";
+        var editURL = "/User/Edit";
+        $(function () {
+            //工具条
+            toptoolbarJson = {
+                items: [
+                    { text: '刷新', id: 'refresh', click: itemclick, icon: "refresh" },
+                    { text: '增加', id: 'add', click: itemclick, icon: "add" },
+                    { text: '修改', id: 'modify', click: itemclick, icon: "modify" },
+                    { text: '删除', id: 'delete', click: onDelete, icon: "delete" }
+                ]
+            };
+            //搜索
+            $("#searchbtn").ligerButton({
+                click: function () {
+                    if (!gridManager) return;
+                    var usercode = $("#txtUserCode").val();
+                    gridManager.setOptions(
+                        { parms: [{ name: 'UserCode', value: usercode }] }
+                    );
+                    gridManager.loadData(true);
+                }
+            });
+            //展示表格的用户定义部分
+            gridManager.set({
+                columns: [
+                    { display: '登录名', name: 'UserCode' },
+                    { display: '密码', name: 'Pwd' },
+                    { display: '姓名', name: 'UserName' },
+                    { display: '备注', name: 'Note' },
+                    {
+                        display: '是否管理员', name: 'IsAdmin', render: function (item) {
+                            if (item.IsAdmin == 1) {
+                                return "是";
+                            } else {
+                                return "否";
+                            }
+                        }
+                    },
+                    {
+                        display: '状态', name: 'status', render: function (item) {
+                            if (item.status == 1) {
+                                return "启用";
+                            } else {
+                                return "禁用";
+                            }
+                        }
+                    }
+                ],
+                url: "/User/Query"
+                , dataAction: "server"
+                , sortName: 'UserCode'
+            });
+        });
+        //删除
+        function onDelete(item) {
+            var data = gridManager.getSelectedRow();
+            if (!data)
+                alert('请选择行');
+            else {
+                $.ligerDialog.confirm('确定删除' + data.UserCode + '?', function (sure) {
+                    if (sure) {
+                        $.post("/User/Delete", { Id: data.Id }, function (data, status) {
+                            if (status == "success") {
+                                if (data.Code == 1) {
+                                    gridManager.reload();
+                                } else {
+                                    alert("删除出错：" + data.Message);
+                                }
+                            }
+                        });
+                    }
+                });
+            }
+            return;
+        }
+    </script>
+}
+@section SearchPanel{
+    <div class="l-panel-search-item">
+        登录名：
+    </div>
+    <div class="l-panel-search-item">
+        <input type="text" id="txtUserCode" />
+    </div>
+    <div class="l-panel-search-item">
+        <div id="searchbtn" style="width:80px;">搜索</div>
+    </div>
+}

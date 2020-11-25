@@ -1,0 +1,42 @@
+.back_southidc {
+	BACKGROUND-IMAGE: url(../image/titlebg.gif); COLOR: #000000
+}
+.table_southidc {
+	BACKGROUND-COLOR: #a4b6d7
+}
+.td_southidc {
+	BACKGROUND-COLOR: #f2f8ff
+}
+.tr_southidc {
+	BACKGROUND-COLOR: #ecf5ff
+}
+.t1 {
+	FONT: 12px 宋体; COLOR: #000000
+}
+.t2 {
+	FONT: 12px 宋体; COLOR: #ffffff
+}
+.t3 {
+	FONT: 12px 宋体; COLOR: #ffff00
+}
+.t4 {
+	FONT: 12px 宋体; COLOR: #800000
+}
+.t5 {
+	FONT: 12px 宋体; COLOR: #191970
+}
+.weiqun:hover {
+	COLOR: #ffffff; FONT-FAMILY: "宋体"; BACKGROUND-COLOR: #cccccc; TEXT-DECORATION: underline; Font-unline: yes
+}
+TD {
+	FONT-SIZE: 12px
+}
+A:link {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}

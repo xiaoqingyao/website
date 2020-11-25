@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutList.cshtml";
+}
+
+@section SearchPanel{
+
+    <div class="l-panel-search-item">
+        用户：
+    </div>
+    <div class="l-panel-search-item">
+        <input type="text" id="user" readonly="" data-comboboxid="user" class="l-text-field">
+    </div>
+    <div class="l-panel-search-item">
+        关键词：
+    </div>
+    <div class="l-panel-search-item">
+        <input type="text" id="txtKeyword" />
+    </div>
+    <div class="l-panel-search-item">
+        昵称：
+    </div>
+    <div class="l-panel-search-item">
+        <input type="text" id="txtNickName" />
+    </div>
+    <div class="l-panel-search-item">
+        <div id="searchbtn" style="width:80px;">搜索</div>
+    </div>
+}
+@section scripts{
+    <script>
+        var userid = '';
+        $(function () {
+            $("#user").ligerComboBox({
+                width: 200,
+                url: '/ComboBoxData/Users',
+                textField: "UserName",
+                valueField: "Id",
+                initIsTriggerEvent: false
+                , keySupport: true
+                , onSelected: function (value) {
+                    userid = value;
+                }
+            });
+
+            $("#searchbtn").ligerButton({
+                click: function () {
+                    if (!gridManager) return;
+                    var keyword = $("#txtKeyword").val();
+                    var nickName = $("#txtNickName").val();
+                    gridManager.setOptions(
+                        { parms: [{ name: 'Keyword', value: keyword }, { name: 'NickName', value: nickName }, { name: 'userid', value: userid }] }
+                    );
+                    gridManager.loadData(true);
+                }
+            });
+            //展示表格的用户定义部分
+            gridManager.set({
+                columns: [
+                    { display: '用户名', name: 'UserName' },
+                    
+                    { display: '群组名', name: 'BatchName' },
+                    { display: '昵称', name: 'NickName' },
+                    { display: '备注名', name: 'RemarkName' },
+                    { display: '关键词', name: 'Keyword' },
+                    { display: '消息内容', name: 'Msg' },
+                    {
+                        display: '创建日期', name: 'CreateDate', width: 100, render: function (item) {
+                            return formatDate(item.CreateDate, 'yyyy-MM-dd HH:mm:ss')
+                        }
+                    }
+                ],
+                url: "/ExtractResult/Query"
+                , dataAction: "server"
+            });
+        });
+    </script>
+}
+

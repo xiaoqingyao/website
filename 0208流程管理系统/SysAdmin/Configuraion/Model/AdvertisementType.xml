@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisement>
+  <Row>
+    <name>图片</name>
+    <value>1</value>
+  </Row>
+  <Row>
+    <name>动画</name>
+    <value>2</value>
+  </Row>
+  <Row>
+    <name>文本</name>
+    <value>3</value>
+  </Row>
+  <Row>
+    <name>代码</name>
+    <value>4</value>
+  </Row>
+  <Row>
+    <name>页面</name>
+    <value>5</value>
+  </Row>
+</Advertisement>

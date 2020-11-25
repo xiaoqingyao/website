@@ -1,0 +1,115 @@
+﻿<!DOCTYPE HTML SYSTEM "-//Macromedia//DWExtension layout-engine 5.0//dialog">
+<html>
+<head>
+<meta http-equiv="Content-Type"/>
+<title>获取模板</title>
+<script language="JavaScript">
+    var sitefile = dreamweaver.getConfigurationPath() + "/Objects/HQB模板管理/Site.txt";
+
+    function commandButtons() {
+        return new Array("刷新列表", "getlist('')", "取消", "window.close()")
+    }
+
+    function getlist(pathUrl) {
+        var sitestr = DWfile.read(sitefile);
+        var site = null;
+        if (sitestr != null) {
+            site = sitestr.split("|||");
+        }
+
+        if (site.length == 5) {
+            document.getElementById("temname").innerHTML = "当前操作站点：<font color='red'>" + site[1] + "</font>";
+
+            var qurl = "op=getTemplate&sitevalue=" + encodeu(site[0]) + "&pwd=" + encodeu(site[3]) + "&path=" + encodeu(pathUrl);
+
+            var httpReply = MMHttp.postText(site[2], qurl, "application/x-www-form-urlencoded", "");
+            if (httpReply.statusCode == 200) {
+                var saveLoc = httpReply.data;
+                document.getElementById("temlist").innerHTML = saveLoc;
+            }
+            else {
+                alert("获取失败");
+            }
+        }
+        else {
+            document.getElementById("temlist").innerHTML = "尚未连接登陆站点";
+        }
+    }
+
+    function getemplate(pathUrl) {
+        document.getElementById("temlist").innerHTML = "<img src='loading.gif' />";
+        var sitestr = DWfile.read(sitefile);
+        var site = null;
+        if (sitestr) {
+            site = sitestr.split("|||");
+        }
+
+        if (site.length == 5) {
+            var llurl = "op=getTemplate&sitevalue=" + encodeu(site[0]) + "&pwd=" + encodeu(site[3]) + "&path=" + encodeu(pathUrl);
+
+            var httpReply = MMHttp.postText(site[2], llurl, "application/x-www-form-urlencoded", "");
+            if (httpReply.statusCode == 200) {
+                var saveLoc = httpReply.data;
+                var wbfilename = site[4] + "/" + pathUrl;
+
+                if (!DWfile.exists(wbfilename)) {
+                    var mulu = wbfilename.substring(0, wbfilename.lastIndexOf("/"));
+                    DWfile.createFolder(mulu)
+                    DWfile.write(wbfilename, saveLoc);
+                }
+
+                var otherDOM = dreamweaver.openDocument(wbfilename);
+                otherDOM.documentElement.outerHTML = saveLoc;
+
+
+            }
+            else {
+                alert("获取失败");
+            }
+        }
+        else {
+            document.getElementById("temlist").innerHTML = "尚未选定登陆站点";
+        }
+        window.close();
+    }
+
+    function encodeu(instr) {
+        return escape(instr).replace(/\&/g, "%26").replace(/\+/g, "%2B").replace(/\"/g, "%22").replace(/\'/g, "%27").replace(/\//g, "%2F");
+    }
+</script>
+<style type="text/css">
+<!--
+#totaldiv {
+	height: 300px;
+	width: 550px;
+}
+#temlist {
+	height: 500px;
+	border-top-style: double;
+	border-right-style: double;
+	border-bottom-style: double;
+	border-left-style: double;
+        overflow: visible;
+	cursor: crosshair;
+	margin: 10px;
+	padding: 10px;
+}
+.ft {
+	height: 60px;
+	width: 50px;
+	float: left;
+	position: fixed;
+	text-align: center;
+        margin: 6px;
+}
+-->
+</style>
+</head>
+<body onload="getlist('')">
+<form name="theform" method="post" action="">
+    <div id="totaldiv">
+        <div id="temname">尚未选定登陆站点</div>
+        <div id="temlist">装载模板目录中,如获取失败请刷新列表重新获取...</div>
+    </div>
+</form>
+</body>

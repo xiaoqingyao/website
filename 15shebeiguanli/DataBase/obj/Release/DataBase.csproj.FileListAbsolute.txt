@@ -1,0 +1,11 @@
+C:\Users\LVCC\Desktop\WL水产设备管理(三层毕设)系统源码\DataBase\bin\Release\DataBase.dll
+C:\Users\LVCC\Desktop\WL水产设备管理(三层毕设)系统源码\DataBase\bin\Release\DataBase.pdb
+C:\Users\LVCC\Desktop\WL水产设备管理(三层毕设)系统源码\DataBase\obj\Release\DataBase.csprojResolveAssemblyReference.cache
+C:\Users\LVCC\Desktop\WL水产设备管理(三层毕设)系统源码\DataBase\obj\Release\DataBase.dll
+C:\Users\LVCC\Desktop\WL水产设备管理(三层毕设)系统源码\DataBase\obj\Release\DataBase.pdb
+D:\03测试项目\15设备管理系统\WL水产设备管理(三层毕设)系统源码\WL水产设备管理(三层毕设)系统源码\DataBase\bin\Release\DataBase.dll
+D:\03测试项目\15设备管理系统\WL水产设备管理(三层毕设)系统源码\WL水产设备管理(三层毕设)系统源码\DataBase\bin\Release\DataBase.pdb
+D:\03测试项目\15设备管理系统\WL水产设备管理(三层毕设)系统源码\WL水产设备管理(三层毕设)系统源码\DataBase\obj\Release\DataBase.csprojAssemblyReference.cache
+D:\03测试项目\15设备管理系统\WL水产设备管理(三层毕设)系统源码\WL水产设备管理(三层毕设)系统源码\DataBase\obj\Release\DataBase.csproj.CoreCompileInputs.cache
+D:\03测试项目\15设备管理系统\WL水产设备管理(三层毕设)系统源码\WL水产设备管理(三层毕设)系统源码\DataBase\obj\Release\DataBase.dll
+D:\03测试项目\15设备管理系统\WL水产设备管理(三层毕设)系统源码\WL水产设备管理(三层毕设)系统源码\DataBase\obj\Release\DataBase.pdb

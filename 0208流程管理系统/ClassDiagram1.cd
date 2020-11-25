@@ -1,0 +1,2423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AllPower.WEB.AJAX.SysAdmin.Model.ModelFiledSelectColumn" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="600.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAABAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>AJAX\SysAdmin\Model\ModelFiledSelectColumn.ashx.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="AllPower.WEB.AJAX.SysAdmin.Model.VoteItemDelel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="611" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AJAX\SysAdmin\Model\VoteItemDelel.ashx.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Resources.Common" Collapsed="true">
+    <Position X="604" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DQ8KAIAAgghZSs7AwBZFEoQQy3cCyFCogQuAQJEr1ZA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Resources.Content" Collapsed="true">
+    <Position X="607.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAgAAAAAAAAAQBEUACAQAAAIAAAAAgAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Resources.FriendLink" Collapsed="true">
+    <Position X="614.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAADEAAAQCIwDQQQAABEAAAoUACAQiAICAIIAQEBIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Resources.KeywordFilter" Collapsed="true">
+    <Position X="604" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAABUAAAAQAAAACQAASQAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Resources.Member" Collapsed="true">
+    <Position X="611" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>oABIAIAABCACkRSoAQBBGAAAoSEIgACDCcFAAQQA4Yg=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Resources.Model" Collapsed="true">
+    <Position X="616.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>R2/1a/DZ/bw37qe//f3Hc5zZlTu+P/VMv/+8///504s=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Resources.Orgin" Collapsed="true">
+    <Position X="609.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CIEQZpAAAoAIkdkYEA4ZERAAAREEACDFEAQAxAUIgIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Resources.Resource" Collapsed="true">
+    <Position X="605.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAEAAABEAAAAQAAAAAAAAAAABAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Resources.Trojan" Collapsed="true">
+    <Position X="602.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAwAIQAAAAAAAAAIhEAAAAQABAAAAAAAAAABAAKA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.Global" Collapsed="true">
+    <Position X="600.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAIAAAAACAAAAEAAAAAAAAAAECIBQAAAAAAAAA=</HashCode>
+      <FileName>Global.asax.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.Login" Collapsed="true">
+    <Position X="616.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAACgAEEAAIAAAAIAAAAgAAAwgAAAIAUAA=</HashCode>
+      <FileName>main\Plus\Member\Login.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.Register" Collapsed="true">
+    <Position X="604" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAiEBAAAgAAEAAIAAABoAAAAAiAgQAAAAIAQEA=</HashCode>
+      <FileName>main\Plus\Member\Register.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.Statistics" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="600.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Statistics.ashx.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="AllPower.WEB.ImportUpload" Collapsed="true">
+    <Position X="472" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>SysAdmin\upfiles\ImportUpload.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.FrontPublic.Common" Collapsed="true">
+    <Position X="605.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ECAAQABAEFAAgAgAACACAIAAAAwDAAAAABIAAAAAAAE=</HashCode>
+      <FileName>main\IncludeFile\Common.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.main.IncludeFile.Left" Collapsed="true">
+    <Position X="612.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>main\IncludeFile\Left.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.main.IncludeFile.onerecord" Collapsed="true">
+    <Position X="605.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>main\IncludeFile\onerecord.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.main.IncludeFile.splitlist" Collapsed="true">
+    <Position X="614.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>main\IncludeFile\splitlist.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.main.IncludeFile.top" Collapsed="true">
+    <Position X="616.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>main\IncludeFile\top.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.main.IncludeFile.toplist" Collapsed="true">
+    <Position X="600.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>main\IncludeFile\toplist.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.main.Plus.API.ColumnWebService" Collapsed="true">
+    <Position X="614.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAkAAAABEAAAAAAAAAAAAAAAAAAAAAAgAAAAIA=</HashCode>
+      <FileName>main\Plus\API\ColumnWebService.asmx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.main.Plus.API.FriendLinkWebService" Collapsed="true">
+    <Position X="616.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>main\Plus\API\FriendLinkWebService.asmx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.main.Plus.API.MemberWebService" Collapsed="true">
+    <Position X="612.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAEAAAAAAAAAAAAAAQAABAEACAACAAQAAAAAAA=</HashCode>
+      <FileName>main\Plus\API\MemberWebService.asmx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.main.Plus.API.Model" Collapsed="true">
+    <Position X="614.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAgAAEAAAAAAAAAAAAAAAACAAAAAAAAAAAAI=</HashCode>
+      <FileName>main\Plus\API\Model.asmx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.CountAPI" Collapsed="true">
+    <Position X="240.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>main\Plus\BrowseCount\BrowseCountAPI.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.ModuleCount" Collapsed="true">
+    <Position X="269.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAEAMQBAAAAAAAAACAAAAAAAAAAIAAAAAEAIIgEA=</HashCode>
+      <FileName>SysAdmin\Count\ColumnCount.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.CountSet" Collapsed="true">
+    <Position X="298.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CEAAACAAABCAAQAAAAAAAQEAAAAAABAACQAAAAOgAQA=</HashCode>
+      <FileName>SysAdmin\Count\CountSet.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.InfoCount" Collapsed="true">
+    <Position X="325.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAMAEQBAAAAAAAIACAAAAAAAgIAIAAAAAEAIJgEQ=</HashCode>
+      <FileName>SysAdmin\Count\InfoCount.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.ActionEdit" Collapsed="true">
+    <Position X="352.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EIAgggKAQBCAAACAACQAAwAAAAAAAAgAAQAEAEIQgMA=</HashCode>
+      <FileName>SysAdmin\SysManage\ActionEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.ColumnCopy" Collapsed="true">
+    <Position X="382" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAOAAAAAFAAAACAAAAAQQAAAAAACBAAAAQAACIAAEA=</HashCode>
+      <FileName>SysAdmin\SysManage\ColumnCopy.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.ColumnEdit" Collapsed="true">
+    <Position X="415.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FIB8iha+YR1KUYqkKBJFQ7mSkNxHCAgOAQGl6M8TYFI=</HashCode>
+      <FileName>SysAdmin\SysManage\ColumnEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.ColumnManage" Collapsed="true">
+    <Position X="442.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAACAAAIAAAAIAAAAAAAAAAIAAIAAAA=</HashCode>
+      <FileName>SysAdmin\SysManage\ColumnManage.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.ColumnMove" Collapsed="true">
+    <Position X="474.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAOAAAAAFAAAACAAAAAAQAAAAAACBAAAAQAACIAAEA=</HashCode>
+      <FileName>SysAdmin\SysManage\ColumnMove.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.ColumnUnite" Collapsed="true">
+    <Position X="505.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAOAAAAAFAAAACAAAAAAQAAAAAACBAAAAQAACoAAEA=</HashCode>
+      <FileName>SysAdmin\SysManage\ColumnUnite.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.ContentPublish" Collapsed="true">
+    <Position X="535" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MAAAEAAAAgAAQgAIAAAQAIAAIAAAgAAAAAAAAAIQEAA=</HashCode>
+      <FileName>SysAdmin\SysManage\ContentPublish.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.CreateWebSite" Collapsed="true">
+    <Position X="566.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAIAAAAAAAAAAAAIAABAEAAAQAAAAIAAEA=</HashCode>
+      <FileName>SysAdmin\SysManage\CreateWebSite.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.DataBaseBackUp" Collapsed="true">
+    <Position X="28.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MEAAsAAAgAAAAEAAAAQQAIgAIAIIAJAAAAEAAAIQAAA=</HashCode>
+      <FileName>SysAdmin\SysManage\DataBaseBackUp.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.DataBaseExecSql" Collapsed="true">
+    <Position X="58" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAABAAAAAAAAAAAAAAAAAEABAAAQAAAAIQAAA=</HashCode>
+      <FileName>SysAdmin\SysManage\DataBaseExecSql.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.DataBaseManageSet" Collapsed="true">
+    <Position X="89.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IEAACCAQBBAAAGAAAAAABQAAAAACABAAAAAAAAIAAAA=</HashCode>
+      <FileName>SysAdmin\SysManage\DataBaseManageSet.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.DataBaseReplace" Collapsed="true">
+    <Position X="123.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EEAAUAAAABBAAEAABAAYAAIAAAAAABAEAAAAUApYAAE=</HashCode>
+      <FileName>SysAdmin\SysManage\DataBaseReplace.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.DataBaseRestore" Collapsed="true">
+    <Position X="157" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EEAAEAAAAAAACEAgAACQIBAAIAABCAAAACAAQAIQAQQ=</HashCode>
+      <FileName>SysAdmin\SysManage\DataBaseRestore.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.DataManage" Collapsed="true">
+    <Position X="184" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAgAA=</HashCode>
+      <FileName>SysAdmin\SysManage\DataManage.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.getsystemplate" Collapsed="true">
+    <Position X="213.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAEAAAAAAACBCAKgAEAAAABAAAAAIAAAE=</HashCode>
+      <FileName>SysAdmin\SysManage\getsystemplate.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.ModelEdit" Collapsed="true">
+    <Position X="242.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAoAAIEBKaAACgACCQRAAAACAggAABAQAGAQIAAAA=</HashCode>
+      <FileName>SysAdmin\SysManage\ModelEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.ModelList" Collapsed="true">
+    <Position X="271.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UAAAAEAAQhCAEAAAABAAAAAAIAAISAgQAEAACAIKAQQ=</HashCode>
+      <FileName>SysAdmin\SysManage\ModelList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.ModelNodeEdit" Collapsed="true">
+    <Position X="301" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQAIgiIAQBUAAACACCIEQaAQMCAACAgCAQAESA4AAFA=</HashCode>
+      <FileName>SysAdmin\SysManage\ModelNodeEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.ModelNodeList" Collapsed="true">
+    <Position X="328" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAgAAAQAAAgAAIgAAAIAAAAQgAAAAIAAIAAAA=</HashCode>
+      <FileName>SysAdmin\SysManage\ModelNodeList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.MsgAdd" Collapsed="true">
+    <Position X="355" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAggACIABAAAAAAAIAACAAAAAAAAAAIAQIAAGIQAEA=</HashCode>
+      <FileName>SysAdmin\SysManage\MsgAdd.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.MsgReceiveList" Collapsed="true">
+    <Position X="384.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAABAEAESBCAAAAAAQECAAAQIIAASACSAAAAGAIaABQ=</HashCode>
+      <FileName>SysAdmin\SysManage\MsgReceiveList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.MsgSend" Collapsed="true">
+    <Position X="418" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAhAEAESBCAAAAAAQECAAAQIJAASACSAAAAGAIKABQ=</HashCode>
+      <FileName>SysAdmin\SysManage\MsgSendList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.MsgShow" Collapsed="true">
+    <Position X="445" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgQAAAAAAAACEEAIhAAAAAAAAAAAAJQAAA=</HashCode>
+      <FileName>SysAdmin\SysManage\MsgShow.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.NewWebSet" Collapsed="true">
+    <Position X="476.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQAACAQCBAAAAKBgACAgIAAIAAAABEAAABAAAIUEkA=</HashCode>
+      <FileName>SysAdmin\SysManage\NewWebSet.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.OutLinkColumn" Collapsed="true">
+    <Position X="508" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FIAIggIIQBFAAICgCAAEQLgAEABACAACAQAkQMYCAFI=</HashCode>
+      <FileName>SysAdmin\SysManage\OutLinkColumn.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.PostSet" Collapsed="true">
+    <Position X="537.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEgAACAACBAAAAAAAAAAAQAAAAAAAJAAAIAACAIAAAA=</HashCode>
+      <FileName>SysAdmin\SysManage\PostSet.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.RoleEdit" Collapsed="true">
+    <Position X="568.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAQDCAAAAAAAAABIABAAAAAAAEAAAAgAIQAAA=</HashCode>
+      <FileName>SysAdmin\SysManage\RoleEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.RoleManage" Collapsed="true">
+    <Position X="31" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAEAAQBCKAAAAAAAAAAAAIAAASggSAEAAAAIKAEQ=</HashCode>
+      <FileName>SysAdmin\SysManage\RoleList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.RolePermit" Collapsed="true">
+    <Position X="60.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACBAAAIAAAAAACAAAAAAAAQIQQAAEEAAAAAAAIAAEA=</HashCode>
+      <FileName>SysAdmin\SysManage\RolePermit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.ServerMachineEdit" Collapsed="true">
+    <Position X="91.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAIgBAAAIAoAIAAGAAAAAAAgAAAAAQAIAAIYCEA=</HashCode>
+      <FileName>SysAdmin\SysManage\ServerMachineEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.ServerMachineManage" Collapsed="true">
+    <Position X="125.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAEAAAAAAgBAAAAAAgAEAAIQAISAgCAAAAAEIQAAQ=</HashCode>
+      <FileName>SysAdmin\SysManage\ServerMachineManage.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.SetSpecialInfoComment" Collapsed="true">
+    <Position X="159.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAACAAAKAAAAAgAIAAKAAACAAQAAAIAAAA=</HashCode>
+      <FileName>SysAdmin\SysManage\SetSpecialInfoComment.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.SingleColumn" Collapsed="true">
+    <Position X="186.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FIBsiha+YRVKEYqkKAAEQrkCEABACAAKAQCkaM8SAFI=</HashCode>
+      <FileName>SysAdmin\SysManage\SingleColumn.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.SiteInfoSet" Collapsed="true">
+    <Position X="215.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEBAACAAABAAAAAAAAAEAQAAEACAABEAAAAAAAKAAAA=</HashCode>
+      <FileName>SysAdmin\SysManage\SiteInfoSet.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.SiteParamSet" Collapsed="true">
+    <Position X="244.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AMADQCAAABIAAAAAAEAIBQBAAMwgCBgAIAAQAAIABQI=</HashCode>
+      <FileName>SysAdmin\SysManage\SiteParamSet.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.SpecialEdit" Collapsed="true">
+    <Position X="274" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABggIAAQBAAABFAQAAGAAACoRCAAAAAAAAAAWIAAAY=</HashCode>
+      <FileName>SysAdmin\SysManage\SpecialEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.SpecialInfoList" Collapsed="true">
+    <Position X="612.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAQAABAIAEAAAAAAAgkEIAAAAAAwBgAAAAoBAAI=</HashCode>
+      <FileName>SysAdmin\SysManage\SpecialInfoList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.SpecialInfoRecommend" Collapsed="true">
+    <Position X="330.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAIQAQBCAAAAAAAIAAAgAIAAAAAAgACAQAAIAAAA=</HashCode>
+      <FileName>SysAdmin\SysManage\SpecialInfoRecommend.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.SpecialList" Collapsed="true">
+    <Position X="357.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAUAUBAAACACAAIAAgAAIAAADAAwAAAAAAICAEI=</HashCode>
+      <FileName>SysAdmin\SysManage\SpecialList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.SpecialMenuEdit" Collapsed="true">
+    <Position X="386.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABggIQAQBAIAAAAQAAGAAAAoRCAAAAAAAAAAWpAAAY=</HashCode>
+      <FileName>SysAdmin\SysManage\SpecialMenuEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.SpecialMenuList" Collapsed="true">
+    <Position X="420.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAUAUBAAAKACAAIAAAAAIAAADAAxAAAAAAICAAI=</HashCode>
+      <FileName>SysAdmin\SysManage\SpecialMenuList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.SysLog" Collapsed="true">
+    <Position X="447.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAEgEABQkFABAAAAKAAAAIIAASACRAAQBEAIKABQ=</HashCode>
+      <FileName>SysAdmin\SysManage\SysLog.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.SysUserChangePassword" Collapsed="true">
+    <Position X="478.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAASQAAQQBACAAAIAAEAAEgAAAAAAAAIQAAAAIIAAAg=</HashCode>
+      <FileName>SysAdmin\SysManage\SysUserChangePassword.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.SysUserEdit" Collapsed="true">
+    <Position X="510.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAQAAAQUBACAAAIBAMAAGgAAAAAAkAIQQAEAAIAAIA=</HashCode>
+      <FileName>SysAdmin\SysManage\SysUserEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.SysUserList" Collapsed="true">
+    <Position X="539.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EUAAAEAAQBCAIQQAAAEgAggAAAAASAgYCgABAgJKAAU=</HashCode>
+      <FileName>SysAdmin\SysManage\SysUserList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.SysUserEdit1" Collapsed="true">
+    <Position X="571" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACBAAAIAAAAAACAgAAAAIgQIQQAAEEIAAAAAIIAAAA=</HashCode>
+      <FileName>SysAdmin\SysManage\SysUserRight.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.TaskEdit" Collapsed="true">
+    <Position X="33.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAkIAgAAQAAAACABhAQAAEIACggAAAAUgIIAKYCEA=</HashCode>
+      <FileName>SysAdmin\SysManage\TaskEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.TaskManage" Collapsed="true">
+    <Position X="62.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAEAAAAAAAAAAAAAAAAAAAIAAISAgCAAIIAAIQDAU=</HashCode>
+      <FileName>SysAdmin\SysManage\TaskManage.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.TemplateEdit" Collapsed="true">
+    <Position X="94" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAIAAAAAUCAAAIAAABAAAIAAIEAAAAAAAAAAAAIQAEA=</HashCode>
+      <FileName>SysAdmin\SysManage\TemplateEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.TemplateManage" Collapsed="true">
+    <Position X="127.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAABAEAAQBCAAAAAAAAAAAAAIAAJSAgQAAAACAJKAUQ=</HashCode>
+      <FileName>SysAdmin\SysManage\TemplateManage.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.TemplateNodeEdit" Collapsed="true">
+    <Position X="161.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ERAAAiBA0ASAACAACCAACAAQMGAACAACAAQEGEoQAFA=</HashCode>
+      <FileName>SysAdmin\SysManage\TemplateNodeEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.TemplateNodeManage" Collapsed="true">
+    <Position X="188.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAIEAIAAgAAAAIAAIAAEA=</HashCode>
+      <FileName>SysAdmin\SysManage\TemplateNodeManage.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.TemplatePermit" Collapsed="true">
+    <Position X="217.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACBAAAIAAAAAACAAAAAAIAQIQAAAEEAAABAAAIAAEA=</HashCode>
+      <FileName>SysAdmin\SysManage\TemplatePermit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.UploadSet" Collapsed="true">
+    <Position X="247" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IEABQCkACFGAAAgIIEZBAQOAQCBAABCAAQAUAIIABCA=</HashCode>
+      <FileName>SysAdmin\SysManage\UploadSet.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.UserGropEidt" Collapsed="true">
+    <Position X="276.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACAoAAAQDCSAAEAgIIAhYMAAAAAAgAAAEAEAAIQgIA=</HashCode>
+      <FileName>SysAdmin\SysManage\UserGropEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.UserGropManage" Collapsed="true">
+    <Position X="303.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAEEAAQBCCAAAAAAQAAAAAIQAASQgQAQAAAAIaAEQ=</HashCode>
+      <FileName>SysAdmin\SysManage\UserGropList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.UserGropPermit" Collapsed="true">
+    <Position X="332.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACBAAAIAAAAAACAAAAAAIAQIQQAAEEAAIAAAIIAAAg=</HashCode>
+      <FileName>SysAdmin\SysManage\UserGropPermit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.WebSiteManage" Collapsed="true">
+    <Position X="359.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAEAAQJCAAAEAAAAAAAAAIAAATAAQAAAACAJKAEA=</HashCode>
+      <FileName>SysAdmin\SysManage\WebSiteManage.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.SysManage.CreateSpecialList" Collapsed="true">
+    <Position X="388.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAQAAABAECAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>SysAdmin\Template\CreateSpecialList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.main.Plus.Comment.CommentFifth" Collapsed="true">
+    <Position X="616.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAABAQCAIQAIgCQAAAAGAIQAAJAAAA=</HashCode>
+      <FileName>main\Plus\Comment\CommentFifth.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.main.Plus.Comment.CommentForm" Collapsed="true">
+    <Position X="600.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAIAAUBQgQAACREAgAIQAogCSABAEGkIQBAMIAAA=</HashCode>
+      <FileName>main\Plus\Comment\CommentForm.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.main.Plus.Comment.CommentListTemp" Collapsed="true">
+    <Position X="602.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIBAAAAAABAACAIQAIgCQAAAgGAIQAAJAAAA=</HashCode>
+      <FileName>main\Plus\Comment\CommentListTemp.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.main.Plus.Comment.ValidateCode" Collapsed="true">
+    <Position X="609.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>main\Plus\Comment\ValidateCode.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.main.Plus.Common.SurveyResult" Collapsed="true">
+    <Position X="602.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAgAAYAACAAAQAAAAAgABABAAQAAAAAMBCAIAAQA=</HashCode>
+      <FileName>main\Plus\Common\SurveyResult.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.main.Plus.Common.ValidateCode" Collapsed="true">
+    <Position X="605.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>main\Plus\Common\ValidateCode.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.main.Plus.Common.VoteResult" Collapsed="true">
+    <Position X="614.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAQAAAAEEAAgBAAAAAACAAAIACAIAAAA=</HashCode>
+      <FileName>main\Plus\Common\VoteResult.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.main.Plus.Form.FormDeal" Collapsed="true">
+    <Position X="612.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAEAAIAAAAAEAAAQACICAAAAAECACAAEIAAAA=</HashCode>
+      <FileName>main\Plus\Form\FormDeal.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.main.Plus.FriendLink.CharLinkTemplate" Collapsed="true">
+    <Position X="609.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AJAAAACAEAAAAAACAAAAAAAAgAIAEAAAAAYAAAIAAAA=</HashCode>
+      <FileName>main\Plus\FriendLink\CharLinkTemplate.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.main.Plus.FriendLink.LinkClickCount" Collapsed="true">
+    <Position X="614.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAQAAAgAAAAABAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>main\Plus\FriendLink\LinkClickCount.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.main.Plus.FriendLink.LogoLinkTemplate" Collapsed="true">
+    <Position X="604" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AJAAAACUEAAAAAACAAABAAAAoAIAABAAAAIAAAIAAAA=</HashCode>
+      <FileName>main\Plus\FriendLink\LogoLinkTemplate.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.main.Plus.Member.ForgetPwd" Collapsed="true">
+    <Position X="611" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAABBACoAQEAAAAACAKIAAAIAACABAAAICAAA=</HashCode>
+      <FileName>main\Plus\Member\ForgetPwd.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.arae" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="604" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAABAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>SysAdmin\ajax\arae.ashx.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="AllPower.Web.Admin.AdminPage" Collapsed="true">
+    <Position X="313.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABBAwDAUEABBiIiCCEhAAIAggCCBAAQVsEAQhAAAAgQ=</HashCode>
+      <FileName>SysAdmin\App_Code\AdminPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.LoginInfoHelper" Collapsed="true">
+    <Position X="602.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>SysAdmin\App_Code\LoginInfoHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.ImportWord" Collapsed="true">
+    <Position X="602.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAIAAAAABAGAIAAAAAAAAAAAAAoAAEA=</HashCode>
+      <FileName>SysAdmin\Editor\ImportEditor\ImportWord.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.KeywordFileImport" Collapsed="true">
+    <Position X="334.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAABAAAAAAAABAAAAAAAAAABAAAAARAQIAAAA=</HashCode>
+      <FileName>SysAdmin\Filter\KeywordFileImport.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.KeywordFilterEdit" Collapsed="true">
+    <Position X="361.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAgAAQBAQAAABAAAAAAAAABAAABAAEAAEAAIIAEA=</HashCode>
+      <FileName>SysAdmin\Filter\KeywordFilterEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.KeywordFilterList" Collapsed="true">
+    <Position X="391" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAABkEEQBAAEQAAAABAAAAAABAAiAAgGAKAAIIKAQc=</HashCode>
+      <FileName>SysAdmin\Filter\KeywordFilterList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.KeywordFilterTest" Collapsed="true">
+    <Position X="422.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAAAAABAAAAAIAAEAAAAEAAQAAAAAAAAAAAoAAEA=</HashCode>
+      <FileName>SysAdmin\Filter\KeywordFilterTest.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.FriendLinkClassEdit" Collapsed="true">
+    <Position X="449.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAgAAACAQBAQAAAAAAAAAIAAAAAAQBAAAAAAAAJIEEQ=</HashCode>
+      <FileName>SysAdmin\LinkManage\FriendLinkClassEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.FriendLinkClassList" Collapsed="true">
+    <Position X="481" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAACAQVAAAAAAAABAAAAAAAUBSAgQgAIAAAICAQY=</HashCode>
+      <FileName>SysAdmin\LinkManage\FriendLinkClassList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.FriendLinkEdit" Collapsed="true">
+    <Position X="512.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAOMRBAQAAJAACAQAABAAAABABAAAAAAAAZIQEw=</HashCode>
+      <FileName>SysAdmin\LinkManage\FriendLinkEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.FriendLinkJsList" Collapsed="true">
+    <Position X="541.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAABIAAAA=</HashCode>
+      <FileName>SysAdmin\LinkManage\FriendLinkJsList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.FriendLinkList" Collapsed="true">
+    <Position X="573.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>GICAAEEIQ1AAAQAAACAhAABBOBEACAgQkECQAAIKAUY=</HashCode>
+      <FileName>SysAdmin\LinkManage\FriendLinkList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.Login" Collapsed="true">
+    <Position X="600.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AwAAEAAAIAAAAEAACAgAAAAJAAAACAAAAAQIAAJIAAQ=</HashCode>
+      <FileName>SysAdmin\Login.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.Main" Collapsed="true">
+    <Position X="607.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>SysAdmin\Main.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.MemberConfigEdit" Collapsed="true">
+    <Position X="96.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAQBABAAAAAAAAAAAAAAAAABABAABAAAIAAEA=</HashCode>
+      <FileName>SysAdmin\MemberManage\MemberConfigEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.MemberEdit" Collapsed="true">
+    <Position X="130" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAlkoEASwFACAAAAABCAAEAAAAEAQLAgABoCAEYJAtA=</HashCode>
+      <FileName>SysAdmin\MemberManage\MemberEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.MemberGroupEdit" Collapsed="true">
+    <Position X="163.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAASBAgAAAgAIAAAAAAAAAgABAAAgBEAAIIQEQ=</HashCode>
+      <FileName>SysAdmin\MemberManage\MemberGroupEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.MemberGroupList" Collapsed="true">
+    <Position X="190.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EABAEEAAYVIAAAAAAIABGAAAAAEIAgggAAIAAAKLAQQ=</HashCode>
+      <FileName>SysAdmin\MemberManage\MemberGroupList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.MemberList" Collapsed="true">
+    <Position X="220" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EIBAACEUYDAAAQAAAAIBgJAEAQAAgqAgBEKQgBICAQc=</HashCode>
+      <FileName>SysAdmin\MemberManage\MemberList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.MemberModelEdit" Collapsed="true">
+    <Position X="249.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAIAAIBAQAAAAAAAAAAAAAEAAgAAAAABAEAIAAAY=</HashCode>
+      <FileName>SysAdmin\MemberManage\MemberModelEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.MemberModelFieldEdit" Collapsed="true">
+    <Position X="278.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EEEEAAAkQFBAgAkAAACQAAQcIAIAABAEAEBQAUIoAlA=</HashCode>
+      <FileName>SysAdmin\MemberManage\MemberModelFieldEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.MemberModelFieldList" Collapsed="true">
+    <Position X="305.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ECAAAAAAaVAAAAQAAgAAAAAAAAAICCgkAAIAAAICARQ=</HashCode>
+      <FileName>SysAdmin\MemberManage\MemberModelFieldList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.MemberModelList" Collapsed="true">
+    <Position X="337" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EABAEEEAYVIABAAAAAABGAAIAgAIAggQAACACAKKAUQ=</HashCode>
+      <FileName>SysAdmin\MemberManage\MemberModelList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.MemberOnlyModelEdit" Collapsed="true">
+    <Position X="364" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAQRAAAAEAABAAAAAAAAAAADAAgAAAAAIBIAA=</HashCode>
+      <FileName>SysAdmin\MemberManage\MemberOnlyModelEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.ADCount" Collapsed="true">
+    <Position X="600.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAgAAAAABAAAAAAAAAAAAAAAAAgAIAAAQ=</HashCode>
+      <FileName>SysAdmin\Model\ADCount.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.AdvertisementConfigEdit" Collapsed="true">
+    <Position X="424.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQBAAAAAAAQAAAAAQAAAABDAAAABAAAIAAEA=</HashCode>
+      <FileName>SysAdmin\Model\AdvertisementConfigEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.AdvertisementEdit" Collapsed="true">
+    <Position X="451.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>GAEACBCAQBQAAAUAAAAAAAAIQAKTEBEAAIlkQBoAAEY=</HashCode>
+      <FileName>SysAdmin\Model\AdvertisementEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.AdvertisementJsEdit" Collapsed="true">
+    <Position X="483.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQBIAAAAAAAAAAAAAAAAAABIABAIAAAIAAEA=</HashCode>
+      <FileName>SysAdmin\Model\AdvertisementJsEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.AdvertisementJsList" Collapsed="true">
+    <Position X="514.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQBAAAAAAAAAgAAgAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>SysAdmin\Model\AdvertisementJsList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.AdvertisementList" Collapsed="true">
+    <Position X="544" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAEAAAQBAAQAQABAIgAIgAIAABCBhgAAIBAAIAAQE=</HashCode>
+      <FileName>SysAdmin\Model\AdvertisementList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.AdvertisingEdit" Collapsed="true">
+    <Position X="575.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>8AwEASBAwBAEAACBCDEAIYQABQIgABQEAgBKVAIACUQ=</HashCode>
+      <FileName>SysAdmin\Model\AdvertisingEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.Advertising" Collapsed="true">
+    <Position X="35.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>VAAAEAAAYBAAQAQABAIgAAgAIAAgCBggAAIAAAIIAAA=</HashCode>
+      <FileName>SysAdmin\Model\AdvertisingList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.CommentConfigEdit" Collapsed="true">
+    <Position X="64.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAABRhADgAAAAAFAQIAQACAgARAAAABAsALEAEQ=</HashCode>
+      <FileName>SysAdmin\Model\CommentConfigEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.CommentList" Collapsed="true">
+    <Position X="98.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAEAAAQBAAAAQABAIgAAAAIAAACAAgAAIQIAIIAAA=</HashCode>
+      <FileName>SysAdmin\Model\CommentList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.CommentTestList" Collapsed="true">
+    <Position X="132.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAARBAgQAQARABgAIQAAiCQEAAgGhIQAAIAAAA=</HashCode>
+      <FileName>SysAdmin\Model\CommentTestList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.CommonFieldEdit" Collapsed="true">
+    <Position X="166" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>VWgBBBJxQDgBAwCUISgjAJFQoIAABLgAE1WAICIiQIY=</HashCode>
+      <FileName>SysAdmin\Model\CommonFieldEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.CommonFieldList" Collapsed="true">
+    <Position X="193" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAQAUBAAACACAAITEABAoIAADAA0AAAAAAIDAAI=</HashCode>
+      <FileName>SysAdmin\Model\CommonFieldList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.ControlFormEdit" Collapsed="true">
+    <Position X="609.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAIAAAAAAAAAQACACAAAAAECAAAAEIAAAA=</HashCode>
+      <FileName>SysAdmin\Model\ControlFormEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.ControlFormList" Collapsed="true">
+    <Position X="251.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAuAAAAAQBAAACACCAAAAAAAIAAAAAAQAgAADAIBAEA=</HashCode>
+      <FileName>SysAdmin\Model\ControlFormList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.ControlFormTemplate" Collapsed="true">
+    <Position X="280.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QBiAAAAAQBAAjAAACABAAAAAMAAAAAAAQAADRAIBAEA=</HashCode>
+      <FileName>SysAdmin\Model\ControlFormTemplate.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.ControlManageEdit" Collapsed="true">
+    <Position X="307.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAQBABAUQAEAAABAAAJAAAAgACAABAAAoAACA=</HashCode>
+      <FileName>SysAdmin\Model\ControlManageEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.ModelList" Collapsed="true">
+    <Position X="339.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IgiCABkAQBAwAGACCAAAAAAAIAQAABQQAAAABCKBAEY=</HashCode>
+      <FileName>SysAdmin\Model\ControlManageList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.ControlManageView" Collapsed="true">
+    <Position X="366.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAIAABAAAAAAEAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>SysAdmin\Model\ControlManageView.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.CustomFormEdit" Collapsed="true">
+    <Position X="393.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQAAAAQBSBAjAAADDEEAAAAQAAACJJAHAABAAAoQQEQ=</HashCode>
+      <FileName>SysAdmin\Model\CustomFormEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.CustomFormList" Collapsed="true">
+    <Position X="427" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAEAAASBAAAAQCBAIgAAAAIAAACBggAAIAAAIABAE=</HashCode>
+      <FileName>SysAdmin\Model\CustomFormList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.FieldManageEdit" Collapsed="true">
+    <Position X="454" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>XWgBFBJxSDgBA4C0IagjAZFwoICABLgAE1WAISoiYoY=</HashCode>
+      <FileName>SysAdmin\Model\FieldManageEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.FieldManageList" Collapsed="true">
+    <Position X="485.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAlAQAUBAAACIiAIITEQBAIoCADAAwAAAACQoDAII=</HashCode>
+      <FileName>SysAdmin\Model\FieldManageList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.FlowStepEdit" Collapsed="true">
+    <Position X="517" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAIAQRAAAAAAACAAAAIACAACEDAAAghAAAIAAkQ=</HashCode>
+      <FileName>SysAdmin\Model\FlowStepEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.FlowStepList" Collapsed="true">
+    <Position X="546.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAQRAACAQAAAogAIAAIAAACBhgAAIAAAIAAgA=</HashCode>
+      <FileName>SysAdmin\Model\FlowStepList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.ModelCreate" Collapsed="true">
+    <Position X="577.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAIAIABAAAAAAAIAAAEAAAABAAAAIAAAA=</HashCode>
+      <FileName>SysAdmin\Model\ModelCreate.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.ModelFieldEdit" Collapsed="true">
+    <Position X="37.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QcADQhkzbRJAowCIYIlDANXUcKAEFJlAVxHgiCqzDSY=</HashCode>
+      <FileName>SysAdmin\Model\ModelFieldEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.ModelFieldGroupEdit" Collapsed="true">
+    <Position X="67" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAQBAACAAAAAEAABgAAAAAYBAAAABAQAIAAEQ=</HashCode>
+      <FileName>SysAdmin\Model\ModelFieldGroupEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.ModelFieldGroupList" Collapsed="true">
+    <Position X="100.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EABAEgAAYVAACAQABgAAAAAAAAAIEBggABIAAAIIAEQ=</HashCode>
+      <FileName>SysAdmin\Model\ModelFieldGroupList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.ModelFieldList" Collapsed="true">
+    <Position X="134.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIRAAAAAYBAAIAYAgABAAAABIgAAEAAQABAACAKAAAg=</HashCode>
+      <FileName>SysAdmin\Model\ModelFieldList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.ModelManageEdit" Collapsed="true">
+    <Position X="168.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IgIBBIQAQBAAgAAgKAJEAIIAIYCMBKAEBAgEgAMQAUU=</HashCode>
+      <FileName>SysAdmin\Model\ModelManageEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.ModelManageList" Collapsed="true">
+    <Position X="195.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAARAUAUBAABGIiAAJBAAAAIgAADAgwAAAAAgICAAI=</HashCode>
+      <FileName>SysAdmin\Model\ModelManageList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.RecyclingAssociatedEdit" Collapsed="true">
+    <Position X="222.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAEQBAAAAAggAAwEAAAACBAABBAAABAQAIAAEA=</HashCode>
+      <FileName>SysAdmin\Model\RecyclingAssociatedEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.RecyclingAssociatedList" Collapsed="true">
+    <Position X="253.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAgAAYBAAAAQAhgAgABgAIAAAABhgAAYAQAIAAAQ=</HashCode>
+      <FileName>SysAdmin\Model\RecyclingAssociatedList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.RecyclingList" Collapsed="true">
+    <Position X="283" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>GgAAEgAAYBAAAAQABgAwAAAApAAAABhgQAYAQAIAAAU=</HashCode>
+      <FileName>SysAdmin\Model\RecyclingList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.RecyclingManageEdit" Collapsed="true">
+    <Position X="310" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACQAEAIQhAAAAAAAAAQAAAACAAQQFAAADBAAAIAAEQ=</HashCode>
+      <FileName>SysAdmin\Model\RecyclingManageEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.RecyclingManageList" Collapsed="true">
+    <Position X="341.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAEgAAYRAAAAQABgAwAAgAIAAAABggAAYAAAIAAAU=</HashCode>
+      <FileName>SysAdmin\Model\RecyclingManageList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.ReviewFlowEdit" Collapsed="true">
+    <Position X="368.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAQBAAAAAAAACAAAAAAAQAABAAAgBAAAIAAEQ=</HashCode>
+      <FileName>SysAdmin\Model\ReviewFlowEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.ReviewFlowList" Collapsed="true">
+    <Position X="395.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAgAAAAQVAAAAQAAAIAAAAAIAQAGBggABIAAAIAAAA=</HashCode>
+      <FileName>SysAdmin\Model\ReviewFlowList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.ReviewFlowNews" Collapsed="true">
+    <Position X="429.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgFAAAAARDAAAAQAAABgBIAAIAQQEAAgEhIAAAKDAAA=</HashCode>
+      <FileName>SysAdmin\Model\ReviewFlowNews.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.ReviewFlowNewsList" Collapsed="true">
+    <Position X="456.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAQAAxBBgACQQAABABAgEAAQAUAAQABAACAIAAEA=</HashCode>
+      <FileName>SysAdmin\Model\ReviewFlowNewsList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.ReviewFlowNewsLogList" Collapsed="true">
+    <Position X="487.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAQBAAAAAAAABgAAAAAAAQEAAgEBIAAAICAAA=</HashCode>
+      <FileName>SysAdmin\Model\ReviewFlowNewsLogList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.ReviewFlowStateEdit" Collapsed="true">
+    <Position X="519.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAAAAQBgAAAAAAACAAAAAAAIAABAAAgBAAAIAAEQ=</HashCode>
+      <FileName>SysAdmin\Model\ReviewFlowStateEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.ReviewFlowStateList" Collapsed="true">
+    <Position X="548.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAAAAQRAAAAQAAAIgAAAAIAAAGBggABIAAAIAAAA=</HashCode>
+      <FileName>SysAdmin\Model\ReviewFlowStateList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.SurveyEdit" Collapsed="true">
+    <Position X="580" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAQBACQAAIAAAAAAAAiEgAQBAAAABEAAIAAEQ=</HashCode>
+      <FileName>SysAdmin\Model\SurveyEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.SurveyItemEdit" Collapsed="true">
+    <Position X="40" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ECAAAAAAQBAAAAIAAAACAgAAAAIAAJAAAADBCAIABUQ=</HashCode>
+      <FileName>SysAdmin\Model\SurveyItemEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.SurveyItemList" Collapsed="true">
+    <Position X="69.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAEgAAYVAAAAQABAAAAogAAAAICAlgAAIBAAIIAQQ=</HashCode>
+      <FileName>SysAdmin\Model\SurveyItemList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.SurveyList" Collapsed="true">
+    <Position X="103" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UAAAEAAAQBACAAQABAIgAAAAIAAACBgiAAYAAAIAAAE=</HashCode>
+      <FileName>SysAdmin\Model\SurveyList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.SurveyPageEdit" Collapsed="true">
+    <Position X="136.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQBIAAAAAAAAAAAAAAAAAABIABAIAAAIAAEA=</HashCode>
+      <FileName>SysAdmin\Model\SurveyPageEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.SurveyTemplate" Collapsed="true">
+    <Position X="604" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAACAIUBBCAAhiQABAAAAAmCAAABAAAAQAAAIAAMA=</HashCode>
+      <FileName>SysAdmin\Model\SurveyTemplate.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.SurveyVoteCount" Collapsed="true">
+    <Position X="197.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAYBACAAAQAAAAAgABABAAAAAAAAMBCAIAAUA=</HashCode>
+      <FileName>SysAdmin\Model\SurveyVoteCount.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.SurveyVoteList" Collapsed="true">
+    <Position X="224.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAQgAAQRACAAAAABEAAogAAAAACAFgAAIBAAIAAQQ=</HashCode>
+      <FileName>SysAdmin\Model\SurveyVoteList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.Template" Collapsed="true">
+    <Position X="256" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQBAAAAAAAAAAAAAAIAAAABIAAAAAAQIAAMA=</HashCode>
+      <FileName>SysAdmin\Model\Template.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.VoteEdit" Collapsed="true">
+    <Position X="285.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAhAQBAAAAQIAAAAABAAAAAAABIAAABMAAIAAEQ=</HashCode>
+      <FileName>SysAdmin\Model\VoteEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.VoteList" Collapsed="true">
+    <Position X="312.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UAAAEAAAQBAAAAQABAIgAAAAIAAACBgiAAIAAAIAAAE=</HashCode>
+      <FileName>SysAdmin\Model\VoteList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.VotePost" Collapsed="true">
+    <Position X="612.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAUBAAAAwCQAAAAAAAgAAACBAAAgAACAIAAEA=</HashCode>
+      <FileName>SysAdmin\Model\VotePost.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.VoteShow" Collapsed="true">
+    <Position X="370.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQBAAAQAAAAEgAIgBAAAAAABgAEIACAIAAAA=</HashCode>
+      <FileName>SysAdmin\Model\VoteShow.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.AuthorEdit" Collapsed="true">
+    <Position X="397.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAgoEQAQDEHJAAAAAAAAIAAIAQAAcAAABAAAAIAEEY=</HashCode>
+      <FileName>SysAdmin\Resource\AuthorEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.AuthorList" Collapsed="true">
+    <Position X="431.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAUAUBAAAAACAAIBAAAAIQAABggwAAAAAAICAEY=</HashCode>
+      <FileName>SysAdmin\Resource\AuthorList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.KeywordEdit" Collapsed="true">
+    <Position X="458.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAQIQDAAAEAAAgAAAEAAIAAAAAAAAAAAAAIAEFY=</HashCode>
+      <FileName>SysAdmin\Resource\KeyWordEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.KeyWordList" Collapsed="true">
+    <Position X="490" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAUAUBAAAAACAAIAAAAAIAAABIgwAAAAAAICAAY=</HashCode>
+      <FileName>SysAdmin\Resource\KeyWordList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.SourceEdit" Collapsed="true">
+    <Position X="521.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IACgIAAAYDAEJAAAAAAAAIAAIAQAAYAAAABAAAIAEAY=</HashCode>
+      <FileName>SysAdmin\Resource\SourceEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.SourceList" Collapsed="true">
+    <Position X="550.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAUAUBAAAAACBAIBAAAAIAAABAg0AAAAAAICAAY=</HashCode>
+      <FileName>SysAdmin\Resource\SourceList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.SinglePageEdit" Collapsed="true">
+    <Position X="582.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAQBAAAAAAAAAAAAAAAAAAABAIAAAgAAIAAEI=</HashCode>
+      <FileName>SysAdmin\Single\SinglePageEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.ActionList" Collapsed="true">
+    <Position X="42.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAEAAQBCAAAAAQAAAAAQAoAAISAgSAIAAAAIKAAQ=</HashCode>
+      <FileName>SysAdmin\SysManage\ActionList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.OutLinkShow" Collapsed="true">
+    <Position X="71.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAABAAAAAAAAAAAAAAgAAAAAAAAAAAAAIAAEA=</HashCode>
+      <FileName>SysAdmin\SysManage\OutLinkShow.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.SelTemplate" Collapsed="true">
+    <Position X="105.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAYAAAAAAIAIABAAAAAIAAAAAIAAAA=</HashCode>
+      <FileName>SysAdmin\SysManage\SelTemplate.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.FileView" Collapsed="true">
+    <Position X="139" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAQBAAAAAAAAAAAAAAQAABABAAAAAAACIAAEA=</HashCode>
+      <FileName>SysAdmin\Trojan\FileView.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.ScanResult" Collapsed="true">
+    <Position X="170.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>cAAAAAAAIBEQAAAAAAAAAAABABAAACAhAAIAAAISAEI=</HashCode>
+      <FileName>SysAdmin\Trojan\ScanResult.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.TrojanScan" Collapsed="true">
+    <Position X="199.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MEAAAAAASBACEBCAAAAAAAAAAAggBAIQAAAAAAoCAEA=</HashCode>
+      <FileName>SysAdmin\Trojan\TrojanScan.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.neatupload" Collapsed="true">
+    <Position X="226.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAkKgAEAEAgCDCAAAAAABAQAIKAwEAgAAoAAALoAAEg=</HashCode>
+      <FileName>SysAdmin\upfiles\NeatUpload.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.ValidateCode" Collapsed="true">
+    <Position X="607.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>SysAdmin\ValidateCode.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.ajax.Lable" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="607.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAABAAAAAAAAAAAAAAAAEAAAAAAAg=</HashCode>
+      <FileName>SysAdmin\ajax\Lable.ashx.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.ajax.ShopFloor" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="609.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAABAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>SysAdmin\ajax\ShopFloor.ashx.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Aspx.Lable" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="609.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SysAdmin\Aspx\Lable.ashx.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Category.CategoryAjax" Collapsed="true">
+    <Position X="607.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAIAAAAAAEAAAAAAIQAAA=</HashCode>
+      <FileName>SysAdmin\Category\CategoryAjax.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Category.CategoryListOrder" Collapsed="true">
+    <Position X="400" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAIQAAA=</HashCode>
+      <FileName>SysAdmin\Category\CategoryListOrder.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Category.EnableAjax" Collapsed="true">
+    <Position X="433.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAIQAAA=</HashCode>
+      <FileName>SysAdmin\Category\EnableAjax.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.Admin.Categorys.CategoryEdit" Collapsed="true">
+    <Position X="460.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EABEAIAAQBKQAAgATAkACBIgAACIAAgAAAAAAAKYAkQ=</HashCode>
+      <FileName>SysAdmin\Category\CategoryEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.Categorys.CategoryList" Collapsed="true">
+    <Position X="492.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAEMAEIQBKAAAEAAAABCBAgIAAISwgQAACACAKaA0Q=</HashCode>
+      <FileName>SysAdmin\Category\CategoryList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Collection.Address" Collapsed="true">
+    <Position X="523.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAQBAAwAAAAAAAEAAAIAgAAAAIAAAAAAJAAAA=</HashCode>
+      <FileName>SysAdmin\Collection\Address.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Collection.FieldEdit" Collapsed="true">
+    <Position X="553" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AGSRAKIAwHAAoACAAAgAFgAAIQgAAASAAQAAAMKAQAw=</HashCode>
+      <FileName>SysAdmin\Collection\FieldEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Collection.FieldList" Collapsed="true">
+    <Position X="584.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAUAUBAAACACAAIBAAAAIAAEFAAgAAAAAAICAII=</HashCode>
+      <FileName>SysAdmin\Collection\FieldList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Collection.FieldMapping" Collapsed="true">
+    <Position X="44.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAABgAABABAAAAAAAAAAAA0AAAAABAAgAgABMAAAA=</HashCode>
+      <FileName>SysAdmin\Collection\FieldMapping.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Collection.FieldReplaceEdit" Collapsed="true">
+    <Position X="73.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAIAAQBAAQAgAAIAAAAAAIAgAIAAQQEAAAAKEAAA=</HashCode>
+      <FileName>SysAdmin\Collection\FieldReplaceEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Collection.FieldReplaceList" Collapsed="true">
+    <Position X="107.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQRAAAAAAACABAAAAIAgAAAAAAEAAAAKAAAA=</HashCode>
+      <FileName>SysAdmin\Collection\FieldReplaceList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Collection.HttpHeaderConfigEdit" Collapsed="true">
+    <Position X="141.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAQBAAAAAAAAAAAAIAIAAAAAAAABAAAAIAEAQ=</HashCode>
+      <FileName>SysAdmin\Collection\HttpHeaderConfigEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Collection.HttpHeaderConfigList" Collapsed="true">
+    <Position X="172.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAUAUBIAACACAAIBAAAAIAAADAAwAAAACAKCAEI=</HashCode>
+      <FileName>SysAdmin\Collection\HttpHeaderConfigList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Collection.HttpHeaderEdit" Collapsed="true">
+    <Position X="202" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAUBACAAAAQQAAEAAAIAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>SysAdmin\Collection\HttpHeaderEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Collection.HttpHeaderList" Collapsed="true">
+    <Position X="229" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQBACAAAgAAAAAAAAIAAAAAAAAAACAAIAAAA=</HashCode>
+      <FileName>SysAdmin\Collection\HttpHeaderList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Collection.LabelVarEdit" Collapsed="true">
+    <Position X="258.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAQBAAAAAAAAAAAAAAIAAAAAAAABAAAAKAEAQ=</HashCode>
+      <FileName>SysAdmin\Collection\LabelVarEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Collection.LabelVarList" Collapsed="true">
+    <Position X="287.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAUAUBAAACACAAIBAAAAIAAADAAwAAAACAKCAAI=</HashCode>
+      <FileName>SysAdmin\Collection\LabelVarList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Collection.LabelVarValueEdit" Collapsed="true">
+    <Position X="314.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACIAAQBAAAAAAAAAAAAAAIAAACAAAAAAAAAKAAAA=</HashCode>
+      <FileName>SysAdmin\Collection\LabelVarValueEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Collection.Publish" Collapsed="true">
+    <Position X="343.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>SysAdmin\Collection\Publish.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Collection.PublishTaskEdit" Collapsed="true">
+    <Position X="373" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAIBAUBAAAACgMhAAAgCgIAAFAABAABAAAAIACAQ=</HashCode>
+      <FileName>SysAdmin\Collection\PublishTaskEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Collection.PublishTaskList" Collapsed="true">
+    <Position X="402.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAUAUBAAACACAAIBAAAAIAAADAAwAAAACAICFEI=</HashCode>
+      <FileName>SysAdmin\Collection\PublishTaskList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Collection.RuleEdit" Collapsed="true">
+    <Position X="436" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QCAAYIIAQDAggiACAAFFEUQQIpgAgAIAAAAIGAKAQAQ=</HashCode>
+      <FileName>SysAdmin\Collection\RuleEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Collection.RuleList" Collapsed="true">
+    <Position X="463" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAQBQAgAAAAAABEAAAIAAAAAAAAAAAAAMAAAA=</HashCode>
+      <FileName>SysAdmin\Collection\RuleList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Collection.Spider" Collapsed="true">
+    <Position X="494.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAgAAAAAAAAAAAKAAAA=</HashCode>
+      <FileName>SysAdmin\Collection\Spider.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Collection.TabelMapping" Collapsed="true">
+    <Position X="526" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAJAAABAAAAAAAAAAAAAAYAAAAABAAgAgAAIAAAA=</HashCode>
+      <FileName>SysAdmin\Collection\TableMapping.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Collection.TaskEdit" Collapsed="true">
+    <Position X="555.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAgBAOQWQBAGAAAAEAAAiAgAIACICUAIBRAgAAJAAAQ=</HashCode>
+      <FileName>SysAdmin\Collection\TaskEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Collection.Task" Collapsed="true">
+    <Position X="586.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAUAUBAAACACAAIBAAAAIAAADAAwAAAACAICFAI=</HashCode>
+      <FileName>SysAdmin\Collection\TaskList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.console.Chart" Collapsed="true">
+    <Position X="611" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>SysAdmin\console\Chart.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.console.Chart1" Collapsed="true">
+    <Position X="612.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>SysAdmin\console\Chart1.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.console.index1" Collapsed="true">
+    <Position X="109.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAggIAACAAAAADABAAAAQQAAEAAAECAAQAAAIgAAA=</HashCode>
+      <FileName>SysAdmin\console\index1.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.console.Index" Collapsed="true">
+    <Position X="143.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAggIAACAAAACDAAAAAAAQAAAAAAAAAAAAAAIgAAA=</HashCode>
+      <FileName>SysAdmin\console\Index.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.console.left" Collapsed="true">
+    <Position X="175" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgEAAAAGAAAABCABABEAgAAAEAAAACAAQAAAIEAAA=</HashCode>
+      <FileName>SysAdmin\console\Left.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.console.Main" Collapsed="true">
+    <Position X="204.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgQAAACADIkACSADSAAAgIgAIIAEAAACJACAAMCDkA=</HashCode>
+      <FileName>SysAdmin\console\Main.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.Controls.Editor" Collapsed="true">
+    <Position X="600.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACACAAAAggCAAAQAQAAAAAAEABAAAAAAACQAAQIAAAA=</HashCode>
+      <FileName>SysAdmin\Controls\Editor.ascx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Controls.PublicOper" Collapsed="true">
+    <Position X="612.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAABAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>SysAdmin\Controls\PublicOper.ascx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.DWAPI" Collapsed="true">
+    <Position X="616.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>SysAdmin\DWAPI.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.LogOut" Collapsed="true">
+    <Position X="605.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>SysAdmin\LogOut.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.MyTable" Collapsed="true">
+    <Position X="602.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>SysAdmin\MyTable.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.NoRight" Collapsed="true">
+    <Position X="604" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>SysAdmin\NoRight.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.QuestionnaireList" Collapsed="true">
+    <Position X="602.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQBAAAAAAkEEBAAAAIAEAAEAAAEAAAAIAAAA=</HashCode>
+      <FileName>SysAdmin\Questionnaire\QuestionnaireList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.sdStatics" Collapsed="true">
+    <Position X="607.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAwAAAAJEhAAAQgAAAAgCQBgAAAAAAAEABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.test" Collapsed="true">
+    <Position X="609.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>SysAdmin\test.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Editor.dowloadActiveX" Collapsed="true">
+    <Position X="612.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>SysAdmin\Editor\dowloadActiveX.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.Editor.eWebEditor.config" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAACAAAAAAQAAAAAA=</HashCode>
+      <FileName>SysAdmin\Editor\eWebEditor\Aspx\config.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.Editor.eWebEditor.i" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAEAAAAIAAAA=</HashCode>
+      <FileName>SysAdmin\Editor\eWebEditor\Aspx\i.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Editor.eWebEditor.Aspx.upload" Collapsed="true">
+    <Position X="589" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACkIgAAAAAgCCAAAAAAAAAQAACAgAEgAAgAAADIAAMA=</HashCode>
+      <FileName>SysAdmin\Editor\eWebEditor\Aspx\upload.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.Admin.Emails.EmailEdit" Collapsed="true">
+    <Position X="46.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EBAEEAAAQBCCAAkABAAAABAAAACIABiABAAEACIYAEA=</HashCode>
+      <FileName>SysAdmin\Email\EmailEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.Emails.EmailList" Collapsed="true">
+    <Position X="76" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EABgAECAQBBAAAEIAAAAABCEIAAIQJAQAAAACkoaAUY=</HashCode>
+      <FileName>SysAdmin\Email\EmailList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.Admin.Email.EmailMenu" Collapsed="true">
+    <Position X="112" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQEEAAAAAAACAAAAAAAAAAAIAAAAAAAAAAAAAIYAAA=</HashCode>
+      <FileName>SysAdmin\Email\EmailMenu.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Emails.EmailView" Collapsed="true">
+    <Position X="145.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAUQBACAAAAAAAAAAQAIAAAAQgAAAAAAAIZAEA=</HashCode>
+      <FileName>SysAdmin\Email\EmailView.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Email.Master" Collapsed="true">
+    <Position X="609.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAEA=</HashCode>
+      <FileName>SysAdmin\Email\Master.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.Web.Admin.Email.WebForm1" Collapsed="true">
+    <Position X="206.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>SysAdmin\Email\WebForm1.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.FileManage.FileEditImage" Collapsed="true">
+    <Position X="231.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEFABAQAAAAAAAAAAAAAQAKAAAAAFAAIIQQMYAAAA=</HashCode>
+      <FileName>SysAdmin\FileManage\FileEditImage.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.FileManage.FileEditTxt" Collapsed="true">
+    <Position X="260.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAQAAAAAAAAAAAAIAAIAAAAAFAAIAAQOYAAAA=</HashCode>
+      <FileName>SysAdmin\FileManage\FileEditTxt.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.FileManage.FileList" Collapsed="true">
+    <Position X="289.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EEEABEAAQAAAwIAAAAEAAAAAIgBACAARIJgQEROOAEA=</HashCode>
+      <FileName>SysAdmin\FileManage\FileList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.FileManage.FileRename" Collapsed="true">
+    <Position X="316.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAABAAAQAAAQAAAAAAAAAAAIAAAAAEAAIgAANYAAIA=</HashCode>
+      <FileName>SysAdmin\FileManage\FileRename.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.LinkManage.FriendLinkConfigEdit" Collapsed="true">
+    <Position X="346" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACgQBAAgAAAAAFAAAAAAAIAEBAAAgBAgAIIAEQ=</HashCode>
+      <FileName>SysAdmin\LinkManage\FriendLinkConfigEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.LinkManage.LinkPageEdit" Collapsed="true">
+    <Position X="375.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQBIAAAAAAAAAAAAAAAAAABIABAIAAAIAAEA=</HashCode>
+      <FileName>SysAdmin\LinkManage\LinkPageEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.MemberManage.MemberScoreList" Collapsed="true">
+    <Position X="404.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EEAAAEAGQAACQQAAAgACAAAAIAAAAAAQAAIAAAIKAMA=</HashCode>
+      <FileName>SysAdmin\MemberManage\MemberScoreList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Model.ajax" Collapsed="true">
+    <Position X="602.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>SysAdmin\Model\ajax.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Model.AppendToNode" Collapsed="true">
+    <Position X="465.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAQBAAAAACAAAAAAgEIAAAAAAAAAAAAAICAEA=</HashCode>
+      <FileName>SysAdmin\Model\AppendToNode.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Model.AppendToSpecial" Collapsed="true">
+    <Position X="496.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAQDAAAAACAAAAAAgAJAAAAAAAEAAAAAIAAAA=</HashCode>
+      <FileName>SysAdmin\Model\AppendToSpecial.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Model.Calendar" Collapsed="true">
+    <Position X="605.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>SysAdmin\Model\Calendar.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Model.CommentPageEdit" Collapsed="true">
+    <Position X="557.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQBIAAAAAAAAAAAAAAAAAABIABAIAAAIAAEA=</HashCode>
+      <FileName>SysAdmin\Model\CommentPageEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Model.CommentTemplate" Collapsed="true">
+    <Position X="591.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAQAAgUAAAQBQAAAQAAgAQABAAEgAQAAMIAAA=</HashCode>
+      <FileName>SysAdmin\Model\CommentTemplate.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Model.CommentTemplateList" Collapsed="true">
+    <Position X="49" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABIAAAA=</HashCode>
+      <FileName>SysAdmin\Model\CommentTemplateList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Model.CommonFieldGroupEdit" Collapsed="true">
+    <Position X="78.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAgAAAQBAAAAAEAAAAAAAAIAAAAAAAAAAAAAIAEEQ=</HashCode>
+      <FileName>SysAdmin\Model\CommonFieldGroupEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Model.CommonFieldGroupList" Collapsed="true">
+    <Position X="114.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAEQBAAAAAAAAAAAAAAIAAAAAAAAAAAAAIAAEA=</HashCode>
+      <FileName>SysAdmin\Model\CommonFieldGroupList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Model.CommonFieldSet" Collapsed="true">
+    <Position X="148" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEIAAQBAAQAAAAAAAAAgAIACAAAAAAAAAAQMBAcA=</HashCode>
+      <FileName>SysAdmin\Model\CommonFieldSet.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Model.DepartMentlist" Collapsed="true">
+    <Position X="611" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAABBAQAARQAICAAgAAEtAAQQAJAgAEhBQAAAIICQUY=</HashCode>
+      <FileName>SysAdmin\Model\DepartMentlist.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Model.Expertedit" Collapsed="true">
+    <Position X="602.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BABCAJgARBwCgIMICgAMBQAEAxBQgxggcAAgIAKABEQ=</HashCode>
+      <FileName>SysAdmin\Model\Expertedit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Model.Expertlist" Collapsed="true">
+    <Position X="604" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAABAQAARQAICAAgAEEtAAQSAJAgAEhBQAAAIICQUc=</HashCode>
+      <FileName>SysAdmin\Model\Expertlist.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Model.FieldListConfig" Collapsed="true">
+    <Position X="262.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BUACAAE1QBAAABCAEKghAIEAIACAAagEAhAAAAoAQII=</HashCode>
+      <FileName>SysAdmin\Model\FieldListConfig.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Model.Flow" Collapsed="true">
+    <Position X="609.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAAgA=</HashCode>
+      <FileName>SysAdmin\Model\Flow.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Model.GetExcelFile" Collapsed="true">
+    <Position X="319" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAQAAAAAAgAAIAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>SysAdmin\Model\GetExcelFile.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Model.KJNewslist" Collapsed="true">
+    <Position X="605.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAABAQAARQAICAAgAAEtAAQQAJAgAEhBQAAAIICQUY=</HashCode>
+      <FileName>SysAdmin\Model\KJNewslist.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Model.SysField" Collapsed="true">
+    <Position X="605.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ECAAABAAAAACAAQMACAEAAACAAAAAYAAAIAoAAIKCAA=</HashCode>
+      <FileName>SysAdmin\Model\ModelAjaxDeal.asmx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Model.ModelLisConfig" Collapsed="true">
+    <Position X="406.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAIABCAAAAAAAAAAAgAIAAAAAAAAQAAACIAAAA=</HashCode>
+      <FileName>SysAdmin\Model\ModelListConfig.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Model.OnlineZXlist" Collapsed="true">
+    <Position X="607.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAABAQAARQAICAAgAAEtAAQQAJAAAEhBQAAAIICQUY=</HashCode>
+      <FileName>SysAdmin\Model\OnlineZXlist.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Model.PublishRange" Collapsed="true">
+    <Position X="467.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAACAAAAABAAAAAAAgAAAAIAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>SysAdmin\Model\PublishRange.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Model.RecommendAreaEdit" Collapsed="true">
+    <Position X="499" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAQAQBAQAAAAAAIAAAAAIAAAAAAAAAAgAQJAAEQ=</HashCode>
+      <FileName>SysAdmin\Model\RecommendAreaEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Model.RecommendAreaList" Collapsed="true">
+    <Position X="528.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAUAUFAAACACAAIBAAAAAAAADAAwAAAUCAoCAEI=</HashCode>
+      <FileName>SysAdmin\Model\RecommendAreaList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Model.RecommendAreaPositionEdit" Collapsed="true">
+    <Position X="559.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAQAQBCAAAAAAAYQAAAAIAAgAABAAAAAAAIAAMQ=</HashCode>
+      <FileName>SysAdmin\Model\RecommendAreaPositionEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Model.RecommendAreaPositionList" Collapsed="true">
+    <Position X="593.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQUAUBAAACACAAIFAAAEAAAgDAAwAAAACAoCAEI=</HashCode>
+      <FileName>SysAdmin\Model\RecommendAreaPositionList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Model.RecommendAreaSet" Collapsed="true">
+    <Position X="51.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAIAAQBAAAAAAAACAAAgAIAAAAAAAAAAAAAYAAEA=</HashCode>
+      <FileName>SysAdmin\Model\RecommendAreaSet.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Model.SeoMapCreate" Collapsed="true">
+    <Position X="80.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAFAAAIAAAAAAAkAAgAAAAACgAAAEAEAAAAAIAAAA=</HashCode>
+      <FileName>SysAdmin\Model\SeoMapCreate.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Model.ShowAuthor" Collapsed="true">
+    <Position X="116.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAUAEBAAAAACAAIAAAgAAAAABgAwAAAQCAICAAA=</HashCode>
+      <FileName>SysAdmin\Model\ShowAuthor.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Model.ShowKeyword" Collapsed="true">
+    <Position X="150.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAUEEBAAAAACAAIgAAgAAAAABAAwAAAACAICAAA=</HashCode>
+      <FileName>SysAdmin\Model\ShowKeyword.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Model.ShowSiteNode" Collapsed="true">
+    <Position X="177.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAABgAAAAAAAAAAAAAAAAAAAAAAAgAAAIAAAA=</HashCode>
+      <FileName>SysAdmin\Model\ShowSiteNode.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Model.ShowSource" Collapsed="true">
+    <Position X="208.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAUAEBAAAAACAAIgAAgAAAAABgAwAAAACAICAAA=</HashCode>
+      <FileName>SysAdmin\Model\ShowSource.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Model.ShowSpecial" Collapsed="true">
+    <Position X="233.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAQBAAAAAAAAAAAAAAAAAAAAAEAAAAAAIAAAA=</HashCode>
+      <FileName>SysAdmin\Model\ShowSpecial.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Model.SurveyAllAnswer" Collapsed="true">
+    <Position X="265" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UAAAAAAAQAAAAAAAAAAAAoAAEAAAAADgAAABgAIAAQA=</HashCode>
+      <FileName>SysAdmin\Model\SurveyAllAnswer.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Model.SurveyAllItem" Collapsed="true">
+    <Position X="292" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAQAACAAAAAAAgAoAAAAAAAABgAAEBAAIAAQA=</HashCode>
+      <FileName>SysAdmin\Model\SurveyAllItem.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Model.Timeaxis" Collapsed="true">
+    <Position X="612.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>SysAdmin\Model\Timeaxis.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Model.Timeaxis_Detail" Collapsed="true">
+    <Position X="614.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAACAAAAAAAAIAAAA=</HashCode>
+      <FileName>SysAdmin\Model\Timeaxis_Detail.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Model.typeclassedit" Collapsed="true">
+    <Position X="604" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABIBkABBAAAIAAQCgAAAEgAJAAAJgACgAAQIoJAAEQ=</HashCode>
+      <FileName>SysAdmin\Model\typeclassedit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Model.typeclasslist" Collapsed="true">
+    <Position X="409" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAACAAAIAAAAIAAAAAAAAAAIAAIAAAA=</HashCode>
+      <FileName>SysAdmin\Model\typeclasslist.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Questionnaire.QuestionnaireEdit" Collapsed="true">
+    <Position X="614.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAhAAAQBEAAAAAAAAgAAAAIAAAABBIBYACgAIAEAg=</HashCode>
+      <FileName>SysAdmin\Questionnaire\QuestionnaireEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Questionnaire.QuestionnaireItemEdit" Collapsed="true">
+    <Position X="616.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAhAAAQBAAAAAAAAAAAAAAIEAAAAAABQCCAAIAAEA=</HashCode>
+      <FileName>SysAdmin\Questionnaire\QuestionnaireItemEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Questionnaire.QuestionnaireItemList" Collapsed="true">
+    <Position X="600.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAQBAAAAAAgAABAAAAAAEAAAAAAAAAAAIAAEA=</HashCode>
+      <FileName>SysAdmin\Questionnaire\QuestionnaireItemList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Questionnaire.statistic" Collapsed="true">
+    <Position X="616.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQBAAAAAAAAAAAAgAAAAAAAAAAAEAAAIAAEA=</HashCode>
+      <FileName>SysAdmin\Questionnaire\statistic.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Questionnaire.Template" Collapsed="true">
+    <Position X="607.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAQBAAAAAggAEAQAAIIAAAQAAAAQAAAAIAAEA=</HashCode>
+      <FileName>SysAdmin\Questionnaire\Template.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Test.reptest" Collapsed="true">
+    <Position X="595.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AggAAAAAAAAAQABAAAAAAAgBIgAAQAAAAAQAQAYABAA=</HashCode>
+      <FileName>SysAdmin\StatisticReport.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Template.AddDirectory" Collapsed="true">
+    <Position X="53.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAIAAAAAAAAAAEAAAAAAgAAAAFAEAAIAAAUJAAAA=</HashCode>
+      <FileName>SysAdmin\Template\AddDirectory.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Template.AddTemplate" Collapsed="true">
+    <Position X="82.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQABQhACAAIAABhAQAAIAAAAABAAAAAAAAIAAAA=</HashCode>
+      <FileName>SysAdmin\Template\AddTemplate.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Template.AllLable" Collapsed="true">
+    <Position X="118.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAABAAAAAAAAAAAAAAAAABAKAAEA=</HashCode>
+      <FileName>SysAdmin\Template\AllLable.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Template.ColumnType" Collapsed="true">
+    <Position X="152.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAEAAAAAAogAAA=</HashCode>
+      <FileName>SysAdmin\Template\ColumnType.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Template.CreateHtml" Collapsed="true">
+    <Position X="179.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABCAIEgEACAAAAAAAAAIQCCCAAMAAEIAEAA=</HashCode>
+      <FileName>SysAdmin\Template\CreateHtml.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Template.CreateLable" Collapsed="true">
+    <Position X="211" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAABAIAAAA=</HashCode>
+      <FileName>SysAdmin\Template\CreateLable.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Template.DetailPageType" Collapsed="true">
+    <Position X="235.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAQIgAAA=</HashCode>
+      <FileName>SysAdmin\Template\DetailPageType.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Template.DWApi" Collapsed="true">
+    <Position X="614.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAIQIAIAAAA=</HashCode>
+      <FileName>SysAdmin\Template\DWApi.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Template.editor" Collapsed="true">
+    <Position X="294.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQgACAAIAARAAAAAgAAAAEAAAAAAAAIIAAAA=</HashCode>
+      <FileName>SysAdmin\Template\editor.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Template.EditTemplate" Collapsed="true">
+    <Position X="321.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAQABQgACBAIAARBAQAAoAAAAFAAAAAAAAIIAAAA=</HashCode>
+      <FileName>SysAdmin\Template\EditTemplate.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Template.FileRename" Collapsed="true">
+    <Position X="348.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAABAAAQAAAAAAAAAAAAAAgAAAAAAEAAIgAAEIAAIA=</HashCode>
+      <FileName>SysAdmin\Template\FileRename.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Template.LabelFreeEdit" Collapsed="true">
+    <Position X="377.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAYAAQBAAAAAACBAIAAAAAAAAgAcABCQAAMIQwAA=</HashCode>
+      <FileName>SysAdmin\Template\LabelFreeEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Template.LableClassAdd" Collapsed="true">
+    <Position X="411.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEIAAQBEAAAAAAAAAAAAAAAAAAAEAAAAAAEIAEAA=</HashCode>
+      <FileName>SysAdmin\Template\LableClassEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Template.LableClassList" Collapsed="true">
+    <Position X="438.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAQDAAECAAAAAAAAAAAAEACAgQACAACAIDAUY=</HashCode>
+      <FileName>SysAdmin\Template\LableClassList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Template.LableContent" Collapsed="true">
+    <Position X="611" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>SysAdmin\Template\LableContent.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Template.LableFreeFirstEdit" Collapsed="true">
+    <Position X="501.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAwBAAAAAAAAAABIAAAAQgAAAAAGAAEEIQIAE=</HashCode>
+      <FileName>SysAdmin\Template\LableFreeFirstEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Template.LableList" Collapsed="true">
+    <Position X="530.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MAAEEEAAQBAEACAIAgFAABAAAiEgDAAQoABQACMJEUU=</HashCode>
+      <FileName>SysAdmin\Template\LableList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Template.LableSinglePage" Collapsed="true">
+    <Position X="562" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAoAAEA=</HashCode>
+      <FileName>SysAdmin\Template\LableSinglePage.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Template.LableSystemEdit" Collapsed="true">
+    <Position X="598" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEYAAQBAAAAABCBAIAAAAAAAACAUABCQAAMIAQAA=</HashCode>
+      <FileName>SysAdmin\Template\LableSystemEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Template.ParamFree" Collapsed="true">
+    <Position X="611" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAoAAEA=</HashCode>
+      <FileName>SysAdmin\Template\ParamFree.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Template.ParamSpecial" Collapsed="true">
+    <Position X="85" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAoIAAA=</HashCode>
+      <FileName>SysAdmin\Template\ParamSpecial.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Template.PeriodicalType" Collapsed="true">
+    <Position X="121" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAIgAAA=</HashCode>
+      <FileName>SysAdmin\Template\PeriodicalType.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Template.PublicListType" Collapsed="true">
+    <Position X="154.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAgBAAAAAAAAAAAAAAAAAAAAAAAAAAAQIgAAA=</HashCode>
+      <FileName>SysAdmin\Template\PublicListType.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Template.OtherType" Collapsed="true">
+    <Position X="181.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAACAAAIAAIAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>SysAdmin\Template\SlideType.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Template.SonModel" Collapsed="true">
+    <Position X="611" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>SysAdmin\Template\SonModel.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Template.SpecialType" Collapsed="true">
+    <Position X="238" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAIAAIAAAAAAAAAAIgAEA=</HashCode>
+      <FileName>SysAdmin\Template\SpecialType.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Template.TemlateProjectEdit" Collapsed="true">
+    <Position X="267.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAIAERBAAgAgAAAAIAQQAAAAAABAABAAAAAIYAAA=</HashCode>
+      <FileName>SysAdmin\Template\TemlateProjectEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Template.TemplateProjectList" Collapsed="true">
+    <Position X="296.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAEIAAQBAEAAIAAAAAAAAAAAEICAgAABAAgAISAUA=</HashCode>
+      <FileName>SysAdmin\Template\TemplateProjectList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Template.TemplateSkinEdit" Collapsed="true">
+    <Position X="323.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAEAAIAEQBAAggiAAAEIBQACAIAAAAAABAAAgAIYAEA=</HashCode>
+      <FileName>SysAdmin\Template\TemplateSkinEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Template.TemplateSkinFileEdit" Collapsed="true">
+    <Position X="350.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAIAAAgACEAIEAABABAAgAAABFBACAIgAAAJAAAA=</HashCode>
+      <FileName>SysAdmin\Template\TemplateSkinFileEdit.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Template.TemplateSkinFileList" Collapsed="true">
+    <Position X="379.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EEAAAABAQAAAAEAQAgAAAIEIAAAAjABTABgQAALAAUQ=</HashCode>
+      <FileName>SysAdmin\Template\TemplateSkinFileList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Template.TemplateSkinList" Collapsed="true">
+    <Position X="413.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAEACAAAABAEAgKAgAAADAAAAAEICAgAAgAAgAMSAUQ=</HashCode>
+      <FileName>SysAdmin\Template\TemplateSkinList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.Template.Template.TemplateList" Collapsed="true">
+    <Position X="440.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EFAACABAQIAACAAAACEAAAECQAABTAATABgQAAIYAQQ=</HashCode>
+      <FileName>SysAdmin\Template\TemplateList.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.upfiles.batchupload" Collapsed="true">
+    <Position X="469.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EA0KhAAACAgCDSAABgEABAQAoiAgEAhgAgAAQPIAAGA=</HashCode>
+      <FileName>SysAdmin\upfiles\batchupload.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.upfiles.BrowseUploaded" Collapsed="true">
+    <Position X="503.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAkAAgAAAAACAgABAAAAAgICAQAAggACAAhBoCAMI=</HashCode>
+      <FileName>SysAdmin\upfiles\BrowseUploaded.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.upfiles.ckeditorupload" Collapsed="true">
+    <Position X="532.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAkKgAAAEAgCCAAAAAAABAQAIKAwAAgAAoAAQDoAAEg=</HashCode>
+      <FileName>SysAdmin\upfiles\ckeditorupload.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.upfiles.FileUpload" Collapsed="true">
+    <Position X="564.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAgAAAEAACDAAAQAAAAAEAAIAkAAQAAoAAQAoAAEA=</HashCode>
+      <FileName>SysAdmin\upfiles\FileUpload.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.upfiles.testupload" Collapsed="true">
+    <Position X="611" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQoBAAAEEQBAAAAACAQAQDgAIAAYBAAAAACAAAIAgEg=</HashCode>
+      <FileName>SysAdmin\upfiles\testupload.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.upfiles.upfile" Collapsed="true">
+    <Position X="55.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>SysAdmin\upfiles\upfile.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllPower.WEB.SysAdmin.upfiles.upload" Collapsed="true">
+    <Position X="87.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAkKgAAAEAgCDCAAAAAABAUAIKAwEAgAAoAAALoAAEg=</HashCode>
+      <FileName>SysAdmin\upfiles\upload.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TOPRAND.WEB.WebManage.FileUpload.FileDel" Collapsed="true">
+    <Position X="605.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAQAAAAAAAAAAAAEBAAAAIAAAAgAIAEAAAAICAAA=</HashCode>
+      <FileName>SysAdmin\upfiles\FileDel.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TOPRAND.WEB.WebManage.FileUpload.FileShow" Collapsed="true">
+    <Position X="607.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAQAABAAAAAAAAIAAAA=</HashCode>
+      <FileName>SysAdmin\upfiles\FileShow.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>

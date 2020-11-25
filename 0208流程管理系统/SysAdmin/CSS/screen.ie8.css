@@ -1,0 +1,13 @@
+﻿.tl-stage {
+	background-image: none;	
+}
+
+.tl-story-block .content {
+	min-height: 1px;
+}
+
+.tl-stage-view-color-category-stories .tl-story-block .bmp-shadow {
+	display: none;
+}
+
+

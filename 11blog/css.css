@@ -1,0 +1,115 @@
+BODY {
+	COLOR: #000000; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; FONT-SIZE: 12px
+}
+TD {
+	COLOR: #000000; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; FONT-SIZE: 12px
+}
+TH {
+	COLOR: #000000; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; FONT-SIZE: 12px
+}
+BODY {
+	BACKGROUND-COLOR: #ffffff;
+	SCROLLBAR-SHADOW-COLOR:#346B99;
+	SCROLLBAR-darkSHADOW-COLOR:#ffffff;
+	SCROLLBAR-ARROW-COLOR: #000000;
+	SCROLLBAR-BASE-COLOR: #AAD9FF;
+	SCROLLBAR-HIGHLIGHT-COLOR: #346B99;
+	margin: 0px;
+	padding:0px;
+}
+A:link {
+	COLOR: #000000;
+	TEXT-DECORATION: none;
+}
+A:visited {
+	COLOR: #990000; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #333333; TEXT-DECORATION: underline
+}
+A:active {
+	COLOR: #333333; TEXT-DECORATION: none
+}
+/*页面中的文本字域的样式定义*/
+textArea {
+	border: 1px solid #666666;
+}
+/*页面中的文本字段的样式定义*/
+.textbox {
+	border: 1px solid #666666;
+}
+/*页面中的不可修改文本字段的样式定义*/
+.textbox2 {
+	border: 1px solid #999999;
+	background-color: #E3E3E3;
+}
+/*页面中的按钮的样式定义*/
+.button {
+	background-color: #C0E2FF;
+	border: 1px solid #0E5FA0;
+	cursor: hand;
+}
+.tb2 {
+	border-collapse:collapse;
+	}
+.tb2 td {
+	border:1px #adceef solid;
+	padding:3px;
+}
+.tbbg1
+{
+	background:#eef3f9;}
+.tbbg2
+{
+	background:#9cc2db;
+	text-align:center}
+
+/*设置页*/
+NoFace
+{
+    word-break: keep-all}
+.SelectedTabStrip A.NoFace:link {
+	COLOR: #000000; TEXT-DECORATION: none; cursor:hand
+}
+.SelectedTabStrip A.NoFace:visited {
+	COLOR: #000000; TEXT-DECORATION: none; cursor:hand
+}
+.SelectedTabStrip A.NoFace:active {
+	COLOR: #000000; TEXT-DECORATION: none; cursor:hand
+}
+.SelectedTabStrip A.NoFace:hover{
+	COLOR: #000000; TEXT-DECORATION: none; cursor:hand
+}
+
+.TabStrip A.NoFace:link {
+	COLOR: #FFFFFF; TEXT-DECORATION: none; cursor:hand
+}
+.TabStrip A.NoFace:visited {
+	COLOR: #FFFFFF; TEXT-DECORATION: none; cursor:hand
+}
+.TabStrip A.NoFace:active {
+	COLOR: #FFFFFF; TEXT-DECORATION: none; cursor:hand
+}
+.TabStrip A.NoFace:hover{
+	COLOR: #FFFFFF; TEXT-DECORATION: none; cursor:hand
+}
+
+    
+.TabStrip
+{
+    background-color:#365390; color:#FFFFFF; BORDER-left:1px solid #0A246A; BORDER-top:1px solid #0A246A; BORDER-bottom:1px solid #0A246A; BORDER-right:1px solid #0A246A; border-right:none; padding-top:2pt; padding-bottom:2pt; padding-left:6pt; padding-right:6pt; text-align:center}
+
+.SelectedTabStrip
+{
+    BORDER-left:1px solid #0A246A; BORDER-top:1px solid #0A246A; BORDER-bottom:none; BORDER-right:1px solid #0A246A; border-right:none; padding-top:2pt; padding-bottom:2pt; padding-left:6pt; padding-right:6pt; text-align:center}
+
+.TabSeparator
+{
+    border-left:1px solid #0A246A; border-bottom:1px solid #0A246A;}
+  
+.MultiPage
+{
+    BORDER-left:1px solid #0A246A; BORDER-bottom:1px solid #0A246A; BORDER-right:1px solid #0A246A; PADDING:4pt; BORDER-TOP:medium none; }
+.NoEmpty {
+	background-color:#FFFFE1; border-top:solid 1px #606060; border-left:solid 1px #606060; border-bottom:solid 1px #FFFFFF; border-right:solid 1px #FFFFFF
+}

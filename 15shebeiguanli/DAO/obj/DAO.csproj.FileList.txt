@@ -1,0 +1,7 @@
+bin\Debug\DAO.dll
+bin\Debug\DAO.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\DAO.dll
+obj\Debug\DAO.pdb
+bin\Debug\DataBase.dll
+bin\Debug\DataBase.pdb

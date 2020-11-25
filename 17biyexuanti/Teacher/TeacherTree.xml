@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMapNode url="" tltle="首页" description="">
+	<siteMapNode url="" tltle="个人信息" description="">
+		<siteMapNode url="~\Teacher\TeacherMessage.aspx" tltle="查看信息" description="" />
+		<siteMapNode url="~\Teacher\ModifyMessage.aspx" tltle="修改信息" description="" />
+		<siteMapNode url="~\Teacher\ModifyPassWord.aspx" tltle="修改密码" description="" />
+	</siteMapNode>
+	<siteMapNode url="" tltle="我的学生" description="">
+		<siteMapNode url="~\Teacher\StudentList.aspx" tltle="学生列表" description="" />
+	</siteMapNode>
+	<siteMapNode url="" tltle="题目管理" description="">
+		<siteMapNode url="~\Teacher\UploadTitle.aspx" tltle="上传题目" description="" />
+		<siteMapNode url="~\Teacher\LookupTitle.aspx" tltle="查看题目" description="" />
+	</siteMapNode>
+	<siteMapNode url="" tltle="消息管理" description="">
+		<siteMapNode url="~\Teacher\Message.aspx" tltle="消息" description="" />
+	</siteMapNode>
+  <siteMapNode url="" tltle="退出登录" description="">
+    <siteMapNode url="~\Default.aspx" tltle="退出登录" description=""/>
+  </siteMapNode>
+</siteMapNode>

@@ -1,0 +1,77 @@
+﻿body
+{
+	font-size: 9pt;
+	text-align: left;
+ 	line-height:200%;
+ 	margin:0px auto;
+ 	width:900px;
+}
+
+A
+{
+	font-size: 9pt;
+	color: black;
+	text-decoration: none;
+}
+A:ACTIVE
+{
+	color: green;
+	text-decoration: none;
+}
+A:FOCUS
+{
+	color: black;
+	text-decoration: none;
+}
+A:HOVER
+{
+	color: #ff4500;
+	position: relative;
+	top: 1px;
+}
+A:LINK
+{
+	text-decoration: none;
+	
+}
+
+.Class
+{
+	font-size: 10pt;
+	font-style: normal;
+	font-family: 黑体;
+	color: #202425;
+	line-height: 16pt;
+	
+}
+.txtbox1
+{
+	border-right: thin inset;
+	border-top: thin inset;
+	border-left: thin inset;
+	border-bottom: thin inset;
+}
+
+.mytb
+{
+	border-bottom: #0099ff 1px solid;
+	border-left: #0099ff 1px solid;
+	border-top: #0099ff 1px solid;
+	border-right: #0099ff 1px solid;
+}
+.9
+{
+	font-size: 9pt;
+	
+}
+
+jian
+{
+	font-size: 12pt;
+	color: green;
+	line-height: 18pt;
+	font-style: normal;
+}
+ .mymenu {
+	FONT-SIZE: 12px; FILTER: DropShadow(Color=#FFFFFF, OffX=1, OffY=2, Positive=1); COLOR: #2d3d50
+}

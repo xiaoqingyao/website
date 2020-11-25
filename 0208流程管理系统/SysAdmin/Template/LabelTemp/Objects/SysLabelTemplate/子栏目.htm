@@ -1,0 +1,145 @@
+<!DOCTYPE HTML SYSTEM "-//Macromedia//DWExtension layout-engine 5.0//dialog">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>项纺导航栏目</title>
+    <script type="text/javascript">
+        String.prototype.trim = function() { return this.replace(/^\s+|\s+$/g, ""); }
+
+        function commandButtons() {
+            return new Array("确定", "getContent()", "取消", "window.close()")
+        }
+		
+		function windowDimensions() { return "460,170"; }
+		
+		function getContent(){
+			var insertContent,nodeCode,subMenuType,level;
+			
+			nodeCode = document.getElementById("Menu").value;
+			subMenuType = "1";
+			
+			for(var i=0;i<document.getElementById("Level").options.length;i++){
+				if(document.getElementById("Level").options[i].selected){
+					level = document.getElementById("Level").options[i].value;
+				}
+			}
+			
+			for(var i=0;i<document.getElementById("SubMenuType").options.length;i++){
+				if(document.getElementById("SubMenuType").options[i].selected){
+					subMenuType = document.getElementById("SubMenuType").options[i].value;
+				}
+			}
+			
+			switch(level){
+				case "1":
+				insertContent = document.getElementById("Level1").innerHTML;
+				break;
+				case "2":
+				insertContent = document.getElementById("Level2").innerHTML;
+				break;
+				case "3":
+				insertContent = document.getElementById("Level3").innerHTML;
+				break;
+			}
+
+			if(nodeCode.trim() != "" && nodeCode.trim() != "请输入栏目的NodeCode值"){
+				insertContent = insertContent.replace("[#NodeCode#]",nodeCode);
+			}else{
+				insertContent = insertContent.replace("NodeCode=\"[#NodeCode#]\"","");
+			}
+			
+			insertContent = insertContent.replace("[#Type#]",subMenuType);
+			dreamweaver.getDocumentDOM("document").source.wrapSelection(insertContent, '');
+			window.close();
+		}
+		
+		function checkMenuValue(){
+			if(document.getElementById("Menu").value.trim() == "请输入栏目的NodeCode值"){
+				document.getElementById("Menu").value = "";
+			}
+		}
+    </script>
+
+</head>
+<body>
+    <form name="theform" method="post" action="">
+    <table height="120" width="420">
+        <tr>
+            <td>
+                所属栏目：
+            </td>
+            <td><input type="text" id="Menu" value="请输入栏目的NodeCode值" onFocus="checkMenuValue()"/>
+ (为空则为当前发布栏目) </td>
+        </tr>
+        <tr><td>显示方式：</td><td>    
+         <select id="SubMenuType">
+            <option value="1" selected="selected">显示当前栏目子栏目</option>
+            <option value="2">显示当前栏目及兄弟栏目（子栏目）</option>
+            <option value="3">显示当前栏目顶级栏目下的所有子栏目</option>
+        </select></td></tr>
+       		<tr>
+            	<td width="100">栏目级数：</td>
+                <td>
+                	<select id="Level" style="width:80px;">
+                    	<option value="1" selected="selected"> 1 </option>
+                    	<option value="2"> 2 </option>
+                    	<option value="3"> 3 </option>
+                    </select>
+                </td>
+            </tr>
+    </table> 
+    <div id="Level1" style="display:none;">
+    {HQB_L000_TemplateName  Type="2" NodeCode="[#NodeCode#]" SubMenuType="[#Type#]" Level="1"} 
+    <!-- 可用变量
+     栏目名称： {$Name}、栏目URL：{$Url}、栏目NodeCode值：{$NodeCode}、栏目图片：{$Image}、鼠标经过图片：{$OverImage}、栏目提示：{$ToolTip}、循环序号：{$HQB.Num}
+    [HQB.Loop]
+        不循环内容 如<div>
+        [Item]<a href="{$Url}" title=”{$ToolTip}”>{$Name}</h4>[/Item]
+        不循环内容 如：</div>
+    [/HQB.Loop]
+    -->
+    {/HQB_L000} 
+    </div>
+    <div id="Level2" style="display:none;">
+    {HQB_L000_TemplateName  Type="2" NodeCode="[#NodeCode#]" SubMenuType="[#Type#]" Level="2"} 
+    <!-- 可用变量
+    栏目名称： {$Name}、栏目URL：{$Url}、栏目NodeCode值：{$NodeCode}、栏目图片：{$Image}、鼠标经过图片：{$OverImage}、栏目提示：{$ToolTip}、循环序号：{$HQB.Num}
+    [HQB.Loop]
+        不循环内容 如<div>
+        [Item]<a href="{$Url}" title=”{$ToolTip}”>{$Name}</h4>[/Item]
+         [HQB.Loop]
+            不循环内容 如<ul>
+                 [Item] <li><a href="{$Url}" title=”{$ToolTip}”>{$Name}</a></li>[/Item]
+         不循环内容 如</ul>
+        [/HQB.Loop] 
+        不循环内容 如：</div>
+    [/HQB.Loop]
+    -->
+    {/HQB_L000} 
+    </div>
+    <div id="Level3" style="display:none;">
+    {HQB_L000_TemplateName  Type="2" NodeCode="[#NodeCode#]" SubMenuType="[#Type#]" Level="3"} 
+    <!-- 可用变量
+	栏目名称： {$Name}、栏目URL：{$Url}、栏目NodeCode值：{$NodeCode}、栏目图片：{$Image}、鼠标经过图片：{$OverImage}、栏目提示：{$ToolTip}、循环序号：{$HQB.Num}
+    [HQB.Loop]
+        不循环内容 如<div>
+        [Item]<a href="{$Url}" title=”{$ToolTip}”>{$Name}</h4>[/Item]
+         [HQB.Loop]
+            不循环内容 如<ul>
+                 [Item] <li><a href="{$Url}" title=”{$ToolTip}”>{$Name}</a></li>[/Item]
+                 [HQB.Loop] 
+                    不循环内容 如<ul>
+                    [Item] <li><a href="{$Url}" title=”{$ToolTip}”>{$Name}</a></li> [/Item]
+                    不循环内容 如</ul>
+                [/HQB.Loop]
+         不循环内容 如</ul>
+        [/HQB.Loop] 
+        不循环内容 如：</div>
+    [/HQB.Loop]
+    -->
+    {/HQB_L000} 
+    </div>  
+  </form>
+</body>
+</html>
+

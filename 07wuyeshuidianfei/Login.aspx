@@ -1,0 +1,3 @@
+﻿<%@ Page Language="C#" %>
+进入系统中...
+<script type="text/javascript">window.location.href="/sysmanage/login.aspx"</script>

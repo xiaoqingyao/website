@@ -1,0 +1,12 @@
+﻿body 
+{
+	margin-left: 0px;
+	margin-top: 0px;
+}
+body,td,th {
+	font-size: 12px;
+	font-family: 宋体;
+}
+.bk {
+	border: 1px solid #3399FF;
+}

@@ -1,0 +1,240 @@
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:10
+日志内容:FilePath:C:\01WebSite\GitA021MVC5仓库管理系统\Configs\Data\DbCommandFiles.config
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:10
+日志内容:反序列化:C:\01WebSite\GitA021MVC5仓库管理系统\Configs\Data\DbCommandFiles.config
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:10
+日志内容:config files length:2
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:10
+日志内容:fileName:C:\01WebSite\GitA021MVC5仓库管理系统\Configs\Data\DbCommonCommand.config
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:10
+日志内容:反序列化:C:\01WebSite\GitA021MVC5仓库管理系统\Configs\Data\DbCommonCommand.config
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:10
+日志内容:fileName:C:\01WebSite\GitA021MVC5仓库管理系统\Configs\Data\DbReportCommand.config
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:10
+日志内容:反序列化:C:\01WebSite\GitA021MVC5仓库管理系统\Configs\Data\DbReportCommand.config
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:10
+日志内容:databaseFolder:C:\01WebSite\GitA021MVC5仓库管理系统\Configs\Data
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:10
+日志内容:databaseFile:Database.config
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:10
+日志内容:反序列化:C:\01WebSite\GitA021MVC5仓库管理系统\Configs\Data\Database.config
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:10
+日志内容:instance.ConnectionString:Server=.;database=JooWMS;user id=sa;Password=lvcc
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2020/4/28 22:14:11
+日志内容: SQL: SELECT * FROM [dbo].[Storage]
+

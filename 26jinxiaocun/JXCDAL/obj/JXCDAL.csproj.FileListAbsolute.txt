@@ -1,0 +1,7 @@
+E:\downcode\JXC\JXCDAL\bin\Debug\JXCDAL.dll
+E:\downcode\JXC\JXCDAL\bin\Debug\JXCDAL.pdb
+E:\downcode\JXC\JXCDAL\bin\Debug\JXCMODEL.dll
+E:\downcode\JXC\JXCDAL\bin\Debug\JXCMODEL.pdb
+E:\downcode\JXC\JXCDAL\obj\Debug\ResolveAssemblyReference.cache
+E:\downcode\JXC\JXCDAL\obj\Debug\JXCDAL.dll
+E:\downcode\JXC\JXCDAL\obj\Debug\JXCDAL.pdb

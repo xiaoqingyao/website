@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="sdStatics" targetNamespace="http://tempuri.org/sdStatics.xsd" xmlns:mstns="http://tempuri.org/sdStatics.xsd" xmlns="http://tempuri.org/sdStatics.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="sdStatics" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="sdStatics" msprop:Generator_UserDSName="sdStatics" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Statistics" msprop:Generator_UserTableName="Statistics" msprop:Generator_RowDeletedName="StatisticsRowDeleted" msprop:Generator_TableClassName="StatisticsDataTable" msprop:Generator_RowChangedName="StatisticsRowChanged" msprop:Generator_RowClassName="StatisticsRow" msprop:Generator_RowChangingName="StatisticsRowChanging" msprop:Generator_RowEvArgName="StatisticsRowChangeEvent" msprop:Generator_RowEvHandlerName="StatisticsRowChangeEventHandler" msprop:Generator_TablePropName="Statistics" msprop:Generator_TableVarName="tableStatistics" msprop:Generator_RowDeletingName="StatisticsRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="VistCount" msprop:Generator_UserColumnName="VistCount" msprop:Generator_ColumnPropNameInRow="VistCount" msprop:Generator_ColumnVarNameInTable="columnVistCount" msprop:Generator_ColumnPropNameInTable="VistCountColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="XinHao" msprop:Generator_UserColumnName="XinHao" msprop:Generator_ColumnPropNameInRow="XinHao" msprop:Generator_ColumnVarNameInTable="columnXinHao" msprop:Generator_ColumnPropNameInTable="XinHaoColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

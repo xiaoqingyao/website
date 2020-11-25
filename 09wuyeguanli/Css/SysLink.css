@@ -1,0 +1,65 @@
+A:link {
+	COLOR: #000000; TEXT-DECORATION:none;
+}
+A:visited {
+	COLOR: #000000; TEXT-DECORATION: none;
+}
+A:hover {
+	COLOR: #000000; TEXT-DECORATION:none;
+}
+td{ font-size:10pt; font-family:ËÎÌו; color:#00659C;}
+
+.inputbox_mouseout
+{
+	background: #ffffff;
+	font-size: 9pt;
+	color: #174BA4;	
+	margin-left:0px;
+	margin-top:0px;
+	border-top: 0 Hidden #FFFFFF;
+	border-left: 0 Hidden #FFFFFF;
+	border-right: 0 Hidden #FFFFFF;
+	border-bottom: 0 Hidden #FFFFFF;
+	font-size: 9pt;
+	font-family: ??,verdana,Arial, Helvetica;
+	font-weight: Normal;
+	text-decoration: None;
+	cursor: Hand;	
+}
+
+.inputbox_mouseover
+{
+	background: #BDD7FF;
+	font-size: 9pt;
+	color: #174BA4;
+	margin-left:0px;
+	margin-top:0px;
+	border-top: 0 Solid #000000;
+	border-left: 0 Solid #000000;
+	border-right: 0 Solid #000000;
+	border-bottom: 0 Solid #000000;
+	font-size: 9pt;
+	font-family: ??,verdana,Arial, Helvetica;
+	font-weight: Normal;
+	text-decoration: None;
+	cursor: Hand;	
+}
+SPAN
+{ color: #00659C; font-size:9pt;	}
+
+.btn1
+        {
+            border-right: #2C59AA 1px solid;
+                padding-right: 2px; border-top: #2C59AA 1px solid; padding-left: 2px; font-size: 12px;
+                filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffffff, EndColorStr=#BDD7FF);
+                border-left: #2C59AA 1px solid; cursor: hand; color: black; padding-top: 2px;
+                border-bottom: #2C59AA 1px solid;
+        }
+        .btn2
+        {
+            border-right: #2C59AA 1px solid;
+                padding-right: 2px; border-top: #2C59AA 1px solid; padding-left: 2px; font-size: 12px;
+                filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=2, StartColorStr=#ffffff, EndColorStr=#013ABF);
+                border-left: #2C59AA 1px solid; cursor: hand; color: white; padding-top: 2px;
+                border-bottom: #2C59AA 1px solid;
+        }

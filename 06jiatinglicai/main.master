@@ -1,0 +1,52 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="main.master.cs" Inherits="main" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <base target="_self"><link href="style.css" type="text/css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="skin/css/base.css" />
+<link rel="stylesheet" type="text/css" href="skin/css/main.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    
+    
+    <table width="98%" align="center" border="0" cellpadding="4" cellspacing="1" bgcolor="#CBD8AC" style="margin-bottom:8px">
+  <tr bgcolor="#EEF4EA">
+    <td background="../skin/images/frame/wbg.gif" class='title'><span><asp:Label ID="Label1" runat="server" Text="Label" Font-Bold="True"></asp:Label></span></td>
+  </tr>
+  <tr bgcolor="#FFFFFF" style="text-align:left; line-height:27px;">
+    
+     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+      </asp:ContentPlaceHolder>
+    </td>
+  </tr>
+  </table>
+    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+	<tr>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td height="22"><div align="center">
+				<DIV align="center">家庭财务管理系统 All Rights Reserved.
+				</DIV>
+			
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td height="22"><FONT face="宋体"></FONT>
+		</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+	</tr>
+</table>
+    </form>
+</body>
+</html>
+

@@ -1,0 +1,81 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+    <title>无标题页</title>
+    <LINK rel="stylesheet" 
+type="text/css" href="Images/lanmu.css">
+<STYLE type="text/css">
+<!--
+.STYLE6 {	font-family: "楷体_GB2312";
+	font-size: 16px;
+	line-height:25px;
+}
+.STYLE8 {font-family: "楷体_GB2312"; font-size: 24px; }
+.STYLE9 {	font-size: 22px;
+	font-weight: bold;
+}
+-->
+</STYLE>
+</head>
+<body leftMargin="0" topMargin="0" bgColor="#e3f0fd" marginheight="0" 
+marginwidth="0">
+    <form id="form1" runat="server">
+   <TABLE id="__01" border="0" cellSpacing="0" cellPadding="0" width="851" bgColor="#ffffff" 
+align="center" style="height: auto">
+  <TBODY>
+  <TR>
+    <TD rowSpan="2" colSpan="1" background="Images/bggg.gif"><IMG alt="" src="Images/lanmu_01.gif" 
+      width="340" height="101"></TD>
+      <td background="Images/bggg.gif" colspan="2" rowspan="2">
+          <A href="" 
+      target="_blank"></A>
+    
+      </td>
+    <TD><IMG alt="" src="Images/分隔符.gif" width="1" height="51"></TD></TR>
+  <TR>
+ 
+    <TD style="height: 50px"><IMG alt="" src="Images/分隔符.gif" width="1" height="50"></TD></TR>
+  <TR>
+      <td colspan="3" style="height: 41px">
+      <DIV id="lanmu-05" style="width: 854px">
+       
+       
+       <A class="dh_bai" href="Login.aspx">返回登陆&nbsp;&nbsp;</A><A 
+      class="dh_bai" 
+      href="NewsList.aspx">|&nbsp;&nbsp;新闻公告&nbsp;&nbsp;</A><A 
+      class="dh_bai" 
+      href="NotedManger.aspx">|&nbsp;&nbsp;记事管理&nbsp;&nbsp;</A><A 
+      class="dh_bai" href="MoneyManger.aspx" >|&nbsp;&nbsp;收支记账&nbsp;&nbsp;</A><A class="dh_bai" href="MoneyTypeList.aspx" >|&nbsp;&nbsp;收支分类&nbsp;&nbsp;</A><A class="dh_bai" href="CKMoneyManger.aspx">|&nbsp;&nbsp;存款管理&nbsp;&nbsp;</A><A class="dh_bai" href="JieMoneyManger.aspx">|&nbsp;&nbsp;借入借出&nbsp;&nbsp;</A><A 
+      class="dh_bai" href="ScheduleManger.aspx"  >|&nbsp;&nbsp;投资管理&nbsp;&nbsp;</A><A 
+      class="dh_bai" 
+      href="TJMoney.aspx">|&nbsp;&nbsp;查询统计</A>
+      
+      <A 
+      class="dh_bai" 
+      href="MoneyTJImage.aspx">|&nbsp;&nbsp;收支统计图</A>
+       
+       </DIV>
+      </td>
+    <TD style="height: 41px"><IMG alt="" src="Images/分隔符.gif" width="1" height="29"></TD></TR>
+  <TR>
+    <TD vAlign="top" rowSpan="2" colSpan="3" align="left">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+    
+      </TD>
+    <TD><IMG alt="" src="Images/分隔符.gif" width="1" height="2"></TD></TR>
+  <TR vAlign="top">
+    <TD><IMG alt="" src="Images/分隔符.gif" width="1" height="534"></TD></TR>
+  <TR>
+    <TD colSpan="3" style="height: 25px">
+    
+    <a href="Admin/Login.aspx">后台入口</a></TD>
+    <TD style="height: 25px"><IMG alt="" src="Images/分隔符.gif" width="1" height="25"></TD></TR>
+  </TBODY></TABLE>
+    </form>
+</body>
+</html>

@@ -1,0 +1,1751 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BDOA" Class="DataEntityDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=WIN-C2PJEHU1EST\HUANGJIALIN;Initial Catalog=BDOA;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="BDOAConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ERPAnPai" Member="ERPAnPai">
+    <Type Name="ERPAnPai">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TitleStr" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="ContentStr" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="TimeStart" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TimeEnd" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TimeTiXing" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TypeStr" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="GongXiangWho" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPYinZhangLog" Member="ERPYinZhangLog">
+    <Type Name="ERPYinZhangLog">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DoSomething" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="IpStr" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TypeStr" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPBaoJia" Member="ERPBaoJia">
+    <Type Name="ERPBaoJia">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CustomName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="BaoJiaTitle" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="BaoJiaType" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="BaoJiaJinE" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="BaoJiaContent" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="BaoJiaResult" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="BaoJiaTime" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IFShare" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="CusBakA" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="CusBakB" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="CusBakC" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="CusBakD" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="CusBakE" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPBaoXiao" Member="ERPBaoXiao">
+    <Type Name="ERPBaoXiao">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProjectName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="FeiYongType" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ShenQingRen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ShenPiRen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ShenQingContent" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="JinE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="StateNow" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ShenQingTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPBBSBanKuai" Member="ERPBBSBanKuai">
+    <Type Name="ERPBBSBanKuai">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BanKuaiName" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="BanZhuList" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="BanKuaiMiaoShu" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="BanKuaiImg" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="JiaoSeXianZhiList" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="BuMenXianZhi" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="UserXianZhi" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPBBSTieZi" Member="ERPBBSTieZi">
+    <Type Name="ERPBBSTieZi">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BanKuaiID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TitleStr" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ContentStr" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ZuiHouUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ZuiHouTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PaiXu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HuiFuContent" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPBook" Member="ERPBook">
+    <Type Name="ERPBook">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BookName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BookSerils" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SuoShuBuMen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BookType" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Auother" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ISBN" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CoperStr" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ChuBanDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CunFangDian" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ShuLiang" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JiaGe" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NeiRong" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="NowState" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPBookJieHuan" Member="ERPBookJieHuan">
+    <Type Name="ERPBookJieHuan">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BookName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JieShuDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GuiHuanDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JieHuanState" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPBuMen" Member="ERPBuMen">
+    <Type Name="ERPBuMen">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BuMenName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ChargeMan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TelStr" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ChuanZhen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="DirID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPBuyChanPin" Member="ERPBuyChanPin">
+    <Type Name="ERPBuyChanPin">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OrderName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ProductName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ProductSerils" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GongYingShang" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ProductType" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="XingHao" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DanWei" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DanJia" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ShuLiang" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ZongJia" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="YiFuKuan" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="QianKuanShu" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="IFJiaoFu" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ChanPinMiaoShu" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPBuyOrder" Member="ERPBuyOrder">
+    <Type Name="ERPBuyOrder">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OrderName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GongYingShangName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Serils" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DingDanLeiXing" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DingDanMiaoShu" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LaiHuoDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TiXingDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ChuangJianRen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FuZeRen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FuJianList" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="NowState" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ShenPiTongGuoRen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPCarBaoXian" Member="ERPCarBaoXian">
+    <Type Name="ERPCarBaoXian">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CarName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FeiYongName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ProjectName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BaoXianPrice" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BaoXianDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TiXingDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPCarBaoYang" Member="ERPCarBaoYang">
+    <Type Name="ERPCarBaoYang">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CarName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BYDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JingBanUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ZhuGuanUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BYQianLCBNum" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="QiYouJinE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BYJinE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="WeiXiuJinE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="OtherJinE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPCarInfo" Member="ERPCarInfo">
+    <Type Name="ERPCarInfo">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CarName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CarPaiHao" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CarXingHao" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LeiXing" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SuoShuDep" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="DriverUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NowState" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPCarJiaYou" Member="ERPCarJiaYou">
+    <Type Name="ERPCarJiaYou">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CarName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JYDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JingBanUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DriverUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JiaYouAddress" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="StartNum" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JiaYouNum" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="YouFeiJinE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPCarLog" Member="ERPCarLog">
+    <Type Name="ERPCarLog">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CarName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LogDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JingBanUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DriverUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ChuCheDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="StartNum" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EndNum" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="XingShiTime" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ShiYou" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="XingShiLiCheng" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="YouHaoShu" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DaoDaAddress" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPCarShiYong" Member="ERPCarShiYong">
+    <Type Name="ERPCarShiYong">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CarName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DriverUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="YongCheUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="YongCheBuMen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="QiShiTime" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JieShuTime" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MuDiDi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LiCheng" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ShengQingUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DiaoDuUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ShengQingShiYou" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="NowState" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPCarWeiHu" Member="ERPCarWeiHu">
+    <Type Name="ERPCarWeiHu">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CarName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="WeiHuRiQi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="WeiHuLeiXing" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="WeiHuYuanYin" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="JingBanUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="WeiHuFeiYong" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NowState" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPCarWeiZhang" Member="ERPCarWeiZhang">
+    <Type Name="ERPCarWeiZhang">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CarName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="WZDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DriverUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="WZAddress" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="KouFenNum" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FKJinE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPContract" Member="ERPContract">
+    <Type Name="ERPContract">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HeTongName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="HeTongSerils" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="HeTongLeiXing" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="QianYueKeHu" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="HeTongMiaoShu" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="HeTongTiaoKuan" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="HeTongContent" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ShengXiaoDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ZhongZhiDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TiXingDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="QianYueRenBuy" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="QianYueRenSell" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CreateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreateUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FuJianList" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="NowState" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPContractChanPin" Member="ERPContractChanPin">
+    <Type Name="ERPContractChanPin">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HeTongName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ChanPinName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DanJia" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ShuLiang" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ZongJia" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="YiFuKuan" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="QianKuanShu" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="IFJiaoFu" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPCrmSetting" Member="ERPCrmSetting">
+    <Type Name="ERPCrmSetting">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TableName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="LieName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="CanShuName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPCustomFuWu" Member="ERPCustomFuWu">
+    <Type Name="ERPCustomFuWu">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CustomName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="FuWuTitle" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="FuWuType" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="FuWuResult" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="FuWuTime" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IFShare" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="CusBakA" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="CusBakB" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="CusBakC" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="CusBakD" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="CusBakE" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPCustomHuiFang" Member="ERPCustomHuiFang">
+    <Type Name="ERPCustomHuiFang">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CustomName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="HuiFangTitle" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="HuiFangType" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="HuiFangResult" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="HuiFangTime" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IFShare" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="CusBakA" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="CusBakB" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="CusBakC" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="CusBakD" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="CusBakE" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPCustomInfo" Member="ERPCustomInfo">
+    <Type Name="ERPCustomInfo">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CustomName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="CustomSerils" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ChargeMan" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="UrlLink" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="YouBian" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TelStr" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="XingZhi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LaiYuan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="QuYu" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ZhuangTai" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="RenShu" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BanGongMianJi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LeiBie" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JiBie" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="YeWuFanWei" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="HangYe" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="MuQianWenTi" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="YuJiDingDanDate" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="BackInfoA" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="BackInfoB" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="BackInfoC" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="BackInfoD" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DingDanCount" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="YuJiTiXing" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IFShare" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="CusBakA" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="CusBakB" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="CusBakC" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="CusBakD" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="CusBakE" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="NameEng" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FaRenDaiMa" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="YingYeZhiZhao" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ZiBenE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ZuZhiXingZhi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="YingYeChangSuo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JingJi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SheHuiGuanXi" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="BenGongSiGuanXi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JieShaoRen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BaoZhengRen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ShuiPiaoName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DiZhiDianHua" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="NaShuiDengJiHao" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="KaiHuHangZhangHao" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="JiaoYiFangShi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ZhangQi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FuKuanFangShi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="YunFeiChengDan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CuXiaoFei" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GuangGaoFei" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="YouDaiZheKou" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FuKuanTaiDu" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ShiFouDuiZhang" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DuiZhangShiJian" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ZuiJiaPaiFangShiJian" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ZuiJiaShouKuanShiJian" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="QiTaGongYing" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="ChangYongNaJia" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="GongSiYiJian" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="ZiXin" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ZongJieLun" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPCustomNeed" Member="ERPCustomNeed">
+    <Type Name="ERPCustomNeed">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CustomName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="NeedContent" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="NeedNow" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="NeedProduct" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="NeedTime" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="NeedLike" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="JingZhengDuiShou" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="HeZuoYiYuan" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="HeZuoJiLv" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="NeedZhangAi" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IFShare" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="CusBakA" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="CusBakB" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="CusBakC" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="CusBakD" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="CusBakE" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPCYDIC" Member="ERPCYDIC">
+    <Type Name="ERPCYDIC">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DicName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Backinfo" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPDangAn" Member="ERPDangAn">
+    <Type Name="ERPDangAn">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FileName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JuanKuName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FileSerils" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FileTitle" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FaWenDanWei" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FaWenDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MiJi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JingJi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TypeStr" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GongWenType" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FilePage" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FuJianList" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IFDel" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPDanWeiInfo" Member="ERPDanWeiInfo">
+    <Type Name="ERPDanWeiInfo">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DanWeiName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Tel" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="YouBian" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="WebUrl" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="KaiHuHang" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ZhangHao" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPFileList" Member="ERPFileList">
+    <Type Name="ERPFileList">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FileName" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="BianHao" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="DaXiao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FileType" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DirID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ShangChuanTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FilePath" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IFDel" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TypeName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IfShare" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DirOrFile" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CanAdd" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="CanMod" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="CanDel" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="CanView" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPGongGao" Member="ERPGongGao">
+    <Type Name="ERPGongGao">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TitleStr" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UserBuMen" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="FuJian" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="ContentStr" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="TypeStr" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPGuDing" Member="ERPGuDing">
+    <Type Name="ERPGuDing">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GDName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GDSerils" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GDType" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SuoShuBuMen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GDAllCount" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NowCount" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NianXian" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GDXingZhi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="QiYongDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BaoGuanUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPGuDingJiLu" Member="ERPGuDingJiLu">
+    <Type Name="ERPGuDingJiLu">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GDName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ZJType" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ZJDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ZJJinE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPHuiBao" Member="ERPHuiBao">
+    <Type Name="ERPHuiBao">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TitleStr" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="ContentStr" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FuJianStr" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="CanLookUser" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPHuiYuan" Member="ERPHuiYuan">
+    <Type Name="ERPHuiYuan">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NameStr" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="RuHuiDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JieShaoRen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SexStr" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JiGuan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JingJi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ChuShengDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="XueLi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ZiLi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GeXing" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="AiHao" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Tel" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MobTel" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ZuiJiaTime" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ChangYong" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ZiXin" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="JieLun" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPJiangCheng" Member="ERPJiangCheng">
+    <Type Name="ERPJiangCheng">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="JCUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JiangChengQuFen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JiangChengType" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ShouYuDanWei" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JiangChengDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JiangChengMingMu" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="JiangChengYuanYin" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPJiangChengZhiDu" Member="ERPJiangChengZhiDu">
+    <Type Name="ERPJiangChengZhiDu">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TitleStr" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="JianJie" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FuJianStr" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="ConTentStr" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPJianLi" Member="ERPJianLi">
+    <Type Name="ERPJianLi">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="YPName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="YPDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="YPSex" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="YPAge" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="XueLi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ZhuanYe" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="YPZhiWei" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="YPJieGuo" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="FuJianStr" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPJiaoSe" Member="ERPJiaoSe">
+    <Type Name="ERPJiaoSe">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="JiaoSeName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="QuanXian" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPJinDu" Member="ERPJinDu">
+    <Type Name="ERPJinDu">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProjectName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ProjectSerils" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JieDuanName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="StartTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EndTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="WanChengDu" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FuZeRen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ContentStr" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FuJianList" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPJiXiao" Member="ERPJiXiao">
+    <Type Name="ERPJiXiao">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="JXName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JianJie" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPJiXiaoCanShu" Member="ERPJiXiaoCanShu">
+    <Type Name="ERPJiXiaoCanShu">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ItemName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPJSDIC" Member="ERPJSDIC">
+    <Type Name="ERPJSDIC">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DicName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Backinfo" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPJuanKu" Member="ERPJuanKu">
+    <Type Name="ERPJuanKu">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="JuanKuName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JuanKuSerils" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SuoShuBuMen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CanViewUserList" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPJXDetails" Member="ERPJXDetails">
+    <Type Name="ERPJXDetails">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="JXID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ItemsID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NumStr" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPKaoQin" Member="ERPKaoQin">
+    <Type Name="ERPKaoQin">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GuiDingTime1" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DengJiTime1" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="GuiDingTime2" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DengJiTime2" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="GuiDingTime3" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DengJiTime3" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="GuiDingTime4" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DengJiTime4" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="GuiDingTime5" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DengJiTime5" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="GuiDingTime6" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DengJiTime6" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="KaoQinRiQi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPKaoQinSetting" Member="ERPKaoQinSetting">
+    <Type Name="ERPKaoQinSetting">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GuiDingTime1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GuiDingTime2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GuiDingTime3" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GuiDingTime4" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GuiDingTime5" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GuiDingTime6" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPLanEmail" Member="ERPLanEmail">
+    <Type Name="ERPLanEmail">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EmailTitle" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EmailContent" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FuJian" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="FromUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ToUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EmailState" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IFDel" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPLinkLog" Member="ERPLinkLog">
+    <Type Name="ERPLinkLog">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CustomName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="LinkTitle" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="LinkType" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="LinkResult" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="LinkTime" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IFShare" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="CusBakA" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="CusBakB" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="CusBakC" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="CusBakD" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="CusBakE" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPLinkMan" Member="ERPLinkMan">
+    <Type Name="ERPLinkMan">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CustomName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="NameStr" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Sex" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BirthDay" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SuoChuJiaoSe" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ZhiWu" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PeiOu" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="ZiNv" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="DanWieDianHua" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DanWeiChuanZhen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JiaTingZhuZhi" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="JiaTingYouBian" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JiaTingDianHua" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ShouJi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="XiaoLingTong" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="QQ" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Msn" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IFShare" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="CusBakA" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="CusBakB" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="CusBakC" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="CusBakD" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="CusBakE" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPLiRun" Member="ERPLiRun">
+    <Type Name="ERPLiRun">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProjectName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ProjectSerils" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SumJinE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FeiYong" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ChengBen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FangZu" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ShuiE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GongZi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TiCheng" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="QiTa" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ShiJi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPMeeting" Member="ERPMeeting">
+    <Type Name="ERPMeeting">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MeetingTitle" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="MeetingZhuTi" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="MiaoShu" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="ChuXiRen" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="WangLuoHuiYiShiIP" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="HuiYiZhuChi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="KaiShiTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="JieShuTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HuiYiJiYao" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ZhuanXieRen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CurentOnline" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="NowState" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPMianShi" Member="ERPMianShi">
+    <Type Name="ERPMianShi">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MSName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MSDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MSSex" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MSAge" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="XueLi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ZhuanYe" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MSZhiWei" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MSJieGuo" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="FuJianStr" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPMobile" Member="ERPMobile">
+    <Type Name="ERPMobile">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FaSongUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ToUserList" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="ContentStr" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPNetEmail" Member="ERPNetEmail">
+    <Type Name="ERPNetEmail">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EmailTitle" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EmailContent" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FuJian" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="FromUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ToUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EmailState" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPNForm" Member="ERPNForm">
+    <Type Name="ERPNForm">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FormName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserListOK" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="DepListOK" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="JiaoSeListOK" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="PaiXuStr" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ContentStr" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ItemsList" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="IFOK" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FormDataName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ItemList" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPNFormType" Member="ERPNFormType">
+    <Type Name="ERPNFormType">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TypeName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PaiXuStr" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPNWorkDetails" Member="ERPNWorkDetails">
+    <Type Name="ERPNWorkDetails">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="WorkID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ItemsNameCN" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ItemsNameEn" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ItemsValue" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPNWorkFlow" Member="ERPNWorkFlow">
+    <Type Name="ERPNWorkFlow">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="WorkFlowName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="FormID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserListOK" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="DepListOK" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="JiaoSeListOK" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="PaiXuStr" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="IFOK" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPNWorkFlowNode" Member="ERPNWorkFlowNode">
+    <Type Name="ERPNWorkFlowNode">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="WorkFlowID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NodeSerils" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NodeName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NodeAddr" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NextNode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IFCanJump" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IFCanView" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IFCanEdit" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IFCanDel" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JieShuHours" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PSType" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SPType" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SPDefaultList" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="CanWriteSet" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="SecretSet" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="ConditionSet" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="NodeLeft" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NodeTop" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPNWorkFlowWT" Member="ERPNWorkFlowWT">
+    <Type Name="ERPNWorkFlowWT">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FromUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ToUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Days" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DayTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPNWorkToDo" Member="ERPNWorkToDo">
+    <Type Name="ERPNWorkToDo">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="WorkName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="FormID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WorkFlowID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FormContent" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FuJianList" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="ShenPiYiJian" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="JieDianID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="JieDianName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ShenPiUserList" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="OKUserList" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="StateNow" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPOffice" Member="ERPOffice">
+    <Type Name="ERPOffice">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OfficeName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MiaoShu" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="FuJianStr" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="TypeStr" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Serils" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="DanWei" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DanJia" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GongYingShang" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="MinNum" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MaxNum" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NowNum" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPPeiXun" Member="ERPPeiXun">
+    <Type Name="ERPPeiXun">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PeiXunName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PeiXunUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CanYuUser" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="StartDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EndDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PeiXunMuDi" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="PeiXunNeiRong" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="XiaoGuo" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="FuJianList" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPPeiXunRiJi" Member="ERPPeiXunRiJi">
+    <Type Name="ERPPeiXunRiJi">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PeiXunName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="RiJiTitle" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="RiJiDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="RiJiContent" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPPeiXunXiaoGuo" Member="ERPPeiXunXiaoGuo">
+    <Type Name="ERPPeiXunXiaoGuo">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PeiXunName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FanKuiZhuTi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="XiaoGuoFanKui" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="ZongTiJieLun" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPPinShen" Member="ERPPinShen">
+    <Type Name="ERPPinShen">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProjectName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ProjectSerils" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PingShenTime" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PingShenJieGuo" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BachInfo" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPProduct" Member="ERPProduct">
+    <Type Name="ERPProduct">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProductName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ProductSerils" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GongYingShang" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ProductType" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="XingHao" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DanWei" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ChengBen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ChuShou" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="RuKuSum" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ChuKuSum" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="NowKuCun" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="KuCunBaoJing" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="CunChuWeiZhi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ChanPinMiaoShu" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="ProductSize" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Performance" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Coating" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SurfaceTreatment" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MagnetizingDirection" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Tolerance" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IsContainingTax" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPProject" Member="ERPProject">
+    <Type Name="ERPProject">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProjectName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ProjectSerils" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SuoShuKeHu" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="YuJiChengJiaoRiQi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TiXingDate" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="FuZeRen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="XiangMuJinE" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="XiangMuYuSuan" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="XiangMuDaXiao" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PeiHeRenList" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HeTongAndFuJian" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPRedHead" Member="ERPRedHead">
+    <Type Name="ERPRedHead">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FileName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="FilePath" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPRenShiHeTong" Member="ERPRenShiHeTong">
+    <Type Name="ERPRenShiHeTong">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HeTongUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NowState" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Serils" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TypeStr" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JingYe" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BaoMiXieYi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="QianYueDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ManYueDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JianZhengJiGuan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JianZhengDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="WeiYueZeRen" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="FuJianList" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPReport" Member="ERPReport">
+    <Type Name="ERPReport">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ReportName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ReportSql" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="TypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserListOK" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="DepListOK" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="JiaoSeListOK" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="PaiXuStr" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPReportType" Member="ERPReportType">
+    <Type Name="ERPReportType">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TypeName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="PaiXuStr" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPRiZhi" Member="ERPRiZhi">
+    <Type Name="ERPRiZhi">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DoSomething" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="IpStr" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPSaveFileName" Member="ERPSaveFileName">
+    <Type Name="ERPSaveFileName">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NowName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="OldName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPSerils" Member="ERPSerils">
+    <Type Name="ERPSerils">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SerilsStr" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="DateStr" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="UserNum" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DanWeiStr" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPSheBei" Member="ERPSheBei">
+    <Type Name="ERPSheBei">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SheBeiName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="YuanBianHao" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CaiWuBianHao" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JiBuBianHao" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SheBeiLeiBie" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="XingHao" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="XiangMu" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ChuChangBianHao" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ShiYongBuMen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ShengChanChangJia" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DanWei" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DanJia" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SuYuanFangShi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SuYaunDanWei" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SuYuanZhouQi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ShangCiSuYuanDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JiHuaSuYaunDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ZhengShuBianHao" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CeLiangFanWei" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BuQueDingDu" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ShiYongCeLiangFanWei" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JingDu" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JieGuoPingJia" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PingJiaUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="QianZiDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ZhengGai" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ChuCiSuYuanDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="QiYongDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CunFangAddr" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GuanLiUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JiFei" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ZhuangTai" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BeiZhu" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="HeDuiUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TiXingDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TiXingUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPShenPi" Member="ERPShenPi">
+    <Type Name="ERPShenPi">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ContentStr" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPShiShi" Member="ERPShiShi">
+    <Type Name="ERPShiShi">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProjectName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ProjectSerils" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ShiShiTime" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ShiShiRen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ShiShiContent" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="WanGongLiang" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PingJia" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="XiaoJie" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="WenTi" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="YuJiJieJueRiQi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="WenTiJieDa" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPShouKuan" Member="ERPShouKuan">
+    <Type Name="ERPShouKuan">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProjectName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ProjectSerils" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JieDuanName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ShouKuanE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FaPiaoHao" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ShouKuanDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DaoKuanDate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ShengYuE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPSongYang" Member="ERPSongYang">
+    <Type Name="ERPSongYang">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CustomName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="SongYangLiaoHao" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="SongYangType" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="SongYangShuLiang" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SongYangDanJia" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SongYangJinE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SongYangResult" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="SongYangTime" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IFShare" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="CusBakA" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="CusBakB" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="CusBakC" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="CusBakD" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="CusBakE" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPSupplyLink" Member="ERPSupplyLink">
+    <Type Name="ERPSupplyLink">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SupplysName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LinkManName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ZhiWei" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Sex" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ShengRi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AiHao" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="IFFirstLink" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="YouBian" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DiZhi" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="JobTel" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JiaTingTel" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MobTel" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EmailStr" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="QQorMsn" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPSupplys" Member="ERPSupplys">
+    <Type Name="ERPSupplys">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SupplysName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Serils" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JianCheng" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DianHua" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MobTel" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ChuanZhen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="URLStr" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EmailStr" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DiQu" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="YouBian" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="KaiHuHang" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ZhangHao" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPSystemSetting" Member="ERPSystemSetting">
+    <Type Name="ERPSystemSetting">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FileType" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPTalkInfo" Member="ERPTalkInfo">
+    <Type Name="ERPTalkInfo">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TalkRoomName" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ToUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ContentStr" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPTalkOnlineUser" Member="ERPTalkOnlineUser">
+    <Type Name="ERPTalkOnlineUser">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TalkRoomName" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="LoginUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPTalkSetting" Member="ERPTalkSetting">
+    <Type Name="ERPTalkSetting">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TalkName" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPTaskFP" Member="ERPTaskFP">
+    <Type Name="ERPTaskFP">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TaskTitle" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="TaskContent" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FromUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ToUserList" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="XinXiGouTong" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="JinDu" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="WanCheng" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="NowState" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPTelFile" Member="ERPTelFile">
+    <Type Name="ERPTelFile">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TitleStr" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="FromUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FileType" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ToUser" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="YiJieShouRen" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="ContentStr" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FuJianStr" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="ChuanYueYiJian" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="QianShouHouIDList" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="ChuanYueHouIDList1" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPTiKu" Member="ERPTiKu">
+    <Type Name="ERPTiKu">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TitleStr" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ItemsA" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ItemsB" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ItemsC" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ItemsD" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ItemsE" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ItemsF" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ItemsG" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ItemsH" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="AnswerStr" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="TiKuID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FenLeiStr" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPTiKuKaoShi" Member="ERPTiKuKaoShi">
+    <Type Name="ERPTiKuKaoShi">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ShiJuanID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ShiJuanName" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPTiKuKaoShiJieGuo" Member="ERPTiKuKaoShiJieGuo">
+    <Type Name="ERPTiKuKaoShiJieGuo">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="KaoShiID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TiMuID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DaAn" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="UserDaAn" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="DeFen" Type="System.Decimal" DbType="Decimal(10,1)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPTiKuShiJuan" Member="ERPTiKuShiJuan">
+    <Type Name="ERPTiKuShiJuan">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ShiJuanTitle" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="IFSuiJiChuTi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FenLeiShunXu" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="KaoShiXianShi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PanDuanTiList" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="DanXuanTiList" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="DuoXuanTiList" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="TianKongTiList" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="JianDaTiList" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="PanDuanFenShu" Type="System.Decimal" DbType="Decimal(18,1)" CanBeNull="true" />
+      <Column Name="DanXuanFenShu" Type="System.Decimal" DbType="Decimal(18,1)" CanBeNull="true" />
+      <Column Name="DuoXuanFenShu" Type="System.Decimal" DbType="Decimal(18,1)" CanBeNull="true" />
+      <Column Name="TianKongFenShu" Type="System.Decimal" DbType="Decimal(18,1)" CanBeNull="true" />
+      <Column Name="JianDaFenShu" Type="System.Decimal" DbType="Decimal(18,1)" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPTiKuShiJuanSet" Member="ERPTiKuShiJuanSet">
+    <Type Name="ERPTiKuShiJuanSet">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DanXuanNum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DuoXuanNum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PanDuanNum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TianKongNum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="JianDaNum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ShiJuanID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TiKuTypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPTiKuType" Member="ERPTiKuType">
+    <Type Name="ERPTiKuType">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TiKuName" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="PaiXu" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPTongXunLu" Member="ERPTongXunLu">
+    <Type Name="ERPTongXunLu">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IfShare" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TypeStr" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FenZu" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NameStr" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Sex" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BirthDay" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NiCheng" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ZhiWu" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PeiOu" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="ZiNv" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="DanWeiMingCheng" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="DanWeiDiZhi" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="DanWeiYouBian" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DanWieDianHua" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DanWeiChuanZhen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JiaTingZhuZhi" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="JiaTingYouBian" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JiaTingDianHua" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ShouJi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="XiaoLingTong" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="QQ" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Msn" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPTouSu" Member="ERPTouSu">
+    <Type Name="ERPTouSu">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CustomName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="TouSuWho" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="TouSuType" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="ChuLiResult" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="TouSuTime" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IFShare" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="CusBakA" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="CusBakB" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="CusBakC" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="CusBakD" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="CusBakE" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPTreeList" Member="ERPTreeList">
+    <Type Name="ERPTreeList">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TextStr" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ImageUrlStr" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ValueStr" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NavigateUrlStr" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Target" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ParentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="QuanXianList" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="PaiXuStr" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ParentClass" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPUser" Member="ERPUser">
+    <Type Name="ERPUser">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UserPwd" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="TrueName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Serils" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Department" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JiaoSe" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ActiveTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ZhiWei" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ZaiGang" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EmailStr" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IfLogin" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Sex" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="BirthDay" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MingZu" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SFZSerils" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="HunYing" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ZhengZhiMianMao" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JiGuan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="HuKou" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="XueLi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ZhiCheng" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BiYeYuanXiao" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ZhuanYe" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CanJiaGongZuoTime" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JiaRuBenDanWeiTime" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JiaTingDianHua" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JiaTingAddress" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="GangWeiBianDong" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="JiaoYueBeiJing" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="GongZuoJianLi" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="SheHuiGuanXi" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="JiangChengJiLu" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ZhiWuQingKuang" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PeiXunJiLu" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="DanBaoJiLu" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="NaoDongHeTong" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="SheBaoJiaoNa" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="TiJianJiLu" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="BeiZhuStr" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FuJian" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="POP3UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="POP3UserPwd" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="POP3Server" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="POP3Port" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SMTPUserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SMTPUserPwd" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SMTPServer" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SMTPFromEmail" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TiXingTime" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IfTiXing" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DaoHangList" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="xKeGuanDep" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="XiaShuUser" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPUserDesk" Member="ERPUserDesk">
+    <Type Name="ERPUserDesk">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ModelName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LookNum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPVote" Member="ERPVote">
+    <Type Name="ERPVote">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TitleStr" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ContentStr" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="ScoreStr" Type="System.String" DbType="VarChar(800)" CanBeNull="true" />
+      <Column Name="TouPiaoRenList" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPWorkPlan" Member="ERPWorkPlan">
+    <Type Name="ERPWorkPlan">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TitleStr" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="ContentStr" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FuJianStr" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="CanLookUser" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPWorkRiZhi" Member="ERPWorkRiZhi">
+    <Type Name="ERPWorkRiZhi">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TitleStr" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TypeStr" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ContentStr" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPXCDetails" Member="ERPXCDetails">
+    <Type Name="ERPXCDetails">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="XCID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ItemsID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NumStr" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPXinChou" Member="ERPXinChou">
+    <Type Name="ERPXinChou">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="XCName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JianJie" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPXinChouCanShu" Member="ERPXinChouCanShu">
+    <Type Name="ERPXinChouCanShu">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ItemName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPXueXi" Member="ERPXueXi">
+    <Type Name="ERPXueXi">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TitleStr" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FuJianStr" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPXueXiXinDe" Member="ERPXueXiXinDe">
+    <Type Name="ERPXueXiXinDe">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="XinDeTitle" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="XinDeContent" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FuJianStr" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="ShenPiContent" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPYinZhang" Member="ERPYinZhang">
+    <Type Name="ERPYinZhang">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="YinZhangName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="YinZhangLeiBie" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="YinZhangMiMa" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ImgPath" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeStr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPFKJH" Member="ERPFKJH">
+    <Type Name="ERPFKJH">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HeTongName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="GYS" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="DaoKuanDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TiXingDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreateUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="NowState" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPRecive" Member="ERPRecive">
+    <Type Name="ERPRecive">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HeTongName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="QianYueKeHu" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="DaoKuanDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TiXingDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreateUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="NowState" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="HTJE" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="SFDK" Type="System.String" DbType="Nvarchar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ERPYS" Member="ERPYS">
+    <Type Name="ERPYS">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HeTongName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="QianYueKeHu" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="DaoKuanDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TiXingDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreateUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BackInfo" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="NowState" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="HTJE" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="SFDK" Type="System.String" DbType="Nvarchar(20)" CanBeNull="true" />
+      <Column Name="FKID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

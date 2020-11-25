@@ -1,0 +1,73 @@
+﻿.house
+{
+	background-image: url(/Content/icons/house.png) !important;
+}
+.application_form
+{
+	background-image: url(/Content/icons/application_form.png) !important;
+}
+.plugin
+{
+	background-image: url(/Content/icons/plugin.png) !important;
+}
+.locked
+{
+	background-image: url(/Content/locked.gif) !important;
+}
+.google
+{
+	background-image: url(/Content/google-chrome.png) !important;
+}
+.ie
+{
+	background-image: url(/Content/ie.png) !important;
+}
+.group
+{
+	background-image: url(/Content/icons/group.png) !important;
+}
+.bricks
+{
+	background-image: url(/Content/icons/bricks.png) !important;
+}
+.folder_user
+{
+	background-image: url(/Content/icons/folder_user.png) !important;
+}
+.book
+{
+	background-image: url(/Content/icons/book.png) !important;
+}
+.user_gray
+{
+	background-image: url(/Content/icons/user_gray.png) !important;
+}
+
+.tag_blue_add
+{
+	background-image: url(/Content/icons/tag_blue_add.png) !important;
+}
+.tag_blue
+{
+	background-image: url(/Content/icons/tag_blue.png) !important;
+}
+.tag_blue_delete
+{
+	background-image: url(/Content/icons/tag_blue_delete.png) !important;
+}
+.tag_blue_edit
+{
+	background-image: url(/Content/icons/tag_blue_edit.png) !important;
+}
+.tag_red
+{
+	background-image: url(/Content/icons/tag_red.png) !important;
+}
+.cog
+{
+	background-image: url(/Content/icons/cog.png) !important;
+}
+.disconnect
+{
+	background-image: url(/Content/icons/disconnect.png) !important;
+}

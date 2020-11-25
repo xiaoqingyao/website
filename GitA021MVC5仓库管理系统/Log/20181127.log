@@ -1,0 +1,355 @@
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:11:24
+日志内容:FilePath:D:\03价值项目\GitA021MVC5仓库管理系统\Git.Storage.Web\Configs\Data\DbCommandFiles.config
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:11:24
+日志内容:反序列化:D:\03价值项目\GitA021MVC5仓库管理系统\Git.Storage.Web\Configs\Data\DbCommandFiles.config
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:11:25
+日志内容:config files length:2
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:11:25
+日志内容:fileName:D:\03价值项目\GitA021MVC5仓库管理系统\Git.Storage.Web\Configs\Data\DbCommonCommand.config
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:11:25
+日志内容:反序列化:D:\03价值项目\GitA021MVC5仓库管理系统\Git.Storage.Web\Configs\Data\DbCommonCommand.config
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:11:25
+日志内容:fileName:D:\03价值项目\GitA021MVC5仓库管理系统\Git.Storage.Web\Configs\Data\DbReportCommand.config
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:11:25
+日志内容:反序列化:D:\03价值项目\GitA021MVC5仓库管理系统\Git.Storage.Web\Configs\Data\DbReportCommand.config
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:11:25
+日志内容:databaseFolder:D:\03价值项目\GitA021MVC5仓库管理系统\Git.Storage.Web\Configs\Data
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:11:25
+日志内容:databaseFile:Database.config
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:11:25
+日志内容:反序列化:D:\03价值项目\GitA021MVC5仓库管理系统\Git.Storage.Web\Configs\Data\Database.config
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:11:25
+日志内容:instance.ConnectionString:Server=.;database=JooWMS;user id=sa;Password=lvcc
+
+日志级别:[error]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:11:39
+日志内容:20  	DataCommand Execution error, command text:
+select * from sysobjects where xtype='U'
+command parameters inforamtion:
+
+	Exception: System.Data.SqlClient.SqlException (0x80131904): 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接) ---> System.ComponentModel.Win32Exception (0x80004005): 系统找不到指定的文件。
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 Microsoft.Practices.EnterpriseLibrary.Data.Database.GetNewOpenConnection()
+   在 Microsoft.Practices.EnterpriseLibrary.Data.Database.GetWrappedConnection()
+   在 Microsoft.Practices.EnterpriseLibrary.Data.Database.GetOpenConnection()
+   在 Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   在 Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String tableName)
+   在 Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteDataSet(DbCommand command)
+   在 Git.Framework.MsSql.DataAccess.DataCommand.ExecuteDataSet(Boolean isOpenTrans)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+
+日志级别:[error]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:11:39
+日志内容:在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接)
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:09
+日志内容:FilePath:D:\03价值项目\GitA021MVC5仓库管理系统\Git.Storage.Web\Configs\Data\DbCommandFiles.config
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:09
+日志内容:反序列化:D:\03价值项目\GitA021MVC5仓库管理系统\Git.Storage.Web\Configs\Data\DbCommandFiles.config
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:09
+日志内容:config files length:2
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:09
+日志内容:fileName:D:\03价值项目\GitA021MVC5仓库管理系统\Git.Storage.Web\Configs\Data\DbCommonCommand.config
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:09
+日志内容:反序列化:D:\03价值项目\GitA021MVC5仓库管理系统\Git.Storage.Web\Configs\Data\DbCommonCommand.config
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:09
+日志内容:fileName:D:\03价值项目\GitA021MVC5仓库管理系统\Git.Storage.Web\Configs\Data\DbReportCommand.config
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:09
+日志内容:反序列化:D:\03价值项目\GitA021MVC5仓库管理系统\Git.Storage.Web\Configs\Data\DbReportCommand.config
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:09
+日志内容:databaseFolder:D:\03价值项目\GitA021MVC5仓库管理系统\Git.Storage.Web\Configs\Data
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:09
+日志内容:databaseFile:Database.config
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:09
+日志内容:反序列化:D:\03价值项目\GitA021MVC5仓库管理系统\Git.Storage.Web\Configs\Data\Database.config
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:09
+日志内容:instance.ConnectionString:Server=.;database=JooWMS;user id=sa;Password=lvcc
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:11
+日志内容: SQL: SELECT COUNT(*) FROM [dbo].[Sequence] AS t0   WHERE t0.[TabName]=@0_t0_TabName
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:12
+日志内容: SQL: SELECT * FROM [dbo].[Storage]
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:16
+日志内容: SQL: SELECT t0.[ID],t0.[UserName],t0.[PassWord],t0.[UserCode],t0.[RealName],t0.[Email],t0.[Mobile],t0.[Phone],t0.[CreateTime],t0.[CreateIp],t0.[CreateUser],t0.[LoginCount],t0.[Picture],t0.[UpdateTime],t0.[IsDelete],t0.[Status],t0.[DepartNum],t0.[ParentCode],t0.[RoleNum],t0.[Remark],t1.[RoleName] AS RoleName FROM [dbo].[Admin] AS t0  LEFT JOIN [dbo].[SysRole] AS t1 ON  t0.[RoleNum]=t1.[RoleNum]  WHERE t0.[UserName]=@0_t0_UserName AND t0.[PassWord]=@1_t0_PassWord 
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:18
+日志内容: SQL: SELECT t0.[ID],t0.[UserName],t0.[PassWord],t0.[UserCode],t0.[RealName],t0.[Email],t0.[Mobile],t0.[Phone],t0.[CreateTime],t0.[CreateIp],t0.[CreateUser],t0.[LoginCount],t0.[Picture],t0.[UpdateTime],t0.[IsDelete],t0.[Status],t0.[DepartNum],t0.[ParentCode],t0.[RoleNum],t0.[Remark],t1.[RoleName] AS RoleName FROM [dbo].[Admin] AS t0  LEFT JOIN [dbo].[SysRole] AS t1 ON  t0.[RoleNum]=t1.[RoleNum]  WHERE t0.[UserName]=@0_t0_UserName AND t0.[PassWord]=@1_t0_PassWord 
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:18
+日志内容: SQL: SELECT t0.[ID],t0.[UserName],t0.[PassWord],t0.[UserCode],t0.[RealName],t0.[Email],t0.[Mobile],t0.[Phone],t0.[CreateTime],t0.[CreateIp],t0.[CreateUser],t0.[LoginCount],t0.[Picture],t0.[UpdateTime],t0.[IsDelete],t0.[Status],t0.[DepartNum],t0.[ParentCode],t0.[RoleNum],t0.[Remark],t1.[RoleName] AS RoleName FROM [dbo].[Admin] AS t0  LEFT JOIN [dbo].[SysRole] AS t1 ON  t0.[RoleNum]=t1.[RoleNum]  WHERE t0.[UserName]=@0_t0_UserName AND t0.[PassWord]=@1_t0_PassWord 
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:18
+日志内容: SQL: SELECT t0.[ID],t0.[UserName],t0.[PassWord],t0.[UserCode],t0.[RealName],t0.[Email],t0.[Mobile],t0.[Phone],t0.[CreateTime],t0.[CreateIp],t0.[CreateUser],t0.[LoginCount],t0.[Picture],t0.[UpdateTime],t0.[IsDelete],t0.[Status],t0.[DepartNum],t0.[ParentCode],t0.[RoleNum],t0.[Remark],t1.[RoleName] AS RoleName FROM [dbo].[Admin] AS t0  LEFT JOIN [dbo].[SysRole] AS t1 ON  t0.[RoleNum]=t1.[RoleNum]  WHERE t0.[UserName]=@0_t0_UserName AND t0.[PassWord]=@1_t0_PassWord 
+
+日志级别:[info]
+日志位置:Git.Framework.Resource.ResourceManager
+日志时间:2018/11/27 星期二 18:13:18
+日志内容: SQL: SELECT t0.[ID],t0.[UserName],t0.[PassWord],t0.[UserCode],t0.[RealName],t0.[Email],t0.[Mobile],t0.[Phone],t0.[CreateTime],t0.[CreateIp],t0.[CreateUser],t0.[LoginCount],t0.[Picture],t0.[UpdateTime],t0.[IsDelete],t0.[Status],t0.[DepartNum],t0.[ParentCode],t0.[RoleNum],t0.[Remark],t1.[RoleName] AS RoleName FROM [dbo].[Admin] AS t0  LEFT JOIN [dbo].[SysRole] AS t1 ON  t0.[RoleNum]=t1.[RoleNum]  WHERE t0.[UserName]=@0_t0_UserName AND t0.[PassWord]=@1_t0_PassWord 
+

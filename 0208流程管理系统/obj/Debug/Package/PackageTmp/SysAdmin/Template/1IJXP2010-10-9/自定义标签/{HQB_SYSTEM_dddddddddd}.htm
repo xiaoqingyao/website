@@ -1,0 +1,22 @@
+<!DOCTYPE HTML SYSTEM "-//Macromedia//DWExtension layout-engine 5.0//dialog">
+<html>
+<head>
+ <meta http-equiv="Content-Type"  content="text/html; charset=utf-8"  />
+<title>插入{HQB_SYSTEM_dddddddddd}</title>
+ <script src="../HQB模板管理/SystemLable.js" type="text/javascript"></script><script type="text/javascript">
+function commandButtons() {
+return new Array("插入标签", "objectTag(0)", "取消", "window.close()")
+}
+</script></head>
+<body>
+<form name="theform" method="post" action="">
+<table width="450" border="0" align="center" cellpadding="4" cellspacing="1">
+<tr><td align="right"> 模型</td><td><select id='TableName'><option value='K_U_ImagesSlide' selected="selected">图片幻灯片模型</option></select></td></tr>
+<tr><td align="right"> 所属栏目</td><td><select id='Menu' multiple="multiple" style="width: 200px; height: 90px"> <option value=''> --请选择--</option></select>(不选则为当前发布栏目)</td></tr>
+<tr><td align="right"> 是否分页</td><td><input id='IsSplit' type='checkbox' checked='checked'/> </td></tr>
+<tr><td align="right"> 文章(或分页）数量</td><td><input type='text' id='PageSize' style='width: 45px' maxlength='2' value='10'/> </td></tr>
+<tr><td align="right"> 排序方式</td><td><input type='text' id='SqlOrder' value='Orders DESC'/> </td></tr>
+<tr><td align="right">内容</td><td><textarea style="width:200px" rows="10" id="txtContent">{$Field(1,AddMan,0,0)} </textarea></td></tr></table>
+</form>
+</body>
+</html>

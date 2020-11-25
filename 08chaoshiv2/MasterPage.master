@@ -1,0 +1,327 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<asp:contentplaceholder id="head" runat="server">
+    </asp:contentplaceholder>
+<head>
+    <link href="StyleSheet.css" rel="Stylesheet" type="text/css" />
+
+    <script src="SlideTrans.js"></script>
+
+    <style type="text/css">
+        .container ul, .container li
+        {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .num
+        {
+            position: absolute;
+            right: 5px;
+            bottom: 5px;
+            font: 12px/1.5 tahoma, arial;
+            height: 18px;
+        }
+        .num li
+        {
+            float: left;
+            color: #d94b01;
+            text-align: center;
+            line-height: 16px;
+            width: 16px;
+            height: 16px;
+            font-family: Arial;
+            font-size: 11px;
+            cursor: pointer;
+            margin-left: 3px;
+            border: 1px solid #f47500;
+            background-color: #fcf2cf;
+        }
+        .num li.on
+        {
+            line-height: 18px;
+            width: 18px;
+            height: 18px;
+            font-size: 14px;
+            margin-top: -2px;
+            background-color: #ff9415;
+            font-weight: bold;
+            color: #FFF;
+        }
+    </style>
+    <style type="text/css">
+        TABLE
+        {
+            margin: 0px auto;
+            margin-bottom: 20px;
+            border: 1px solid #FFDD99;
+            background-color: #FFF9ED</style>
+    <style type="text/css">
+        .container, .container img
+        {
+            width: 600px;
+            height: 200px;
+        }
+        .container img
+        {
+            border: 0;
+            vertical-align: top;
+        }
+    </style>
+
+    <script>
+        new SlideTrans("idContainer", "idSlider", 3, { Vertical: false }).Run();
+        function changeImg() {
+            var url = "validate.aspx?" + Math.round();
+            document.getElementById('imgYz').src = "";
+            document.getElementById('imgYz').src = url;
+        }
+    </script>
+
+</head>
+<body>
+    <form id="form2" runat="server">
+    <div align="center">
+        <table id="__01" height="900" border="0" cellpadding="0" cellspacing="0" style="width: 962px"
+            language="javascript" onclick="return __01_onclick()">
+            <tr>
+                <td  style="font-size: 20pt; height: 103px; text-align: left; 
+                    font-family: 方正舒体" valign="bottom">
+                    <img src="images/logo.jpg" height="103px" width="300px"/>
+                    
+                </td>
+                <td  valign="bottom" style="font-size: 12pt; text-align: center; height: 31px;">
+                    <a href="Default.aspx"><font size="5">首页</font></a> <a href="News.aspx"><font size="5">
+                        公告</font></a> <a href="GoodsInfo.aspx"><font size="5">商品信息</font></a> <a href="ShopCar.aspx">
+                            <font size="5">购物车</font></a> <a href="LiuYan.aspx"><font size="5">留言板</font></a><a href="SecondHand.aspx"><font size="5">二手专区</font></a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" valign="bottom" style="font-size: 12pt; text-align: center; height: 31px;
+                    background-image: url(images/Topbg.jpg);">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" rowspan="6" style="vertical-align: top; text-align: left">
+                    <table style="width: 974px; height: 734px">
+                        <tr>
+                            <td valign="top" style="width: 191px; height: 121px;">
+                                <asp:TextBox ID="Name" runat="server"></asp:TextBox><asp:Button runat="server" ID="btn_Search" OnClick="btn_Search_Click" Text="搜" />
+                                <asp:Image ID="Image1" runat="server" ImageUrl="~/images/分类.jpg" />
+                                <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" CellPadding="4"
+                                    ForeColor="#333333" GridLines="None" Height="125px" ShowHeader="False" Width="186px">
+                                    <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                    <RowStyle BackColor="#EFF3FB" />
+                                    <Columns>
+                                        <asp:HyperLinkField DataNavigateUrlFields="TypeName" DataNavigateUrlFormatString="ClassGoods.aspx?GoodsType={0} "
+                                            DataTextField="TypeName" />
+                                    </Columns>
+                                    <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                                    <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                                    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                    <EditRowStyle BackColor="#2461BF" />
+                                    <AlternatingRowStyle BackColor="White" />
+                                </asp:GridView>
+                                <asp:Image ID="Image4" runat="server" ImageUrl="~/images/最新上架.jpg" /><br />
+                                <asp:DataList ID="DataList2" runat="server" DataKeyField="GoodsID" OnItemCommand="dlstGoods_ItemCommand"
+                                    RepeatColumns="1" Width="184px">
+                                    <ItemTemplate>
+                                        <table>
+                                            <tr>
+                                                <td style="width: 40px">
+                                                    <a href='goodsdetail.aspx?goodsid=<%# Eval("GoodsID")%>'>
+                                                        <asp:Image ID="Image1" runat="server" Height="40px" ImageUrl='<%# Eval("GoodsPicture") %>'
+                                                            Width="40px" />
+                                                    </a>
+                                                </td>
+                                                <td style="width: 200px">
+                                                    <%# Eval("GoodsName") %>
+                                                    最近售出：<%# Eval("sales") %>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </ItemTemplate>
+                                </asp:DataList>
+                            </td>
+                            <td style="height: 121px;" valign="top">
+                                <div class="container" id="idContainer2">
+                                    <ul id="idSlider2">
+                                        <li><a href="goodsdetail.aspx?goodsid=8">
+                                            <img src="images/pp1.jpg" width="900" /></a></li>
+                                        <li><a href="goodsdetail.aspx?goodsid=10">
+                                            <img src="images/pp2.jpg" width="900" /></a></li>
+                                        <li><a href="goodsdetail.aspx?goodsid=13">
+                                            <img src="images/pp3.jpg" width="900" /></a></li>
+                                    </ul>
+                                    <ul class="num" id="idNum">
+                                    </ul>
+                                </div>
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </td>
+                            <td style="height: 121px;" valign="top">
+                                <div id="divLogin" runat="server">
+                                    <table border="0" cellpadding="0" cellspacing="0" style="width: 189px">
+                                        <tr>
+                                            <td style="height: 31px" colspan="2">
+                                                用户名：<asp:TextBox ID="txtMemberName" runat="server" Width="108px"></asp:TextBox>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" style="height: 31px">
+                                                密&nbsp; 码：<asp:TextBox ID="txtPWD" runat="server" TextMode="Password" Width="108px"></asp:TextBox>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                验证码：<asp:TextBox ID="txtYzm" runat="server" TextMode="Password" Width="108px"></asp:TextBox>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="height: 31px">
+                                            </td>
+                                            <td align="center">
+                                                <img id="imgYz" align="middle" alt="看不清，请单击该验证码" src="validate.aspx" height="25px"
+                                                    style="width: 78px" onclick="changeImg();" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" style="height: 30px; text-align: center">
+                                                <asp:Button ID="btLogin" runat="server" OnClick="btLogin_Click" Text="登录" />
+                                                <asp:Button ID="btRegister" runat="server" OnClick="Button2_Click" Text="注册" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div id="divShow" runat="server" visible="false">
+                                    <asp:Panel ID="Panel1" runat="server" Height="50px">
+                                        欢迎<%=Session["MemberName"]%>登陆，<asp:LinkButton ID="linkbtSeeOrder" runat="server"
+                                            OnClick="linkbtSeeOrder_Click">查看订单</asp:LinkButton>
+                                        <asp:LinkButton ID="linkbtUpt" runat="server" OnClick="linkbtUpt_Click">修改资料</asp:LinkButton>
+                                        <asp:LinkButton ID="linkbtExit" runat="server" OnClick="linkbtExit_Click">注销</asp:LinkButton></asp:Panel>
+                                </div>
+                                <asp:Image ID="Image3" runat="server" ImageUrl="~/images/公告.jpg" />
+                                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="NewsID"
+                                    GridLines="None" ShowHeader="False" Width="186px" Height="104px">
+                                    <Columns>
+                                        <asp:HyperLinkField DataNavigateUrlFields="NewsID" DataNavigateUrlFormatString="newsdetail.aspx?newsid={0} "
+                                            DataTextField="NewsTitle" Target="_blank">
+                                            <ItemStyle Width="200px" />
+                                        </asp:HyperLinkField>
+                                        <asp:BoundField DataField="NewsID" HeaderText="NewsID" InsertVisible="False" ReadOnly="True"
+                                            SortExpression="NewsID" Visible="False" />
+                                    </Columns>
+                                </asp:GridView>
+                                <asp:Image ID="Image5" runat="server" ImageUrl="~/images/热销.jpg" /><br />
+                                <asp:DataList ID="DataList1" runat="server" DataKeyField="GoodsID" RepeatColumns="1"
+                                    Width="184px">
+                                    <ItemTemplate>
+                                        <table>
+                                            <tr>
+                                                <td style="width: 40px">
+                                                    <a href='goodsdetail.aspx?goodsid=<%# Eval("GoodsID")%>'>
+                                                        <asp:Image ID="Image1" runat="server" Height="40px" ImageUrl='<%# Eval("GoodsPicture") %>'
+                                                            Width="40px" />
+                                                    </a>
+                                                </td>
+                                                <td style="width: 200px">
+                                                    <%# Eval("GoodsName") %>
+                                                    最近售出：<%# Eval("sales") %>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </ItemTemplate>
+                                </asp:DataList>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 191px">
+                            </td>
+                            <td style="width: 345730px">
+                            </td>
+                            <td style="width: 516px">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+                <td style="background-image: url(images/首页_15.gif); height: 16px;" colspan="2">
+                    <a href="Admin/Login.aspx">管理员后台登录</a>
+                </td>
+            </tr>
+        </table>
+        <!-- End ImageReady Slices -->
+    </div>
+
+    <script>
+
+        var nums = [], timer, n = $$("idSlider2").getElementsByTagName("li").length,
+	st = new SlideTrans("idContainer2", "idSlider2", n, {
+	    onStart: function() {//设置按钮样式
+	        forEach(nums, function(o, i) { o.className = st.Index == i ? "on" : ""; })
+	    }
+	});
+        for (var i = 1; i <= n; AddNum(i++)) { };
+        function AddNum(i) {
+            var num = $$("idNum").appendChild(document.createElement("li"));
+            num.innerHTML = i--;
+            num.onmouseover = function() {
+                timer = setTimeout(function() { num.className = "on"; st.Auto = false; st.Run(i); }, 200);
+            }
+            num.onmouseout = function() { clearTimeout(timer); num.className = ""; st.Auto = true; st.Run(); }
+            nums[i] = num;
+        }
+        st.Run();
+
+
+        $$("idAuto").onclick = function() {
+            if (st.Auto) {
+                st.Auto = false; st.Stop(); this.value = "自动";
+            } else {
+                st.Auto = true; st.Run(); this.value = "停止";
+            }
+        }
+        $$("idNext").onclick = function() { st.Next(); }
+        $$("idPre").onclick = function() { st.Previous(); }
+        $$("idTween").onchange = function() {
+            switch (parseInt(this.value)) {
+                case 2:
+                    st.Tween = Tween.Bounce.easeOut; break;
+                case 1:
+                    st.Tween = Tween.Back.easeOut; break;
+                default:
+                    st.Tween = Tween.Quart.easeOut;
+            }
+        } 
+
+    </script>
+
+    <br />
+
+    <script type="text/javascript"><!--
+        google_ad_client = "ca-pub-0342339836871729";
+        /* 728x90, 创建于 10-1-26 */
+        google_ad_slot = "8648094726";
+        google_ad_width = 728;
+        google_ad_height = 90;
+        function __01_onclick() {
+
+        } 
+
+//-->
+    </script>
+
+    </form>
+</body>

@@ -1,0 +1,15 @@
+E:\WMS\DataBase\bin\Debug\DataBase.dll
+E:\WMS\DataBase\bin\Debug\DataBase.pdb
+E:\WMS\DataBase\obj\Debug\ResolveAssemblyReference.cache
+E:\WMS\DataBase\obj\Debug\DataBase.dll
+E:\WMS\DataBase\obj\Debug\DataBase.pdb
+E:\BBS\DataBase\bin\Debug\DataBase.dll
+E:\BBS\DataBase\bin\Debug\DataBase.pdb
+E:\BBS\DataBase\obj\Debug\ResolveAssemblyReference.cache
+E:\BBS\DataBase\obj\Debug\DataBase.dll
+E:\BBS\DataBase\obj\Debug\DataBase.pdb
+E:\shopping\DataBase\bin\Debug\DataBase.dll
+E:\shopping\DataBase\bin\Debug\DataBase.pdb
+E:\shopping\DataBase\obj\Debug\ResolveAssemblyReference.cache
+E:\shopping\DataBase\obj\Debug\DataBase.dll
+E:\shopping\DataBase\obj\Debug\DataBase.pdb

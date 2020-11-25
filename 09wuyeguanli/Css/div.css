@@ -1,0 +1,24 @@
+/* CSS Document */
+BODY {
+	BACKGROUND-COLOR: #ffffff; COLOR: #000000; FONT-FAMILY: ËÎÌו; FONT-SIZE: 12px;scrollbar-face-color: #DEE3E7; scrollbar-highlight-color: #FFFFFF; scrollbar-shadow-color: #DEE3E7; scrollbar-3dlight-color: #D1D7DC; scrollbar-arrow-color: #006699; scrollbar-track-color: #EFEFEF; scrollbar-darkshadow-color: #98AAB1
+}
+DIV.neat-dialog-cont {
+	Z-INDEX: 98; BACKGROUND: none transparent scroll repeat 0% 0%; LEFT: 0px; WIDTH: 100%; POSITION: absolute; TOP: 0px; HEIGHT: 100%
+}
+DIV.neat-dialog-bg {
+	Z-INDEX: -1; FILTER: alpha(opacity=60); LEFT: 0px; WIDTH: 100%; POSITION: absolute; TOP: 0px; HEIGHT: 100%; BACKGROUND-COLOR: #000000; opacity: 0.7; background-position:center;padding:100 px
+}
+DIV.neat-dialog { 
+	 Z-INDEX: 99;   TOP: 20%;FILTER: position:relative
+}
+DIV.neat-dialog-title { 
+	PADDING-RIGHT: 0.3em; PADDING-LEFT: 0.3em; FONT-SIZE: 0.8em; PADDING-BOTTOM: 0.1em; MARGIN: 0px; LINE-HEIGHT: 1.2em; PADDING-TOP: 0.1em; BORDER-BOTTOM: #444 1px solid; POSITION: fixed; width:500 px; height:200 px
+}
+IMG.nd-cancel {
+	RIGHT: 0.2em; POSITION: absolute; TOP: 0.2em
+}
+DIV.neat-dialog P {
+	PADDING-RIGHT: 0.2em; PADDING-LEFT: 0.2em; PADDING-BOTTOM: 0.2em; PADDING-TOP: 0.2em; TEXT-ALIGN: center
+}
+
+

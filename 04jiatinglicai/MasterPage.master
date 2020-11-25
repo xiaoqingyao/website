@@ -1,0 +1,102 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>无标题页</title>
+    <link rel="stylesheet"
+        type="text/css" href="Images/lanmu.css">
+    <style type="text/css">
+        <!--
+        .STYLE6 {
+            font-family: "楷体_GB2312";
+            font-size: 16px;
+            line-height: 25px;
+        }
+
+        .STYLE8 {
+            font-family: "楷体_GB2312";
+            font-size: 24px;
+        }
+
+        .STYLE9 {
+            font-size: 22px;
+            font-weight: bold;
+        }
+        -->
+    </style>
+</head>
+<body leftmargin="0" topmargin="0" bgcolor="#e3f0fd" marginheight="0"
+    marginwidth="0">
+    <form id="form1" runat="server">
+        <table id="__01" border="0" cellspacing="0" cellpadding="0" width="851" bgcolor="#ffffff"
+            align="center" style="height: auto">
+            <tbody>
+                <tr>
+                    <td rowspan="2" colspan="1" background="Images/bggg.gif">
+                        <img alt="" src="Images/lanmu_01.gif"
+                            width="340" height="101"></td>
+                    <td background="Images/bggg.gif" colspan="2" rowspan="2">
+                        <a href=""
+                            target="_blank"></a>
+
+                    </td>
+                    <td>
+                        <img alt="" src="Images/分隔符.gif" width="1" height="51"></td>
+                </tr>
+                <tr>
+
+                    <td style="height: 50px">
+                        <img alt="" src="Images/分隔符.gif" width="1" height="50"></td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="height: 41px">
+                        <div id="lanmu-05" style="width: 854px">
+
+
+                            <a class="dh_bai" href="Login.aspx">返回登陆&nbsp;&nbsp;</a><a
+                                class="dh_bai"
+                                href="NewsList.aspx">|&nbsp;&nbsp;新闻公告&nbsp;&nbsp;</a><a
+                                    class="dh_bai"
+                                    href="NotedManger.aspx">|&nbsp;&nbsp;记事管理&nbsp;&nbsp;</a><a
+                                        class="dh_bai" href="MoneyManger.aspx">|&nbsp;&nbsp;收支记账&nbsp;&nbsp;</a><a class="dh_bai" href="MoneyTypeList.aspx">|&nbsp;&nbsp;收支分类&nbsp;&nbsp;</a><a class="dh_bai" href="CKMoneyManger.aspx">|&nbsp;&nbsp;存款管理&nbsp;&nbsp;</a><a class="dh_bai" href="JieMoneyManger.aspx">|&nbsp;&nbsp;借入借出&nbsp;&nbsp;</a><a
+                                            class="dh_bai" href="ScheduleManger.aspx">|&nbsp;&nbsp;投资管理&nbsp;&nbsp;</a><a
+                                                class="dh_bai"
+                                                href="TJMoney.aspx">|&nbsp;&nbsp;查询统计</a>
+
+                            <a
+                                class="dh_bai"
+                                href="MoneyTJImage.aspx">|&nbsp;&nbsp;收支统计图</a>
+
+                        </div>
+                    </td>
+                    <td style="height: 41px">
+                        <img alt="" src="Images/分隔符.gif" width="1" height="29"></td>
+                </tr>
+                <tr>
+                    <td valign="top" rowspan="2" colspan="3" align="left">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+
+                    </td>
+                    <td>
+                        <img alt="" src="Images/分隔符.gif" width="1" height="2"></td>
+                </tr>
+                <tr valign="top">
+                    <td>
+                        <img alt="" src="Images/分隔符.gif" width="1" height="534"></td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="height: 25px">
+
+                        <a href="Admin/Login.aspx">后台入口</a></td>
+                    <td style="height: 25px">
+                        <img alt="" src="Images/分隔符.gif" width="1" height="25"></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>

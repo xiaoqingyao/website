@@ -1,0 +1,187 @@
+body,td,th {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #FFFFFF;
+	color: #000000;
+}
+button {
+	font-family: Arial, Helvetica, sans-serif, "宋体";
+	font-size: 12px;
+	color: #003399;
+	text-decoration: none;
+	padding: 1px;
+	cursor: hand;
+	text-align: center;
+	background-image: url(images/bg_button_17.jpg);
+	background-repeat: repeat-x;
+	border: 1px solid #6699CC;
+	line-height: 16px;
+	height: 20px;
+}
+input {
+	font-family: "宋体";
+	font-size: 12px;
+	color: #003399;
+	text-decoration: none;
+	background-color: #FFFFFF;
+	border: 1px solid #6699CC;
+	line-height: 16px;
+	height: 20px;
+}
+input.button {
+	font-family: Arial, Helvetica, sans-serif, "宋体";
+	font-size: 12px;
+	color: #003399;
+	text-decoration: none;
+	padding: 1px;
+	cursor: hand;
+	text-align: center;
+	background-image: url(images/bg_button_17.jpg);
+	background-repeat: repeat-x;
+	border: 1px solid #6699CC;
+	line-height: 16px;
+	height: 20px;
+}
+input.checkbox{
+BORDER-TOP-STYLE: none; 
+BORDER-RIGHT-STYLE: none; 
+BORDER-LEFT-STYLE: none; 
+BACKGROUND-COLOR: transparent; 
+BORDER-BOTTOM-STYLE: none
+}
+img {
+	border: 1px solid #0066CC;
+	padding: 3px;
+	background-color: #FFFFFF;
+}
+table {
+	border: none;
+	background-color: #EDF3FA;
+	font-family: Arial, Helvetica, sans-serif, "宋体";
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+	line-height: 22px;
+}
+a {
+	font-family: "宋体";
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+a:hover {
+	font-family: "宋体";
+	font-size: 12px;
+	color: #FF6600;
+	text-decoration: underline;
+}
+tr {
+	border: 1px solid #0066CC;
+}
+td {
+	background-color: #ECF2F9;
+	border: 1px solid #9FBFDF;
+	text-indent: 5px;
+}
+th {
+	background-color: #ECF2F9;
+	border: 1px solid #9FBFDF;
+	text-indent: 5px;
+}
+select {
+	font-family: Arial, Helvetica, sans-serif, "宋体";
+	font-size: 12px;
+	color: #003399;
+	line-height: 18px;
+	border: 1px solid #6699CC;
+	background-color: #FFFFFF;
+	display: block;
+	}
+.edit {
+	font-family: Arial, Helvetica, sans-serif, "宋体";
+	font-size: 12px;
+	line-height: 20px;
+	color: #000000;
+	text-decoration: none;
+	height: 22px;
+	width: 60px;
+	background-image: url(images/edit.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	cursor: hand;
+}
+.del {
+	font-family: Arial, Helvetica, sans-serif, "宋体";
+	font-size: 12px;
+	line-height: 20px;
+	color: #000000;
+	text-decoration: none;
+	background-image: url(images/del.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 22px;
+	width: 60px;
+	cursor: hand;
+}
+.bt12b {
+	font-family: Arial, Helvetica, sans-serif, "宋体";
+	font-size: 12px;
+	line-height: 22px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+	background-color: #6581C2;
+	height: 100%;
+	width: 100%;
+}
+.whitetext {
+	font-family: Arial, Helvetica, sans-serif, "宋体";
+	font-size: 12px;
+	line-height: 22px;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.whitetext:hover {
+	font-family: Arial, Helvetica, sans-serif, "宋体";
+	font-size: 12px;
+	line-height: 22px;
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+.link {
+	font-family: Arial, Helvetica, sans-serif, "宋体";
+	font-size: 12px;
+	line-height: 22px;
+	font-weight: normal;
+	color: #00ff00;
+	text-decoration: none;
+}
+.link:hover {
+	font-family: Arial, Helvetica, sans-serif, "宋体";
+	font-size: 12px;
+	line-height: 22px;
+	color: #00ff00;
+	text-decoration: underline;
+}
+.link:active {
+	font-family: Arial, Helvetica, sans-serif, "宋体";
+	font-size: 12px;
+	line-height: 22px;
+	color: #00ff00;
+	text-decoration: none;
+	background-color: #003399;
+}
+.row {
+	font-family: Arial, Helvetica, sans-serif, "宋体";
+	font-size: 12px;
+	line-height: 22px;
+	color: #003399;
+	text-decoration: none;
+	background-image: url(../Images/bg_right_10.jpg);
+	height: 22px;
+	text-align: center;
+	background-repeat: repeat-x;
+	background-position: bottom;
+}

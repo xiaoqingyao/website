@@ -1,0 +1,583 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>用户管理</title>
+    <link href="../css/ustyle.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.ui.form.select.js"></script>
+    <script type="text/javascript" src="../js/publicform.js"></script>
+    <script type="text/javascript" src="../js/listcheck.js"></script>
+    <link href="../css/dialog.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../js/jquery.dialog.js"></script>
+    <script type="text/javascript" src="../js/win.js"></script>
+        <script type="text/javascript" src="../js/common.js"></script>
+    <script language="javascript" type="text/javascript">
+        function SetChkName(obj) {
+            if (obj.checked) {
+                var rpt = document.getElementById("senfe");
+                var tid = rpt.rows[event.srcElement.parentElement.parentElement.rowIndex].cells[2].innerHTML;
+                tid = tid.replace(/<[^>]+>/g, "");
+                document.getElementById("hdName").value += tid + ",";
+                alert(document.getElementById("hdName").value);
+            }
+        }
+        function setAction(IsOk) {
+            if (IsOk == "true") {
+                if (GetSelectTitle()) {
+                    $("#btnHidAction").click();
+                }
+            }
+        }
+
+        function selectThisRow(d) {
+            var chkList = document.getElementsByName("chkId");
+            for (i = 0; i < chkList.length; i++) {
+                
+                if (chkList[i].value.indexOf(d + "|") == 0) {
+                    document.getElementById("txtSearch").value = document.getElementById("txtSearch").value + chkList[i].value
+                    //chkList[i].checked = true;
+                    return true;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="Form1" method="post" action="SysUserList.aspx?NodeCode=100010001" id="Form1">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['Form1'];
+if (!theForm) {
+    theForm = document.Form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div>
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWGwL0x/c2ArnJyI4JApntjN0KArXvir0DAu+OvL8FAqPC/8kPAouT+ekJAsvH08oFAqrzyIMHAun8yIMHAoCsyYMHAr+zyYMHAqbRyIMHAuXayIMHAuyFyYMHAquNyYMHAoK9yYMHAsHEyYMHAonL6OIEAsjU6OIEAt+D6eIEAp6L6eIEAoWp6OIEAsSy6OIEAsvd6OIEAqTY0YABAsvHl8kFqclyeSQGLDSIHcqfwb7Ty8azPP0=" />
+</div>
+    <input name="hidLogTitle" type="hidden" id="hidLogTitle" value="ttt3" />
+    <div class="container">
+        <h4>
+            位置： <a href="#">系统管理</a> &gt; <span class="breadcrumb_current">登录账户管理</span>
+        </h4>
+        <div id="searchContainer">
+            <p>
+                <span>登录名称：</span>
+                <input name="txtSearch" type="text" value="218|141" id="txtSearch" />
+                <input type="hidden" name="hdName" id="hdName" />
+                <input type="submit" name="btnQuery" value="搜索" id="btnQuery" /></p>
+        </div>
+        <div class="function">
+            <input type="submit" name="btnHidAction" value="" id="btnHidAction" style="display:none" />
+            <input type="submit" name="btnNew" value="添加" id="btnNew" />
+            <input type="submit" name="btnDelete" value="删除" onclick="selfconfirm({msg:'确定要执行删除操作吗？',fn:function(data){setAction(data)}});return false;" id="btnDelete" />
+        </div>
+        <ul class="ulheader">
+            <li style="width: 5% ;text-align:center">
+                <input type="checkbox" name="checkBoxAll" id="checkBoxAll" value="" /></li>
+            <li style="width: 5%;text-align:center">序号 </li>
+            <li style="width: 20%">登录名称 </li>
+            <li style="width: 20%">所属用户组 </li>
+            <li style="width: 15%;text-align:center">最后登录时间 </li>
+            <li style="width: 10%;text-align:center">状态 </li>
+            <li style="width: 20%">操作 </li>
+        </ul>
+        
+                <ul class="ulheader ulbody">
+                    <li style="width: 5%; text-align:center">
+                        <input type="checkbox" name="chkId" value='219|142'" />
+                    </li>
+                    <li style="width: 5%;text-align:center"><input
+                            type="hidden" name="chkName" value='ttt4' />
+                        142</li>
+                    <li style="width: 20%"><a href="SysUserEdit.aspx?action=Edit&NodeCode=100010001&Userid=142" id="Title219|142">ttt4</a> </li>
+                    <li style="width: 20%">
+                        店铺录入用户组
+                    </li>
+                    <li style="width: 15%;text-align:center">
+                        2010-07-19 11:17:31
+                    </li>
+                    <li style="width: 10%;text-align:center">
+                        <span style="color:red;font-size:14px">√</span>
+                    </li>
+                    <li style="width: 20%"><a href="SysUserRight.aspx?action=Edit&NodeCode=100010001&Userid=142" id="RptUser_ctl00_lnkRight" class="abtn">
+                        权限</a> 
+                        <a id="RptUser_ctl00_lnkbState" title="ttt4" class="abtn" href="javascript:__doPostBack('RptUser$ctl00$lnkbState','')">禁用</a> 
+
+                          
+                        <a href="#" id="RptUser_ctl00_lnkDelete" class="abtn" onclick="if(selectThisRow(219)){selfconfirm({msg:&quot;确定要执行删除操作吗？&quot;,fn:function(data){setAction(data)}});}return false;">删除</a>
+                        <a href="SysUserChangePassword.aspx?NodeCode=100010001&Userid=142" id="RptUser_ctl00_lnkChangePWD" class="abtn">修改密码</a></li>
+                </ul>
+            
+                <ul class="ulheader ulbody">
+                    <li style="width: 5%; text-align:center">
+                        <input type="checkbox" name="chkId" value='193|124'" />
+                    </li>
+                    <li style="width: 5%;text-align:center"><input
+                            type="hidden" name="chkName" value='shop29' />
+                        124</li>
+                    <li style="width: 20%"><a href="SysUserEdit.aspx?action=Edit&NodeCode=100010001&Userid=124" id="Title193|124">shop29</a> </li>
+                    <li style="width: 20%">
+                        店铺录入用户组
+                    </li>
+                    <li style="width: 15%;text-align:center">
+                        2010-06-26 11:36:47
+                    </li>
+                    <li style="width: 10%;text-align:center">
+                        <span style="color:red;font-size:14px">√</span>
+                    </li>
+                    <li style="width: 20%"><a href="SysUserRight.aspx?action=Edit&NodeCode=100010001&Userid=124" id="RptUser_ctl01_lnkRight" class="abtn">
+                        权限</a> 
+                        <a id="RptUser_ctl01_lnkbState" title="shop29" class="abtn" href="javascript:__doPostBack('RptUser$ctl01$lnkbState','')">禁用</a> 
+
+                          
+                        <a href="#" id="RptUser_ctl01_lnkDelete" class="abtn" onclick="if(selectThisRow(193)){selfconfirm({msg:&quot;确定要执行删除操作吗？&quot;,fn:function(data){setAction(data)}});}return false;">删除</a>
+                        <a href="SysUserChangePassword.aspx?NodeCode=100010001&Userid=124" id="RptUser_ctl01_lnkChangePWD" class="abtn">修改密码</a></li>
+                </ul>
+            
+                <ul class="ulheader ulbody">
+                    <li style="width: 5%; text-align:center">
+                        <input type="checkbox" name="chkId" value='192|123'" />
+                    </li>
+                    <li style="width: 5%;text-align:center"><input
+                            type="hidden" name="chkName" value='shop28' />
+                        123</li>
+                    <li style="width: 20%"><a href="SysUserEdit.aspx?action=Edit&NodeCode=100010001&Userid=123" id="Title192|123">shop28</a> </li>
+                    <li style="width: 20%">
+                        店铺录入用户组
+                    </li>
+                    <li style="width: 15%;text-align:center">
+                        2010-06-26 11:36:39
+                    </li>
+                    <li style="width: 10%;text-align:center">
+                        <span style="color:red;font-size:14px">√</span>
+                    </li>
+                    <li style="width: 20%"><a href="SysUserRight.aspx?action=Edit&NodeCode=100010001&Userid=123" id="RptUser_ctl02_lnkRight" class="abtn">
+                        权限</a> 
+                        <a id="RptUser_ctl02_lnkbState" title="shop28" class="abtn" href="javascript:__doPostBack('RptUser$ctl02$lnkbState','')">禁用</a> 
+
+                          
+                        <a href="#" id="RptUser_ctl02_lnkDelete" class="abtn" onclick="if(selectThisRow(192)){selfconfirm({msg:&quot;确定要执行删除操作吗？&quot;,fn:function(data){setAction(data)}});}return false;">删除</a>
+                        <a href="SysUserChangePassword.aspx?NodeCode=100010001&Userid=123" id="RptUser_ctl02_lnkChangePWD" class="abtn">修改密码</a></li>
+                </ul>
+            
+                <ul class="ulheader ulbody">
+                    <li style="width: 5%; text-align:center">
+                        <input type="checkbox" name="chkId" value='191|122'" />
+                    </li>
+                    <li style="width: 5%;text-align:center"><input
+                            type="hidden" name="chkName" value='shop27' />
+                        122</li>
+                    <li style="width: 20%"><a href="SysUserEdit.aspx?action=Edit&NodeCode=100010001&Userid=122" id="Title191|122">shop27</a> </li>
+                    <li style="width: 20%">
+                        店铺录入用户组
+                    </li>
+                    <li style="width: 15%;text-align:center">
+                        2010-06-26 11:36:30
+                    </li>
+                    <li style="width: 10%;text-align:center">
+                        <span style="color:red;font-size:14px">√</span>
+                    </li>
+                    <li style="width: 20%"><a href="SysUserRight.aspx?action=Edit&NodeCode=100010001&Userid=122" id="RptUser_ctl03_lnkRight" class="abtn">
+                        权限</a> 
+                        <a id="RptUser_ctl03_lnkbState" title="shop27" class="abtn" href="javascript:__doPostBack('RptUser$ctl03$lnkbState','')">禁用</a> 
+
+                          
+                        <a href="#" id="RptUser_ctl03_lnkDelete" class="abtn" onclick="if(selectThisRow(191)){selfconfirm({msg:&quot;确定要执行删除操作吗？&quot;,fn:function(data){setAction(data)}});}return false;">删除</a>
+                        <a href="SysUserChangePassword.aspx?NodeCode=100010001&Userid=122" id="RptUser_ctl03_lnkChangePWD" class="abtn">修改密码</a></li>
+                </ul>
+            
+                <ul class="ulheader ulbody">
+                    <li style="width: 5%; text-align:center">
+                        <input type="checkbox" name="chkId" value='190|121'" />
+                    </li>
+                    <li style="width: 5%;text-align:center"><input
+                            type="hidden" name="chkName" value='shop26' />
+                        121</li>
+                    <li style="width: 20%"><a href="SysUserEdit.aspx?action=Edit&NodeCode=100010001&Userid=121" id="Title190|121">shop26</a> </li>
+                    <li style="width: 20%">
+                        店铺录入用户组
+                    </li>
+                    <li style="width: 15%;text-align:center">
+                        2010-06-26 11:36:22
+                    </li>
+                    <li style="width: 10%;text-align:center">
+                        <span style="color:red;font-size:14px">√</span>
+                    </li>
+                    <li style="width: 20%"><a href="SysUserRight.aspx?action=Edit&NodeCode=100010001&Userid=121" id="RptUser_ctl04_lnkRight" class="abtn">
+                        权限</a> 
+                        <a id="RptUser_ctl04_lnkbState" title="shop26" class="abtn" href="javascript:__doPostBack('RptUser$ctl04$lnkbState','')">禁用</a> 
+
+                          
+                        <a href="#" id="RptUser_ctl04_lnkDelete" class="abtn" onclick="if(selectThisRow(190)){selfconfirm({msg:&quot;确定要执行删除操作吗？&quot;,fn:function(data){setAction(data)}});}return false;">删除</a>
+                        <a href="SysUserChangePassword.aspx?NodeCode=100010001&Userid=121" id="RptUser_ctl04_lnkChangePWD" class="abtn">修改密码</a></li>
+                </ul>
+            
+                <ul class="ulheader ulbody">
+                    <li style="width: 5%; text-align:center">
+                        <input type="checkbox" name="chkId" value='189|120'" />
+                    </li>
+                    <li style="width: 5%;text-align:center"><input
+                            type="hidden" name="chkName" value='shop25' />
+                        120</li>
+                    <li style="width: 20%"><a href="SysUserEdit.aspx?action=Edit&NodeCode=100010001&Userid=120" id="Title189|120">shop25</a> </li>
+                    <li style="width: 20%">
+                        店铺录入用户组
+                    </li>
+                    <li style="width: 15%;text-align:center">
+                        2010-06-26 11:36:07
+                    </li>
+                    <li style="width: 10%;text-align:center">
+                        <span style="color:red;font-size:14px">√</span>
+                    </li>
+                    <li style="width: 20%"><a href="SysUserRight.aspx?action=Edit&NodeCode=100010001&Userid=120" id="RptUser_ctl05_lnkRight" class="abtn">
+                        权限</a> 
+                        <a id="RptUser_ctl05_lnkbState" title="shop25" class="abtn" href="javascript:__doPostBack('RptUser$ctl05$lnkbState','')">禁用</a> 
+
+                          
+                        <a href="#" id="RptUser_ctl05_lnkDelete" class="abtn" onclick="if(selectThisRow(189)){selfconfirm({msg:&quot;确定要执行删除操作吗？&quot;,fn:function(data){setAction(data)}});}return false;">删除</a>
+                        <a href="SysUserChangePassword.aspx?NodeCode=100010001&Userid=120" id="RptUser_ctl05_lnkChangePWD" class="abtn">修改密码</a></li>
+                </ul>
+            
+                <ul class="ulheader ulbody">
+                    <li style="width: 5%; text-align:center">
+                        <input type="checkbox" name="chkId" value='188|119'" />
+                    </li>
+                    <li style="width: 5%;text-align:center"><input
+                            type="hidden" name="chkName" value='shop24' />
+                        119</li>
+                    <li style="width: 20%"><a href="SysUserEdit.aspx?action=Edit&NodeCode=100010001&Userid=119" id="Title188|119">shop24</a> </li>
+                    <li style="width: 20%">
+                        店铺录入用户组
+                    </li>
+                    <li style="width: 15%;text-align:center">
+                        2010-06-26 11:35:55
+                    </li>
+                    <li style="width: 10%;text-align:center">
+                        <span style="color:red;font-size:14px">√</span>
+                    </li>
+                    <li style="width: 20%"><a href="SysUserRight.aspx?action=Edit&NodeCode=100010001&Userid=119" id="RptUser_ctl06_lnkRight" class="abtn">
+                        权限</a> 
+                        <a id="RptUser_ctl06_lnkbState" title="shop24" class="abtn" href="javascript:__doPostBack('RptUser$ctl06$lnkbState','')">禁用</a> 
+
+                          
+                        <a href="#" id="RptUser_ctl06_lnkDelete" class="abtn" onclick="if(selectThisRow(188)){selfconfirm({msg:&quot;确定要执行删除操作吗？&quot;,fn:function(data){setAction(data)}});}return false;">删除</a>
+                        <a href="SysUserChangePassword.aspx?NodeCode=100010001&Userid=119" id="RptUser_ctl06_lnkChangePWD" class="abtn">修改密码</a></li>
+                </ul>
+            
+                <ul class="ulheader ulbody">
+                    <li style="width: 5%; text-align:center">
+                        <input type="checkbox" name="chkId" value='187|118'" />
+                    </li>
+                    <li style="width: 5%;text-align:center"><input
+                            type="hidden" name="chkName" value='shop23' />
+                        118</li>
+                    <li style="width: 20%"><a href="SysUserEdit.aspx?action=Edit&NodeCode=100010001&Userid=118" id="Title187|118">shop23</a> </li>
+                    <li style="width: 20%">
+                        管理员用户组1
+                    </li>
+                    <li style="width: 15%;text-align:center">
+                        2010-06-26 11:35:46
+                    </li>
+                    <li style="width: 10%;text-align:center">
+                        <span style="color:red;font-size:14px">√</span>
+                    </li>
+                    <li style="width: 20%"><a href="SysUserRight.aspx?action=Edit&NodeCode=100010001&Userid=118" id="RptUser_ctl07_lnkRight" class="abtn">
+                        权限</a> 
+                        <a id="RptUser_ctl07_lnkbState" title="shop23" class="abtn" href="javascript:__doPostBack('RptUser$ctl07$lnkbState','')">禁用</a> 
+
+                          
+                        <a href="#" id="RptUser_ctl07_lnkDelete" class="abtn" onclick="if(selectThisRow(187)){selfconfirm({msg:&quot;确定要执行删除操作吗？&quot;,fn:function(data){setAction(data)}});}return false;">删除</a>
+                        <a href="SysUserChangePassword.aspx?NodeCode=100010001&Userid=118" id="RptUser_ctl07_lnkChangePWD" class="abtn">修改密码</a></li>
+                </ul>
+            
+                <ul class="ulheader ulbody">
+                    <li style="width: 5%; text-align:center">
+                        <input type="checkbox" name="chkId" value='186|117'" />
+                    </li>
+                    <li style="width: 5%;text-align:center"><input
+                            type="hidden" name="chkName" value='shop22' />
+                        117</li>
+                    <li style="width: 20%"><a href="SysUserEdit.aspx?action=Edit&NodeCode=100010001&Userid=117" id="Title186|117">shop22</a> </li>
+                    <li style="width: 20%">
+                        店铺录入用户组
+                    </li>
+                    <li style="width: 15%;text-align:center">
+                        2010-06-26 11:35:36
+                    </li>
+                    <li style="width: 10%;text-align:center">
+                        <span style="color:red;font-size:14px">√</span>
+                    </li>
+                    <li style="width: 20%"><a href="SysUserRight.aspx?action=Edit&NodeCode=100010001&Userid=117" id="RptUser_ctl08_lnkRight" class="abtn">
+                        权限</a> 
+                        <a id="RptUser_ctl08_lnkbState" title="shop22" class="abtn" href="javascript:__doPostBack('RptUser$ctl08$lnkbState','')">禁用</a> 
+
+                          
+                        <a href="#" id="RptUser_ctl08_lnkDelete" class="abtn" onclick="if(selectThisRow(186)){selfconfirm({msg:&quot;确定要执行删除操作吗？&quot;,fn:function(data){setAction(data)}});}return false;">删除</a>
+                        <a href="SysUserChangePassword.aspx?NodeCode=100010001&Userid=117" id="RptUser_ctl08_lnkChangePWD" class="abtn">修改密码</a></li>
+                </ul>
+            
+                <ul class="ulheader ulbody">
+                    <li style="width: 5%; text-align:center">
+                        <input type="checkbox" name="chkId" value='183|114'" />
+                    </li>
+                    <li style="width: 5%;text-align:center"><input
+                            type="hidden" name="chkName" value='news5' />
+                        114</li>
+                    <li style="width: 20%"><a href="SysUserEdit.aspx?action=Edit&NodeCode=100010001&Userid=114" id="Title183|114">news5</a> </li>
+                    <li style="width: 20%">
+                        系统管理员组
+                    </li>
+                    <li style="width: 15%;text-align:center">
+                        2010-06-18 09:45:46
+                    </li>
+                    <li style="width: 10%;text-align:center">
+                        <span style="color:red;font-size:14px">√</span>
+                    </li>
+                    <li style="width: 20%"><a href="SysUserRight.aspx?action=Edit&NodeCode=100010001&Userid=114" id="RptUser_ctl09_lnkRight" class="abtn">
+                        权限</a> 
+                        <a id="RptUser_ctl09_lnkbState" title="news5" class="abtn" href="javascript:__doPostBack('RptUser$ctl09$lnkbState','')">禁用</a> 
+
+                          
+                        <a href="#" id="RptUser_ctl09_lnkDelete" class="abtn" onclick="if(selectThisRow(183)){selfconfirm({msg:&quot;确定要执行删除操作吗？&quot;,fn:function(data){setAction(data)}});}return false;">删除</a>
+                        <a href="SysUserChangePassword.aspx?NodeCode=100010001&Userid=114" id="RptUser_ctl09_lnkChangePWD" class="abtn">修改密码</a></li>
+                </ul>
+            
+                <ul class="ulheader ulbody">
+                    <li style="width: 5%; text-align:center">
+                        <input type="checkbox" name="chkId" value='181|112'" />
+                    </li>
+                    <li style="width: 5%;text-align:center"><input
+                            type="hidden" name="chkName" value='news3' />
+                        112</li>
+                    <li style="width: 20%"><a href="SysUserEdit.aspx?action=Edit&NodeCode=100010001&Userid=112" id="Title181|112">news3</a> </li>
+                    <li style="width: 20%">
+                        系统管理员组
+                    </li>
+                    <li style="width: 15%;text-align:center">
+                        2010-06-18 09:45:27
+                    </li>
+                    <li style="width: 10%;text-align:center">
+                        <span style="color:red;font-size:14px">√</span>
+                    </li>
+                    <li style="width: 20%"><a href="SysUserRight.aspx?action=Edit&NodeCode=100010001&Userid=112" id="RptUser_ctl10_lnkRight" class="abtn">
+                        权限</a> 
+                        <a id="RptUser_ctl10_lnkbState" title="news3" class="abtn" href="javascript:__doPostBack('RptUser$ctl10$lnkbState','')">禁用</a> 
+
+                          
+                        <a href="#" id="RptUser_ctl10_lnkDelete" class="abtn" onclick="if(selectThisRow(181)){selfconfirm({msg:&quot;确定要执行删除操作吗？&quot;,fn:function(data){setAction(data)}});}return false;">删除</a>
+                        <a href="SysUserChangePassword.aspx?NodeCode=100010001&Userid=112" id="RptUser_ctl10_lnkChangePWD" class="abtn">修改密码</a></li>
+                </ul>
+            
+                <ul class="ulheader ulbody">
+                    <li style="width: 5%; text-align:center">
+                        <input type="checkbox" name="chkId" value='180|111'" />
+                    </li>
+                    <li style="width: 5%;text-align:center"><input
+                            type="hidden" name="chkName" value='news2' />
+                        111</li>
+                    <li style="width: 20%"><a href="SysUserEdit.aspx?action=Edit&NodeCode=100010001&Userid=111" id="Title180|111">news2</a> </li>
+                    <li style="width: 20%">
+                        系统管理员组
+                    </li>
+                    <li style="width: 15%;text-align:center">
+                        2010-06-18 09:45:17
+                    </li>
+                    <li style="width: 10%;text-align:center">
+                        <span style="color:red;font-size:14px">√</span>
+                    </li>
+                    <li style="width: 20%"><a href="SysUserRight.aspx?action=Edit&NodeCode=100010001&Userid=111" id="RptUser_ctl11_lnkRight" class="abtn">
+                        权限</a> 
+                        <a id="RptUser_ctl11_lnkbState" title="news2" class="abtn" href="javascript:__doPostBack('RptUser$ctl11$lnkbState','')">禁用</a> 
+
+                          
+                        <a href="#" id="RptUser_ctl11_lnkDelete" class="abtn" onclick="if(selectThisRow(180)){selfconfirm({msg:&quot;确定要执行删除操作吗？&quot;,fn:function(data){setAction(data)}});}return false;">删除</a>
+                        <a href="SysUserChangePassword.aspx?NodeCode=100010001&Userid=111" id="RptUser_ctl11_lnkChangePWD" class="abtn">修改密码</a></li>
+                </ul>
+            
+                <ul class="ulheader ulbody">
+                    <li style="width: 5%; text-align:center">
+                        <input type="checkbox" name="chkId" value='178|109'" />
+                    </li>
+                    <li style="width: 5%;text-align:center"><input
+                            type="hidden" name="chkName" value='shop20' />
+                        109</li>
+                    <li style="width: 20%"><a href="SysUserEdit.aspx?action=Edit&NodeCode=100010001&Userid=109" id="Title178|109">shop20</a> </li>
+                    <li style="width: 20%">
+                        店铺录入用户组
+                    </li>
+                    <li style="width: 15%;text-align:center">
+                        2010-06-18 09:22:31
+                    </li>
+                    <li style="width: 10%;text-align:center">
+                        <span style="color:red;font-size:14px">√</span>
+                    </li>
+                    <li style="width: 20%"><a href="SysUserRight.aspx?action=Edit&NodeCode=100010001&Userid=109" id="RptUser_ctl12_lnkRight" class="abtn">
+                        权限</a> 
+                        <a id="RptUser_ctl12_lnkbState" title="shop20" class="abtn" href="javascript:__doPostBack('RptUser$ctl12$lnkbState','')">禁用</a> 
+
+                          
+                        <a href="#" id="RptUser_ctl12_lnkDelete" class="abtn" onclick="if(selectThisRow(178)){selfconfirm({msg:&quot;确定要执行删除操作吗？&quot;,fn:function(data){setAction(data)}});}return false;">删除</a>
+                        <a href="SysUserChangePassword.aspx?NodeCode=100010001&Userid=109" id="RptUser_ctl12_lnkChangePWD" class="abtn">修改密码</a></li>
+                </ul>
+            
+                <ul class="ulheader ulbody">
+                    <li style="width: 5%; text-align:center">
+                        <input type="checkbox" name="chkId" value='212|93'" />
+                    </li>
+                    <li style="width: 5%;text-align:center"><input
+                            type="hidden" name="chkName" value='shop4' />
+                        93</li>
+                    <li style="width: 20%"><a href="SysUserEdit.aspx?action=Edit&NodeCode=100010001&Userid=93" id="Title212|93">shop4</a> </li>
+                    <li style="width: 20%">
+                        管理员用户组1|管理员用户组1|系统管理员组|店铺录入用户组
+                    </li>
+                    <li style="width: 15%;text-align:center">
+                        2010-06-18 09:18:51
+                    </li>
+                    <li style="width: 10%;text-align:center">
+                        <span style="color:red;font-size:14px">√</span>
+                    </li>
+                    <li style="width: 20%"><a href="SysUserRight.aspx?action=Edit&NodeCode=100010001&Userid=93" id="RptUser_ctl13_lnkRight" class="abtn">
+                        权限</a> 
+                        <a id="RptUser_ctl13_lnkbState" title="shop4" class="abtn" href="javascript:__doPostBack('RptUser$ctl13$lnkbState','')">禁用</a> 
+
+                          
+                        <a href="#" id="RptUser_ctl13_lnkDelete" class="abtn" onclick="if(selectThisRow(212)){selfconfirm({msg:&quot;确定要执行删除操作吗？&quot;,fn:function(data){setAction(data)}});}return false;">删除</a>
+                        <a href="SysUserChangePassword.aspx?NodeCode=100010001&Userid=93" id="RptUser_ctl13_lnkChangePWD" class="abtn">修改密码</a></li>
+                </ul>
+            
+                <ul class="ulheader ulbody">
+                    <li style="width: 5%; text-align:center">
+                        <input type="checkbox" name="chkId" value='211|92'" />
+                    </li>
+                    <li style="width: 5%;text-align:center"><input
+                            type="hidden" name="chkName" value='shop3' />
+                        92</li>
+                    <li style="width: 20%"><a href="SysUserEdit.aspx?action=Edit&NodeCode=100010001&Userid=92" id="Title211|92">shop3</a> </li>
+                    <li style="width: 20%">
+                        管理员用户组1
+                    </li>
+                    <li style="width: 15%;text-align:center">
+                        2010-06-18 09:18:41
+                    </li>
+                    <li style="width: 10%;text-align:center">
+                        <span style="color:red;font-size:14px">√</span>
+                    </li>
+                    <li style="width: 20%"><a href="SysUserRight.aspx?action=Edit&NodeCode=100010001&Userid=92" id="RptUser_ctl14_lnkRight" class="abtn">
+                        权限</a> 
+                        <a id="RptUser_ctl14_lnkbState" title="shop3" class="abtn" href="javascript:__doPostBack('RptUser$ctl14$lnkbState','')">禁用</a> 
+
+                          
+                        <a href="#" id="RptUser_ctl14_lnkDelete" class="abtn" onclick="if(selectThisRow(211)){selfconfirm({msg:&quot;确定要执行删除操作吗？&quot;,fn:function(data){setAction(data)}});}return false;">删除</a>
+                        <a href="SysUserChangePassword.aspx?NodeCode=100010001&Userid=92" id="RptUser_ctl14_lnkChangePWD" class="abtn">修改密码</a></li>
+                </ul>
+            
+                <ul class="ulheader ulbody">
+                    <li style="width: 5%; text-align:center">
+                        <input type="checkbox" name="chkId" value='210|91'" />
+                    </li>
+                    <li style="width: 5%;text-align:center"><input
+                            type="hidden" name="chkName" value='shop2' />
+                        91</li>
+                    <li style="width: 20%"><a href="SysUserEdit.aspx?action=Edit&NodeCode=100010001&Userid=91" id="Title210|91">shop2</a> </li>
+                    <li style="width: 20%">
+                        管理员用户组1
+                    </li>
+                    <li style="width: 15%;text-align:center">
+                        2010-06-18 09:18:29
+                    </li>
+                    <li style="width: 10%;text-align:center">
+                        <span style="color:red;font-size:14px">√</span>
+                    </li>
+                    <li style="width: 20%"><a href="SysUserRight.aspx?action=Edit&NodeCode=100010001&Userid=91" id="RptUser_ctl15_lnkRight" class="abtn">
+                        权限</a> 
+                        <a id="RptUser_ctl15_lnkbState" title="shop2" class="abtn" href="javascript:__doPostBack('RptUser$ctl15$lnkbState','')">禁用</a> 
+
+                          
+                        <a href="#" id="RptUser_ctl15_lnkDelete" class="abtn" onclick="if(selectThisRow(210)){selfconfirm({msg:&quot;确定要执行删除操作吗？&quot;,fn:function(data){setAction(data)}});}return false;">删除</a>
+                        <a href="SysUserChangePassword.aspx?NodeCode=100010001&Userid=91" id="RptUser_ctl15_lnkChangePWD" class="abtn">修改密码</a></li>
+                </ul>
+            
+                <ul class="ulheader ulbody">
+                    <li style="width: 5%; text-align:center">
+                        <input type="checkbox" name="chkId" value='204|90'" />
+                    </li>
+                    <li style="width: 5%;text-align:center"><input
+                            type="hidden" name="chkName" value='shop1' />
+                        90</li>
+                    <li style="width: 20%"><a href="SysUserEdit.aspx?action=Edit&NodeCode=100010001&Userid=90" id="Title204|90">shop1</a> </li>
+                    <li style="width: 20%">
+                        
+                    </li>
+                    <li style="width: 15%;text-align:center">
+                        2010-06-18 09:18:19
+                    </li>
+                    <li style="width: 10%;text-align:center">
+                        <span style="color:red;font-size:14px">√</span>
+                    </li>
+                    <li style="width: 20%"><a href="SysUserRight.aspx?action=Edit&NodeCode=100010001&Userid=90" id="RptUser_ctl16_lnkRight" class="abtn">
+                        权限</a> 
+                        <a id="RptUser_ctl16_lnkbState" title="shop1" class="abtn" href="javascript:__doPostBack('RptUser$ctl16$lnkbState','')">禁用</a> 
+
+                          
+                        <a href="#" id="RptUser_ctl16_lnkDelete" class="abtn" onclick="if(selectThisRow(204)){selfconfirm({msg:&quot;确定要执行删除操作吗？&quot;,fn:function(data){setAction(data)}});}return false;">删除</a>
+                        <a href="SysUserChangePassword.aspx?NodeCode=100010001&Userid=90" id="RptUser_ctl16_lnkChangePWD" class="abtn">修改密码</a></li>
+                </ul>
+            
+        <!--
+        <span class="function fr">
+            <input type="submit" name="btnNew1" value="添加" id="btnNew1" />
+            <input type="submit" name="btnDelete1" value="删除" onclick="return GetSelectTitle();" id="btnDelete1" />
+        </span>
+        -->
+        <ul class="page">
+            
+<!-- AspNetPager 7.3.2  Copyright:2003-2010 Webdiyer (www.webdiyer.com) -->
+<div id="Split" style="text-align:center;">
+<div style="width:2%;float:left;">
+	
+</div><div align="center" style="width:98%;float:left;">
+	<a disabled="disabled" style="margin-right:5px;">&lt;&lt;</a><a disabled="disabled" style="margin-right:5px;">&lt;</a><span style="margin-right:5px;font-weight:Bold;color:red;">1</span><a disabled="disabled" style="margin-right:5px;">&gt;</a><a disabled="disabled" style="margin-right:5px;">&gt;&gt;</a>&nbsp;&nbsp;<select name="Split_input" id="Split_input" onchange="ANP_goToPage(this)">
+		<option value="1" selected="true">1</option>
+	</select>
+</div>
+</div>
+<!-- AspNetPager 7.3.2  Copyright:2003-2010 Webdiyer (www.webdiyer.com) -->
+
+
+        </ul>
+        <br clear="left" />
+    </div>
+    <span id="spanmsg">
+    	<script language='javascript'>
+    	window.onload=inputMsg('提示信息','操作成功！');
+    	//setTimeout("alert({ msg: '操作成功！', title: '提示信息'});",1000);
+    	</script>
+    	</span>
+    </form>
+</body>
+</html>
+<script language="javascript">
+    function inputMsg(msgtitle, msgcontent) {
+        alert({ msg: msgcontent, title: msgtitle });
+    }
+</script>

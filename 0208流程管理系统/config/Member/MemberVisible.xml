@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Visible>
+  <row>
+    <name>所有人</name>
+    <value>0</value>
+  </row>
+  <row>
+    <name>仅好友</name>
+    <value>1</value>
+  </row>
+</Visible>

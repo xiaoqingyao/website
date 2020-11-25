@@ -1,0 +1,15 @@
+E:\WMS\COMM\bin\Debug\COMM.dll
+E:\WMS\COMM\bin\Debug\COMM.pdb
+E:\WMS\COMM\obj\Debug\ResolveAssemblyReference.cache
+E:\WMS\COMM\obj\Debug\COMM.dll
+E:\WMS\COMM\obj\Debug\COMM.pdb
+E:\BBS\COMM\bin\Debug\COMM.dll
+E:\BBS\COMM\bin\Debug\COMM.pdb
+E:\BBS\COMM\obj\Debug\ResolveAssemblyReference.cache
+E:\BBS\COMM\obj\Debug\COMM.dll
+E:\BBS\COMM\obj\Debug\COMM.pdb
+E:\shopping\COMM\bin\Debug\COMM.dll
+E:\shopping\COMM\bin\Debug\COMM.pdb
+E:\shopping\COMM\obj\Debug\ResolveAssemblyReference.cache
+E:\shopping\COMM\obj\Debug\COMM.dll
+E:\shopping\COMM\obj\Debug\COMM.pdb

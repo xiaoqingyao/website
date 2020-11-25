@@ -1,0 +1,9 @@
+D:\03测试项目\26进销存管理系统带论文\程序\进销存管理系统\进销存管理系统\JXCDAL\bin\Release\JXCDAL.dll
+D:\03测试项目\26进销存管理系统带论文\程序\进销存管理系统\进销存管理系统\JXCDAL\bin\Release\JXCDAL.pdb
+D:\03测试项目\26进销存管理系统带论文\程序\进销存管理系统\进销存管理系统\JXCDAL\bin\Release\JXCMODEL.dll
+D:\03测试项目\26进销存管理系统带论文\程序\进销存管理系统\进销存管理系统\JXCDAL\bin\Release\JXCMODEL.pdb
+D:\03测试项目\26进销存管理系统带论文\程序\进销存管理系统\进销存管理系统\JXCDAL\obj\Release\JXCDAL.csprojAssemblyReference.cache
+D:\03测试项目\26进销存管理系统带论文\程序\进销存管理系统\进销存管理系统\JXCDAL\obj\Release\JXCDAL.csproj.CoreCompileInputs.cache
+D:\03测试项目\26进销存管理系统带论文\程序\进销存管理系统\进销存管理系统\JXCDAL\obj\Release\JXCDAL.csproj.CopyComplete
+D:\03测试项目\26进销存管理系统带论文\程序\进销存管理系统\进销存管理系统\JXCDAL\obj\Release\JXCDAL.dll
+D:\03测试项目\26进销存管理系统带论文\程序\进销存管理系统\进销存管理系统\JXCDAL\obj\Release\JXCDAL.pdb
